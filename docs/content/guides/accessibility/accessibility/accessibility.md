@@ -1,7 +1,7 @@
 ---
 id: o4qhm1bg
-title: Accessibility
-metaTitle: Accessibility - JavaScript Data Grid | Handsontable
+title: 无障碍设施Accessibility
+metaTitle: 无障碍设施Accessibility - JavaScript Data Grid | Handsontable
 description: Learn about Handsontable's accessibility features.
 permalink: /accessibility
 canonicalUrl: /accessibility
@@ -19,60 +19,67 @@ tags:
   - vpat
 react:
   id: x82phf34
-  metaTitle: Accessibility - React Data Grid | Handsontable
+  metaTitle: 无障碍设施Accessibility - React Data Grid | Handsontable
 searchCategory: Guides
-category: Accessibility
+category: 无障碍设施Accessibility
 ---
 
-# Accessibility
+# 无障碍设施Accessibility
 
+Handsontable 的设计符合全球标准，易于访问。我们优先考虑包容性，确保残障人士也能使用网络应用程序。
 Handsontable is designed to be accessible, aligning with global standards. We prioritize inclusivity, ensuring web applications are usable by people with disabilities. 
 
 [[toc]]
 
-## Overview
+## 概述Overview
 
+Handsontable 的辅助功能包括：
 Accessibility features of Handsontable include:
 
-- Keyboard navigation that lets you use the grid without a mouse.
-- Support for the most popular screen readers.
-- Flexible API to configure keyboard shortcuts and navigation methods.
+- 键盘导航让您无需鼠标即可使用网格。Keyboard navigation that lets you use the grid without a mouse.
+- 支持最流行的屏幕阅读器。Support for the most popular screen readers.
+- 灵活的 API 来配置键盘快捷键和导航方法。Flexible API to configure keyboard shortcuts and navigation methods.
 
-## Conformance with standards
+## 符合标准Conformance with standards
 
+大多数全球标准和法规都是根据 WCAG（Web 内容可访问性指南）制定的。Handsontable 符合[WCAG 2.1 AA](https://www.w3.org/WAI/WCAG21/quickref/)中概述的要求 （打开新窗口）指南，使其与大多数本地标准兼容，例如：
 Most global standards and regulations are created in accordance with WCAG (Web Content Accessibility Guidelines).
 Handsontable meets requirements outlined in the [WCAG 2.1 AA](https://www.w3.org/WAI/WCAG21/quickref/) guidelines,
 which makes it compatible with most local standards, such as:
 
-### Region
+### 地区Region
 
-#### USA
+#### 美国USA
 - [Section 508 of the US Rehabilitation Act](https://www.section508.gov/)
 - [Americans with Disabilities Act (ADA)](https://www.ada.gov/resources/web-guidance/) 
 
-#### Europe
+#### 欧洲Europe
 - [European Accessibility Act (EAA)](https://ec.europa.eu/social/main.jsp?catId=1202)
 - [Web Accessibility Directive (WAD)](https://eur-lex.europa.eu/legal-content/EN/LSU/?uri=CELEX:32016L2102)
 
-#### Canada
+#### 加拿大anada
 - [Standard on Web Accessibility](https://www.tbs-sct.canada.ca/pol/doc-eng.aspx?id=23601) 
 
-## Keyboard navigation
+## 键盘导航Keyboard navigation
 
+Handsontable 不需要鼠标即可在网格元素间导航。对于暂时或永久性运动障碍的用户来说，这是一项重要功能，因为他们很难跟踪鼠标光标。键盘导航也是提高生产力的好方法，这就是为什么许多用户无论对可访问性有何需求，都选择使用键盘而不是鼠标。
 Handsontable doesn't require a mouse to navigate across the grid's elements. This is an important feature for those users with temporary or permanent motor impairments for whom following the mouse cursor is difficult. Keyboard navigation is also a great way to improve productivity, which is why many users choose the keyboard over the mouse regardless of their accessibility needs.
 
+我们对数百个实施的经验表明，Handsontable 倾向于用作电子表格应用程序或数据网格组件。虽然乍一看差异似乎很小，但它会显著影响用户对导航的期望。
 Our experience with hundreds of implementations shows that Handsontable tends to be used either as a **spreadsheet application** or a **data grid component**. While at first the difference seems subtle, it significantly impacts user expectations regarding navigation.
 
+在典型的电子表格应用程序（例如 Microsoft Excel 或 Google Sheets）中，您无法将焦点移到标题上。如果不了解复杂的[键盘快捷键](@/guides/navigation/keyboard-shortcuts/keyboard-shortcuts.md)，就很难对数据进行排序或过滤。此外，打开[列菜单](@/guides/columns/column-menu/column-menu.md)并非易事。Handsontable 在这方面提供了灵活性，允许用户在数据网格和电子表格“模式”之间切换。要进行这种切换，您可以使用两个选项的组合：[`navigableHeaders`](@/api/options.md#navigableheaders)启用或禁用将焦点移到标题上，并[`tabNavigation`](@/api/options.md#tabnavigation)决定是否<kbd>**Tab**</kbd>可以使用该键在单元格和标题之间导航。
 In a typical spreadsheet application (think of Microsoft Excel or Google Sheets), you can't move the focus onto headers. This makes it difficult to sort or filter data without knowing complex [keyboard shortcuts](@/guides/navigation/keyboard-shortcuts/keyboard-shortcuts.md). Additionally, opening a [column menu](@/guides/columns/column-menu/column-menu.md) is not trivial.
 Handsontable offers flexibility in this regard, allowing users to switch between data grid and spreadsheet "modes". To do that switch, you can use a combination of two options: [`navigableHeaders`](@/api/options.md#navigableheaders) to enable or disable moving focus onto headers, and [`tabNavigation`](@/api/options.md#tabnavigation) to decide if the <kbd>**Tab**</kbd> key can be used to navigate across cells and headers.
 
+下表提供了有关这两种情况的更多详细信息：
 The following table provides more details about these two scenarios:
  
-| Aspect                    | Data grid mode                                                                                                                                                                                                                                          | Spreadsheet mode (default)                                                                                                                                                                              |
+| 方面Aspect                    | 数据网格模式Data grid mode                                                                                                                                                                                                                                          | 电子表格模式（默认）Spreadsheet mode (default)                                                                                                                                                                              |
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Configuration             | [`navigableHeaders: true`](@/api/options.md#navigableheaders) <br>  [`tabNavigation: false`](@/api/options.md#tabnavigation)                                                                                                                            | [`navigableHeaders: false`](@/api/options.md#navigableheaders) <br> [`tabNavigation: true`](@/api/options.md#tabnavigation)                                                                             |
-| Primary navigation method | Arrow keys                                                                                                                                                                                                                                              | <kbd>**Tab**</kbd> / <kbd>**Shift**</kbd>+<kbd>**Tab**</kbd>                                                                                                                                            |
-| Navigable headers         | Yes                                                                                                                                                                                                                                                     | No                                                                                                                                                                                                      |
+| 配置Configuration             | [`navigableHeaders: true`](@/api/options.md#navigableheaders) <br>  [`tabNavigation: false`](@/api/options.md#tabnavigation)                                                                                                                            | [`navigableHeaders: false`](@/api/options.md#navigableheaders) <br> [`tabNavigation: true`](@/api/options.md#tabnavigation)                                                                             |
+| 主要导航方式Primary navigation method | 箭头键Arrow keys                                                                                                                                                                                                                                              | <kbd>**Tab**</kbd> / <kbd>**Shift**</kbd>+<kbd>**Tab**</kbd>                                                                                                                                            |
+| 可导航的标题Navigable headers         | 是Yes                                                                                                                                                                                                                                                     | 否No                                                                                                                                                                                                      |
 | Navigation                | Use the arrow keys navigate across the grid. Use simple shortcuts such as <kbd>**Enter**</kbd> or <kbd>**Space**</kbd> to open menus or interact with headers, cells, or cell editors. <br><br>You can't use the <kbd>**Tab**</kbd> key for navigation. | Use <kbd>**Tab**</kbd> / <kbd>**Shift**</kbd>+<kbd>**Tab**</kbd> to navigate across the grid.<br>This behavior is similar to Excel or Google Sheets. <br><br>To open menus, use more complex shortcuts. |
 | Focus behavior            | One tab stop. The grid is included in the page tab sequence only once.                                                                                                                                                                                  | Multiple tab stops. All tabbable elements of the grid, such as cells, are included in the page tab sequence.                                                                                            |
 
