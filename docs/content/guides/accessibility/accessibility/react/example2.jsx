@@ -478,7 +478,7 @@ const countries = data.reduce((acc, curr) => {
 }, []);
 
 /* end:skip-in-preview */
-// Handsontable options
+// Handsontable 选项
 const hotOptions = {
   data,
   height: 464,
@@ -531,11 +531,11 @@ const ExampleComponent = () => {
       />
 
       <HotTable
-        // Handsontable needs to reload when changing virtualization
-        // by changing the key, we force the component to reload
+        //更改虚拟化时 Handsontable 需要重新加载
+        //通过更改密钥，我们强制组件重新加载
         key={String(toggleableOptions.renderAllRows)}
         {...hotOptions}
-        // Pass in the options which can change for demo
+        //传入demo中可以改变的选项
         {...toggleableOptions}
       >
         <HotColumn data="companyName" type="text" />
@@ -566,9 +566,9 @@ const ExampleComponent = () => {
   );
 };
 
-// Demo Options allows you to change the Handsontable options
-// This allows us to change the Handsontable settings from the UI, showcasing
-// the flexibility of Handsontable in configuring according to your needs.
+//演示选项允许您更改 Handsontable 选项
+//这允许我们从 UI 更改 Handsontable 设置，展示
+//Handsontable 可以根据您的需求灵活配置。
 function DemoOptions({
   tabNavigation,
   navigableHeaders,
@@ -580,7 +580,7 @@ function DemoOptions({
   enterMoves,
   changeToggleOptions,
 }) {
-  // on checkbox change, update handsontable option
+  //复选框更改时，更新可操作选项
   const handleCheckboxChange = (checkboxName) => {
     switch (checkboxName) {
       case 'enable-tab-navigation':
@@ -657,7 +657,7 @@ function DemoOptions({
                 aria-label="Enable navigation with the Tab key"
                 onChange={() => handleCheckboxChange('enable-tab-navigation')}
               />
-              Enable navigation with the Tab key
+              使用 Tab 键启用导航
             </label>
             <a
               href="https://handsontable.com/docs/react-data-grid/api/options/#tabnavigation"
@@ -704,7 +704,7 @@ function DemoOptions({
                   handleCheckboxChange('enable-header-navigation')
                 }
               />
-              Enable navigation across headers
+              启用跨标题导航
             </label>
             <a
               href="https://handsontable.com/docs/react-data-grid/api/options/#navigableheaders"
@@ -751,7 +751,7 @@ function DemoOptions({
                   handleCheckboxChange('enable-cell-virtualization')
                 }
               />
-              Enable cells virtualization
+              启用单元虚拟化
             </label>
             <a
               href="https://handsontable.com/docs/react-data-grid/api/options/#renderAllRows"
@@ -798,7 +798,7 @@ function DemoOptions({
                   handleCheckboxChange('enable-cell-enter-editing')
                 }
               />
-              The Enter key begins cell editing
+              Enter 键开始单元格编辑
             </label>
             <a
               href="https://handsontable.com/docs/react-data-grid/api/options/#enterbeginsediting"
