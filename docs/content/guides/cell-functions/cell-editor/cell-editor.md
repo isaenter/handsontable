@@ -303,7 +303,7 @@ class CustomEditor extends BaseEditor {
 ##### finishEditing(restoreOriginalValue: 'Boolean' _\[optional\]_, ctrlDown: `Boolean` _\[optional\]_, callback: `Function`)
 :::
 
-尝试完成细胞版本。内部调用 [`saveValue()`](@/api/baseEditor.md#savevalue) 和 `discardEditor()`。如果`restoreOriginalValue`设置为`true`，则单元格值将设置为其原始值（来自版本之前的值）。 `ctrlDown` 值作为第二个参数传递给 [`saveValue()`](@/api/baseEditor.md#savevalue)。
+尝试完成单元格版本。内部调用 [`saveValue()`](@/api/baseEditor.md#savevalue) 和 `discardEditor()`。如果`restoreOriginalValue`设置为`true`，则单元格值将设置为其原始值（来自版本之前的值）。 `ctrlDown` 值作为第二个参数传递给 [`saveValue()`](@/api/baseEditor.md#savevalue)。
 
 回调函数包含一个布尔参数 -如果新值有效或 [`allowInvalid`](@/api/options.md#allowinvalid) 配置选项设置为 `true`，否则参数为 `false`。
 
@@ -551,7 +551,7 @@ class CustomEditor extends TextEditor {
   | -------------- | ------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
   | instance       | `Handsontable.Core` | 此编辑器对象所属的 Handsontable 实例。在类构造函数中设置，在编辑器的整个生命周期中不可变。                                     |
   | row            | `Number`            | 活动单元格行索引。对每个 [`prepare()`](@/api/baseEditor.md#prepare) 方法调用进行更新。                                         |
-  | col            | `Number`            | 活跃细胞指数。对每个 [`prepare()`](@/api/baseEditor.md#prepare) 方法调用进行更新。                                             |
+  | col            | `Number`            | 活跃单元格指数。对每个 [`prepare()`](@/api/baseEditor.md#prepare) 方法调用进行更新。                                             |
   | prop           | `String`            | 与活动单元格关联的属性名称（仅当数据源是对象数组时相关）。对每个 [`prepare()`](@/api/baseEditor.md#prepare) 方法调用进行更新。 |
   | TD             | `HTMLTableCellNode` | 活动单元格的节点对象。对每个 [`prepare()`](@/api/baseEditor.md#prepare) 方法调用进行更新。                                     |
   | cellProperties | `Object`            | 表示活动单元格属性的对象。对每个 [`prepare()`](@/api/baseEditor.md#prepare) 方法调用进行更新。                                 |

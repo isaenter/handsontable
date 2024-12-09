@@ -89,7 +89,7 @@ const ExampleComponent = () => {
       rowHeaders={true}
       hiddenColumns={{
         columns: [3, 5, 9],
-        // show UI indicators to mark hidden columns
+        // 显示 UI 指示器来标记隐藏列
         indicators: true,
       }}
     />

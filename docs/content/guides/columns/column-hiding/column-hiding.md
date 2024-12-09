@@ -1,6 +1,6 @@
 ---
 id: 6elqkmhr
-title: Column hiding
+title: 列隐藏
 metaTitle: Column hiding - JavaScript Data Grid | Handsontable
 description:
   Hide individual columns to avoid rendering them as DOM elements. It helps you reduce screen
@@ -14,26 +14,26 @@ searchCategory: Guides
 category: Columns
 ---
 
-# Column hiding
+# 列隐藏
 
-Hide individual columns to reduce screen clutter and improve the grid's performance.
+隐藏各个列以减少屏幕混乱并提高网格的性能。
 
 [[toc]]
 
 ## 概述
 
-"Hiding a column" means that the hidden column doesn't get rendered as a DOM element.
+`隐藏列`意味着隐藏的列不会呈现为 DOM 元素。
 
-When you're hiding a column:
+当您隐藏列时：
 
-- The source data doesn't get modified.
-- The [`HiddenColumns`](@/api/hiddenColumns.md) plugin doesn't participate in data
-  transformation<br>(the shape of the data returned by the
-  [`getData*()` methods](@/api/core.md#getdata) stays intact).
+- 源数据不会被修改。
+- [`HiddenColumns`](@/api/hiddenColumns.md) 插件不参与数据
+  转换<br>（由返回的数据的形状
+  [`getData*()` 方法]（@/api/core.md#getdata）保持不变）。
 
-## Enable column hiding
+## 启用列隐藏
 
-To enable column hiding, use the [`hiddenColumns`](@/api/options.md#hiddencolumns) option.
+要启用列隐藏，请使用 [`hiddenColumns`](@/api/options.md#hiddencolumns) 选项。
 
 ::: only-for javascript
 
@@ -57,19 +57,19 @@ To enable column hiding, use the [`hiddenColumns`](@/api/options.md#hiddencolumn
 
 :::
 
-## Set up column hiding
+## 设置列隐藏
 
-To set up your column hiding configuration, follow the steps below.
+要设置列隐藏配置，请按照以下步骤操作。
 
-### Step 1: Specify columns hidden by default
+### 第 1 步：指定默认隐藏的列
 
-To both enable column hiding and specify columns hidden by default, set the
-[`hiddenColumns`](@/api/options.md#hiddencolumns) configuration option to an object.
+要启用列隐藏并指定默认隐藏的列，请设置
+[`hiddenColumns`](@/api/options.md#hiddencolumns) 对象的配置选项。
 
-In the object, add a [`columns`](@/api/options.md#columns) configuration option, and set it to an
-array of column indexes.
+在对象中，添加一个 [`columns`](@/api/options.md#columns) 配置选项，并将其设置为
+列索引数组。
 
-Now, those columns are hidden by default:
+现在，这些列默认隐藏：
 
 ::: only-for javascript
 
@@ -93,19 +93,19 @@ Now, those columns are hidden by default:
 
 :::
 
-### Step 2: Show UI indicators
+### 第 2 步：显示 UI 指示器
 
-To easily see which columns are currently hidden, display UI indicators.
+要轻松查看当前隐藏的列，请显示 UI 指示器。
 
-To enable the UI indicators, in the [`hiddenColumns`](@/api/options.md#hiddencolumns) object, set
-the [`indicators`](@/api/hiddenColumns.md) property to `true`:
+要启用 UI 指示器，请在 [`hiddenColumns`](@/api/options.md#hiddencolumns) 对象中设置
+将 [`indicators`](@/api/hiddenColumns.md) 属性设置为 `true`：
 
 ::: tip
 
-If you use both the [`NestedHeaders`](@/api/nestedHeaders.md) plugin and the
-[`HiddenColumns`](@/api/hiddenColumns.md) plugin, you also need to set the
-[`colHeaders`](@/api/options.md#colheaders) property to `true`. Otherwise,
-[`indicators`](@/api/hiddenColumns.md) won't work.
+如果您同时使用 [`NestedHeaders`](@/api/nestedHeaders.md) 插件和
+[`HiddenColumns`](@/api/hiddenColumns.md) 插件，还需要设置
+[`colHeaders`](@/api/options.md#colheaders) 属性设置为 `true`。否则，
+[`indicators`](@/api/hiddenColumns.md) 不起作用。
 
 :::
 
@@ -131,14 +131,14 @@ If you use both the [`NestedHeaders`](@/api/nestedHeaders.md) plugin and the
 
 :::
 
-### Step 3: Set up context menu items
+### 第 3 步：设置上下文菜单项
 
-To easily hide and unhide columns, add column hiding items to Handsontable's
-[context menu](@/guides/accessories-and-menus/context-menu/context-menu.md).
+要轻松隐藏和取消隐藏列，请将列隐藏项添加到 Handsontable 的
+[上下文菜单](@/guides/accessories-and-menus/context-menu/context-menu.md)。
 
-Enable both the [`ContextMenu`](@/api/contextMenu.md) plugin and the
-[`HiddenColumns`](@/api/hiddenColumns.md) plugin. Now, the context menu automatically displays
-additional items for hiding and unhiding columns.
+启用 [`ContextMenu`](@/api/contextMenu.md) 插件和
+[`HiddenColumns`](@/api/hiddenColumns.md) 插件。现在，上下文菜单会自动显示
+用于隐藏和取消隐藏列的附加项目。
 
 ::: only-for javascript
 
@@ -162,11 +162,11 @@ additional items for hiding and unhiding columns.
 
 :::
 
-You can also add the column hiding menu items individually, by adding the
-[`hidden_columns_show`](@/guides/accessories-and-menus/context-menu/context-menu.md#context-menu-with-specific-options)
-and
-[`hidden_columns_hide`](@/guides/accessories-and-menus/context-menu/context-menu.md#context-menu-with-specific-options)
-strings to the[ `contextMenu`](@/api/contextMenu.md) parameter:
+您还可以单独添加列隐藏菜单项，方法是添加
+[`hidden_​​columns_show`](@/guides/accessories-and-menus/context-menu/context-menu.md#context-menu-with-specific-options)
+和
+[`hidden_​​columns_hide`](@/guides/accessories-and-menus/context-menu/context-menu.md#context-menu-with-specific-options)
+字符串到[`contextMenu`](@/api/contextMenu.md)参数：
 
 ::: only-for javascript
 
@@ -190,12 +190,12 @@ strings to the[ `contextMenu`](@/api/contextMenu.md) parameter:
 
 :::
 
-### Step 4: Set up copy and paste behavior
+### 步骤 4：设置复制和粘贴行为
 
-By default, hidden columns are included in copying and pasting.
+默认情况下，复制和粘贴时包含隐藏列。
 
-To exclude hidden columns from copying and pasting, in the [`hiddenColumns`](@/api/hiddenColumns.md)
-object, set the [`copyPasteEnabled`](@/api/hiddenColumns.md) property to `false`:
+要从复制和粘贴中排除隐藏列，请在 [`hiddenColumns`](@/api/hiddenColumns.md) 中
+对象，将 [`copyPasteEnabled`](@/api/hiddenColumns.md) 属性设置为 `false`：
 
 ::: only-for javascript
 
@@ -219,98 +219,98 @@ object, set the [`copyPasteEnabled`](@/api/hiddenColumns.md) property to `false`
 
 :::
 
-## Column hiding API methods
+## 列隐藏API方法
 
-For the most popular column hiding tasks, use the API methods below.
+对于最流行的列隐藏任务，请使用以下 API 方法。
 
 ::: only-for react
 
 ::: tip
 
-To use the Handsontable API, you'll need access to the Handsontable instance. You can do that by
-utilizing a reference to the `HotTable` component, and reading its `hotInstance` property.
+要使用 Handsontable API，您需要访问 Handsontable 实例。你可以这样做
+利用对`HotTable`组件的引用，并读取其`hotInstance`属性。
 
-For more information, see the [Instance methods](@/guides/getting-started/react-methods/react-methods.md) page.
-
-:::
+有关更多信息，请参阅[实例方法](@/guides/getting-started/react-methods/react-methods.md)页面。
 
 :::
 
-To see your changes, re-render your Handsontable instance with the
-[`render()`](@/api/core.md#render) method.
+:::
 
-### Access the [`HiddenColumns`](@/api/hiddenColumns.md) plugin instance
+要查看您的更改，请使用以下命令重新渲染您的 Handsontable 实例
+[`render()`](@/api/core.md#render) 方法。
 
-To access the [`HiddenColumns`](@/api/hiddenColumns.md) plugin instance, use the
-[`getPlugin()`](@/api/core.md#getplugin) method:
+### 访问 [`HiddenColumns`](@/api/hiddenColumns.md) 插件实例
+
+要访问 [`HiddenColumns`](@/api/hiddenColumns.md) 插件实例，请使用
+[`getPlugin()`](@/api/core.md#getplugin) 方法：
 
 ```js
 const plugin = hot.getPlugin('hiddenColumns');
 ```
 
-### Hide a single column
+### 隐藏单列
 
-To hide a single column, use the [`hideColumn()`](@/api/hiddenColumns.md#hidecolumn) method:
+要隐藏单个列，请使用 [`hideColumn()`](@/api/hiddenColumns.md#hidecolumn) 方法：
 
 ```js
 const plugin = hot.getPlugin('hiddenColumns');
 
 plugin.hideColumn(4);
 
-// re-render your Handsontable instance
+//重新渲染你的 Handsontable 实例
 hot.render();
 ```
 
-### Hide multiple columns
+### 隐藏多列
 
-To hide multiple columns:
+隐藏多列：
 
-- Either pass column indexes as arguments to the [`hideColumn()`](@/api/hiddenColumns.md#hidecolumn)
-  method
-- Or pass an array of column indexes to the [`hideColumns()`](@/api/hiddenColumns.md#hidecolumn)
-  method
+- 将列索引作为参数传递给 [`hideColumn()`](@/api/hiddenColumns.md#hidecolumn)
+  方法
+- 或者将列索引数组传递给 [`hideColumns()`](@/api/hiddenColumns.md#hidecolumn)
+  方法
 
 ```js
 const plugin = hot.getPlugin('hiddenColumns');
 
 plugin.hideColumn(0, 4, 6);
-// or
+// 或者
 plugin.hideColumns([0, 4, 6]);
 
-// re-render your Handsontable instance
+//重新渲染你的 Handsontable 实例
 hot.render();
 ```
 
-### Unhide a single column
+### 取消隐藏单列
 
-To unhide a single column, use the [`showColumn()`](@/api/hiddenColumns.md#showcolumn) method:
+要取消隐藏单个列，请使用 [`showColumn()`](@/api/hiddenColumns.md#showcolumn) 方法：
 
 ```js
 const plugin = hot.getPlugin('hiddenColumns');
 
 plugin.showColumn(4);
 
-// re-render your Handsontable instance
+//重新渲染你的 Handsontable 实例
 hot.render();
 ```
 
-### Unhide multiple columns
+### 取消隐藏多列
 
-To unhide multiple columns:
+要取消隐藏多列：
 
-- Either pass column indexes as arguments to the [`showColumn()`](@/api/hiddenColumns.md#showcolumn)
-  method
-- Or pass an array of column indexes to the [`showColumns()`](@/api/hiddenColumns.md#showcolumns)
-  method
+- 将列索引作为参数传递给 [`showColumn()`](@/api/hiddenColumns.md#showcolumn)
+  方法
+- 或者将列索引数组传递给 [`showColumns()`](@/api/hiddenColumns.md#showcolumns)
+  方法
 
 ```js
 const plugin = hot.getPlugin('hiddenColumns');
 
 plugin.showColumn(0, 4, 6);
-// or
+// 或者
 plugin.showColumns([0, 4, 6]);
 
-// re-render your Handsontable instance
+//重新渲染你的 Handsontable 实例
 hot.render();
 ```
 

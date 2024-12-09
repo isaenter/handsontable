@@ -37,7 +37,7 @@ const ExampleComponent = () => {
           type: 'text',
         },
         {
-          // 2nd cell is simple text, no special options here
+          // 第二个单元格是简单文本，这里没有特殊选项
         },
         {
           type: 'time',

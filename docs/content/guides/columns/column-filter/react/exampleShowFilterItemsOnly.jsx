@@ -94,9 +94,9 @@ const ExampleComponent = () => {
           className: 'htCenter',
         },
       ]}
-      // enable filtering
+      // 启用过滤
       filters={true}
-      // enable the column menu, but display only the filter menu items
+      // 启用列菜单，但仅显示过滤菜单项
       dropdownMenu={[
         'filter_by_condition',
         'filter_by_value',

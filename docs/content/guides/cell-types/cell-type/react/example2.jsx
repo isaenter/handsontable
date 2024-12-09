@@ -35,7 +35,7 @@ const ExampleComponent = () => {
             headerAction: false,
             compareFunctionFactory: function compareFunctionFactory() {
               return function comparator() {
-                return 0; // Don't sort the first visual column.
+                return 0; // 不要对第一个可视列进行排序。
               };
             },
           },

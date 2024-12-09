@@ -94,15 +94,15 @@ const ExampleComponent = () => {
           className: 'htCenter',
         },
       ]}
-      // enable filtering
+      // 启用过滤
       filters={true}
-      // enable the column menu
+      // 启用列菜单
       dropdownMenu={true}
       height="auto"
-      // `beforeFilter()` is a Handsontable hook
-      // it's fired after Handsontable gathers information about the filters, but before the filters are applied
+      // `beforeFilter()` 是一个 Handsontable 钩子
+      // 它在 Handsontable 收集有关过滤器的信息之后但在应用过滤器之前触发
       beforeFilter={function (conditionsStack) {
-        // gather information about the filters
+        // 收集有关过滤器的信息
         console.log(`The amount of filters: ${conditionsStack.length}`);
         console.log(
           `The last changed column index: ${conditionsStack[0].column}`
@@ -110,10 +110,10 @@ const ExampleComponent = () => {
         console.log(
           `The amount of filters added to this column: ${conditionsStack[0].conditions.length}`
         );
-        // the list of filter conditions
+        // 过滤条件列表
         console.log(conditionsStack[0].conditions);
 
-        // return `false` to disable filtering on the client side
+        // 返回`false`以禁用客户端过滤
         return false;
       }}
       autoWrapRow={true}

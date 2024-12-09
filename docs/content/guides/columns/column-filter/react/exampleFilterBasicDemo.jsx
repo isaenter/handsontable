@@ -95,9 +95,9 @@ const ExampleComponent = () => {
           className: 'htCenter',
         },
       ]}
-      // enable filtering
+      // 启用过滤
       filters={true}
-      // enable the column menu
+      // 启用列菜单
       dropdownMenu={true}
       height="auto"
       autoWrapRow={true}

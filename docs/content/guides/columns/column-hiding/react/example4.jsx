@@ -87,10 +87,10 @@ const ExampleComponent = () => {
       height="auto"
       colHeaders={true}
       rowHeaders={true}
-      // enable the context menu
+      // 启用上下文菜单
       contextMenu={true}
-      // enable the `HiddenColumns` plugin
-      // automatically adds the context menu's column hiding items
+      // 启用“HiddenColumns”插件
+      // 自动添加上下文菜单的列隐藏项
       hiddenColumns={{
         columns: [3, 5, 9],
         indicators: true,

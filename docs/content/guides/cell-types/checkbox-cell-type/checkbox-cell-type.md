@@ -1,6 +1,6 @@
 ---
 id: p8sggqin
-title: Checkbox cell type
+title: 复选框单元格类型
 metaTitle: Checkbox cell type - JavaScript Data Grid | Handsontable
 description: Create interactive elements that can be checked or unchecked, by using the checkbox cell type.
 permalink: /checkbox-cell-type
@@ -12,25 +12,25 @@ searchCategory: Guides
 category: Cell types
 ---
 
-# Checkbox cell type
+# 复选框单元格类型
 
-Create interactive elements that can be checked or unchecked, by using the checkbox cell type.
+使用复选框单元格类型创建可以选中或取消选中的交互式元素。
 
 [[toc]]
 
 ## 概述
 
-Data in these cells will be rendered as a checkbox and you can easily change it by checking/unchecking the checkbox.
+这些单元格中的数据将呈现为复选框，您可以通过选中/取消选中该复选框轻松更改它。
 
-To check the box, use the mouse or press <kbd>**Space**</kbd> or <kbd>**Enter**</kbd>.
+要选中该框，请使用鼠标或按 <kbd>**空格**</kbd> 或 <kbd>**Enter**</kbd>。
 
-To uncheck the box, use the mouse or press <kbd>**Space**</kbd>, <kbd>**Enter**</kbd>, <kbd>**Delete**</kbd> or <kbd>**Backspace**</kbd>.
+要取消选中该框，请使用鼠标或按 <kbd>**空格**</kbd>、<kbd>**Enter**</kbd>、<kbd>**Delete**</kbd> 或 < kbd>**退格键**</kbd>。
 
-You can change the state of multiple cells at once by selecting the cells you want to change and pressing <kbd>**Space**</kbd>.
+您可以通过选择要更改的单元格并按 <kbd>**空格**</kbd> 来一次更改多个单元格的状态。
 
-## Checkbox true/false values
+## 复选框真/假值
 
-This is the default usage scenario where column data has a `true` or `false` value, and we only want to display checkboxes.
+这是默认的使用场景，其中列数据具有`true`或`false`值，并且我们只想显示复选框。
 
 ::: only-for javascript
 
@@ -54,9 +54,9 @@ This is the default usage scenario where column data has a `true` or `false` val
 
 :::
 
-## Checkbox template
+## 复选框模板
 
-If you want to use values other than `true` and `false`, you have to provide this information using [`checkedTemplate`](@/api/options.md#checkedtemplate) and [`uncheckedTemplate`](@/api/options.md#uncheckedtemplate). Handsontable will then update your data using the appropriate template.
+如果您想使用`true`和`false`以外的值，则必须使用 [`checkedTemplate`](@/api/options.md#checkedtemplate) 和 [`uncheckedTemplate`](@/api/options.md#uncheckedtemplate）。然后，Handsontable 将使用适当的模板更新您的数据。
 
 ::: only-for javascript
 
@@ -80,9 +80,9 @@ If you want to use values other than `true` and `false`, you have to provide thi
 
 :::
 
-## Checkbox labels
+## 复选框标签
 
-To add a label to the checkbox, use the [`label`](@/api/options.md#label) option. You can declare where the label will be injected with this option - either before or after the checkbox element. You can also declare from which data source the label text will be updated.
+要向复选框添加标签，请使用 [`label`](@/api/options.md#label) 选项。您可以声明使用此选项注入标签的位置 -在复选框元素之前或之后。您还可以声明将从哪个数据源更新标签文本。
 
 ::: only-for javascript
 
@@ -108,17 +108,17 @@ To add a label to the checkbox, use the [`label`](@/api/options.md#label) option
 
 ## 相关键盘快捷键
 
-| Windows                  | macOS                    | Action                        |  Excel  | Sheets  |
-| ------------------------ | ------------------------ | ----------------------------- | :-----: | :-----: |
-| <kbd>**Space**</kbd>     | <kbd>**Space**</kbd>     | Check or uncheck the checkbox | &cross; | &check; |
-| <kbd>**Enter**</kbd>     | <kbd>**Enter**</kbd>     | Check or uncheck the checkbox | &cross; | &check; |
-| <kbd>**Delete**</kbd>    | <kbd>**Delete**</kbd>    | Uncheck the checkbox          | &cross; | &check; |
-| <kbd>**Backspace**</kbd> | <kbd>**Backspace**</kbd> | Uncheck the checkbox          | &cross; | &check; |
+| Windows                  | macOS                    | Action               |  Excel  | Sheets  |
+| ------------------------ | ------------------------ | -------------------- | :-----: | :-----: |
+| <kbd>**Space**</kbd>     | <kbd>**Space**</kbd>     | 选中或取消选中复选框 | &cross; | &check; |
+| <kbd>**Enter**</kbd>     | <kbd>**Enter**</kbd>     | 选中或取消选中复选框 | &cross; | &check; |
+| <kbd>**Delete**</kbd>    | <kbd>**Delete**</kbd>    | 取消选中复选框       | &cross; | &check; |
+| <kbd>**Backspace**</kbd> | <kbd>**Backspace**</kbd> | 取消选中复选框       | &cross; | &check; |
 
 ## 相关文章
 
 ### 相关指南
-- [Cell type](@/guides/cell-types/cell-type/cell-type.md)
+- [单元格类型](@/guides/cell-types/cell-type/cell-type.md)
 
 ### 相关API参考
 

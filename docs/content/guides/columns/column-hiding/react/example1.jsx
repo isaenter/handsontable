@@ -88,7 +88,7 @@ const ExampleComponent = () => {
       colHeaders={true}
       rowHeaders={true}
       contextMenu={true}
-      // enable the `HiddenColumns` plugin
+      // 启用“HiddenColumns”插件
       hiddenColumns={{
         columns: [2, 4, 6],
         indicators: true,

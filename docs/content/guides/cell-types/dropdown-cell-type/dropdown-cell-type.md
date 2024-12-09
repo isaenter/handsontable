@@ -1,6 +1,6 @@
 ---
 id: oi78d8nv
-title: Dropdown cell type
+title: 下拉单元格类型
 metaTitle: Dropdown cell type - JavaScript Data Grid | Handsontable
 description: Collect user input with a searchable list of choices, by using the dropdown cell type.
 permalink: /dropdown-cell-type
@@ -12,29 +12,29 @@ searchCategory: Guides
 category: Cell types
 ---
 
-# Dropdown cell type
+# 下拉单元格类型
 
-Collect user input with a searchable list of choices, by using the dropdown cell type.
+通过使用下拉单元格类型，通过可搜索的选项列表收集用户输入。
 
 [[toc]]
 
 ## 概述
 
-The dropdown cell type is based on an autocomplete cell type and can also be searchable.
+下拉单元格类型基于自动完成单元格类型，并且也可以搜索。
 
-## Usage
+## 用法
 
-This example shows the usage of the dropdown feature. Dropdown is based on [Autocomplete](@/guides/cell-types/autocomplete-cell-type/autocomplete-cell-type.md) cell type. All options used by `autocomplete` cell type apply to `dropdown` as well.
+此示例显示了下拉功能的用法。下拉菜单基于[自动完成](@/guides/cell-types/autocomplete-cell-type/autocomplete-cell-type.md) 单元格类型。 `自动完成`单元格类型使用的所有选项也适用于`下拉菜单`。
 
 ::: only-for javascript
 
-Internally, cell `{type: 'dropdown'}` is equivalent to cell `{type: 'autocomplete', strict: true, filter: false}`. Therefore you can think of `dropdown` as a searchable `<select>`.
+在内部，单元格`{type: 'dropdown'}`相当于单元格`{type: 'autocomplete', strict: true, filter: false}`。因此，您可以将`dropdown`视为可搜索的`<select>`。
 
 :::
 
 ::: only-for react
 
-Internally, cell `type="dropdown"` is equivalent to cell `type="autocomplete" strict={true} filter={false}`. Therefore you can think of `dropdown` as a searchable `<select>`.
+在内部，单元格 `type="dropdown"` 相当于单元格 `type="autocomplete" strict={true} filter={false}`。因此，您可以将`dropdown`视为可搜索的`<select>`。
 
 :::
 
@@ -68,9 +68,9 @@ Internally, cell `type="dropdown"` is equivalent to cell `type="autocomplete" st
 
 <div class="boxes-list gray">
 
-- [Autocomplete cell type](@/guides/cell-types/autocomplete-cell-type/autocomplete-cell-type.md)
-- [Cell type](@/guides/cell-types/cell-type/cell-type.md)
-- [Select cell type](@/guides/cell-types/select-cell-type/select-cell-type.md)
+- [自动完成单元格类型](@/guides/cell-types/autocomplete-cell-type/autocomplete-cell-type.md)
+- [细胞类型](@/guides/cell-types/cell-type/cell-type.md)
+- [选择单元格类型](@/guides/cell-types/select-cell-type/select-cell-type.md)
 
 </div>
 

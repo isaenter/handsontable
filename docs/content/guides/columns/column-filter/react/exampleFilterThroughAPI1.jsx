@@ -10,35 +10,35 @@ registerAllModules();
 const ExampleComponent = () => {
   const hotTableComponentRef = useRef(null);
   const filterBelow200 = () => {
-    // get the `Filters` plugin, so you can use its API
+    // 获取`Filters`插件，这样你就可以使用它的API
     const filters =
       hotTableComponentRef.current?.hotInstance?.getPlugin('filters');
 
-    // clear any existing filters
+    // 清除所有现有的过滤器
     filters?.clearConditions();
-    // filter data by the 'Price' column (column at index 2)
-    // to display only items that are less than ('lt') $200
+    // 按`价格`列（索引 2 处的列）过滤数据
+    // 仅显示低于 ('lt') $200 的商品
     filters?.addCondition(2, 'lt', [200]);
     filters?.filter();
   };
 
   const filterAbove200 = () => {
-    // get the `Filters` plugin, so you can use its API
+    // 获取`Filters`插件，这样你就可以使用它的API
     const filters =
       hotTableComponentRef.current?.hotInstance?.getPlugin('filters');
 
     filters?.clearConditions();
-    // display only items that are more than ('gt') $200
+    // 仅显示超过 ('gt') $200 的商品
     filters?.addCondition(2, 'gt', [200]);
     filters?.filter();
   };
 
   const clearAllFilters = () => {
-    // get the `Filters` plugin, so you can use its API
+    // 获取`Filters`插件，这样你就可以使用它的API
     const filters =
       hotTableComponentRef.current?.hotInstance?.getPlugin('filters');
 
-    // clear all filters
+    // 清除所有过滤器
     filters?.clearConditions();
     filters?.filter();
   };
@@ -137,9 +137,9 @@ const ExampleComponent = () => {
             className: 'htCenter',
           },
         ]}
-        // enable filtering
+        // 启用过滤
         filters={true}
-        // enable the column menu
+        // 启用列菜单
         dropdownMenu={true}
         height="auto"
         autoWrapRow={true}

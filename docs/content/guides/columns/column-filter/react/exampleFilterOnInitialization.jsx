@@ -13,11 +13,11 @@ const ExampleComponent = () => {
 
   useEffect(() => {
     const handsontableInstance = hotTableComponentRef.current?.hotInstance;
-    // get the `Filters` plugin, so you can use its API
+    // 获取`Filters`插件，这样你就可以使用它的API
     const filters = handsontableInstance?.getPlugin('filters');
 
-    // filter data by the 'Price' column (column at index 2)
-    // to display only items that are less than ('lt') $200
+    // 按`价格`列（索引 2 处的列）过滤数据
+    // 仅显示低于 ('lt') $200 的商品
     filters?.addCondition(2, 'lt', [200]);
     filters?.filter();
   }, []);
@@ -110,9 +110,9 @@ const ExampleComponent = () => {
           className: 'htCenter',
         },
       ]}
-      // enable filtering
+      // 启用过滤
       filters={true}
-      // enable the column menu
+      // 启用列菜单
       dropdownMenu={true}
       height="auto"
       autoWrapRow={true}

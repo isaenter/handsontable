@@ -91,7 +91,7 @@ const ExampleComponent = () => {
       hiddenColumns={{
         columns: [3, 5, 9],
         indicators: true,
-        // exclude hidden columns from copying and pasting
+        // 从复制和粘贴中排除隐藏列
         copyPasteEnabled: false,
       }}
     />

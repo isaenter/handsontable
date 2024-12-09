@@ -1,6 +1,6 @@
 ---
 id: p25m5sco
-title: Date cell type
+title: 日期单元格类型
 metaTitle: Date cell type - JavaScript Data Grid | Handsontable
 description: Use the date cell type to display, format, and validate date values. Pick a date using an interactive pop-up editor.
 permalink: /date-cell-type
@@ -12,17 +12,17 @@ searchCategory: Guides
 category: Cell types
 ---
 
-# Date cell type
+# 日期单元格类型
 
-Use the date cell type to display, format, and validate date values. Pick a date using an interactive pop-up editor.
+使用日期单元格类型来显示、格式化和验证日期值。使用交互式弹出编辑器选择日期。
 
 [[toc]]
 
-## Usage
+## 用法
 
-To set the date cell type, use the option `type: 'date'` in the [`columns`](@/api/options.md#columns) array or [`cells`](@/api/options.md#cells) function. The date cell uses [Pikaday datepicker](https://github.com/dbushell/Pikaday) as the UI control. Pikaday uses [Moment.js](https://github.com/moment/moment) as a date formatter.
+要设置日期单元格类型，请在 [`columns`](@/api/options.md#columns) 数组或 [`cells`](@/api/options.md) 中使用选项 `type: 'date'` #cells）功能。日期单元格使用 [Pikaday datepicker](https://github.com/dbushell/Pikaday) 作为 UI 控件。 Pikaday 使用 [Moment.js](https://github.com/moment/moment) 作为日期格式化程序。
 
-Note that date cell requires additional modules :
+请注意，日期单元格需要额外的模块：
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/moment@2.29.4/moment.min.js"></script>
@@ -30,17 +30,17 @@ Note that date cell requires additional modules :
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@handsontable/pikaday@1.0.0/css/pikaday.min.css">
 ```
 
-## Date format
+## 日期格式
 
-`date` cells accept strings that are formatted in line with the [`dateFormat`](@/api/options.md#dateformat) setting.
+`date`单元格接受格式符合 [`dateFormat`](@/api/options.md#dateformat) 设置的字符串。
 
-The default date format is `'DD/MM/YYYY'`.
+默认日期格式为`DD/MM/YYYY`。
 
-Handsontable doesn't support JavaScript's `Date` object.
+Handsontable 不支持 JavaScript 的`Date`对象。
 
-### Change the date format
+### 更改日期格式
 
-To change the date format accepted by `date` cells, set the [`dateFormat`](@/api/options.md#dateformat) configuration option to a string with your preferred format. For example:
+要更改`date`单元格接受的日期格式，请将 [`dateFormat`](@/api/options.md#dateformat) 配置选项设置为具有您首选格式的字符串。例如：
 
 ::: only-for javascript
 
@@ -58,22 +58,23 @@ dateFormat={'YYYY-MM-DD'}
 
 :::
 
-### Autocorrect invalid dates
+### 自动更正无效日期
 
-By default, when the user enters a date in a format that doesn't match the [`dateFormat`](@/api/options.md#dateformat) setting, the date is treated as invalid.
+默认情况下，当用户输入的日期格式与 [`dateFormat`](@/api/options.md#dateformat) 设置不匹配时，该日期将被视为无效。
 
-You can let Handsontable correct such dates automatically, so they match the required format. To do this, set the [`correctFormat`](@/api/options.md#correctformat) option to `true`. For example:
+您可以让 Handsontable 自动更正此类日期，使它们符合所需的格式。为此，请将 [` CorrectFormat`](@/api/options.md# Correctformat) 选项设置为 `true`。
+例如：
 
 ::: only-for javascript
 
 ```js
 dateFormat: 'YYYY-MM-DD',
 
-// default behavior
-// date entered as `30/12/2022` will be invalid
+// 默认行为
+// 输入的日期为`30/12/2022`将无效
 correctFormat: false,
 
-// date entered as `30/12/2022` will be corrected to `2022/12/30`
+// 输入的日期`30/12/2022`将更正为`2022/12/30`
 correctFormat: true,
 ```
 
@@ -84,19 +85,19 @@ correctFormat: true,
 ```jsx
 dateFormat={'YYYY-MM-DD'}
 
-// default behavior
-// date entered as `30/12/2022` will be invalid
+// 默认行为
+// 输入的日期为`30/12/2022`将无效
 correctFormat={false}
 
-// date entered as `30/12/2022` will be corrected to `2022/12/30`
+// 输入的日期`30/12/2022`将更正为`2022/12/30`
 correctFormat={true}
 ```
 
 :::
 
-## Basic example
+## 基本示例
 
-Click on one of the ▼ icons to open an interactive date editor.
+单击 ▼ 图标之一打开交互式日期编辑器。
 
 ::: only-for javascript
 

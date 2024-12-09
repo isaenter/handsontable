@@ -1,6 +1,6 @@
 ---
 id: qiasr3y1
-title: Column headers
+title: 列标题
 metaTitle: Column headers - JavaScript Data Grid | Handsontable
 description: Use default column headers (A, B, C), or set them to custom values provided by an array or a function.
 permalink: /column-header
@@ -12,21 +12,20 @@ searchCategory: Guides
 category: Columns
 ---
 
-# Column headers
+# 列标题
 
-Use default column headers (A, B, C), or set them to custom values provided by an array or a function.
+使用默认列标题（A、B、C），或将它们设置为数组或函数提供的自定义值。
 
 [[toc]]
 
 ## 概述
 
-Column headers are gray-colored rows used to label each column or group of columns. By default, these headers are populated with letters in alphabetical order.
+列标题是灰色行，用于标记每一列或一组列。默认情况下，这些标头按字母顺序填充字母。
 
-To reflect the type or category of data in a particular column, give it a custom name and then display it in a column header. For example, instead of letters as labels such as `A, B, C, ...` name them `ID, Full name, Country, ...`.
+要反映特定列中数据的类型或类别，请为其指定自定义名称，然后将其显示在列标题中。例如，不要将字母作为标签，如`A、B、C、...`，而是将它们命名为`ID、全名、国家/地区...`。
 
-## Default headers
-
-Setting the [`colHeaders`](@/api/options.md#colheaders) option to `true` enables the default column headers as shown in the example below:
+## 默认标头
+将 [`colHeaders`](@/api/options.md#colheaders) 选项设置为 `true` 会启用默认列标题，如下例所示：
 
 ::: only-for javascript
 
@@ -50,8 +49,8 @@ Setting the [`colHeaders`](@/api/options.md#colheaders) option to `true` enables
 
 :::
 
-## Header labels as an array
-An array of labels can be used to set the [`colHeaders`](@/api/options.md#colheaders) as shown in the example below:
+## 标头标签作为数组
+标签数组可用于设置 [`colHeaders`](@/api/options.md#colheaders)，如下例所示：
 
 ::: only-for javascript
 
@@ -75,8 +74,8 @@ An array of labels can be used to set the [`colHeaders`](@/api/options.md#colhea
 
 :::
 
-## Header labels as a function
-The [`colHeaders`](@/api/options.md#colheaders) can also be populated using a function as shown in the example below:
+## 标头标签作为函数
+[`colHeaders`](@/api/options.md#colheaders) 也可以使用函数填充，如下例所示：
 
 ::: only-for javascript
 
@@ -100,11 +99,11 @@ The [`colHeaders`](@/api/options.md#colheaders) can also be populated using a fu
 
 :::
 
-## Customize column headers
+## 自定义列标题
 
-You can align the text in the header label with the [`headerClassName`](@/api/options.md#headerclassname) option. Setting it to `htLeft`, `htCenter`, or `htRight` will align the header labels to the left, center, or right, respectively.
+您可以将标题标签中的文本与 [`headerClassName`](@/api/options.md#headerclassname) 选项对齐。将其设置为`htLeft`、`htCenter`或`htRight`将分别将标题标签向左、居中或向右对齐。
 
-You can also set the alignment for a specific column by using the [`columns`](@/api/options.md#columns) option.
+您还可以使用 [`columns`](@/api/options.md#columns) 选项设置特定列的对齐方式。
 
 ::: only-for javascript
 
@@ -128,7 +127,7 @@ You can also set the alignment for a specific column by using the [`columns`](@/
 
 :::
 
-If you want to style the header labels, you can pass any number of class names, separated by a space, to the [`headerClassName`](@/api/options.md#headerclassname) option.
+如果要设置标题标签的样式，可以将任意数量的类名（以空格分隔）传递给 [`header ClassName`](@/api/options.md#headerclassname) 选项。
 
 ::: only-for javascript
 
@@ -154,9 +153,9 @@ If you want to style the header labels, you can pass any number of class names, 
 
 :::
 
-## Nested headers
+## 嵌套标头
 
-More complex data structures can be displayed with multiple headers, each representing a different category of data. To learn more about nested headers, see the [column groups](@/guides/columns/column-groups/column-groups.md) page.
+更复杂的数据结构可以用多个标题来显示，每个标题代表不同的数据类别。要了解有关嵌套标题的更多信息，请参阅[列组](@/guides/columns/column-groups/column-groups.md)页面。
 
 ## 相关文章
 
@@ -164,7 +163,7 @@ More complex data structures can be displayed with multiple headers, each repres
 
 <div class="boxes-list gray">
 
-- [Column groups](@/guides/columns/column-groups/column-groups.md)
+- [列组](@/guides/columns/column-groups/column-groups.md)
 
 </div>
 

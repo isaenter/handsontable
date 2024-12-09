@@ -1,6 +1,6 @@
 ---
 id: l5a447bl
-title: Numeric cell type
+title: 数字单元格类型
 metaTitle: Numeric cell type - JavaScript Data Grid | Handsontable
 description: Display, format, sort, and filter numbers correctly by using the numeric cell type.
 permalink: /numeric-cell-type
@@ -12,23 +12,23 @@ searchCategory: Guides
 category: Cell types
 ---
 
-# Numeric cell type
+# 数字单元格类型
 
-Display, format, sort, and filter numbers correctly by using the numeric cell type.
+使用数字单元格类型正确显示、格式化、排序和过滤数字。
 
 [[toc]]
 
 ## 概述
 
-The default cell type in Handsontable is text. The data of a text cell is processed as a `string`
-type that corresponds to the value of the text editor's internal `<textarea>` element. However,
-there are many cases where you need cell values to be treated as a `number` type. The numeric cell
-type allows you to format displayed numbers nicely and sort them correctly.
+Handsontable 中的默认单元格类型是文本。文本单元格的数据被处理为`字符串`
+与文本编辑器内部`<textarea>`元素的值相对应的类型。然而，
+在很多情况下，您需要将单元格值视为`数字`类型。数字单元格
+type 允许您很好地格式化显示的数字并正确排序。
 
-## Numeric cell type demo
+## 数字单元格类型演示
 
-In the following demo, columns **Year**, **Price ($)**, and **Price (€)** use the numeric cell type.
-Click on the column names to sort them.
+在以下演示中，列**年份**、**价格 ($)**和 **价格 (€)**使用数字单元格类型。
+单击列名称对其进行排序。
 
 ::: only-for javascript
 
@@ -52,24 +52,24 @@ Click on the column names to sort them.
 
 :::
 
-## Use the numeric cell type
+## 使用数字单元格类型
 
-To use the numeric cell type, set the [`type`](@/api/options.md#type) option to `'numeric'`:
+要使用数字单元格类型，请将 [`type`](@/api/options.md#type) 选项设置为 `'numeric'`：
 
 ::: only-for javascript
 
 ```js
-// set the numeric cell type for each cell of the entire grid
+// 为整个网格的每个单元格设置数字单元格类型
 type: 'numeric',
 
-// set the numeric cell type for each cell of a single column
+// 为单列的每个单元格设置数字单元格类型
 columns: [
   {
     type: 'numeric',
   },
 ]
 
-// set the numeric cell type for a single cell
+// 设置单个单元格的数字单元格类型
 cell: [
   {
     row: 0,
@@ -84,15 +84,15 @@ cell: [
 ::: only-for react
 
 ```jsx
-// set the numeric cell type for each cell of the entire grid
+// 为整个网格的每个单元格设置数字单元格类型
 type={'numeric'},
 
-// set the numeric cell type for each cell of a single column
+// 为单列的每个单元格设置数字单元格类型
 columns={[{
   type: 'numeric',
 }]}
 
-// set the numeric cell type for a single cell
+// 设置单个单元格的数字单元格类型
 cell={[{
   row: 0,
   col: 0,
@@ -102,20 +102,20 @@ cell={[{
 
 :::
 
-Mind that Handsontable doesn't parse strings to numbers. In your data source, make sure to store
-numeric cell values as numbers, not as strings.
+请注意，Handsontable 不会将字符串解析为数字。在您的数据源中，确保存储
+数字单元格值为数字，而不是字符串。
 
-All positive and negative integers whose magnitude is no greater than 253 (+/- 9007199254740991) are
-representable in the `Number` type, i.e., as a safe integer. Any calculations that are performed on
-bigger numbers won't be calculated precisely, due to JavaScript's limitations.
+所有大小不大于 253 (+/-9007199254740991) 的正整数和负整数
+可以用`Number`类型表示，即作为安全整数。执行的任何计算
+由于 JavaScript 的限制，更大的数字将无法精确计算。
 
-## Format numbers
+## 格式化数字
 
-To format the look of numeric values in [cell renderers](@/guides/cell-functions/cell-renderer/cell-renderer.md),
-use the [`numericFormat`](@/api/options.md#numericformat) option.
+要格式化[单元格渲染器](@/guides/cell-functions/cell-renderer/cell-renderer.md)中数值的外观，
+使用 [`numericFormat`](@/api/options.md#numericformat) 选项。
 
-In the following demo, columns **Price in Japan** and **Price in Turkey** use two different
-[`numericFormat`](@/api/options.md#numericformat) configurations.
+在以下演示中，列 **日本价格**和 **土耳其价格**使用两种不同的
+[`numericFormat`](@/api/options.md#numericformat) 配置。
 
 ::: only-for javascript
 
@@ -139,24 +139,24 @@ In the following demo, columns **Price in Japan** and **Price in Turkey** use tw
 
 :::
 
-Mind that the [`numericFormat`](@/api/options.md#numericformat) option doesn't change the way
-numbers are presented or parsed by the [cell editor](@/guides/cell-functions/cell-editor/cell-editor.md). When
-you edit a numeric cell:
+请注意 [`numericFormat`](@/api/options.md#numericformat) 选项不会改变方式
+数字由[单元格编辑器](@/guides/cell-functions/cell-editor/cell-editor.md) 呈现或解析。什么时候
+您编辑数字单元格：
 
-- Regardless of the [`numericFormat`](@/api/options.md#numericformat) configuration, the number
-  that's being edited displays its decimal separator as a period (`.`), and has no thousands
-  separator or currency symbol.<br>For example, during editing `$7,000.02`, the number displays as
-  `7000.02`.
-- You can enter a decimal separator either with a period (`.`), or with a comma (`,`).
-- You can't enter a thousands separator. After you finish editing the cell, the thousands
-  separator is added automatically, based on your [`numericFormat`](@/api/options.md#numericformat)
-  configuration.
+- 无论 [`numericFormat`](@/api/options.md#numericformat) 配置如何，数字
+  正在编辑的文件将其小数点分隔符显示为句点 (`.`)，并且没有千位
+分隔符或货币符号。<br>例如，在编辑`$7,000.02`期间，数字显示为
+  `7000.02`。
+- 您可以使用句点 (`.`) 或逗号 (`,`) 输入小数点分隔符。
+- 您不能输入千位分隔符。完成单元格编辑后，数千个
+  根据您的 [`numericFormat`](@/api/options.md#numericformat) 自动添加分隔符
+  配置。
 
 ## 相关文章
 
 ### 相关指南
 
-- [Cell type](@/guides/cell-types/cell-type/cell-type.md)
+- [单元格类型](@/guides/cell-types/cell-type/cell-type.md)
 
 ### 相关API参考
 

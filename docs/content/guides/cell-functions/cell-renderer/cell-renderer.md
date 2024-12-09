@@ -44,7 +44,7 @@ category: Cell functions
 
 渲染器是决定单元格外观的函数。
 
-设置在一起，渲染器，[编辑器](@/guides/cell-functions/cell-editor/cell-editor.md) 和 [验证器](@/guides/cell-functions/cell-validator/cell-validator.md ）形成[细胞类型](@/guides/cell-types/cell-type/cell-type.md)。
+设置在一起，渲染器，[编辑器](@/guides/cell-functions/cell-editor/cell-editor.md) 和 [验证器](@/guides/cell-functions/cell-validator/cell-validator.md ）形成[单元格类型](@/guides/cell-types/cell-type/cell-type.md)。
 
 ## 将自定义渲染器声明为组件
 

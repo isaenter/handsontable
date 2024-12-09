@@ -26,21 +26,21 @@ const ExampleComponent = () => {
           type: 'text',
         },
         {
-          // 2nd cell is simple text, no special options here
+          // 第二个单元格是简单文本，这里没有特殊选项
         },
         {
           type: 'date',
           dateFormat: 'MM/DD/YYYY',
           correctFormat: true,
           defaultDate: '01/01/1900',
-          // datePicker additional options
-          // (see https://github.com/dbushell/Pikaday#configuration)
+          // datePicker 附加选项
+          // （参见https://github.com/dbushell/Pikaday#configuration）
           datePickerConfig: {
-            // First day of the week (0: Sunday, 1: Monday, etc)
+            // 一周的第一天（0：星期日，1：星期一等）
             firstDay: 0,
             showWeekNumber: true,
             disableDayFn(date) {
-              // Disable Sunday and Saturday
+              // 周日、周六禁用
               return date.getDay() === 0 || date.getDay() === 6;
             },
           },

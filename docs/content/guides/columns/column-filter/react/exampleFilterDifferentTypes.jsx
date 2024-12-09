@@ -59,13 +59,13 @@ const ExampleComponent = () => {
       columns={[
         {
           title: 'Model',
-          // set the type of the 'Model' column
+          // 设置`模型`列的类型
           type: 'text',
           data: 'model',
         },
         {
           title: 'Price',
-          // set the type of the 'Price' column
+          // 设置`价格`列的类型
           type: 'numeric',
           data: 'price',
           numericFormat: {
@@ -75,7 +75,7 @@ const ExampleComponent = () => {
         },
         {
           title: 'Sold on',
-          // set the type of the 'Date' column
+          // 设置`日期`列的类型
           type: 'date',
           data: 'sellDate',
           dateFormat: 'MMM D, YYYY',
@@ -84,7 +84,7 @@ const ExampleComponent = () => {
         },
         {
           title: 'Time',
-          // set the type of the 'Time' column
+          // 设置`时间`列的类型
           type: 'time',
           data: 'sellTime',
           timeFormat: 'hh:mm A',
@@ -93,14 +93,14 @@ const ExampleComponent = () => {
         },
         {
           title: 'In stock',
-          // set the type of the 'In stock' column
+          // 设置`库存`列的类型
           type: 'checkbox',
           data: 'inStock',
           className: 'htCenter',
         },
         {
           title: 'Size',
-          // set the type of the 'Size' column
+          // 设置`大小`列的类型
           type: 'dropdown',
           data: 'size',
           source: ['XS', 'S', 'M', 'L', 'XL'],
@@ -108,16 +108,16 @@ const ExampleComponent = () => {
         },
         {
           title: 'Color',
-          // set the type of the 'Size' column
+          // 设置`大小`列的类型
           type: 'autocomplete',
           data: 'color',
           source: ['White', 'Black', 'Yellow', 'Blue', 'Green'],
           className: 'htCenter',
         },
       ]}
-      // enable filtering
+      // 启用过滤
       filters={true}
-      // enable the column menu
+      // 启用列菜单
       dropdownMenu={true}
       height={175}
       autoWrapRow={true}

@@ -1,6 +1,6 @@
 ---
 id: k4mb003v
-title: Column groups
+title: 列组
 metaTitle: Column groups - JavaScript Data Grid | Handsontable
 description: Group your columns, using multiple levels of nested column headers, to better reflect the structure of your data.
 permalink: /column-groups
@@ -17,20 +17,20 @@ searchCategory: Guides
 category: Columns
 ---
 
-# Column groups
+# 列组
 
-Group your columns, using multiple levels of nested column headers, to better reflect the structure of your data.
+使用多层嵌套列标题对列进行分组，以更好地反映数据的结构。
 
 [[toc]]
 
-## Nested column headers
+## 嵌套列标题
 
-The [`NestedHeaders`](@/api/nestedHeaders.md) plugin allows you to create a nested headers structure by using the `colspan` attribute.
+[`NestedHeaders`](@/api/nestedHeaders.md) 插件允许您使用 `colspan` 属性创建嵌套标头结构。
 
-To create a header that spans multiple columns, its corresponding configuration array element should be provided as an object with `label` and `colspan`
-properties. The `label` property defines the header's label, while the `colspan` property defines the number of columns that the header should cover.
+要创建跨多列的标题，应将其相应的配置数组元素作为带有`label`和`colspan`的对象提供
+特性。 `label`属性定义标题的标签，而`colspan`属性定义标题应覆盖的列数。
 
-### Configuration
+### 配置
 
 ::: only-for javascript
 
@@ -58,7 +58,7 @@ nestedHeaders={[
 
 :::
 
-### Example
+### 例子
 
 ::: only-for javascript
 
@@ -82,28 +82,28 @@ nestedHeaders={[
 
 :::
 
-## Collapsible headers
+## 可折叠标题
 
-The [`CollapsibleColumns`](@/api/collapsibleColumns.md) plugin enables columns and their headers to be collapsed/expanded.
+[`CollapsibleColumns`](@/api/collapsibleColumns.md) 插件允许折叠/展开列及其标题。
 
-This plugin adds multi-column headers which have buttons. Clicking these buttons will collapse or expand all "child" headers, leaving the first one visible.
+该插件添加了带有按钮的多列标题。单击这些按钮将折叠或展开所有`子`标题，使第一个标题可见。
 
-The [`NestedHeaders`](@/api/nestedHeaders.md) plugin needs to be enabled for this to work properly.
+需要启用 [`NestedHeaders`](@/api/nestedHeaders.md) 插件才能正常工作。
 
-### Configuration
+### 配置
 
-To enable the Collapsible Columns plugin, either set the [`collapsibleColumns`](@/api/options.md#collapsiblecolumns) configuration option to:
+要启用可折叠列插件，请将 [`collapsibleColumns`](@/api/options.md#collapsiblecolumns) 配置选项设置为：
 
-- `true` - this will enable the functionality for _all_ multi-column headers, every column with the `colspan` attribute defined will be extended with the
-  "expand/collapse" button
-- An array of objects containing information specifying which headers should have the "expand/collapse" buttons for example:
-
+- `true` -这将启用_all_多列标题的功能，定义了`colspan`属性的每一列都将使用
+  `展开/折叠`按钮
+- 包含指定哪些标题应具有`展开/折叠`按钮的信息的对象数组，例如：
+- 
 ::: only-for javascript
 
 ```js
 collapsibleColumns: [
-  { row: -4, col: 1, collapsible: true }, // Add the button to the 4th-level header of the 1st column - counting from the first table row upwards.
-  { row: -3, col: 5, collapsible: true }, // Add the button to the 3rd-level header of the 5th column - counting from the first table row upwards.
+  { row: -4, col: 1, collapsible: true }, //将按钮添加到第 1 列的第 4 级标题 -从第一个表格行向上计数。
+  { row: -3, col: 5, collapsible: true }, //将按钮添加到第 5 列的第 3 级标题 -从第一个表格行向上计数。
 ];
 ```
 
@@ -113,14 +113,14 @@ collapsibleColumns: [
 
 ```jsx
 collapsibleColumns={[
-  { row: -4, col: 1, collapsible: true }, // Add the button to the 4th-level header of the 1st column - counting from the first table row upwards.
-  { row: -3, col: 5, collapsible: true } // Add the button to the 3rd-level header of the 5th column - counting from the first table row upwards.
+  { row: -4, col: 1, collapsible: true }, //将按钮添加到第 1 列的第 4 级标题 -从第一个表格行向上计数。
+  { row: -3, col: 5, collapsible: true } //将按钮添加到第 5 列的第 3 级标题 -从第一个表格行向上计数。
 ]}
 ```
 
 :::
 
-### Example
+### 例子
 
 ::: only-for javascript
 
@@ -144,17 +144,17 @@ collapsibleColumns={[
 
 :::
 
-## Known limitations
+## 已知的限制
 
-- A column header can span up to 1000 columns, as the [HTML table specification](https://html.spec.whatwg.org/multipage/tables.html#dom-tdth-colspan) sets the
-  limit of `colspan` to `1000`.
-- A nested column header can't be wider than its parent element (headers can't overlap).
+- 列标题最多可以跨越 1000 列，因为 [HTML 表格规范](https://html.spec.whatwg.org/multipage/tables.html#dom-tdth-colspan) 设置了
+  `colspan` 的限制为 `1000`。
+- 嵌套列标题不能比其父元素宽（标题不能重叠）。
 
 ## 相关键盘快捷键
 
-| Windows                                     | macOS                                        | Action                                                  |  Excel  | Sheets  |
-| ------------------------------------------- | -------------------------------------------- | ------------------------------------------------------- | :-----: | :-----: |
-| <kbd>**Enter**</kbd>                        | <kbd>**Enter**</kbd>                         | Collapse or expand the selected column group            | &cross; | &cross; |
+| Windows              | macOS                | Action               |  Excel  | Sheets  |
+| -------------------- | -------------------- | -------------------- | :-----: | :-----: |
+| <kbd>**Enter**</kbd> | <kbd>**Enter**</kbd> | 折叠或展开选定的列组 | &cross; | &cross; |
 
 ## 相关API参考
 

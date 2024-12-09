@@ -1,6 +1,6 @@
 ---
 id: cjib1mhw
-title: Autocomplete cell type
+title: 自动完成单元格类型
 metaTitle: Autocomplete cell type - JavaScript Data Grid | Handsontable
 description: Collect user input with a list of choices, by using the autocomplete cell type.
 permalink: /autocomplete-cell-type
@@ -12,22 +12,23 @@ searchCategory: Guides
 category: Cell types
 ---
 
-# Autocomplete cell type
+# 自动完成单元格类型
 
-Collect user input with a list of choices, by using the autocomplete cell type.
+使用自动完成单元格类型收集用户输入的选项列表。
 
 [[toc]]
 
 ## 概述
 
-You can complete the autocomplete cell type in three different ways:
-- Flexible mode
-- Strict mode
-- Strict mode using Ajax
+您可以通过三种不同的方式完成自动完成单元格类型：
 
-## Autocomplete flexible mode
+- 灵活的模式
+- 严格模式
+- 使用 Ajax 的严格模式
 
-This example uses the `autocomplete` feature in the default flexible mode. In this mode, the user can choose one of the suggested options while typing or enter a custom value that is not included in the suggestions.
+## 自动完成灵活模式
+
+此示例在默认灵活模式下使用`自动完成`功能。在此模式下，用户可以在键入时选择建议选项之一，或输入建议中未包含的自定义值。
 
 ::: only-for javascript
 
@@ -53,17 +54,17 @@ This example uses the `autocomplete` feature in the default flexible mode. In th
 
 :::
 
-## Autocomplete strict mode
+## 自动完成严格模式
 
-This is the same example as above, the difference being that `autocomplete` now runs in strict mode. In this mode, the autocomplete cells will only accept values that are defined in the source array. The mouse and keyboard bindings are identical to the `Handsontable` cell type but with the differences below:
+这与上面的示例相同，不同之处在于`自动完成`现在在严格模式下运行。在此模式下，自动完成单元格将仅接受源数组中定义的值。鼠标和键盘绑定与`Handsontable`单元类型相同，但有以下差异：
 
-- If there is at least one option visible, there always is a selection in HOT-in-HOT
-- When the first row is selected, pressing <kbd>**Arrow Up**</kbd> does not deselect HOT-in-HOT. Instead, it behaves as the <kbd>**Enter**</kbd> key but moves the selection in the main HOT upwards
+-如果至少有一个选项可见，则总有一个选项位于 HOT-in-HOT 中
+-当选择第一行时，按 <kbd>**向上箭头**</kbd> 不会取消选择 HOT-in-HOT。相反，它的行为类似于 <kbd>**Enter**</kbd> 键，但向上移动主 HOT 中的选择
 
-In strict mode, the [`allowInvalid`](@/api/options.md#allowinvalid) option determines the behaviour in the case of manual user input:
+在严格模式下， [`allowInvalid`](@/api/options.md#allowinvalid) 选项决定手动用户输入情况下的行为：
 
-- [`allowInvalid: true`](@/api/options.md#allowinvalid) optional - allows manual input of a value that does not exist in the `source`, the field background is highlighted in red, and the selection advances to the next cell
-- [`allowInvalid: false`](@/api/options.md#allowinvalid) - does not allow manual input of a value that does not exist in the `source`, the <kbd>**Enter**</kbd> key is ignored, and the editor field remains open
+- [`allowInvalid: true`](@/api/options.md#allowinvalid) 可选 -允许手动输入`source`中不存在的值，字段背景以红色突出显示，选择前进到下一个单元格
+- [`allowInvalid: false`](@/api/options.md#allowinvalid) -不允许手动输入`source`中不存在的值，<kbd>**Enter**</kbd > 键被忽略，编辑器字段保持打开状态
 
 ::: only-for javascript
 
@@ -89,9 +90,9 @@ In strict mode, the [`allowInvalid`](@/api/options.md#allowinvalid) option deter
 
 :::
 
-## Autocomplete strict mode (Ajax)
+## 自动完成严格模式（Ajax）
 
-Autocomplete can also be used with Ajax data sources. In the example below, suggestions for the "Car" column are loaded from the server. To load data from a remote *asynchronous* source, assign a function to the 'source' property. The function should perform the server-side request and call the callback function when the result is available.
+自动完成功能还可以与 Ajax 数据源一起使用。在下面的示例中，`汽车`列的建议是从服务器加载的。要从远程*异步*源加载数据，请将函数分配给`source`属性。该函数应执行服务器端请求并在结果可用时调用回调函数。
 
 ::: only-for javascript
 
@@ -121,9 +122,9 @@ Autocomplete can also be used with Ajax data sources. In the example below, sugg
 
 ### 相关指南
 
-- [Cell type](@/guides/cell-types/cell-type/cell-type.md)
-- [Dropdown cell type](@/guides/cell-types/dropdown-cell-type/dropdown-cell-type.md)
-- [Select cell type](@/guides/cell-types/select-cell-type/select-cell-type.md)
+- [单元格类型](@/guides/cell-types/cell-type/cell-type.md)
+- [下拉单元格类型](@/guides/cell-types/dropdown-cell-type/dropdown-cell-type.md)
+- [选择单元格类型](@/guides/cell-types/select-cell-type/select-cell-type.md)
 
 ### 相关API参考
 

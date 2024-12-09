@@ -49,8 +49,8 @@ const ExampleComponent = () => {
             getValue() {
               const selection = this.getSelectedLast();
 
-              // Get the manufacturer name of the clicked row and ignore header
-              // coordinates (negative values)
+              // 获取点击行的制造商名称并忽略标题
+              // 坐标（负值）
               return this.getSourceDataAtRow(Math.max(selection[0], 0)).name;
             },
           },

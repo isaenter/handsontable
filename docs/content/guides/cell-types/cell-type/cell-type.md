@@ -1,6 +1,6 @@
 ---
 id: de2hxgso
-title: Cell type
+title: 细胞类型
 metaTitle: Cell type - JavaScript Data Grid | Handsontable
 description: Use Handsontable's built-in cell types such as autocomplete, date, time, and more, for consistent UI across cell renderer, editor, and validator.
 permalink: /cell-type
@@ -12,29 +12,30 @@ searchCategory: Guides
 category: Cell types
 ---
 
-# Cell type
+# 细胞类型
 
-Use Handsontable's built-in cell types such as autocomplete, date, time, and more, for consistent UI across cell renderer, editor, and validator.
+使用 Handsontable 的内置单元格类型（例如自动完成、日期、时间等），在单元格渲染器、编辑器和验证器之间实现一致的 UI。
 
 [[toc]]
 
 ## 概述
 
-There are three functions associated with every table cell: [`renderer`](@/api/options.md#renderer), [`editor`](@/api/options.md#editor), and optionally [`validator`](@/api/options.md#validator). These functions are mostly used all together as they are strongly connected.
+每个表格单元格关联三个函数：[`renderer`](@/api/options.md#renderer)、[`editor`](@/api/options.md#editor) 和可选的 [`validator` ](@/api/options.md#validator)。这些函数大多一起使用，因为它们紧密相连。
 
-Example scenario - To store a date in a cell, you would:
-- Use a [`renderer`](@/api/options.md#renderer) to display the date using appropriate formatting `dd/mm/yyyy`, `yyyy-mm-dd`, etc.
-- Use an [`editor`](@/api/options.md#editor) that displays a calendar instead of the default text input, allowing the user to easily pick the right date.
-- Use a [`validator`](@/api/options.md#validator) to check if the value entered by a user is valid.
+示例场景 -要将日期存储在单元格中，您可以：
 
-Cell type is represented by a string i.e. `"text"`, `"numeric"`, `"date"`. Each string is internally mapped to functions associated with this type e.g., `"numeric"` type is associated with the following functions:
+- 使用 [`renderer`](@/api/options.md#renderer) 使用适当的格式`dd/mm/yyyy`、`yyyy-mm-dd`等显示日期。
+- 使用显示日历而不是默认文本输入的[`编辑器`](@/api/options.md#editor)，允许用户轻松选择正确的日期。
+- 使用 [`validator`](@/api/options.md#validator) 检查用户输入的值是否有效。
+
+单元格类型由字符串表示，即`文本`、`数字`、`日期`。每个字符串在内部映射到与该类型关联的函数，例如`numeric`类型与以下函数关联：
 
 - `Handsontable.renderers.NumericRenderer`
 - `Handsontable.editors.TextEditor`
 - `Handsontable.validators.NumericValidator`
 
 
-When Handsontable encounters a cell with the [`type`](@/api/options.md#type) option defined, it checks which cell functions this type refers to and uses them. For example, when setting the column type to `'password'`:
+当 Handsontable 遇到定义了 [`type`](@/api/options.md#type) 选项的单元格时，它会检查该类型引用了哪些单元格函数并使用它们。例如，将列类型设置为`密码`时：
 
 ::: only-for javascript
 
@@ -56,7 +57,7 @@ columns={[{
 
 :::
 
-the functions [`editor`](@/api/options.md#editor), [`renderer`](@/api/options.md#renderer), and [`copyable`](@/api/options.md#copyable) are automatically set as follows:
+函数 [`editor`](@/api/options.md#editor)、[`renderer`](@/api/options.md#renderer) 和 [`copyable`](@/api/options.md #copyable) 自动设置如下：
 
 ::: only-for javascript
 
@@ -82,26 +83,26 @@ columns={[{
 
 :::
 
-## Available cell types
+## 可用的细胞类型
 
-Handsontable comes with nine types:
+Handsontable 有九种类型：
 
-- ["autocomplete"](@/guides/cell-types/autocomplete-cell-type/autocomplete-cell-type.md) or `Handsontable.cellTypes.autocomplete`
-- ["checkbox"](@/guides/cell-types/checkbox-cell-type/checkbox-cell-type.md) or `Handsontable.cellTypes.checkbox`
-- ["date"](@/guides/cell-types/date-cell-type/date-cell-type.md) or `Handsontable.cellTypes.date`
-- ["dropdown"](@/guides/cell-types/dropdown-cell-type/dropdown-cell-type.md) or `Handsontable.cellTypes.dropdown`
-- ["handsontable"](@/guides/cell-types/handsontable-cell-type/handsontable-cell-type.md) or `Handsontable.cellTypes.handsontable`
-- ["numeric"](@/guides/cell-types/numeric-cell-type/numeric-cell-type.md) or `Handsontable.cellTypes.numeric`
-- ["password"](@/guides/cell-types/password-cell-type/password-cell-type.md) or `Handsontable.cellTypes.password`
-- ["select"](@/guides/cell-types/select-cell-type/select-cell-type.md) or `Handsontable.cellTypes.select`
-- ["time"](@/guides/cell-types/time-cell-type/time-cell-type.md) or `Handsontable.cellTypes.time`
-- "text" or `Handsontable.cellTypes.text`
+- ["autocomplete"](@/guides/cell-types/autocomplete-cell-type/autocomplete-cell-type.md) 或 `Handsontable.cellTypes.autocomplete`
+- ["checkbox"](@/guides/cell-types/checkbox-cell-type/checkbox-cell-type.md) 或 `Handsontable.cellTypes.checkbox`
+- ["date"](@/guides/cell-types/date-cell-type/date-cell-type.md) 或 `Handsontable.cellTypes.date`
+- ["dropdown"](@/guides/cell-types/dropdown-cell-type/dropdown-cell-type.md) 或 `Handsontable.cellTypes.dropdown`
+- ["handsontable"](@/guides/cell-types/handsontable-cell-type/handsontable-cell-type.md) 或 `Handsontable.cellTypes.handsontable`
+- ["numeric"](@/guides/cell-types/numeric-cell-type/numeric-cell-type.md) 或 `Handsontable.cellTypes.numeric`
+- ["passw或d"](@/guides/cell-types/passw或d-cell-type/passw或d-cell-type.md) 或 `Handsontable.cellTypes.password`
+- ["select"](@/guides/cell-types/select-cell-type/select-cell-type.md) 或 `Handsontable.cellTypes.select`
+- ["time"](@/guides/cell-types/time-cell-type/time-cell-type.md) 或 `Handsontable.cellTypes.time`
+- "text" 或 `Handsontable.cellTypes.text`
 
-The `text` cell type is the default type.
+`文本`单元格类型是默认类型。
 
-## Anatomy of a cell type
+## 细胞类型的解剖
 
-A cell type is a predefined set of cell properties. Cell type defines which [`renderer`](@/api/options.md#renderer), [`editor`](@/api/options.md#editor) or [`validator`](@/api/options.md#validator) should be used for a cell. They can also define any different cell property that will be assumed for each matching cell:
+单元格类型是一组预定义的单元格属性。单元格类型定义了 [`renderer`](@/api/options.md#renderer)、[`editor`](@/api/options.md#editor) 或 [`validator`](@/api/options. md#validator) 应该用于单元格。他们还可以定义每个匹配单元格假定的任何不同的单元格属性：
 
 ```js
 Handsontable.cellTypes.registerCellType('custom', {
@@ -112,7 +113,7 @@ Handsontable.cellTypes.registerCellType('custom', {
 });
 ```
 
-When used in Handsontable settings:
+在 Handsontable 设置中使用时：
 
 ::: only-for javascript
 
@@ -134,7 +135,7 @@ columns={[{
 
 :::
 
-Is an equivalent to defining them all:
+相当于定义它们全部：
 
 ::: only-for javascript
 
@@ -164,18 +165,18 @@ columns={[{
 
 :::
 
-## Register custom cell type
+## 注册自定义单元格类型
 
-When you create a custom cell type, best practice is to assign it as an alias that will refer to this particular type definition.
+创建自定义单元格类型时，最佳做法是将其指定为引用此特定类型定义的别名。
 
-This gives users a convenient way of defining which cell type should be used for describing cell properties. The user doesn't need to know which part of the code is responsible for rendering, validating, or editing the cell value. They do not even need to know that there are any functions at all. You can change the cell behaviour associated with an alias without changing the code that defines a cell's properties.
+这为用户提供了一种方便的方法来定义应使用哪种细胞类型来描述细胞属性。用户不需要知道代码的哪一部分负责呈现、验证或编辑单元格值。他们甚至不需要知道有任何功能。您可以更改与别名关联的单元格行为，而无需更改定义单元格属性的代码。
 
-To register your own alias use `Handsontable.cellTypes.registerCellType()` function. It takes two arguments:
+要注册您自己的别名，请使用`Handsontable.cellTypes.registerCellType()`函数。它需要两个参数：
 
-- `cellTypeName` - a string representing the cell type object
-- [`type`](@/api/options.md#type) - an object with keys [`editor`](@/api/options.md#editor), [`renderer`](@/api/options.md#renderer), and [`validator`](@/api/options.md#validator) that will be represented by `cellTypeName`
-
-If you'd like to register `copyablePasswordType` under alias `copyable-password`, you need to call:
+- `cellTypeName` -表示细胞类型对象的字符串
+- [`type`](@/api/options.md#type) -带有键的对象 [`editor`](@/api/options.md#editor), [`renderer`](@/api/options .md#renderer) 和 [`validator`](@/api/options.md#validator) 将由 `cellTypeName` 表示
+  
+如果您想在别名`copyable-password`下注册`copyablePasswordType`，您需要调用：
 
 ```js
 Handsontable.cellTypes.registerCellType('copyable-password', {
@@ -184,7 +185,7 @@ Handsontable.cellTypes.registerCellType('copyable-password', {
 });
 ```
 
-Choose aliases wisely. If you register your cell type under name that is already registered, the target function will be overwritten:
+明智地选择别名。如果您使用已注册的名称注册单元格类型，则目标函数将被覆盖：
 
 ```js
 Handsontable.cellTypes.registerCellType('password', {
@@ -192,11 +193,11 @@ Handsontable.cellTypes.registerCellType('password', {
   renderer: copyablePasswordRenderer,
 });
 
-// Now 'password' alias points to the newly created
-// object, not Handsontable.cellTypes.password
+// 现在`密码`别名指向新创建的
+// 对象，而不是 Handsontable.cellTypes.password
 ```
 
-Unless you intentionally want to overwrite an existing alias, try to choose a unique name. Best practice is to prefix your aliases with a custom name to minimize the possibility of name collisions. This is especially important if you want to publish your cell type as you never know what aliases have been registered by a user who uses your cell type.
+除非您故意要覆盖现有别名，否则请尝试选择一个唯一的名称。最佳做法是为别名添加自定义名称前缀，以最大程度地减少名称冲突的可能性。如果您想要发布您的单元格类型，这一点尤其重要，因为您永远不知道使用您的单元格类型的用户注册了哪些别名。
 
 ```js
 Handsontable.cellTypes.registerCellType('copyable-password', {
@@ -204,7 +205,7 @@ Handsontable.cellTypes.registerCellType('copyable-password', {
   renderer: copyablePasswordRenderer,
 });
 ```
-Someone might already registered such alias. It would be better use a unique prefix:
+有人可能已经注册了这样的别名。最好使用唯一的前缀：
 
 ```js
 Handsontable.cellTypes.registerCellType('my.copyable-password', {
@@ -213,38 +214,38 @@ Handsontable.cellTypes.registerCellType('my.copyable-password', {
 });
 ```
 
-To sum up, a well-prepared cell type object should look like this:
+总而言之，一个准备好的单元格类型对象应该是这样的：
 
 ```js
 class MyEditor extends Handsontable.editors.TextEditor {}
 
 function customRenderer(instance, td, row, column, prop, value, cellProperties) {
-  // ...renderer logic
+  // ...渲染器逻辑
 }
 
 function customValidator(query, callback) {
-  // ...validator logic
-  callback(/* Pass `true` or `false` */);
+  // ...验证器逻辑
+  callback(/* 传递 `true` 或 `false` */);
 }
 
-// Register an alias
+// 注册别名
 Handsontable.cellTypes.registerCellType('my.custom', {
   editor: MyEditor,
   renderer: customRenderer,
   validator: customValidator,
-  // You can add additional options to the cell type
-  // based on Handsontable settings
+  // 您可以向单元格类型添加其他选项
+  // 基于 Handsontable 设置
   className: 'my-cell',
   allowInvalid: true,
-  // Or you can add custom properties which
-  // will be accessible in `cellProperties`
+  // 或者您可以添加自定义属性
+  // 可以在 `cellProperties` 中访问
   myCustomCellState: 'complete',
 });
 ```
 
-## Using an alias
+## 使用别名
 
-The next step is to use the registered aliases to enable users to easily refer to them without the need to know what the actual cell type object is. Here's an example of how you would use your cell definition:
+下一步是使用注册的别名，使用户能够轻松引用它们，而无需知道实际的单元类型对象是什么。以下是如何使用单元格定义的示例：
 
 ::: only-for javascript
 
@@ -270,9 +271,9 @@ const hot = new Handsontable(container, {
 
 :::
 
-## Precedence
+## 优先级
 
-It is possible to define the [`type`](@/api/options.md#type) option together with options such as [`renderer`](@/api/options.md#renderer), [`editor`](@/api/options.md#editor) or [`validator`](@/api/options.md#validator). For example:
+可以将 [`type`](@/api/options.md#type) 选项与 [`renderer`](@/api/options.md#renderer)、[`editor`] 等选项一起定义(@/api/options.md#editor) 或 [`validator`](@/api/options.md#validator)。例如：
 
 ::: only-for javascript
 
@@ -280,7 +281,7 @@ It is possible to define the [`type`](@/api/options.md#type) option together wit
 const hot = new Handsontable(container, {
   columns: [{
     type: 'numeric',
-    // validator function defined elsewhere
+    // 其他地方定义的验证器函数
     validator: customValidator
   }]
 });
@@ -294,7 +295,7 @@ const hot = new Handsontable(container, {
 <HotTable
   columns={[{
     type: 'numeric',
-    // validator function defined elsewhere
+    // 其他地方定义的验证器函数
     validator: customValidator
   }]}
 />
@@ -302,7 +303,7 @@ const hot = new Handsontable(container, {
 
 :::
 
-We defined the[`type`](@/api/options.md#type) for all cells in a column to be `numeric`. We also defined a validator function directly. In Handsontable, cell functions that are defined directly always take precedence over functions associated with cell type, so the above configuration is equivalent to:
+我们将列中所有单元格的[`type`](@/api/options.md#type)定义为`numeric`。我们还直接定义了一个验证器函数。在 Handsontable 中，直接定义的单元格函数始终优先于与单元格类型关联的函数，因此上述配置等效于：
 
 ::: only-for javascript
 
@@ -332,13 +333,13 @@ const hot = new Handsontable(container, {
 
 :::
 
-There is one more way you can define the configuration using types:
+您还可以通过另一种方式使用类型定义配置：
 
 ::: only-for javascript
 
 ```js
 const hot = new Handsontable(container, {
-  // validator function defined elsewhere
+  // 其他地方定义的验证器函数
   validator: customValidator,
   columns: [{
     type: 'my.custom'
@@ -361,7 +362,7 @@ const hot = new Handsontable(container, {
 
 :::
 
-Using [cascade configuration](@/guides/getting-started/configuration-options/configuration-options.md#cascading-configuration) we define a table with two columns, with [`validator`](@/api/options.md#validator) set to `customValidator` function. The s[`type`](@/api/options.md#type) of the first column is set to `password`. The `Password` cell type does not define a validator function:
+使用[级联配置](@/guides/getting-started/configuration-options/configuration-options.md#cascading-configuration)我们定义一个包含两列的表，并使用[`validator`](@/api/options.md #validator) 设置为 `customValidator` 函数。第一列的 s[`type`](@/api/options.md#type) 设置为 `password`。 `Password` 单元格类型没有定义验证器函数：
 
 ```js
 {
@@ -371,14 +372,14 @@ Using [cascade configuration](@/guides/getting-started/configuration-options/con
 }
 ```
 
-Because `type: 'password'` is a more specific configuration for the cells in the first column than the `validator: customValidator`, cell functions associated with the `password` type take precedence over the functions defined on the higher level of configuration. Therefore, the equivalent configuration is:
+由于`type: 'password'`对于第一列中的单元格来说是比`validator: customValidator`更具体的配置，因此与`password`类型关联的单元格函数优先于在更高配置级别上定义的函数。因此，等效配置为：
 
 ::: only-for javascript
 
 ```js
 function customValidator(query, callback) {
-  // ...validator logic
-  callback(/* Pass `true` or `false` */);
+  // ...验证器逻辑
+  callback(/*传递`true`或`false`*/);
 }
 
 const hot = new Handsontable(container, {
@@ -400,8 +401,8 @@ const hot = new Handsontable(container, {
 
 ```jsx
 function customValidator(query, callback) {
-  // ...validator logic
-  callback(/* Pass `true` or `false` */);
+  // ...验证器逻辑
+  callback(/* 传递 `true`或`false` */);
 }
 
 <HotTable
@@ -420,9 +421,9 @@ function customValidator(query, callback) {
 
 :::
 
-## Built-in cell types example
+## 内置单元格类型示例
 
-The example below shows some of the built-in cell types, i.e. combinations of cell renderers and editors available in Handsontable. The example also shows the declaration of custom cell renderers, namely `yellowRenderer` and `greenRenderer`.
+下面的示例显示了一些内置单元格类型，即 Handsontable 中可用的单元格渲染器和编辑器的组合。该示例还显示了自定义单元格渲染器的声明，即`yellowRenderer`和`greenRenderer`。
 
 ::: only-for javascript
 
@@ -447,13 +448,13 @@ The example below shows some of the built-in cell types, i.e. combinations of ce
 :::
 
 
-## Empty cells
+## 空单元格
 
-It's worth to mention that values such as `''` (empty string), `null` and `undefined` are considered empty values. Cells with empty values are displayed in a similar way for most of the data types (see below).
+值得一提的是，`''`（空字符串）、`null`和`undefined`等值被视为空值。对于大多数数据类型，具有空值的单元格以类似的方式显示（见下文）。
 
 ::: tip
 
-Please keep in mind that opening a cell with `undefined` and `null` values results in overwriting the original value with an empty string. Moreover, copying and pasting that values will result in pasting the empty string.
+请记住，打开带有`undefined`和`null`值的单元格会导致用空字符串覆盖原始值。此外，复制并粘贴该值将导致粘贴空字符串。
 
 :::
 
@@ -479,7 +480,7 @@ Please keep in mind that opening a cell with `undefined` and `null` values resul
 
 :::
 
-Empty cells may be treated differently in different contexts, for example, the [`ColumnSorting`](@/api/columnSorting.md) plugin has `sortEmptyCells` option which is responsible for establishing whether empty cells should be sorted like non-empty cells.
+在不同的上下文中，空单元格可能会受到不同的处理，例如，[`ColumnSorting`](@/api/columnSorting.md) 插件有 `sortEmptyCells` 选项，它负责确定空单元格是否应该像非空单元格一样排序。
 
 ## 相关文章
 
@@ -487,10 +488,10 @@ Empty cells may be treated differently in different contexts, for example, the [
 
 <div class="boxes-list gray">
 
-- [Cell function](@/guides/cell-functions/cell-function/cell-function.md)
-- [Cell editor](@/guides/cell-functions/cell-editor/cell-editor.md)
-- [Cell renderer](@/guides/cell-functions/cell-renderer/cell-renderer.md)
-- [Cell validator](@/guides/cell-functions/cell-validator/cell-validator.md)
+- [细胞功能](@/guides/cell-functions/cell-function/cell-function.md)
+- [单元格编辑器](@/guides/cell-functions/cell-editor/cell-editor.md)
+- [单元格渲染器](@/guides/cell-functions/cell-renderer/cell-renderer.md)
+- [单元格验证器](@/guides/cell-functions/cell-validator/cell-validator.md)
 
 </div>
 

@@ -1,6 +1,6 @@
 ---
 id: q63yhvq5
-title: Time cell type
+title: 时间单元类型
 metaTitle: Time cell type - JavaScript Data Grid | Handsontable
 description: Use the time cell type to display, format, and validate values as times. The time cell type uses Moment.js as a time formatter.
 permalink: /time-cell-type
@@ -12,30 +12,30 @@ searchCategory: Guides
 category: Cell types
 ---
 
-# Time cell type
+# 时间单元类型
 
-Use the time cell type to display, format, and validate values as times. The time cell type uses Moment.js as a time formatter.
+使用时间单元格类型将值显示为时间、设置格式并验证值。时间单元格类型使用 Moment.js 作为时间格式化程序。
 
 [[toc]]
 
-## Usage
-To use the time cell type, set the `type: 'time'` option in the [`columns`](@/api/options.md#columns) array or the [`cells`](@/api/options.md#cells) function.
-The time cell uses [Moment.js](https://github.com/moment/moment) as the time formatter, therefore you must add the following required dependency:
+## 用法
+要使用时间单元格类型，请在 [`columns`](@/api/options.md#columns) 数组或 [`cells`](@/api/options.md#columns) 数组中设置 `type: 'time'` 选项。 md#cells) 函数。
+时间单元使用 [Moment.js](https://github.com/moment/moment) 作为时间格式化程序，因此您必须添加以下必需的依赖项：
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/moment@2.29.4/moment.min.js"></script>
 ```
 
-All data entered into the time-typed cells is eventually validated against the default time format - `h:mm:ss a`, which translates to, for example, `9:30:00 am` unless another format is provided as the `timeFormat`.
-If you enable the [`correctFormat`](@/api/options.md#correctformat) configuration option, the values will be automatically formatted to match the desired time format.
+输入到时间类型单元格中的所有数据最终都会根据默认时间格式`h:mm:ss a`进行验证，该格式会转换为`9:30:00 am`，除非提供了另一种格式作为“时间格式`.
+如果启用 [` CorrectFormat`](@/api/options.md# Correctformat) 配置选项，这些值将自动格式化以匹配所需的时间格式。
 
 ::: tip
 
-By default, the values entered into the time-type column are not validated, so if you want them to display in the proper format, remember to call [`hot.validateCells()`](@/api/core.md#validatecells) after the table initialization.
+默认情况下，输入到时间类型列中的值不会被验证，因此如果您希望它们以正确的格式显示，请记住调用 [`hot.validateCells()`](@/api/core.md#validatecells ）在表初始化之后。
 
 :::
 
-## Basic example
+## 基本示例
 
 ::: only-for javascript
 
@@ -65,7 +65,7 @@ By default, the values entered into the time-type column are not validated, so i
 
 <div class="boxes-list gray">
 
-- [Cell type](@/guides/cell-types/cell-type/cell-type.md)
+- [单元格类型](@/guides/cell-types/cell-type/cell-type.md)
 
 </div>
 

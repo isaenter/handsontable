@@ -7,7 +7,7 @@ import 'handsontable/styles/ht-theme-main.css';
 registerAllModules();
 
 const ExampleComponent = () => {
-  // remove the column menu button from the 'Brand', 'Price', and 'Date' columns
+  // 从`品牌`、`价格`和`日期`列中删除列菜单按钮
   const removeColumnMenuButton = (col, TH) => {
     if (col > 1) {
       const button = TH.querySelector('.changeType');
@@ -107,34 +107,34 @@ const ExampleComponent = () => {
           className: 'htCenter',
         },
       ]}
-      // enable filtering for all columns
+      // 对所有列启用过滤
       filters={true}
-      // enable the column menu for all columns
-      // but display only the 'Filter by value' list and the 'OK' and 'Cancel' buttons
+      // 启用所有列的列菜单
+      // 但仅显示`按值过滤`列表以及`确定`和`取消`按钮
       dropdownMenu={{
         items: {
           filter_by_value: {
-            // hide the 'Filter by value' list from all columns but the first one
+            // 隐藏除第一列之外的所有列中的`按值过滤`列表
             hidden() {
               return this.getSelectedRangeLast().to.col > 0;
             },
           },
           filter_action_bar: {
-            // hide the 'OK' and 'Cancel' buttons from all columns but the first one
+            // 隐藏除第一列之外的所有列中的`确定`和`取消`按钮
             hidden() {
               return this.getSelectedRangeLast().to.col > 0;
             },
           },
           clear_column: {
-            // hide the 'Clear column' menu item from the first column
+            // 隐藏第一列中的`清除列`菜单项
             hidden() {
               return this.getSelectedRangeLast().to.col < 1;
             },
           },
         },
       }}
-      // `afterGetColHeader()` is a Handsontable hook
-      // it's fired after Handsontable appends information about a column header to the table header
+      // `afterGetColHeader()` 是一个 Handsontable 钩子
+      // 它在 Handsontable 将有关列标题的信息附加到表标题后触发
       afterGetColHeader={removeColumnMenuButton}
       height="auto"
       autoWrapRow={true}

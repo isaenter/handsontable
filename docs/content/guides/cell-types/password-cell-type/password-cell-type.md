@@ -1,6 +1,6 @@
 ---
 id: a7a5mkrw
-title: Password cell type
+title: 密码单元格类型
 metaTitle: Password cell type - JavaScript Data Grid | Handsontable
 description: Use the password cell type to mask confidential values by rendering entered characters as symbols.
 permalink: /password-cell-type
@@ -12,15 +12,15 @@ searchCategory: Guides
 category: Cell types
 ---
 
-# Password cell type
+# 密码单元格类型
 
-Use the password cell type to mask confidential values by rendering entered characters as symbols.
+使用密码单元格类型通过将输入的字符呈现为符号来屏蔽机密值。
 
 [[toc]]
 
 ## 概述
 
-The password cell type behaves like a text cell, the only difference being that it masks its value using asterisks in the cell renderer. An `<input type="password">` field is used for the cell editor. Data is stored in the data source as plain text.
+密码单元格类型的行为类似于文本单元格，唯一的区别是它在单元格渲染器中使用星号掩盖其值。 `<input type="password">` 字段用于单元格编辑器。数据以纯文本形式存储在数据源中。
 
 ::: only-for javascript
 
@@ -44,9 +44,9 @@ The password cell type behaves like a text cell, the only difference being that 
 
 :::
 
-## Fixed hash length
+## 固定哈希长度
 
-By default, every hash has a length equal to the length of its corresponding value. Use option `hashLength` to set a fixed hash length.
+默认情况下，每个哈希的长度等于其对应值的长度。使用选项`hashLength`设置固定的哈希长度。
 
 ::: only-for javascript
 
@@ -70,9 +70,9 @@ By default, every hash has a length equal to the length of its corresponding val
 
 :::
 
-## Custom hash symbol
+## 自定义哈希符号
 
-By default, every hash consists of asterisks `*`. Use the option `hashSymbol` to set a custom hash symbol. You can use any character, entity, or even HTML. Note that you can't change the symbol used by the input field due to browser limitations.
+默认情况下，每个哈希值都由星号`*`组成。使用选项`hashSymbol`设置自定义哈希符号。您可以使用任何字符、实体，甚至 HTML。请注意，由于浏览器限制，您无法更改输入字段使用的符号。
 
 ::: only-for javascript
 
@@ -100,7 +100,7 @@ By default, every hash consists of asterisks `*`. Use the option `hashSymbol` to
 
 ### 相关指南
 
-- [Cell type](@/guides/cell-types/cell-type/cell-type.md)
+- [单元格类型](@/guides/cell-types/cell-type/cell-type.md)
 
 ### 相关API参考
 

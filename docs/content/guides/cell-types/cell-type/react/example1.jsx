@@ -49,9 +49,9 @@ const ExampleComponent = () => {
       licenseKey="non-commercial-and-evaluation"
       columns={[
         { data: 'id', type: 'text' },
-        // 'text' is default, you don't actually need to declare it
+        // 'text' 是默认的，你实际上不需要声明它
         { data: 'name', renderer: yellowRenderer },
-        // use default 'text' cell type but overwrite its renderer with yellowRenderer
+        // 使用默认的`文本`单元格类型，但用 YellowRenderer 覆盖其渲染器
         { data: 'isActive', type: 'checkbox' },
         { data: 'date', type: 'date', dateFormat: 'YYYY-MM-DD' },
         { data: 'color', type: 'autocomplete', source: colors },

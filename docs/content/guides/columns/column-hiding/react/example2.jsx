@@ -87,9 +87,9 @@ const ExampleComponent = () => {
       height="auto"
       colHeaders={true}
       rowHeaders={true}
-      // enable the `HiddenColumns` plugin
+      // 启用“HiddenColumns”插件
       hiddenColumns={{
-        // specify columns hidden by default
+        // 指定默认隐藏的列
         columns: [3, 5, 9],
       }}
     />

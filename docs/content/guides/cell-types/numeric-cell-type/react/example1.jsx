@@ -7,7 +7,7 @@ import 'handsontable/styles/ht-theme-main.css';
 
 // 注册 Handsontable 的模块
 registerAllModules();
-// register the languages you need
+// 注册您需要的语言
 numbro.registerLanguage(deDE);
 
 const ExampleComponent = () => {

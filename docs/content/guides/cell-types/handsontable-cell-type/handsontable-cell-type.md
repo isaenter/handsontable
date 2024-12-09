@@ -1,6 +1,6 @@
 ---
 id: kdie9yhz
-title: Handsontable cell type
+title: Handsontable单元格类型
 metaTitle: Handsontable cell type - JavaScript Data Grid | Handsontable
 description: Add a spreadsheet editor in a popup, by using the Handsontable cell type.
 permalink: /handsontable-cell-type
@@ -12,33 +12,33 @@ searchCategory: Guides
 category: Cell types
 ---
 
-# Handsontable cell type
+# Handsontable单元格类型
 
-Add a spreadsheet editor in a popup, by using the Handsontable cell type.
+使用 Handsontable 单元格类型在弹出窗口中添加电子表格编辑器。
 
 [[toc]]
 
 ## Usage
 
-**HOT-in-HOT opens by any of the following:**
+**表中表 通过以下任一方式打开:**
 
-- <kbd>**F2**</kbd> or <kbd>**Enter**</kbd> key is pressed while the cell is selected
-- The triangle icon is clicked
-- The cell content is double clicked
+- 选择单元格时按下 <kbd>**F2**</kbd> 或 <kbd>**Enter**</kbd> 键
+- 单击三角形图标
+- 双击单元格内容
 
-While HOT-in-HOT is opened, the text field above the HOT-in-HOT remains focused at all times.
+当表中表打开时，表中表上方的文本字段始终保持焦点状态。
 
-**Keyboard bindings while the HOT-in-HOT is opened:**
+**打开 表中表 时的键盘绑定：**
 
-- <kbd>**Escape**</kbd> - close editor and cancel change.
-- <kbd>**Enter**</kbd> - close editor and apply change\*, move the selection in the main HOT downwards or according to the [`enterMoves`](@/api/options.md#enterMoves) setting.
-- <kbd>**Tab**</kbd> - behaves as the <kbd>**Enter**</kbd> key, but move the selection in the main HOT to the right or to the left (depending on your [`layoutDirection`](@/api/options.md#layoutdirection) setting) or according to the [`tabMoves`](@/api/options.md#tabmoves)setting.
-- <kbd>**Arrow Down**</kbd> - move the selection in HOT-in-HOT downwards. If the last row was selected, this has no effect.
-- <kbd>**Arrow Up**</kbd> - move the selection in HOT-in-HOT upwards. If the first row was selected, deselect. If HOT-in-HOT was deselected, behave as the <kbd>**Enter**</kbd> key but move the selection in the main HOT upwards.
-- <kbd>**Arrow Right**</kbd> - move the text cursor in the text field to the left. If the text cursor was at the start position, behave as the <kbd>**Enter**</kbd> key but move the selection in the main HOT to the left.
-- <kbd>**Arrow Left**</kbd> - move the text cursor in the text field to the right. If the text cursor was at the end position, behave as the <kbd>**Tab**</kbd> key.
+- <kbd>**Escape**</kbd> -关闭编辑器并取消更改。
+- <kbd>**Enter**</kbd> -关闭编辑器并应用更改\*，向下移动主 HOT 中的选择或根据 [`enterMoves`](@/api/options.md#enterMoves)环境。
+- <kbd>**Tab**</kbd> -行为与 <kbd>**Enter**</kbd> 键相同，但将主 HOT 中的选择移动到右侧或左侧（取决于您的[`layoutDirection`](@/api/options.md#layoutdirection) 设置）或根据 [`tabMoves`](@/api/options.md#tabmoves) 设置。
+- <kbd>**向下箭头**</kbd> -向下移动 HOT-in-HOT 中的选择。如果选择了最后一行，则此操作无效。
+- <kbd>**向上箭头**</kbd> -向上移动 HOT-in-HOT 中的选择。如果选择了第一行，则取消选择。如果取消选择 HOT-in-HOT，则其行为与 <kbd>**Enter**</kbd> 键相同，但向上移动主 HOT 中的选择。
+- <kbd>**向右箭头**</kbd> -将文本字段中的文本光标向左移动。如果文本光标位于开始位置，则其行为与 <kbd>**Enter**</kbd> 键相同，但将主 HOT 中的选择移动到左侧。
+- <kbd>**向左箭头**</kbd> -将文本字段中的文本光标向右移动。如果文本光标位于结束位置，则充当 <kbd>**Tab**</kbd> 键。
 
-## Basic example
+## 基本示例
 
 ::: only-for javascript
 
@@ -68,7 +68,7 @@ While HOT-in-HOT is opened, the text field above the HOT-in-HOT remains focused 
 
 ### 相关指南
 
-- [Cell type](@/guides/cell-types/cell-type/cell-type.md)
+- [单元格类型](@/guides/cell-types/cell-type/cell-type.md)
 
 ### 相关API参考
 

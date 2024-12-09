@@ -1,6 +1,6 @@
 ---
 id: pqe1xozj
-title: Select cell type
+title: 选择单元格类型
 metaTitle: Select cell type - JavaScript Data Grid | Handsontable
 description: Use the select cell type to collect user input with an HTML <select> element that creates a multi-item dropdown list.
 permalink: /select-cell-type
@@ -12,19 +12,19 @@ searchCategory: Guides
 category: Cell types
 ---
 
-# Select cell type
+# 选择单元格类型
 
-Use the select cell type to collect user input with an HTML `<select>` element that creates a multi-item dropdown list.
+使用选择单元格类型通过 HTML `<select>` 元素收集用户输入，该元素创建多项目下拉列表。
 
 [[toc]]
 
 ## 概述
 
-The select cell type is a simpler form of the [dropdown](@/guides/cell-types/dropdown-cell-type/dropdown-cell-type.md) cell type.
+选择单元格类型是 [dropdown](@/guides/cell-types/dropdown-cell-type/dropdown-cell-type.md) 单元格类型的更简单形式。
 
-## Usage
+## 用法
 
-The select editor should be considered an example of how to write editors rather than used as a fully-featured editor. It is a much simpler form of the [Dropdown editor](@/guides/cell-types/dropdown-cell-type/dropdown-cell-type.md). We recommend that you use the latter in your projects.
+选择编辑器应被视为如何编写编辑器的示例，而不是用作功能齐全的编辑器。它是[下拉编辑器](@/guides/cell-types/dropdown-cell-type/dropdown-cell-type.md) 的更简单的形式。我们建议您在项目中使用后者。
 
 ::: only-for javascript
 
@@ -54,9 +54,9 @@ The select editor should be considered an example of how to write editors rather
 
 <div class="boxes-list gray">
 
-- [Autocomplete cell type](@/guides/cell-types/autocomplete-cell-type/autocomplete-cell-type.md)
-- [Cell type](@/guides/cell-types/cell-type/cell-type.md)
-- [Dropdown cell type](@/guides/cell-types/dropdown-cell-type/dropdown-cell-type.md)
+- [自动完成单元格类型](@/guides/cell-types/autocomplete-cell-type/autocomplete-cell-type.md)
+- [细胞类型](@/guides/cell-types/cell-type/cell-type.md)
+- [下拉单元格类型](@/guides/cell-types/dropdown-cell-type/dropdown-cell-type.md)
 
 </div>
 

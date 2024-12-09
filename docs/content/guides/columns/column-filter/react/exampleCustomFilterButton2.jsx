@@ -94,11 +94,11 @@ const ExampleComponent = () => {
           className: 'htCenter',
         },
       ]}
-      // enable filtering
+      // 启用过滤
       filters={true}
-      // enable the column menu
+      // 启用列菜单
       dropdownMenu={true}
-      // to differentiate this example's CSS from other examples on this page
+      // 将此示例的 CSS 与本页其他示例区分开来
       className="customFilterButtonExample2"
       height="auto"
       autoWrapRow={true}
