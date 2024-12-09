@@ -314,9 +314,9 @@ plugin.showColumns([0, 4, 6]);
 hot.render();
 ```
 
-## Related API reference
+## 相关API参考
 
-- Configuration options:
+- 配置选项:
   - [`hiddenColumns`](@/api/options.md#hiddencolumns)
 - Hooks:
   - [`afterHideColumns`](@/api/hooks.md#afterhidecolumns)

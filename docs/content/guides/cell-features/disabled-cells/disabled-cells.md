@@ -171,8 +171,8 @@ The following example shows the table with non-editable cells containing the wor
 
 :::
 
-## Related API reference
+## 相关API参考
 
-- Configuration options:
+- 配置选项:
   - [`readOnly`](@/api/options.md#readonly)
   - [`readOnlyCellClassName`](@/api/options.md#readonlycellclassname)

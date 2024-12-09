@@ -534,9 +534,9 @@ details, [contact our Sales Team](https://handsontable.com/get-a-quote).
 
 </div>
 
-### Related API reference
+### 相关API参考
 
-- Configuration options:
+- 配置选项:
   - [`formulas`](@/api/options.md#formulas)
 - Hooks:
   - [`afterFormulasValuesUpdate`](@/api/hooks.md#afterformulasvaluesupdate)

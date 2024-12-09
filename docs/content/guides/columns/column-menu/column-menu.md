@@ -77,7 +77,7 @@ To use the default dropdown contents, set it to `true`, or to customize it by se
 
 :::
 
-## Related keyboard shortcuts
+## 相关键盘快捷键
 
 | Windows                                                  | macOS                                                       | Action                                                                                                       |  Excel  | Sheets  |
 | -------------------------------------------------------- | ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ | :-----: | :-----: |
@@ -90,9 +90,9 @@ To use the default dropdown contents, set it to `true`, or to customize it by se
 
 - [Context menu](@/guides/accessories-and-menus/context-menu/context-menu.md)
 
-### Related API reference
+### 相关API参考
 
-- Configuration options:
+- 配置选项:
   - [`dropdownMenu`](@/api/options.md#dropdownmenu)
 - Hooks:
   - [`afterDropdownMenuDefaultOptions`](@/api/hooks.md#afterdropdownmenudefaultoptions)

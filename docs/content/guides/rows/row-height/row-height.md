@@ -144,9 +144,9 @@ You can adjust the size of one or multiple rows simultaneously, even if the sele
 
 :::
 
-## Related API reference
+## 相关API参考
 
-- Configuration options:
+- 配置选项:
   - [`autoRowSize`](@/api/options.md#autorowsize)
   - [`manualRowResize`](@/api/options.md#manualrowresize)
   - [`rowHeights`](@/api/options.md#rowheights)

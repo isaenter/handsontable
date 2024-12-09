@@ -37,9 +37,9 @@ The following example shows a Handsontable instance with translations set up in 
 - [Layout direction](@/guides/internationalization/layout-direction/layout-direction.md)
 - [Locale](@/guides/internationalization/locale/locale.md)
 
-### Related API reference
+### 相关API参考
 
-- Configuration options:
+- 配置选项:
   - [`language`](@/api/options.md#language)
   - [`layoutDirection`](@/api/options.md#layoutdirection)
   - [`locale`](@/api/options.md#locale)

@@ -73,9 +73,9 @@ The following code sample configures the grid to use `htCenter` and configures i
 
 :::
 
-## Related API reference
+## 相关API参考
 
-- Configuration options:
+- 配置选项:
   - [`className`](@/api/options.md#classname)
 - Hooks:
   - [`afterSetCellMeta`](@/api/hooks.md#aftersetcellmeta)

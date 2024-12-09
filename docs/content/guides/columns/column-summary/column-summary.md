@@ -657,9 +657,9 @@ To throw data type errors, set the [`suppressDataTypeErrors`](@/api/columnSummar
 
 :::
 
-## Related API reference
+## 相关API参考
 
-- Configuration options:
+- 配置选项:
   - [`columnSummary`](@/api/options.md#columnsummary)
 - Plugins:
   - [`ColumnSummary`](@/api/columnSummary.md)

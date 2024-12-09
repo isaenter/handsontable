@@ -106,7 +106,7 @@ To add a label to the checkbox, use the [`label`](@/api/options.md#label) option
 
 :::
 
-## Related keyboard shortcuts
+## 相关键盘快捷键
 
 | Windows                  | macOS                    | Action                        |  Excel  | Sheets  |
 | ------------------------ | ------------------------ | ----------------------------- | :-----: | :-----: |
@@ -120,9 +120,9 @@ To add a label to the checkbox, use the [`label`](@/api/options.md#label) option
 ### Related guides
 - [Cell type](@/guides/cell-types/cell-type/cell-type.md)
 
-### Related API reference
+### 相关API参考
 
-- Configuration options:
+- 配置选项:
   - [`checkedTemplate`](@/api/options.md#checkedtemplate)
   - [`label`](@/api/options.md#label)
   - [`type`](@/api/options.md#type)

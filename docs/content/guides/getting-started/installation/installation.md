@@ -274,9 +274,9 @@ For more information on `@handsontable/react`, see the [14.6 documentation](http
 
 - [Modules](@/guides/tools-and-building/modules/modules.md)
 
-### Related API reference
+### 相关API参考
 
-- Configuration options:
+- 配置选项:
   - [`maxCols`](@/api/options.md#maxcols)
   - [`maxRows`](@/api/options.md#maxrows)
   - [`minCols`](@/api/options.md#mincols)

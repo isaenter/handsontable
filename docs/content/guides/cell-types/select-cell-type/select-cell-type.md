@@ -60,9 +60,9 @@ The select editor should be considered an example of how to write editors rather
 
 </div>
 
-### Related API reference
+### 相关API参考
 
-- Configuration options:
+- 配置选项:
   - [`selectOptions`](@/api/options.md#selectoptions)
   - [`type`](@/api/options.md#type)
 - Core methods:

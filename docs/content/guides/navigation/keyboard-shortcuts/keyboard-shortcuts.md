@@ -236,7 +236,7 @@ For the list of [options](@/guides/getting-started/configuration-options/configu
 - APIs:
   - [`ShortcutContext`](@/api/shortcutContext.md)
   - [`ShortcutManager`](@/api/shortcutManager.md)
-- Configuration options:
+- 配置选项:
   - [`enterBeginsEditing`](@/api/options.md#enterbeginsediting)
   - [`enterMoves`](@/api/options.md#entermoves)
   - [`tabMoves`](@/api/options.md#tabmoves)

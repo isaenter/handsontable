@@ -118,15 +118,15 @@ The example below uses virtualized merged cells. It's also recommended to increa
 
 :::
 
-## Related keyboard shortcuts
+## 相关键盘快捷键
 
 | Windows                                | macOS                                  | Action                              |  Excel  | Sheets  |
 | -------------------------------------- | -------------------------------------- | ----------------------------------- | :-----: | :-----: |
 | <kbd>**Ctrl**</kbd>+<kbd>**M**</kbd> | <kbd>**Ctrl**</kbd>+<kbd>**M**</kbd> | Merge or unmerge the selected cells | &cross; | &cross; |
 
-## Related API reference
+## 相关API参考
 
-- Configuration options:
+- 配置选项:
   - [`mergeCells`](@/api/options.md#mergecells)
   - [`viewportColumnRenderingThreshold`](@/api/options.md#viewportcolumnrenderingthreshold)
   - [`viewportRowRenderingThreshold`](@/api/options.md#viewportrowrenderingthreshold)

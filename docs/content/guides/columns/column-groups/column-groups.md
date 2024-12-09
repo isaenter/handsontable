@@ -150,15 +150,15 @@ collapsibleColumns={[
   limit of `colspan` to `1000`.
 - A nested column header can't be wider than its parent element (headers can't overlap).
 
-## Related keyboard shortcuts
+## 相关键盘快捷键
 
 | Windows                                     | macOS                                        | Action                                                  |  Excel  | Sheets  |
 | ------------------------------------------- | -------------------------------------------- | ------------------------------------------------------- | :-----: | :-----: |
 | <kbd>**Enter**</kbd>                        | <kbd>**Enter**</kbd>                         | Collapse or expand the selected column group            | &cross; | &cross; |
 
-## Related API reference
+## 相关API参考
 
-- Configuration options:
+- 配置选项:
   - [`collapsibleColumns`](@/api/options.md#collapsiblecolumns)
   - [`nestedHeaders`](@/api/options.md#nestedheaders)
 - Core methods:

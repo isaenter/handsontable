@@ -230,7 +230,7 @@ The following demo uses [`beforeKeyDown`](@/api/hooks.md#beforekeydown) callback
 
 :::
 
-## Related API reference
+## 相关API参考
 
 - Core methods:
   - [`addHook()`](@/api/core.md#addhook)

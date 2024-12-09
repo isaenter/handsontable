@@ -39,9 +39,9 @@ Select a language from the selector above the table and open the Context Menu to
 - [Layout direction](@/guides/internationalization/layout-direction/layout-direction.md)
 - [Locale](@/guides/internationalization/locale/locale.md)
 
-### Related API reference
+### 相关API参考
 
-- Configuration options:
+- 配置选项:
   - [`language`](@/api/options.md#language)
   - [`layoutDirection`](@/api/options.md#layoutdirection)
   - [`locale`](@/api/options.md#locale)

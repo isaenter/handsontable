@@ -74,9 +74,9 @@ Internally, cell `type="dropdown"` is equivalent to cell `type="autocomplete" st
 
 </div>
 
-### Related API reference
+### 相关API参考
 
-- Configuration options:
+- 配置选项:
   - [`allowHtml`](@/api/options.md#allowhtml)
   - [`source`](@/api/options.md#source)
   - [`trimDropdown`](@/api/options.md#trimdropdown)

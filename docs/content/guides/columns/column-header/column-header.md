@@ -168,9 +168,9 @@ More complex data structures can be displayed with multiple headers, each repres
 
 </div>
 
-### Related API reference
+### 相关API参考
 
-- Configuration options:
+- 配置选项:
   - [`activeHeaderClassName`](@/api/options.md#activeheaderclassname)
   - [`colHeaders`](@/api/options.md#colheaders)
   - [`columnHeaderHeight`](@/api/options.md#columnheaderheight)

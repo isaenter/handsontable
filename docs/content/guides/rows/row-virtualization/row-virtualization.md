@@ -80,8 +80,8 @@ Using row virtualization has the following side effects:
 - [Column virtualization](@/guides/columns/column-virtualization/column-virtualization.md)
 - [Performance](@/guides/optimization/performance/performance.md)
 
-### Related API reference
+### 相关API参考
 
-- Configuration options:
+- 配置选项:
   - [`renderAllRows`](@/api/options.md#renderallrows)
   - [`viewportRowRenderingOffset`](@/api/options.md#viewportrowrenderingoffset)

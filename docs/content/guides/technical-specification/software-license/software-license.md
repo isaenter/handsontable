@@ -81,7 +81,7 @@ For many years Handsontable was available as an open-source software, and releas
 
 </div>
 
-### Related API reference
+### 相关API参考
 
 - Options:
   - [`licenseKey`](@/api/options.md#licensekey)

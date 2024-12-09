@@ -39,11 +39,11 @@ The following is an implementation of the `@handsontable/angular` component with
 
 </div>
 
-### Related API reference
+### 相关API参考
 
 - APIs:
   - [`BasePlugin`](@/api/basePlugin.md)
-- Configuration options:
+- 配置选项:
   - [`editor`](@/api/options.md#editor)
   - [`enterBeginsEditing`](@/api/options.md#enterbeginsediting)
 - Core methods:

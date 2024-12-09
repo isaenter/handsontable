@@ -596,7 +596,7 @@ At the moment, filtering comes with the following limitations:
 - The list of values that you can filter by is generated automatically and there's no supported way
   of modifying it.
 
-## Related keyboard shortcuts
+## 相关键盘快捷键
 
 | Windows                             | macOS                                  | Action            |  Excel  | Sheets  |
 | ----------------------------------- | -------------------------------------- | ----------------- | :-----: | :-----: |

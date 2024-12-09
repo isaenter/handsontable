@@ -190,11 +190,11 @@ Edit the above grid to see the `changes` argument from the callback.
 
 Mind that changes in table are applied after running all validators (both synchronous and and asynchronous) from every changed cell.
 
-## Related API reference
+## 相关API参考
 
 - APIs:
   - [`BasePlugin`](@/api/basePlugin.md)
-- Configuration options:
+- 配置选项:
   - [`allowEmpty`](@/api/options.md#allowempty)
   - [`allowInvalid`](@/api/options.md#allowinvalid)
   - [`invalidCellClassName`](@/api/options.md#invalidcellclassname)

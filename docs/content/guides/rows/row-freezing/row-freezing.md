@@ -54,8 +54,8 @@ The following example specifies two fixed rows with `fixedRowsTop: 2`. Horizonta
 
 :::
 
-## Related API reference
+## 相关API参考
 
-- Configuration options:
+- 配置选项:
   - [`fixedRowsBottom`](@/api/options.md#fixedrowsbottom)
   - [`fixedRowsTop`](@/api/options.md#fixedrowstop)

@@ -335,7 +335,7 @@ const pluginInstance = hotTableComponentRef.current.hotInstance.getPlugin(Custom
 
 :::
 
-## Related API reference
+## 相关API参考
 
 - APIs:
   - [`BasePlugin`](@/api/basePlugin.md)

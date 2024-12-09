@@ -130,9 +130,9 @@ Click on one of the ▼ icons to open an interactive date editor.
 
 </div>
 
-### Related API reference
+### 相关API参考
 
-- Configuration options:
+- 配置选项:
   - [`correctFormat`](@/api/options.md#correctformat)
   - [`dateFormat`](@/api/options.md#dateformat)
   - [`datePickerConfig`](@/api/options.md#datepickerconfig)

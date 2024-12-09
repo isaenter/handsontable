@@ -43,11 +43,11 @@ The following example is an implementation of `@handsontable/vue` with a custom 
 
 </div>
 
-### Related API reference
+### 相关API参考
 
 - APIs:
   - [`BasePlugin`](@/api/basePlugin.md)
-- Configuration options:
+- 配置选项:
   - [`renderer`](@/api/options.md#renderer)
 - Core methods:
   - [`getCellMeta()`](@/api/core.md#getcellmeta)

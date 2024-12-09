@@ -69,9 +69,9 @@ By default, the values entered into the time-type column are not validated, so i
 
 </div>
 
-### Related API reference
+### 相关API参考
 
-- Configuration options:
+- 配置选项:
   - [`type`](@/api/options.md#type)
 - Core methods:
   - [`getCellMeta()`](@/api/core.md#getcellmeta)

@@ -988,7 +988,7 @@ import { registerPlugin, ColumnSorting } from 'handsontable/plugins';
 registerPlugin(ColumnSorting);
 ```
 
-## Related keyboard shortcuts
+## 相关键盘快捷键
 
 | Windows                                  | macOS                                   | Action                                                                                                                                                   |  Excel  | Sheets  |
 | ---------------------------------------- | --------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | :-----: | :-----: |

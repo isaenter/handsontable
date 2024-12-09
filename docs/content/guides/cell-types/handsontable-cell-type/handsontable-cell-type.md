@@ -70,9 +70,9 @@ While HOT-in-HOT is opened, the text field above the HOT-in-HOT remains focused 
 
 - [Cell type](@/guides/cell-types/cell-type/cell-type.md)
 
-### Related API reference
+### 相关API参考
 
-- Configuration options:
+- 配置选项:
   - [`type`](@/api/options.md#type)
 - Core methods:
   - [`getCellMeta()`](@/api/core.md#getcellmeta)

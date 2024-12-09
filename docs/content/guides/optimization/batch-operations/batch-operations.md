@@ -236,9 +236,9 @@ The following examples show how much the [`batch()`](@/api/core.md#batch) method
 
 </div>
 
-### Related API reference
+### 相关API参考
 
-- Configuration options:
+- 配置选项:
   - [`maxCols`](@/api/options.md#maxcols)
   - [`maxRows`](@/api/options.md#maxrows)
   - [`observeDOMVisibility`](@/api/options.md#observedomvisibility)

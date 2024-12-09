@@ -268,9 +268,9 @@ plugin.showRow(0, 4, 6);
 plugin.showRows([0, 4, 6]);
 ```
 
-## Related API reference
+## 相关API参考
 
-- Configuration options:
+- 配置选项:
   - [`hiddenRows`](@/api/options.md#hiddenrows)
 - Hooks:
   - [`afterHideRows`](@/api/hooks.md#afterhiderows)

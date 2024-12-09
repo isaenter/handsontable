@@ -69,9 +69,9 @@ The main benefit of using the [`PersistentState`](@/api/persistentState.md) plug
 
 For the data separation to work properly, make sure that each instance of Handsontable has a unique `id`.
 
-## Related API reference
+## 相关API参考
 
-- Configuration options:
+- 配置选项:
   - [`persistentState`](@/api/options.md#persistentstate)
 - Core methods:
   - [`updateSettings()`](@/api/core.md#updatesettings)

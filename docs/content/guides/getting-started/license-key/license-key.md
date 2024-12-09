@@ -140,7 +140,7 @@ To get a commercial license key for your Handsontable copy, contact our [Sales T
 
 </div>
 
-### Related API reference
+### 相关API参考
 
-- Configuration options:
+- 配置选项:
   - [`licenseKey`](@/api/options.md#licensekey)

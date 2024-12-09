@@ -77,9 +77,9 @@ You can reduce the size of your bundle by importing and registering only the
 
 :::
 
-## Related API reference
+## 相关API参考
 
-- Configuration options:
+- 配置选项:
   - [`maxCols`](@/api/options.md#maxcols)
   - [`maxRows`](@/api/options.md#maxrows)
   - [`minCols`](@/api/options.md#mincols)

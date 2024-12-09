@@ -220,9 +220,9 @@ The example below displays the number of matching search results. To do this, it
 
 :::
 
-## Related API reference
+## 相关API参考
 
-- Configuration options:
+- 配置选项:
   - [`search`](@/api/options.md#search)
 - Plugins:
   - [`Search`](@/api/search.md)

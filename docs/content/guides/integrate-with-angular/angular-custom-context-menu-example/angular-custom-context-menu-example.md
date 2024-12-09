@@ -50,9 +50,9 @@ The following is an implementation of the `@handsontable/angular` component with
 
 </div>
 
-### Related API reference
+### 相关API参考
 
-- Configuration options:
+- 配置选项:
   - [`allowInsertColumn`](@/api/options.md#allowinsertcolumn)
   - [`allowInsertRow`](@/api/options.md#allowinsertrow)
   - [`allowRemoveColumn`](@/api/options.md#allowremovecolumn)

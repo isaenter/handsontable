@@ -115,9 +115,9 @@ In the names of the API properties, the words `start` and `end` refer to the sta
 
 - [Conditional formatting](@/guides/cell-features/conditional-formatting/conditional-formatting.md)
 
-### Related API reference
+### 相关API参考
 
-- Configuration options:
+- 配置选项:
   - [`activeHeaderClassName`](@/api/options.md#activeheaderclassname)
   - [`className`](@/api/options.md#classname)
   - [`commentedCellClassName`](@/api/options.md#commentedcellclassname)

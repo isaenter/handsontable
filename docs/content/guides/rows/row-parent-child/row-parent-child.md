@@ -119,7 +119,7 @@ When you use the parent-child row structure, the following Handsontable features
 - [Column filter](@/guides/columns/column-filter/column-filter.md)
 - [Rows sorting](@/guides/rows/rows-sorting/rows-sorting.md)
 
-## Related keyboard shortcuts
+## 相关键盘快捷键
 
 | Windows              | macOS                | Action                           |  Excel  | Sheets  |
 | -------------------- | -------------------- | -------------------------------- | :-----: | :-----: |
@@ -135,9 +135,9 @@ When you use the parent-child row structure, the following Handsontable features
 
 </div>
 
-### Related API reference
+### 相关API参考
 
-- Configuration options:
+- 配置选项:
   - [`bindRowsWithHeaders`](@/api/options.md#bindrowswithheaders)
   - [`contextMenu`](@/api/options.md#contextmenu)
   - [`nestedRows`](@/api/options.md#nestedrows)

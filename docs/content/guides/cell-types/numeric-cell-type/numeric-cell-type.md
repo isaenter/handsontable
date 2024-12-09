@@ -158,9 +158,9 @@ you edit a numeric cell:
 
 - [Cell type](@/guides/cell-types/cell-type/cell-type.md)
 
-### Related API reference
+### 相关API参考
 
-- Configuration options:
+- 配置选项:
   - [`numericFormat`](@/api/options.md#numericformat)
   - [`type`](@/api/options.md#type)
 - Core methods:

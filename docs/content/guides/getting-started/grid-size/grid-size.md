@@ -179,7 +179,7 @@ You can listen for two hooks, [`beforeRefreshDimensions`](@/api/hooks.md#beforer
 
 **Related API reference**
 
-- Configuration options:
+- 配置选项:
   - [`height`](@/api/options.md#height)
   - [`layoutDirection`](@/api/options.md#layoutdirection)
   - [`preventOverflow`](@/api/options.md#preventoverflow)

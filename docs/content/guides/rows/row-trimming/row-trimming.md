@@ -147,7 +147,7 @@ plugin.untrimRows([0, 4, 6]);
 
 To see the changes made, call `hot.render();` to re-render the table.
 
-## Related API reference
+## 相关API参考
 
 - Options:
   - [`trimRows`](@/api/options.md#trimrows)

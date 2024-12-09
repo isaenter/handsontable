@@ -19,7 +19,7 @@ const ExampleComponent = () => {
       colHeaders={true}
       contextMenu={true}
       comments={{
-        // on mouseover, wait 2 seconds before the comment box displays
+        // 鼠标悬停时，等待 2 秒，然后评论框显示
         displayDelay: 2000,
       }}
       cell={[{ row: 1, col: 1, comment: { value: 'Some comment' } }]}

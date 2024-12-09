@@ -87,9 +87,9 @@ Mind that when you unfreeze a frozen column, it doesn't go back to the original 
 
 :::
 
-## Related API reference
+## 相关API参考
 
-- Configuration options:
+- 配置选项:
   - [`fixedColumnsStart`](@/api/options.md#fixedcolumnsstart)
   - [`manualColumnFreeze`](@/api/options.md#manualcolumnfreeze)
 - Plugins:

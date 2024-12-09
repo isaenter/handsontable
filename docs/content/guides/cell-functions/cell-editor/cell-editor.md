@@ -1222,7 +1222,7 @@ const hot = new Handsontable(container, {
 
 :::
 
-## Related keyboard shortcuts
+## 相关键盘快捷键
 
 | Windows                                                 | macOS                                                           | Action                                                            |  Excel  | Sheets  |
 | ------------------------------------------------------- | --------------------------------------------------------------- | ----------------------------------------------------------------- | :-----: | :-----: |
@@ -1260,19 +1260,19 @@ const hot = new Handsontable(container, {
 
 </div>
 
-### Related API reference
+### 相关API参考
 
 :::
 
 ::: only-for react
 
-## Related API reference
+## 相关API参考
 
 :::
 
 - APIs:
   - [`BasePlugin`](@/api/basePlugin.md)
-- Configuration options:
+- 配置选项:
   - [`editor`](@/api/options.md#editor)
   - [`enterBeginsEditing`](@/api/options.md#enterbeginsediting)
 - Core methods:

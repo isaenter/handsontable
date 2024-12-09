@@ -61,9 +61,9 @@ This demo shows how to use the cell type renderer feature to make some condition
 
 - [Formatting cells](@/guides/cell-features/formatting-cells/formatting-cells.md)
 
-### Related API reference
+### 相关API参考
 
-- Configuration options:
+- 配置选项:
   - [`activeHeaderClassName`](@/api/options.md#activeheaderclassname)
   - [`className`](@/api/options.md#classname)
   - [`commentedCellClassName`](@/api/options.md#commentedcellclassname)

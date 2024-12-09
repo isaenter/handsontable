@@ -1,6 +1,6 @@
 ---
 id: deqvum60
-title: Comments
+title: 评论
 metaTitle: Comments - JavaScript Data Grid | Handsontable
 description: Add a comment (a note) to a cell, using the context menu, just like in Excel. Edit and delete comments. Make comments read-only.
 permalink: /comments
@@ -14,15 +14,15 @@ searchCategory: Guides
 category: Cell features
 ---
 
-# Comments
+# 评论
 
-Add a comment (a note) to a cell, using the context menu, just like in Excel. Edit and delete comments. Make comments read-only.
+使用上下文菜单向单元格添加注释（注释），就像在 Excel 中一样。编辑和删除评论。将评论设置为只读。
 
 [[toc]]
 
-## Enable the plugin
+## 启用插件
 
-Set the [`comments`](@/api/options.md#comments) configuration option to `true` to enable the feature and add all the needed context menu items. For example:
+将 [`comments`](@/api/options.md#comments) 配置选项设置为 `true` 以启用该功能并添加所有需要的上下文菜单项。例如：
 
 ::: only-for javascript
 
@@ -54,17 +54,17 @@ const hot = new Handsontable(container, {
 
 :::
 
-## Add comments via the context menu
+## 通过上下文菜单添加评论
 
-After you've enabled the plugin, the [Context Menu](@/guides/accessories-and-menus/context-menu/context-menu.md) gains a few new items:
+启用插件后，[上下文菜单](@/guides/accessories-and-menus/context-menu/context-menu.md) 获得一些新项目：
 
-- Add/Edit comment
-- Delete comment
-- Read-only comment
+- 添加/编辑评论
+- 删除评论
+- 只读评论
 
-## Set up pre-set comments
+## 设置预设注释
 
-You can also pre-define comments for your table. Comments are stored in the table's/column's/cell's metadata object and you can declare as any value of the respective type. For example:
+您还可以为表格预先定义注释。注释存储在表/列/单元格的元数据对象中，您可以将其声明为相应类型的任何值。例如：
 
 ::: only-for javascript
 
@@ -86,9 +86,9 @@ cell={[
 
 :::
 
-In this example, the comment "Hello world!" is added to the cell at `(1,1)`.
+在此示例中，注释`Hello world!`添加到单元格`(1,1)`处。
 
-## Basic example
+## 基本示例
 
 ::: only-for javascript
 
@@ -112,9 +112,9 @@ In this example, the comment "Hello world!" is added to the cell at `(1,1)`.
 
 :::
 
-## Make a comment read-only
+## 将评论设置为只读
 
-By default, all comments are editable. To change this, set the [`readOnly`](@/api/options.md#readonly) configuration option to `true` when adding a comment. This example makes the "Tesla" comment attached to a cell read-only, whereas the "Honda" comment attached to another cell is editable.
+默认情况下，所有评论都是可编辑的。要更改此设置，请在添加注释时将 [`readOnly`](@/api/options.md#readonly) 配置选项设置为 `true`。此示例使附加到单元格的`Tesla`注释为只读，而附加到另一个单元格的`Honda`注释是可编辑的。
 
 ::: only-for javascript
 
@@ -138,9 +138,9 @@ By default, all comments are editable. To change this, set the [`readOnly`](@/ap
 
 :::
 
-## Set a comment box's size
+## 设置评论框的大小
 
-To set the width and height of a comment box, use the [`style`](@/api/options.md#comments) parameter.
+要设置评论框的宽度和高度，请使用 [`style`](@/api/options.md#comments) 参数。
 
 ::: only-for javascript
 
@@ -164,9 +164,9 @@ To set the width and height of a comment box, use the [`style`](@/api/options.md
 
 :::
 
-## Set a delay for displaying comments
+## 设置显示评论的延迟
 
-To display comments after a pre-configured time delay, use the [`displayDelay`](@/api/options.md#comments) parameter.
+要在预先配置的时间延迟后显示评论，请使用 [`displayDelay`](@/api/options.md#comments) 参数。
 
 ::: only-for javascript
 
@@ -190,16 +190,16 @@ To display comments after a pre-configured time delay, use the [`displayDelay`](
 
 :::
 
-## Related keyboard shortcuts
+## 相关键盘快捷键
 
 | Windows                                                 | macOS                                                      | Action                                  |  Excel  | Sheets  |
 | ------------------------------------------------------- | ---------------------------------------------------------- | --------------------------------------- | :-----: | :-----: |
-| <kbd>**Ctrl**</kbd>+<kbd>**Alt**</kbd>+<kbd>**M**</kbd> | <kbd>**Ctrl**</kbd>+<kbd>**Option**</kbd>+<kbd>**M**</kbd> | Add or edit a comment                   | &cross; | &check; |
-| <kbd>**Ctrl**</kbd>+<kbd>**Enter**</kbd>                | <kbd>**Cmd**</kbd>+<kbd>**Enter**</kbd>                    | Save and exit the current comment       | &cross; | &check; |
-| <kbd>**Escape**</kbd>                                   | <kbd>**Escape**</kbd>                                      | Exit the current comment without saving | &cross; | &cross; |
+| <kbd>**Ctrl**</kbd>+<kbd>**Alt**</kbd>+<kbd>**M**</kbd> | <kbd>**Ctrl**</kbd>+<kbd>**Option**</kbd>+<kbd>**M**</kbd> | 添加或编辑评论                           | &cross; | &check; |
+| <kbd>**Ctrl**</kbd>+<kbd>**Enter**</kbd>                | <kbd>**Cmd**</kbd>+<kbd>**Enter**</kbd>                    | 保存并退出当前评论                        | &cross; | &check; |
+| <kbd>**Escape**</kbd>                                   | <kbd>**Escape**</kbd>                                      | 退出当前评论而不保存                      | &cross; | &cross; |
 
-## Related API reference
+## 相关API参考
 
-- Configuration options:
+- 配置选项:
   - [`commentedCellClassName`](@/api/options.md#commentedcellclassname)
   - [`comments`](@/api/options.md#comments)

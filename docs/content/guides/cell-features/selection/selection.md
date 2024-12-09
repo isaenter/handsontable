@@ -150,7 +150,7 @@ To jump across a horizontal edge:
 - When cell selection is on a column's first cell, press the up arrow key.
 - When cell selection is on a column's last cell, press the down arrow key, or press <kbd>**Enter**</kbd>.
 
-## Related keyboard shortcuts
+## 相关键盘快捷键
 
 | Windows                                                       | macOS                                                        | Action                                                                           |  Excel  | Sheets  |
 | ------------------------------------------------------------- | ------------------------------------------------------------ | -------------------------------------------------------------------------------- | :-----: | :-----: |
@@ -174,9 +174,9 @@ To jump across a horizontal edge:
 <sup>*</sup> This action depends on your [layout direction](@/guides/internationalization/layout-direction/layout-direction.md).<br>
 <sup>**</sup> In case of multiple selection layers, only the last selection layer gets extended.
 
-## Related API reference
+## 相关API参考
 
-- Configuration options:
+- 配置选项:
   - [`autoWrapCol`](@/api/options.md#autowrapcol)
   - [`autoWrapRow`](@/api/options.md#autowraprow)
   - [`fragmentSelection`](@/api/options.md#fragmentselection)

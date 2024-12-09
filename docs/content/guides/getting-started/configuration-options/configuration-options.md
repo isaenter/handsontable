@@ -703,9 +703,9 @@ In the example below, some cells are read-only, and some cells are editable:
 :::
 
 
-## Related API reference
+## 相关API参考
 
-- Configuration options:
+- 配置选项:
   - [List of all options](@/api/options.md)
   - [`cell`](@/api/options.md#cell)
   - [`cells`](@/api/options.md#cells)

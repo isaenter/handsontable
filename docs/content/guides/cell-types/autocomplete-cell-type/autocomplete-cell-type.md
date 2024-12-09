@@ -125,9 +125,9 @@ Autocomplete can also be used with Ajax data sources. In the example below, sugg
 - [Dropdown cell type](@/guides/cell-types/dropdown-cell-type/dropdown-cell-type.md)
 - [Select cell type](@/guides/cell-types/select-cell-type/select-cell-type.md)
 
-### Related API reference
+### 相关API参考
 
-- Configuration options:
+- 配置选项:
   - [`allowHtml`](@/api/options.md#allowhtml)
   - [`filteringCaseSensitive`](@/api/options.md#filteringcasesensitive)
   - [`sortByRelevance`](@/api/options.md#sortbyrelevance)

@@ -119,9 +119,9 @@ See the [batch operations](@/guides/optimization/batch-operations/batch-operatio
 - [Modules](@/guides/tools-and-building/modules/modules.md)
 - [Bundle size](@/guides/optimization/bundle-size/bundle-size.md)
 
-### Related API reference
+### 相关API参考
 
-- Configuration options:
+- 配置选项:
   - [`autoColumnSize`](@/api/options.md#autocolumnsize)
   - [`autoRowSize`](@/api/options.md#autorowsize)
   - [`colWidths`](@/api/options.md#colwidths)

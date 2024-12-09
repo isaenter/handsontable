@@ -49,7 +49,7 @@ The example below shows how cell renderers can be used to populate the template 
 
 :::
 
-## Related API reference
+## 相关API参考
 
 - Hooks:
   - [`beforeChange`](@/api/hooks.md#beforechange)

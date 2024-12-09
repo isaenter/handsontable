@@ -21,7 +21,7 @@ const ExampleComponent = () => {
       comments={true}
       cell={[
         { row: 1, col: 1, comment: { value: 'Some comment' } },
-        // add the `style` parameter
+        // 添加`style`参数
         {
           row: 2,
           col: 2,

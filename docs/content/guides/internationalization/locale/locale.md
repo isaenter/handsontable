@@ -127,9 +127,9 @@ const hot = new Handsontable(container, {
 
 </div>
 
-### Related API reference
+### 相关API参考
 
-- Configuration options:
+- 配置选项:
   - [`language`](@/api/options.md#language)
   - [`layoutDirection`](@/api/options.md#layoutdirection)
   - [`locale`](@/api/options.md#locale)

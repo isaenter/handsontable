@@ -76,9 +76,9 @@ A tree grid enables you to represent the nested data structures within the data 
 
 </div>
 
-### Related API reference
+### 相关API参考
 
-- Configuration options:
+- 配置选项:
   - [`activeHeaderClassName`](@/api/options.md#activeheaderclassname)
   - [`currentHeaderClassName`](@/api/options.md#currentheaderclassname)
   - [`bindRowsWithHeaders`](@/api/options.md#bindrowswithheaders)

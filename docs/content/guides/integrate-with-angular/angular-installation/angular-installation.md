@@ -79,9 +79,9 @@ Now, you can use the Handsontable component in your HTML files.
 </hot-table>
 ```
 
-## Related API reference
+## 相关API参考
 
-- Configuration options:
+- 配置选项:
   - [`maxCols`](@/api/options.md#maxcols)
   - [`maxRows`](@/api/options.md#maxrows)
   - [`minCols`](@/api/options.md#mincols)

@@ -154,9 +154,9 @@ const ExampleComponent = () => {
 
 </div>
 
-### Related API reference
+### 相关API参考
 
-- Configuration options:
+- 配置选项:
   - [`editor`](@/api/options.md#editor)
   - [`renderer`](@/api/options.md#renderer)
   - [`type`](@/api/options.md#type)

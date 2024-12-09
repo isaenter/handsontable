@@ -40,9 +40,9 @@ To test the IME support, you will need to change your language preferences for y
 
 <video controls loop v-bind:src="'/docs/'+ $page.currentVersion + '/img/pages/ime-support/ime-support-in-handsontable.mp4'" width="100%"></video>
 
-## Related API reference
+## 相关API参考
 
-- Configuration options:
+- 配置选项:
   - [`language`](@/api/options.md#language)
   - [`layoutDirection`](@/api/options.md#layoutdirection)
   - [`locale`](@/api/options.md#locale)

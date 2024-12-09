@@ -102,9 +102,9 @@ By default, every hash consists of asterisks `*`. Use the option `hashSymbol` to
 
 - [Cell type](@/guides/cell-types/cell-type/cell-type.md)
 
-### Related API reference
+### 相关API参考
 
-- Configuration options:
+- 配置选项:
   - [`type`](@/api/options.md#type)
 - Core methods:
   - [`getCellMeta()`](@/api/core.md#getcellmeta)
