@@ -1,6 +1,6 @@
 ---
 id: zu0ja2qo
-title: Icon pack
+title: 图标包
 metaTitle: Icon pack - JavaScript Data Grid | Handsontable
 description: Create toolbars, menu bars, and context menus with our set of icons, designed specifically for tables, spreadsheets, and data-rich components.
 permalink: /icon-pack
@@ -15,24 +15,24 @@ searchCategory: Guides
 category: Accessories and menus
 ---
 
-# Icon pack
+# 图标包
 
-Create toolbars, menu bars, and context menus with our set of icons, designed specifically for tables, spreadsheets, and data-rich components.
+使用我们专为表格、电子表格和数据丰富的组件设计的图标集创建工具栏、菜单栏和右键菜单。
 
 [[toc]]
 
-## Overview
+## 概述
 
-Spreadsheet icons are designed to accompany data grids, spreadsheets and other dynamic data views. They are clean, consistent and lightweight. You can use them to create toolbars, menu bars and context menus. They look great at any scale and screen resolution.
+电子表格图标旨在与数据网格、电子表格和其他动态数据视图一起使用。它们干净、一致且轻便。您可以使用它们来创建工具栏、菜单栏和右键菜单。它们在任何尺寸和屏幕分辨率下看起来都很棒。
 
-- 160+ SVG icons.
-- Recommended size is 24px or scaled accordingly - 18, 24 or 36px.
-- Recommended color on light background is black at 75% opacity - `rgba(0, 0, 0, 0.75)`. For disabled icon style reduce the opacity to 35%.
-- Recommended color on dark background is white at 80% opacity - `rgba(255, 255, 255, 0.8)`. For disabled icon style reduce the opacity. to 30%.
+- 160 多个 SVG 图标。
+- 建议尺寸为 24 像素或相应缩放 -18、24 或 36 像素。
+- 浅色背景上的推荐颜色为黑色，不透明度为 75% -`rgba(0, 0, 0, 0.75)`。对于禁用的图标样式，将不透明度降低至 35%。
+- 深色背景上的推荐颜色为不透明度为 80% 的白色 -`rgba(255, 255, 255, 0.8)`。对于禁用的图标样式，降低不透明度。至 30%。
 
-## Download the package
+## 下载包
 
-Download the full set from the [git repository](https://github.com/handsontable/spreadsheet-icons) or from npm like so:
+从 [git 存储库](https://github.com/handsontable/spreadsheet-icons) 或从 npm 下载全套内容，如下所示：
 
 ```bash
 npm install @handsontable/spreadsheet-icons
@@ -211,10 +211,10 @@ npm install @handsontable/spreadsheet-icons
   <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.6,11.5h6.8c0.055,0,0.1-0.045,0.1-0.1V9.6c0-0.055-0.045-0.1-0.1-0.1H6.6c-0.055,0-0.1,0.045-0.1,0.1v1.8C6.5,11.455,6.545,11.5,6.6,11.5z M15.955,14.041c-0.033-0.033-0.037-0.083-0.011-0.122C16.61,12.925,17,11.755,17,10.5C17,6.916,13.859,4,10,4s-7,2.916-7,6.5S6.141,17,10,17c1.696,0,3.251-0.566,4.464-1.502c0.039-0.03,0.093-0.027,0.127,0.008l4.881,4.881c0.039,0.039,0.102,0.039,0.141,0l1.273-1.273c0.039-0.039,0.039-0.102,0-0.141L15.955,14.041z M10,15.375c-2.895,0-5.25-2.187-5.25-4.875S7.105,5.625,10,5.625s5.25,2.187,5.25,4.875S12.895,15.375,10,15.375z"/></svg><span>zoom-out</span></div>
 </div>
 
-## Related blog articles
+## 相关博客文章
 
 <div class="boxes-list">
 
-- [Introducing the new Handsontable spreadsheet icons](https://handsontable.com/blog/handsontable-spreadsheet-icons)
+- [推出新的 Handsontable 电子表格图标](https://handsontable.com/blog/handsontable-spreadsheet-icons)
 
 </div>

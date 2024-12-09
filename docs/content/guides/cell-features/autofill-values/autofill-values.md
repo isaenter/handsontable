@@ -1,6 +1,6 @@
 ---
 id: if13we5c
-title: Autofill values
+title: 自动填充值
 metaTitle: Autofill values - JavaScript Data Grid | Handsontable
 description: Copy a cell's value into multiple other cells, using the "fill handle" UI element. Configure the direction of copying, and more, through Handsontable's API.
 permalink: /autofill-values
@@ -20,15 +20,15 @@ searchCategory: Guides
 category: Cell features
 ---
 
-# Autofill values
+# 自动填充值
 
-Copy a cell's value into multiple other cells, using the "fill handle" UI element. Configure the direction of copying, and more, through Handsontable's API.
+使用`填充句柄`UI 元素将单元格的值复制到多个其他单元格中。通过 Handsontable 的 API 配置复制方向等。
 
 [[toc]]
 
-## Autofill in all directions
+## 全方位自动填充
 
-Using the tiny square known as the 'fill handle' in the corner of the selected cell, you can drag it (drag-down) to repeat the values from the cell. Double click the fill handle in `cell B4` where the value is `30` to fill the selection down to the last value in neighboring column, just like it would in Excel or Google Sheets.
+使用所选单元格角落中称为`填充手柄`的小方块，您可以拖动它（向下拖动）以重复单元格中的值。双击`单元格 B4`中值为`30`的填充手柄，将所选内容填充到相邻列中的最后一个值，就像在 Excel 或 Google Sheets 中一样。
 
 ::: only-for javascript
 
@@ -52,9 +52,9 @@ Using the tiny square known as the 'fill handle' in the corner of the selected c
 
 :::
 
-## Autofill in a vertical direction only and creating new rows
+## 仅在垂直方向自动填充并创建新行
 
-In this configuration, the fill handle is restricted to move only vertically. New rows are automatically added to the bottom of the table by changing [`autoInsertRow`](@/api/options.md#fillhandle) to `true`.
+在此配置中，填充手柄仅限于垂直移动。通过将 [`autoInsertRow`](@/api/options.md#fillhandle) 更改为 `true`，新行会自动添加到表格底部。
 
 ::: only-for javascript
 
@@ -78,13 +78,13 @@ In this configuration, the fill handle is restricted to move only vertically. Ne
 
 :::
 
-## Related API reference
+## 相关API参考
 
-- Configuration options:
+- 配置选项：
   - [`fillHandle`](@/api/options.md#fillhandle)
 - Hooks:
   - [`afterAutofill`](@/api/hooks.md#afterautofill)
   - [`beforeAutofill`](@/api/hooks.md#beforeautofill)
   - [`modifyAutofillRange`](@/api/hooks.md#modifyautofillrange)
-- Plugins:
+- 插件:
   - [`Autofill`](@/api/autofill.md)

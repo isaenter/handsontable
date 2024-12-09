@@ -86,7 +86,7 @@ Here's an example:
 
 :::
 
-In the example above, we’ve created a data object consisting of 2016’s Grammy nominees of the “Rock” genre. Each _0-level_ entry declares a category, while
+In the example above, we’ve created a data object consisting of 2016’s Grammy nominees of the `Rock` genre. Each _0-level_ entry declares a category, while
 their children declare nominees - assigned under the `__children` properties.
 
 Note that the first 0-level object in the array needs to have all columns defined to display the table properly. They can be declared as `null` or an empty
@@ -109,7 +109,7 @@ The context menu has been extended with a few Nested Rows related options, such 
 - Insert child row
 - Detach from parent
 
-The “Insert row above” and “Insert row below” options were modified to work properly with the nested data structure.
+The `Insert row above` and `Insert row below` options were modified to work properly with the nested data structure.
 
 ## Known limitations
 

@@ -3,55 +3,55 @@ import { registerAllModules } from 'handsontable/registry';
 import 'handsontable/styles/handsontable.css';
 import 'handsontable/styles/ht-theme-main.css';
 
-// register Handsontable's modules
+// 注册 Handsontable 的模块
 registerAllModules();
 
 const contextMenuSettings = {
   callback(key, selection, clickEvent) {
-    // Common callback for all options
+    // 所有选项的公共回调
     console.log(key, selection, clickEvent);
   },
   items: {
     row_above: {
       disabled() {
-        // `disabled` can be a boolean or a function
-        // Disable option when first row was clicked
+        //`disabled` 可以是布尔值或函数
+        //单击第一行时禁用选项
         return this.getSelectedLast()?.[0] === 0; // `this` === hot
       },
     },
-    // A separator line can also be added like this:
-    // 'sp1': { name: '---------' }
-    // and the key has to be unique
+    //也可以像这样添加分隔线：
+    //'sp1': { 名称: '--------' }
+    //并且键必须是唯一的
     sp1: '---------',
     row_below: {
       name: 'Click to add row below',
     },
     about: {
-      // Own custom option
+      // 自己的定制选项
       name() {
-        // `name` can be a string or a function
-        return '<b>Custom option</b>'; // Name can contain HTML
+        // `name` 可以是字符串或函数
+        return '<b>Custom option</b>'; // 名称可以包含 HTML
       },
       hidden() {
-        // `hidden` can be a boolean or a function
-        // Hide the option when the first column was clicked
+        //`hidden` 可以是布尔值或函数
+        //单击第一列时隐藏选项
         return this.getSelectedLast()?.[1] == 0; // `this` === hot
       },
       callback() {
-        // Callback for specific option
+        // 特定选项的回调
         setTimeout(() => {
-          alert('Hello world!'); // Fire alert after menu close (with timeout)
+          alert('Hello world!'); // 菜单关闭后发出弹窗警报（超时）
         }, 0);
       },
     },
     colors: {
-      // Own custom option
+      // 自己的定制选项
       name: 'Colors...',
       submenu: {
-        // Custom option with submenu of items
+        // 带有项目子菜单的自定义选项
         items: [
           {
-            // Key must be in the form 'parent_key:child_key'
+            // Key必须采用`parent_key:child_key”格式
             key: 'colors:red',
             name: 'Red',
             callback() {
@@ -66,8 +66,8 @@ const contextMenuSettings = {
       },
     },
     credits: {
-      // Own custom property
-      // Custom rendered element in the context menu
+      // 自己的自定义属性
+      // 右键菜单中的自定义渲染元素
       renderer() {
         const elem = document.createElement('marquee');
 

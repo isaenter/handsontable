@@ -24,7 +24,7 @@ import {
 } from '../src/helpers'
 import { HotTableProps, HotTableRef, HotRendererProps } from '../src/types'
 
-// register Handsontable's modules
+// 注册 Handsontable 的模块
 registerAllModules();
 
 describe('Passing column settings using HotColumn', () => {

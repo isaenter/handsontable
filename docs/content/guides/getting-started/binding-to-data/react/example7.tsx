@@ -12,7 +12,7 @@ interface Person {
   attr: (attr: string, val?: Handsontable.CellValue) => keyof Person | Person;
 }
 
-// register Handsontable's modules
+// 注册 Handsontable 的模块
 registerAllModules();
 
 interface ModelOptions {

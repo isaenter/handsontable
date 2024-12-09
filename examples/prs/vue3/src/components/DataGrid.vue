@@ -6,7 +6,7 @@ import "handsontable/dist/handsontable.full.min.css";
 
 import { data } from "../data";
 
-// register Handsontable's modules
+// 注册 Handsontable 的模块
 registerAllModules();
 
 export default defineComponent({

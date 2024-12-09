@@ -83,7 +83,7 @@ Double click on a cell to open the editor and preview the formula.
 ## Data grid example
 
 This example is more typical of data grids than spreadsheets. Calculations are present in two places
-– in column “Total due (fx)”, and in the summary row at the bottom.
+– in column `Total due (fx)`, and in the summary row at the bottom.
 
 ::: only-for javascript
 

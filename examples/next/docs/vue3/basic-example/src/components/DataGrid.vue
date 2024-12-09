@@ -8,7 +8,7 @@ import { data } from '../constants';
 
 import { alignHeaders, addClassesToRows } from '../hooks-callbacks';
 
-// register Handsontable's modules
+// 注册 Handsontable 的模块
 registerAllModules();
 
 export default defineComponent({

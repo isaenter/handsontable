@@ -41,7 +41,7 @@ import { registerAllModules } from 'handsontable/registry';
 import { AppComponent } from './app.component';
 /* end:skip-in-compilation */
 
-// register Handsontable's modules
+// 注册 Handsontable 的模块
 registerAllModules();
 
 @NgModule({

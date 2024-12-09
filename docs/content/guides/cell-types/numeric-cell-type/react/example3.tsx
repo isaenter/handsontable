@@ -6,7 +6,7 @@ import trTR from 'numbro/languages/tr-TR';
 import 'handsontable/styles/handsontable.css';
 import 'handsontable/styles/ht-theme-main.css';
 
-// register Handsontable's modules
+// 注册 Handsontable 的模块
 registerAllModules();
 
 // register the languages you need

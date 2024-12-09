@@ -4,7 +4,7 @@ import { registerAllModules } from 'handsontable/registry';
 import 'handsontable/styles/handsontable.css';
 import 'handsontable/styles/ht-theme-main.css';
 
-// register Handsontable's modules
+// 注册 Handsontable 的模块
 registerAllModules();
 
 const ExampleComponent = () => {
@@ -54,14 +54,14 @@ const ExampleComponent = () => {
           onMouseDown={() => copyBtnMousedownCallback()}
           onClick={() => copyBtnClickCallback()}
         >
-          Select and copy cell B2
+          选择并复制单元格 B2
         </button>
         <button
           id="cut"
           onMouseDown={() => cutBtnMousedownCallback()}
           onClick={() => cutBtnClickCallback()}
         >
-          Select and cut cell B2
+          选择并剪切单元格 B2
         </button>
       </div>
     </>

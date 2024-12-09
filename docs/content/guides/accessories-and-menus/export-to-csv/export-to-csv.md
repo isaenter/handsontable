@@ -1,8 +1,8 @@
 ---
 id: 51aacis1
-title: Export to CSV
-metaTitle: Export to CSV - JavaScript Data Grid | Handsontable
-description: Export your grid's raw data to the CSV format, as a downloadable file, a blob, or a string. Customize your export using Handsontable's configuration options.
+title: 导出为 CSV
+metaTitle: 导出为 CSV - JavaScript Data Grid | Handsontable
+description: 将网格的原始数据导出为 CSV 格式，作为可下载文件、blob 或字符串。使用 Handsontable 的配置选项自定义您的导出。
 permalink: /export-to-csv
 canonicalUrl: /export-to-csv
 tags:
@@ -10,22 +10,22 @@ tags:
   - save file
 react:
   id: sfxo3g54
-  metaTitle: Export to CSV - React Data Grid | Handsontable
+  metaTitle: 导出为 CSV - React Data Grid | Handsontable
 searchCategory: Guides
 category: Accessories and menus
 ---
 
-# Export to CSV
+# 导出为 CSV
 
-Export your grid's raw data to the CSV format, as a downloadable file, a blob, or a string. Customize your export using Handsontable's configuration options.
+将网格的原始数据导出为 CSV 格式，作为可下载文件、blob 或字符串。使用 Handsontable 的配置选项自定义您的导出。
 
 [[toc]]
 
-## Examples
+## 示例
 
-Mind that CSV exports contain only raw data, and don't include formulas, styling, or formatting information.
+请注意，CSV 导出仅包含原始数据，不包含公式、样式或格式信息。
 
-### Export to file
+### 导出到文件
 
 ::: only-for javascript
 
@@ -51,9 +51,9 @@ Mind that CSV exports contain only raw data, and don't include formulas, styling
 :::
 
 
-### Export as a JavaScript Blob object
+### 导出为 JavaScript Blob 对象
 
-Open a console in browser developer tools to see the result for the below example.
+在浏览器开发人员工具中打开控制台以查看以下示例的结果。
 
 ::: only-for javascript
 
@@ -78,9 +78,9 @@ Open a console in browser developer tools to see the result for the below exampl
 
 :::
 
-### Export as a string
+### 导出为字符串
 
-Open a console in browser developer tools to see the result for the below example.
+在浏览器开发人员工具中打开控制台以查看以下示例的结果。
 
 ::: only-for javascript
 
@@ -105,135 +105,135 @@ Open a console in browser developer tools to see the result for the below exampl
 
 :::
 
-## Available methods
+## 可用方法
 
 ::: only-for react
 
 ::: tip
 
-To use the Handsontable API, you'll need access to the Handsontable instance. You can do that by utilizing a reference to the `HotTable` component, and reading its `hotInstance` property.
+要使用 Handsontable API，您需要访问 Handsontable 实例。您可以通过利用对`HotTable`组件的引用并读取其`hotInstance`属性来做到这一点。
 
-For more information, see the [Instance methods](@/guides/getting-started/react-methods/react-methods.md) page.
-
-:::
+有关更多信息，请参阅[实例方法](@/guides/getting-started/react-methods/react-methods.md)页面。
 
 :::
 
-The plugin exposes the following methods to export data.
+:::
 
-- [`downloadFile(format, options)`](@/api/exportFile.md#downloadfile) - allows you to generate a downloadable file, directly in your browser.
-- [`exportAsBlob(format, options)`](@/api/exportFile.md#exportasblob) - allows you to export a JavaScript Blob object.
-- [`exportAsString(format, options)`](@/api/exportFile.md#exportasstring) - allows you to export data as a string.
+该插件公开了以下方法来导出数据。
 
-All of them accept the same arguments:
+- [`downloadFile(format, options)`](@/api/exportFile.md#downloadfile) - 允许您直接在浏览器中生成可下载的文件。
+- [`exportAsBlob(format, options)`](@/api/exportFile.md#exportasblob) - 允许您导出 JavaScript Blob 对象。
+- [`exportAsString(format, options)`](@/api/exportFile.md#exportasstring) - 允许您将数据导出为字符串。
 
-### format `String`
+他们都接受相同的论点：
 
-This is required to prepare a predefined settings object. We currently allow for only `'csv'` to be used.
+### 格式 `String`
 
-### options `Object`
+这是准备预定义设置对象所必需的。目前我们仅允许使用`csv`。
 
-This is an optional argument. It contains a set of supported options and extends the predefined CSV configuration. For the complete list of options that you can use, see [available options](#available-options-in-the-export-configuration).
+### 选项 `Object`
 
-## Available options in the export configuration
+这是一个可选参数。它包含一组受支持的选项并扩展了预定义的 CSV 配置。有关可以使用的选项的完整列表，请参阅[可用选项](#available-options-in-the-export-configuration)。
 
-Below you can find all supported options:
+## 导出配置中的可用选项
+
+您可以在下面找到所有支持的选项：
 
 ### bom `Boolean`
 
-Allows you to export data with a BOM signature.
+允许您导出带有 BOM 签名的数据。
 
-Note that this property will prepend content with the UTF-16BE BOM signature (_FE FF_). The browser will convert the signature to the UTF-8 value (_EF BB BF_) automatically.
+请注意，此属性将在内容前面添加 UTF-16BE BOM 签名 (_FE FF_)。浏览器会自动将签名转换为UTF-8值（_EF BB BF_）。
 
-You can use this property in all of the [available methods](#available-methods).
+您可以在所有[可用方法](#available-methods)中使用此属性。
 
-Default value: `true`
+默认值：`true`
 
-### columnDelimiter `String`
+### 列分隔符 `String`
 
-Allows you to define the columns delimiter.
+允许您定义列分隔符。
 
-You can use this property in all of the [available methods](#available-methods).
+您可以在所有[可用方法](#available-methods)中使用此属性。
 
-Default value: `','`
+默认值：`','`
 
-### columnHeaders `Boolean`
+### 列标题 `Boolean`
 
-When set to `true`, includes column headers in the exported data.
+设置为`true`时，在导出的数据中包含列标题。
 
-You can use this property in all of the [available methods](#available-methods).
+您可以在所有[可用方法](#available-methods)中使用此属性。
 
-The `columnHeaders` option doesn't support the [`NestedHeaders` plugin](@/api/nestedHeaders.md).
+`columnHeaders` 选项不支持 [`NestedHeaders` 插件](@/api/nestedHeaders.md)。
 
-Default value: `false`
+默认值：`false`
 
-### exportHiddenColumns `Boolean`
+### 导出隐藏列 `Boolean`
 
-Allows you to export data from hidden columns.
+允许您从隐藏列导出数据。
 
-You can use this property in all of the [available methods](#available-methods).
+您可以在所有[可用方法](#available-methods)中使用此属性。
 
-Default value: `false`
+默认值：`false`
 
-### exportHiddenRows `Boolean`
+### 导出隐藏行 `Boolean`
 
-Allows you to export data from hidden rows.
+允许您从隐藏行导出数据。
 
-You can use this property in all of the [available methods](#available-methods).
+您可以在所有[可用方法](#available-methods)中使用此属性。
 
-Default value: `false`
+默认值：`false`
 
-### fileExtension `String`
+### 文件扩展名 `String`
 
-Allows you to define the file extension.
+允许您定义文件扩展名。
 
-You can use this property in the `downloadFile()` method.
+您可以在`downloadFile()`方法中使用此属性。
 
-Default value: `'csv'`
+默认值：`'csv'`
 
-### filename `String`
+### 文件名 `String`
 
-Allows you to define the file name.
+允许您定义文件名。
 
-You can use predefined placeholders, which will be replaced by the date.
+您可以使用预定义的占位符，该占位符将被日期替换。
 
-You can use this property in the `downloadFile()` method.
+您可以在`downloadFile()`方法中使用此属性。
 
-Default value: `'Handsontable [YYYY]-[MM]-[DD]'`
+默认值：`'Handsontable [YYYY]-[MM]-[DD]'`
 
-### mimeType `String`
+### mime类型 `String`
 
-Allows you to define the MIME type.
+允许您定义 MIME 类型。
 
-You can use this property in the `downloadFile()` and `exportAsBlob()` methods.
+您可以在`downloadFile()`和`exportAsBlob()`方法中使用此属性。
 
-Default value: `'text/csv'`
+默认值：`'text/csv'`
 
-### range `Array`
+### 范围 `Array`
 
-Allows you to define a range of dataset to export. It's represented by an array of numeric, visual indexes `[startRow, startColumn, endRow, endColumn]`.
+允许您定义要导出的数据集范围。它由数字、视觉索引`[startRow、startColumn、endRow、endColumn]`数组表示。
 
-You can use this property in all of the [available methods](#available-methods).
+您可以在所有[可用方法](#available-methods)中使用此属性。
 
-Default value: `'text/csv'`
+默认值：`'text/csv'`
 
-### rowDelimiter `String`
+### 行分隔符 `String`
 
-Allows you to define rows delimiter.
+允许您定义行分隔符。
 
-You can use this property in all of the [available methods](#available-methods).
+您可以在所有[可用方法](#available-methods)中使用此属性。
 
-Default value: `'\r\n'`
+默认值：`'\r\n'`
 
-### rowHeaders `Boolean`
+### 行标题 `Boolean`
 
-Allows you to export data with their row header.
+允许您导出数据及其行标题。
 
-You can use this property in all of the [available methods](#available-methods).
+您可以在所有[可用方法](#available-methods)中使用此属性。
 
-Default value: `false`
+默认值：`false`
 
-## Related API reference
+## 相关API参考
 
-- Plugins:
+- 插件:
   - [`ExportFile`](@/api/exportFile.md)

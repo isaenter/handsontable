@@ -4,7 +4,7 @@ import { textRenderer, registerRenderer } from 'handsontable/renderers';
 import 'handsontable/styles/handsontable.css';
 import 'handsontable/styles/ht-theme-main.css';
 
-// register Handsontable's modules
+// 注册 Handsontable 的模块
 registerAllModules();
 
 const ExampleComponent = () => {

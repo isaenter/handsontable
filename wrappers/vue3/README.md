@@ -84,7 +84,7 @@ Use this data grid as you would any other component in your application. [Option
   import { HotTable } from '@handsontable/vue3';
   import { registerAllModules } from 'handsontable/registry';
 
-  // register Handsontable's modules
+  // 注册 Handsontable 的模块
   registerAllModules();
 
   export default defineComponent({

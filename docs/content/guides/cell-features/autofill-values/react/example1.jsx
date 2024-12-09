@@ -3,7 +3,7 @@ import { registerAllModules } from 'handsontable/registry';
 import 'handsontable/styles/handsontable.css';
 import 'handsontable/styles/ht-theme-main.css';
 
-// register Handsontable's modules
+// 注册 Handsontable 的模块
 registerAllModules();
 
 const ExampleComponent = () => {
@@ -21,7 +21,7 @@ const ExampleComponent = () => {
       data={data}
       rowHeaders={true}
       colHeaders={true}
-      fillHandle={true} // possible values: true, false, "horizontal", "vertical",
+      fillHandle={true} // 可配置的值: true, false, "horizontal", "vertical",
       height="auto"
       autoWrapRow={true}
       autoWrapCol={true}

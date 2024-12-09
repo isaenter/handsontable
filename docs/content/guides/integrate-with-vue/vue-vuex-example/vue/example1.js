@@ -7,7 +7,7 @@ import 'handsontable/styles/ht-theme-main.css';
 
 Vue.use(Vuex);
 
-// register Handsontable's modules
+// 注册 Handsontable 的模块
 registerAllModules();
 
 const ExampleComponent = {

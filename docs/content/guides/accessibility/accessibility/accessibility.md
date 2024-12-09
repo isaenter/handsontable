@@ -61,7 +61,7 @@ Handsontable 不需要鼠标即可在网格元素间导航。对于暂时或永�
 
 我们对数百个实施的经验表明，Handsontable 倾向于用作电子表格应用程序或数据网格组件。虽然乍一看差异似乎很小，但它会显著影响用户对导航的期望。
 
-在典型的电子表格应用程序（例如 Microsoft Excel 或 Google Sheets）中，您无法将焦点移到标题上。如果不了解复杂的[键盘快捷键](@/guides/navigation/keyboard-shortcuts/keyboard-shortcuts.md)，就很难对数据进行排序或过滤。此外，打开[列菜单](@/guides/columns/column-menu/column-menu.md)并非易事。Handsontable 在这方面提供了灵活性，允许用户在数据网格和电子表格“模式”之间切换。要进行这种切换，您可以使用两个选项的组合：[`navigableHeaders`](@/api/options.md#navigableheaders)启用或禁用将焦点移到标题上，并[`tabNavigation`](@/api/options.md#tabnavigation)决定是否<kbd>**Tab**</kbd>可以使用该键在单元格和标题之间导航。
+在典型的电子表格应用程序（例如 Microsoft Excel 或 Google Sheets）中，您无法将焦点移到标题上。如果不了解复杂的[键盘快捷键](@/guides/navigation/keyboard-shortcuts/keyboard-shortcuts.md)，就很难对数据进行排序或过滤。此外，打开[列菜单](@/guides/columns/column-menu/column-menu.md)并非易事。Handsontable 在这方面提供了灵活性，允许用户在数据网格和电子表格`模式`之间切换。要进行这种切换，您可以使用两个选项的组合：[`navigableHeaders`](@/api/options.md#navigableheaders)启用或禁用将焦点移到标题上，并[`tabNavigation`](@/api/options.md#tabnavigation)决定是否<kbd>**Tab**</kbd>可以使用该键在单元格和标题之间导航。
 
 下表提供了有关这两种情况的更多详细信息：
  
@@ -147,9 +147,9 @@ Handsontable 的每个新版本都通过以下屏幕阅读器进行了全面的�
 
 ```js
 const hot = new Handsontable(container, {
-  // disable column virtualization
+  // 禁用列虚拟化
   renderAllColumns: true,
-  // disable row virtualization
+  // 禁用行虚拟化
   renderAllRows: true,
 });
 ```
@@ -160,59 +160,59 @@ const hot = new Handsontable(container, {
 
 ```js
 <HotTable
-  // disable column virtualization
+  // 禁用列虚拟化
   renderAllColumns={true}
-  // disable row virtualization
+  // 禁用行虚拟化
   renderAllRows={true}
 />
 ```
 
 :::
 
-## High-contrast theme
+## 高对比度主题
 
-The recommended [minimum contrast ratio](https://www.w3.org/WAI/WCAG21/quickref/#contrast-minimum) for text against images or backgrounds is 4.5:1. To achieve this level of contrast with Handsontable's default theme, you can:
+建议文本与图像或背景的[最小对比度](https://www.w3.org/WAI/WCAG21/quickref/#contrast-minimum) 为 4.5:1。要与 Handsontable 的默认主题实现这种程度的对比，您可以：
 
-- Override the grid's CSS with your own styles.
-- Use third-party software, such as the [High Contrast](https://chrome.google.com/webstore/detail/high-contrast/djcfdncoelnlbldjfhinnjlhdjlikmph) extension for Chrome, supported by Google.
+- 用您自己的样式覆盖网格的 CSS。
+- 使用第三方软件，例如 Google 支持的 Chrome 的 [高对比度](https://chrome.google.com/webstore/detail/high-contrast/djcfdncoelnlbldjfhinnjlhdjlikmph) 扩展程序。
 
-## Requirements for developers
+## 对开发者的要求
 
-When you customize Handsontable, it's you who's responsible for ensuring the accessibility of your solution. Especially when you create a [custom cell type](@/guides/cell-types/cell-type/cell-type.md) or a [custom plugin](@/guides/tools-and-building/custom-plugins/custom-plugins.md), remember to make them accessible to everyone.
+当您自定义 Handsontable 时，您有责任确保解决方案的可访问性。特别是当您创建[自定义单元类型](@/guides/cell-types/cell-type/cell-type.md) 或[自定义插件](@/guides/tools-and-building/custom-plugins/custom-plugins.md），请记住让每个人都可以访问它们。
 
-Our recommendations for custom development:
+我们对定制开发的建议：
 
-- Test your code against WCAG 2.1 requirements frequently.
-- Use proper color contrast, font size, and semantic HTML.
-- If needed, implement additional WAI-ARIA attributes.
-- Avoid flashing or blinking content.
-- Test your customizations with real users who have different types of disabilities. If you don’t have access to real users, try [Funkify](https://www.funkify.org/), a disability simulator, which can help you look at your application from the perspective of users with different disabilities.
+- 经常根据 WCAG 2.1 要求测试您的代码。
+- 使用适当的颜色对比度、字体大小和语义 HTML。
+- 如果需要，实施附加 WAI-ARIA 属性。
+- 避免闪烁或闪烁的内容。
+- 与具有不同类型残疾的真实用户一起测试您的自定义设置。如果您无法接触到真实用户，请尝试 [Funkify](https://www.funkify.org/)，这是一个残障模拟器，它可以帮助您从不同残障用户的角度来看待您的应用程序。
 
 ::: tip
 
-The quality of custom Handsontable modifications can impact your application's accessibility level. Make sure to actively check how your changes influence the overall accessibility of your application, using tools like [Lighthouse](https://developers.google.com/web/tools/lighthouse).
+自定义 Handsontable 修改的质量可能会影响应用程序的可访问性级别。确保使用 [Lighthouse](https://developers.google.com/web/tools/lighthouse) 等工具主动检查您的更改如何影响应用程序的整体可访问性。
 
 :::
 
-## Maintaining accessibility
+## 保持可访问性
 
-We make sure our data grid remains accessible by taking the following measures:
+我们通过采取以下措施确保我们的数据网格保持可访问性：
 
-- We check Handsontable's accessibility score with a range of accessibility testing tools.
-- We use automated visual regression testing.
-- We manually test all of Handsontable's features with the most popular screen readers.
-- We use automated unit and end-to-end tests.
+- 我们使用一系列辅助功能测试工具检查 Handsontable 的辅助功能得分。
+- 我们使用自动视觉回归测试。
+- 我们使用最流行的屏幕阅读器手动测试 Handsontable 的所有功能。
+- 我们使用自动化单元和端到端测试。
 
-## Known limitations
+## 已知限制
 
-- When [frozen rows](@/guides/rows/row-freezing/row-freezing.md), [frozen columns](@/guides/columns/column-freezing/column-freezing.md), or both, are enabled, some screen readers may incorrectly read the total number of rows and columns.
-- When you select a cell that's part of a frozen row, frozen column, or both, NVDA and JAWS might incorrectly announce that cell's column header name.
-- Dynamic ARIA attributes are sometimes omitted by screen readers.
-- The `aria-rowcount` attribute is intentionally set to `-1`, as most screen readers either ignore or misinterpret it. This configuration ensures accuracy with screen readers such as VoiceOver. We plan to revise this approach once screen readers consistently handle the `aria-rowcount` attribute correctly.
+- 当[冻结行](@/guides/rows/row-freezing/row-freezing.md)、[冻结列](@/guides/columns/column-freezing/column-freezing.md)或两者同时存在时启用后，某些屏幕阅读器可能会错误地读取总行数和总列数。
+- 当您选择属于​​冻结行、冻结列或两者的单元格时，NVDA 和 JAWS 可能会错误地宣告该单元格的列标题名称。
+- 屏幕阅读器有时会忽略动态 ARIA 属性。
+- `aria-rowcount` 属性故意设置为 `-1`，因为大多数屏幕阅读器要么忽略或误解它。此配置可确保 VoiceOver 等屏幕阅读器的准确性。一旦屏幕阅读器始终正确地处理`aria-rowcount属性，我们计划修改此方法。
 
-## API reference
+## API 参考
 
-For the list of [options](@/guides/getting-started/configuration-options/configuration-options.md), methods, and [Handsontable hooks](@/guides/getting-started/events-and-hooks/events-and-hooks.md) related to accessibility, see the following API reference pages:
+有关[选项](@/guides/getting-started/configuration-options/configuration-options.md)、方法和[Handsontable hooks](@/guides/getting-started/events-and-hooks/events)的列表-and-hooks.md) 与可访问性相关，请参阅以下 API 参考页：
 
 - [`autoWrapCol`](@/api/options.md#autowrapcol)
 - [`autoWrapRow`](@/api/options.md#autowraprow)
@@ -225,12 +225,12 @@ For the list of [options](@/guides/getting-started/configuration-options/configu
 - [`viewportColumnRenderingOffset`](@/api/options.md#viewportcolumnrenderingoffset)
 - [`viewportRowRenderingOffset`](@/api/options.md#viewportrowrenderingoffset)
 
-## Troubleshooting
+## 故障排除
 
-Try the following links if you didn't find what you need:
+如果您没有找到您需要的内容，请尝试以下链接：
 
-- [View related topics](https://github.com/handsontable/handsontable/labels/Accessibility) on GitHub
-- [Report an issue](https://github.com/handsontable/handsontable/issues/new/choose) on GitHub
-- [Ask a question](https://stackoverflow.com/questions/tagged/handsontable) on Stack Overflow
-- [Start a discussion](https://forum.handsontable.com/c/getting-help/questions) on Handsontable's forum
-- [Contact our technical support](https://handsontable.com/contact?category=technical_support) to get help
+- GitHub 上的[查看相关主题](https://github.com/handsontable/handsontable/labels/Accessibility)
+- GitHub 上的[报告问题](https://github.com/handsontable/handsontable/issues/new/choose)
+- Stack Overflow 上的[提问](https://stackoverflow.com/questions/tagged/handsontable)
+- 在 Handsontable 论坛上[开始讨论](https://forum.handsontable.com/c/getting-help/questions)
+- [联系我们的技术支持](https://handsontable.com/contact?category=technical_support) 获取帮助

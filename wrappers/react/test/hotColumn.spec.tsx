@@ -14,7 +14,7 @@ import {
   mountComponentWithRef
 } from './_helpers';
 
-// register Handsontable's modules
+// 注册 Handsontable 的模块
 registerAllModules();
 
 describe('Passing column settings using HotColumn', () => {

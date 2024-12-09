@@ -847,7 +847,7 @@ function DemoOptions({
                   handleCheckboxChange('enable-arrow-rl-first-last-column')
                 }
               />
-              The right/left arrow keys move the focus to the first/last column
+              右/左箭头键将焦点移动到第一/最后一列
             </label>
             <a
               href="https://handsontable.com/docs/react-data-grid/api/options/#autowrapcol"
@@ -894,7 +894,7 @@ function DemoOptions({
                   handleCheckboxChange('enable-arrow-td-first-last-column')
                 }
               />
-              The up/down arrow keys move the focus to the first/last row
+              上/下箭头键将焦点移动到第一行/最后一行
             </label>
             <a
               href="https://handsontable.com/docs/react-data-grid/api/options/#autowraprow"
@@ -941,7 +941,7 @@ function DemoOptions({
                   handleCheckboxChange('enable-enter-focus-editing')
                 }
               />
-              The Enter key moves the focus after cell edition
+              单元格编辑后按 <kbd>**Enter**</kbd> 键移动焦点
             </label>
             <a
               href="https://handsontable.com/docs/react-data-grid/api/options/#entermoves"

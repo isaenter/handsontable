@@ -43,7 +43,7 @@ import { AppComponent } from './app.component';
 import { HotTableModule } from '@handsontable/angular';
 import { registerAllModules } from 'handsontable/registry';
 
-// register Handsontable's modules
+// 注册 Handsontable 的模块
 registerAllModules();
 
 @NgModule({

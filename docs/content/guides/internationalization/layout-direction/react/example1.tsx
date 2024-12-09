@@ -4,7 +4,7 @@ import { registerLanguageDictionary, arAR } from 'handsontable/i18n';
 import 'handsontable/styles/handsontable.css';
 import 'handsontable/styles/ht-theme-main.css';
 
-// register Handsontable's modules
+// 注册 Handsontable 的模块
 registerAllModules();
 registerLanguageDictionary(arAR);
 
