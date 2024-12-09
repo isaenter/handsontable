@@ -29,7 +29,7 @@ Set the layout direction for right-to-left languages. Automatically inherit your
 
 [[toc]]
 
-## Overview
+## 概述
 
 To properly display Handsontable's UI and data in LTR languages (such as English, Chinese, or Russian) and RTL languages (such as Arabic, Persian, or Hebrew), configure your grid's layout direction.
 
@@ -224,9 +224,9 @@ You can apply the horizontal text alignment settings to:
 - [Individual cells](@/guides/getting-started/configuration-options/configuration-options.md#set-cell-options), by setting [`className`](@/api/options.md#classname) on the cell level
 - [Individual grid elements, based on any logic you implement](@/guides/getting-started/configuration-options/configuration-options.md#implement-custom-logic), by setting [`className`](@/api/options.md#classname) using the [`cells`](@/api/options.md#cells) option's callback
 
-## Related articles
+## 相关文章
 
-### Related guides
+### 相关指南
 
 <div class="boxes-list gray">
 

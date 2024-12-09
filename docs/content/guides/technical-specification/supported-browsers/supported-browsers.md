@@ -20,7 +20,7 @@ Handsontable supports all the most popular desktop and mobile browsers.
 
 [[toc]]
 
-## Overview
+## 概述
 
 We carefully test our code on the **two latest versions** of most-popular modern browser, on both mobile and desktop devices. In addition to running unit and end-to-end tests, we focus on two factors that are crucial for all users: performance and accuracy of the user interface.
 

@@ -133,5 +133,5 @@ The [`moveColumns`](@/api/manualColumnMove.md#movecolumns) function cannot perfo
 - Hooks:
   - [`afterColumnMove`](@/api/hooks.md#aftercolumnmove)
   - [`beforeColumnMove`](@/api/hooks.md#beforecolumnmove)
-- Plugins:
+- 插件:
   - [`ManualColumnMove`](@/api/manualColumnMove.md)

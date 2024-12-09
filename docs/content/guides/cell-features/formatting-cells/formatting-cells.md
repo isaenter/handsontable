@@ -18,7 +18,7 @@ Change the appearance of cells, using custom CSS classes, inline styles, or cust
 
 [[toc]]
 
-## Overview
+## 概述
 
 Handsontable uses the HTML `table` structure so customization is based either on referencing to the already existing elements, such as `TR`/`TD`, or by applying
 your own CSS classes to HTML elements.
@@ -109,9 +109,9 @@ In the names of the API properties, the words `start` and `end` refer to the sta
 
 :::
 
-## Related articles
+## 相关文章
 
-### Related guides
+### 相关指南
 
 - [Conditional formatting](@/guides/cell-features/conditional-formatting/conditional-formatting.md)
 
@@ -131,5 +131,5 @@ In the names of the API properties, the words `start` and `end` refer to the sta
   - [`placeholderCellClassName`](@/api/options.md#placeholdercellclassname)
   - [`readOnlyCellClassName`](@/api/options.md#readonlycellclassname)
   - [`tableClassName`](@/api/options.md#tableclassname)
-- Plugins:
+- 插件:
   - [`CustomBorders`](@/api/customBorders.md)

@@ -31,7 +31,7 @@ category: Styling
 
 Use Handsontable's built-in themes or customize its look by adjusting available CSS variables.
 
-## Overview
+## 概述
 
 Handsontable themes manage most visual elements of the design and are simple to customize. By default, two built-in themes are available: `main` and `horizon`. Both themes feature dark and light modes that automatically adjust to your app's preferred color scheme.
 

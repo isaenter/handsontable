@@ -18,7 +18,7 @@ Activate Handsontable, passing your license key in the configuration object. Use
 
 [[toc]]
 
-## Overview
+## 概述
 
 Handsontable is available under Commercial and Free licenses, depending on your usage.
 
@@ -130,9 +130,9 @@ _The license key for Handsontable expired on `[expiration_date]`, and is not val
 
 To get a commercial license key for your Handsontable copy, contact our [Sales Team](https://handsontable.com/get-a-quote).
 
-## Related articles
+## 相关文章
 
-### Related guides
+### 相关指南
 
 <div class="boxes-list gray">
  

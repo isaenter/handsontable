@@ -59,9 +59,9 @@ By default, the values entered into the time-type column are not validated, so i
 
 :::
 
-## Related articles
+## 相关文章
 
-### Related guides
+### 相关指南
 
 <div class="boxes-list gray">
 

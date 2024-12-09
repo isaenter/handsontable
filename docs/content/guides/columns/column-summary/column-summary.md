@@ -26,7 +26,7 @@ Calculate sum, min, max, count, average or custom aggregates of individual colum
 
 [[toc]]
 
-## Overview
+## 概述
 
 The [`ColumnSummary`](@/api/columnSummary.md) plugin lets you quickly calculate and display a column summary.
 
@@ -661,5 +661,5 @@ To throw data type errors, set the [`suppressDataTypeErrors`](@/api/columnSummar
 
 - 配置选项:
   - [`columnSummary`](@/api/options.md#columnsummary)
-- Plugins:
+- 插件:
   - [`ColumnSummary`](@/api/columnSummary.md)

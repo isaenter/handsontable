@@ -29,7 +29,7 @@ Customize Handsontable's keyboard shortcuts.
 
 [[toc]]
 
-## Overview
+## 概述
 
 You can completely customize your keyboard shortcuts, using the [`ShortcutManager`](@/api/shortcutManager.md) API:
 

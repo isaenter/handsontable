@@ -22,7 +22,7 @@ Extend Handsontable's functionality by writing your custom plugin. Use the BaseP
 
 [[toc]]
 
-## Overview
+## 概述
 
 Plugins are a great way of extending Handsontable's capabilities. In fact, most Handsontable features are provided by plugins.
 

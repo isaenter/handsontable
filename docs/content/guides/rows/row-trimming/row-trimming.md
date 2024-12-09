@@ -18,7 +18,7 @@ Hide individual rows from your interface and exclude them from the rendering pro
 
 [[toc]]
 
-## Overview
+## 概述
 
 Row trimming is similar to [row hiding](@/guides/rows/row-hiding/row-hiding.md), but works a bit differently.
 
@@ -156,5 +156,5 @@ To see the changes made, call `hot.render();` to re-render the table.
   - [`afterUntrimRow`](@/api/hooks.md#afteruntrimrow)
   - [`beforeTrimRow`](@/api/hooks.md#beforetrimrow)
   - [`beforeUntrimRow`](@/api/hooks.md#beforeuntrimrow)
-- Plugins:
+- 插件:
   - [`TrimRows`](@/api/trimRows.md)

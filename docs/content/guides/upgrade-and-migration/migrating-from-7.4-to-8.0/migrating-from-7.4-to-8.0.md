@@ -19,7 +19,7 @@ Migrate from Handsontable 7.4 to Handsontable 8.0, released on August 5, 2020.
 
 [[toc]]
 
-## Overview
+## 概述
 
 This guide helps you upgrade your Handsontable version to 8.0.0. We strongly recommend the upgrade, as it lets you benefit from a completely new architecture of row and column management.
 

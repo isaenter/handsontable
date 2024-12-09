@@ -18,7 +18,7 @@ Use default column headers (A, B, C), or set them to custom values provided by a
 
 [[toc]]
 
-## Overview
+## 概述
 
 Column headers are gray-colored rows used to label each column or group of columns. By default, these headers are populated with letters in alphabetical order.
 
@@ -158,9 +158,9 @@ If you want to style the header labels, you can pass any number of class names, 
 
 More complex data structures can be displayed with multiple headers, each representing a different category of data. To learn more about nested headers, see the [column groups](@/guides/columns/column-groups/column-groups.md) page.
 
-## Related articles
+## 相关文章
 
-### Related guides
+### 相关指南
 
 <div class="boxes-list gray">
 
@@ -186,5 +186,5 @@ More complex data structures can be displayed with multiple headers, each repres
   - [`beforeHighlightingColumnHeader`](@/api/hooks.md#beforehighlightingcolumnheader)
   - [`modifyColHeader`](@/api/hooks.md#modifycolheader)
   - [`modifyColumnHeaderHeight`](@/api/hooks.md#modifycolumnheaderheight)
-- Plugins:
+- 插件:
   - [`NestedHeaders`](@/api/nestedHeaders.md)

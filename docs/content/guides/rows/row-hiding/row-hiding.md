@@ -18,7 +18,7 @@ Hide individual rows to avoid rendering them as DOM elements. It helps you reduc
 
 [[toc]]
 
-## Overview
+## 概述
 
 "Hiding a row" means that the hidden row doesn't get rendered as a DOM element.
 
@@ -277,5 +277,5 @@ plugin.showRows([0, 4, 6]);
   - [`afterUnhideRows`](@/api/hooks.md#afterunhiderows)
   - [`beforeHideRows`](@/api/hooks.md#beforehiderows)
   - [`beforeUnhideRows`](@/api/hooks.md#beforeunhiderows)
-- Plugins:
+- 插件:
   - [`HiddenRows`](@/api/hiddenRows.md)

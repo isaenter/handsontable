@@ -23,7 +23,7 @@ Lock the position of specified columns, keeping them visible when scrolling.
 
 [[toc]]
 
-## Overview
+## 概述
 
 Column freezing locks specific columns of a grid in place, keeping them visible while scrolling to
 another area of the grid. We refer to frozen columns as _fixed_.
@@ -92,5 +92,5 @@ Mind that when you unfreeze a frozen column, it doesn't go back to the original 
 - 配置选项:
   - [`fixedColumnsStart`](@/api/options.md#fixedcolumnsstart)
   - [`manualColumnFreeze`](@/api/options.md#manualcolumnfreeze)
-- Plugins:
+- 插件:
   - [`ManualColumnFreeze`](@/api/manualColumnFreeze.md)

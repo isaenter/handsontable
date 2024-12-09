@@ -18,7 +18,7 @@ Render, edit, and validate the contents of your cells, using Handsontable's cell
 
 [[toc]]
 
-## Overview
+## 概述
 
 With every cell in the Handsontable there are 3 associated functions:
 
@@ -141,9 +141,9 @@ const ExampleComponent = () => {
 
 :::
 
-## Related articles
+## 相关文章
 
-### Related guides
+### 相关指南
 
 <div class="boxes-list gray">
 

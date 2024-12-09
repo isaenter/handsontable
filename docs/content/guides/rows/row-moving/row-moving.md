@@ -80,5 +80,5 @@ The [`moveRows`](@/api/manualRowMove.md#moverows) function cannot perform some a
 - Hooks:
   - [`afterRowMove`](@/api/hooks.md#afterrowmove)
   - [`beforeRowMove`](@/api/hooks.md#beforerowmove)
-- Plugins:
+- 插件:
   - [`ManualRowMove`](@/api/manualRowMove.md)

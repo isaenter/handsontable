@@ -18,7 +18,7 @@ Create interactive elements that can be checked or unchecked, by using the check
 
 [[toc]]
 
-## Overview
+## 概述
 
 Data in these cells will be rendered as a checkbox and you can easily change it by checking/unchecking the checkbox.
 
@@ -115,9 +115,9 @@ To add a label to the checkbox, use the [`label`](@/api/options.md#label) option
 | <kbd>**Delete**</kbd>    | <kbd>**Delete**</kbd>    | Uncheck the checkbox          | &cross; | &check; |
 | <kbd>**Backspace**</kbd> | <kbd>**Backspace**</kbd> | Uncheck the checkbox          | &cross; | &check; |
 
-## Related articles
+## 相关文章
 
-### Related guides
+### 相关指南
 - [Cell type](@/guides/cell-types/cell-type/cell-type.md)
 
 ### 相关API参考

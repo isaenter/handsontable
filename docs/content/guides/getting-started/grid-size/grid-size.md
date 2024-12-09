@@ -168,7 +168,7 @@ You can listen for two hooks, [`beforeRefreshDimensions`](@/api/hooks.md#beforer
 
 :::
 
-## Related articles
+## 相关文章
 
 <div class="boxes-list gray">
 

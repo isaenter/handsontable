@@ -18,7 +18,7 @@ Collect user input with a list of choices, by using the autocomplete cell type.
 
 [[toc]]
 
-## Overview
+## 概述
 
 You can complete the autocomplete cell type in three different ways:
 - Flexible mode
@@ -117,9 +117,9 @@ Autocomplete can also be used with Ajax data sources. In the example below, sugg
 
 :::
 
-## Related articles
+## 相关文章
 
-### Related guides
+### 相关指南
 
 - [Cell type](@/guides/cell-types/cell-type/cell-type.md)
 - [Dropdown cell type](@/guides/cell-types/dropdown-cell-type/dropdown-cell-type.md)

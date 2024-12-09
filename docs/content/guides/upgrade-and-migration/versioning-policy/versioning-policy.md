@@ -18,7 +18,7 @@ Handsontable follows the principles of [Semantic Versioning](https://semver.org/
 
 [[toc]]
 
-## Overview
+## 概述
 
 We use the version format of X.Y.Z (Major.Minor.Patch), incrementing them when a certain type of change occurs to the code.
 

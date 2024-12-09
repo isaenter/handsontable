@@ -120,9 +120,9 @@ Click on one of the ▼ icons to open an interactive date editor.
 
 :::
 
-## Related articles
+## 相关文章
 
-### Related guides
+### 相关指南
 
 <div class="boxes-list gray">
 

@@ -29,7 +29,7 @@ functions, custom functions, named expressions, and more.
 
 [[toc]]
 
-## Overview
+## 概述
 
 The _Formulas_ plugin provides you an extensive calculation capabilities based on formulas using the
 spreadsheet notation. Under the hood, it uses an engine called
@@ -514,7 +514,7 @@ details, [contact our Sales Team](https://handsontable.com/get-a-quote).
 
 :::
 
-## Related articles
+## 相关文章
 
 ### HyperFormula documentation
 
@@ -545,5 +545,5 @@ details, [contact our Sales Team](https://handsontable.com/get-a-quote).
   - [`afterSheetAdded`](@/api/hooks.md#aftersheetadded)
   - [`afterSheetRemoved`](@/api/hooks.md#aftersheetremoved)
   - [`afterSheetRenamed`](@/api/hooks.md#aftersheetrenamed)
-- Plugins:
+- 插件:
   - [`Formulas`](@/api/formulas.md)

@@ -24,7 +24,7 @@ Set Handsontable's UI language to one of the built-in translations, or create yo
 
 [[toc]]
 
-## Overview
+## 概述
 
 You can easily change the text of the UI for the purpose of translating it to specific languages. We provide the developer with predefined languages, which can be applied by loading the language set and changing just one setting, and an ability to use their own language sets, created using templates of existing language files.
 
@@ -341,9 +341,9 @@ Handsontable.languages.dictionaryKeys
 
 Contains: `Object`
 
-## Related articles
+## 相关文章
 
-### Related guides
+### 相关指南
 
 <div class="boxes-list gray">
 

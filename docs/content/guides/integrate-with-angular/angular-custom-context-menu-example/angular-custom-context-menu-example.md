@@ -29,9 +29,9 @@ The following is an implementation of the `@handsontable/angular` component with
 
 :::
 
-## Related articles
+## 相关文章
 
-### Related guides
+### 相关指南
 
 <div class="boxes-list gray">
 
@@ -72,5 +72,5 @@ The following is an implementation of the `@handsontable/angular` component with
   - [`beforeDropdownMenuSetItems`](@/api/hooks.md#beforedropdownmenusetitems)
   - [`beforeDropdownMenuShow`](@/api/hooks.md#beforedropdownmenushow)
   - [`beforeOnCellContextMenu`](@/api/hooks.md#beforeoncellcontextmenu)
-- Plugins:
+- 插件:
   - [`ContextMenu`](@/api/contextMenu.md)

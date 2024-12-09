@@ -2,7 +2,7 @@
 
 To avoid unintended changes to Handsontable's UI, we use visual regression testing.
 
-## Overview
+## 概述
 
 We run visual tests automatically by using the following tools:
 

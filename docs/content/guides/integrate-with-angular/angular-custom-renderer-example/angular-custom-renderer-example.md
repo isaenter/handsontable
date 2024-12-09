@@ -29,9 +29,9 @@ The following example is an implementation of `@handsontable/angular` with a cus
 
 :::
 
-## Related articles
+## 相关文章
 
-### Related guides
+### 相关指南
 
 <div class="boxes-list gray">
 

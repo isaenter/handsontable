@@ -29,9 +29,9 @@ The following is an implementation of the `@handsontable/angular` component with
 
 :::
 
-## Related articles
+## 相关文章
 
-### Related guides
+### 相关指南
 
 <div class="boxes-list gray">
 

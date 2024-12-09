@@ -1,6 +1,6 @@
 ---
 id: 4ca0c70r
-title: Conditional formatting
+title: 条件格式
 metaTitle: Conditional formatting - JavaScript Data Grid | Handsontable
 description: Format specified cells, based on dynamic conditions.
 permalink: /conditional-formatting
@@ -12,24 +12,24 @@ searchCategory: Guides
 category: Cell features
 ---
 
-# Conditional formatting
+# 条件格式
 
-Format specified cells, based on dynamic conditions.
+根据动态条件设置指定单元格的格式。
 
 [[toc]]
 
-## Overview
+## 概述
 
-Conditional formatting can be used to set the font, color, typeface, etc., for cell content and can also be used to format the style of a cell, all based on a predefined set of criteria.
+条件格式可用于设置单元格内容的字体、颜色、字体等，也可用于设置单元格样式的格式，所有这些都基于一组预定义的条件。
 
-## Example of conditional formatting
+## 条件格式示例
 
-This demo shows how to use the cell type renderer feature to make some conditional formatting:
+该演示展示了如何使用单元格类型渲染器功能来进行一些条件格式设置：
 
-1. The first row is read-only and formatted as bold green text.
-2. All cells in the Nissan column are formatted as italic text.
-3. Empty cells are formatted with a silver background.
-4. Negative numbers are formatted as red text.
+1. 第一行是只读的，格式为粗体绿色文本。
+2. Nissan 列中的所有单元格均设置为斜体文本格式。
+3. 空单元格的格式为银色背景。
+4. 负数的格式为红色文本。
 
 ::: only-for javascript
 
@@ -55,11 +55,11 @@ This demo shows how to use the cell type renderer feature to make some condition
 
 :::
 
-## Related articles
+## 相关文章
 
-### Related guides
+### 相关指南
 
-- [Formatting cells](@/guides/cell-features/formatting-cells/formatting-cells.md)
+- [设置单元格格式](@/guides/cell-features/formatting-cells/formatting-cells.md)
 
 ### 相关API参考
 
@@ -77,5 +77,5 @@ This demo shows how to use the cell type renderer feature to make some condition
   - [`placeholderCellClassName`](@/api/options.md#placeholdercellclassname)
   - [`readOnlyCellClassName`](@/api/options.md#readonlycellclassname)
   - [`tableClassName`](@/api/options.md#tableclassname)
-- Plugins:
+- 插件:
   - [`CustomBorders`](@/api/customBorders.md)

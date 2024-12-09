@@ -21,7 +21,7 @@ Select a single cell, a range of adjacent cells, or multiple non-adjacent ranges
 
 [[toc]]
 
-## Overview
+## 概述
 
 Selection enables you to select a single cell or ranges of cells within Handsontable. Once selected, you can retrieve data from the cell, edit the cell's contents, or change the style of the cell.
 
@@ -205,5 +205,5 @@ To jump across a horizontal edge:
   - [`afterSelectionEnd`](@/api/hooks.md#afterselectionend)
   - [`afterSelectionEndByProp`](@/api/hooks.md#afterselectionendbyprop)
   - [`modifyTransformStart`](@/api/hooks.md#modifytransformstart)
-- Plugins:
+- 插件:
   - [`DragToScroll`](@/api/dragToScroll.md)

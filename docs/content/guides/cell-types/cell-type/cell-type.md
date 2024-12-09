@@ -18,7 +18,7 @@ Use Handsontable's built-in cell types such as autocomplete, date, time, and mor
 
 [[toc]]
 
-## Overview
+## 概述
 
 There are three functions associated with every table cell: [`renderer`](@/api/options.md#renderer), [`editor`](@/api/options.md#editor), and optionally [`validator`](@/api/options.md#validator). These functions are mostly used all together as they are strongly connected.
 
@@ -481,9 +481,9 @@ Please keep in mind that opening a cell with `undefined` and `null` values resul
 
 Empty cells may be treated differently in different contexts, for example, the [`ColumnSorting`](@/api/columnSorting.md) plugin has `sortEmptyCells` option which is responsible for establishing whether empty cells should be sorted like non-empty cells.
 
-## Related articles
+## 相关文章
 
-### Related guides
+### 相关指南
 
 <div class="boxes-list gray">
 

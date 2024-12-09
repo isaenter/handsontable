@@ -18,7 +18,7 @@ Collect user input with a searchable list of choices, by using the dropdown cell
 
 [[toc]]
 
-## Overview
+## 概述
 
 The dropdown cell type is based on an autocomplete cell type and can also be searchable.
 
@@ -62,9 +62,9 @@ Internally, cell `type="dropdown"` is equivalent to cell `type="autocomplete" st
 
 :::
 
-## Related articles
+## 相关文章
 
-### Related guides
+### 相关指南
 
 <div class="boxes-list gray">
 

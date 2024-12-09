@@ -168,6 +168,6 @@ collapsibleColumns={[
   - [`afterColumnExpand`](@/api/hooks.md#aftercolumnexpand)
   - [`beforeColumnCollapse`](@/api/hooks.md#beforecolumncollapse)
   - [`beforeColumnExpand`](@/api/hooks.md#beforecolumnexpand)
-- Plugins:
+- 插件:
   - [`CollapsibleColumns`](@/api/collapsibleColumns.md)
   - [`NestedHeaders`](@/api/nestedHeaders.md)

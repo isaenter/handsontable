@@ -45,7 +45,7 @@ Batch CRUD operations, to avoid unnecessary rendering cycles and boost your grid
 
 </style>
 
-## Overview
+## 概述
 
 Within Handsontable, every CRUD operation ends with a [`render()`](@/api/core.md#render). In most cases, this is considered expected behaviour. The table has to reflect the requested changes at some point. However, sometimes you may find this mechanism slightly excessive.
 
@@ -218,9 +218,9 @@ The following examples show how much the [`batch()`](@/api/core.md#batch) method
 
 :::
 
-## Related articles
+## 相关文章
 
-### Related guides
+### 相关指南
 
 <div class="boxes-list gray">
 

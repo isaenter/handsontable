@@ -18,7 +18,7 @@ Learn about the licensing terms of the Handsontable data grid.
 
 [[toc]]
 
-## Overview
+## 概述
 
 Handsontable's source code is available under two types of licenses, to make it a better fit for different types of projects. You are required to specify which type of license you use.
 
@@ -71,9 +71,9 @@ For more details on entering the license key, see the [License key](@/guides/get
 
 For many years Handsontable was available as an open-source software, and released under the MIT license. The last version available under permissive terms was [6.2.2](https://github.com/handsontable/handsontable/tree/6.2.2) released on December 19, 2018.
 
-## Related articles
+## 相关文章
 
-### Related guides
+### 相关指南
 
 <div class="boxes-list gray">
 

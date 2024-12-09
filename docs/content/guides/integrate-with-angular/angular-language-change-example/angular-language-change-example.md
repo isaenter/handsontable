@@ -31,9 +31,9 @@ Select a language from the selector above the table and open the Context Menu to
 
 :::
 
-## Related articles
+## 相关文章
 
-### Related guides
+### 相关指南
 
 - [Language](@/guides/internationalization/language/language.md)
 - [Layout direction](@/guides/internationalization/layout-direction/layout-direction.md)

@@ -22,7 +22,7 @@ Lock the position of specified rows, keeping them visible when scrolling.
 
 [[toc]]
 
-## Overview
+## 概述
 
 Row freezing locks specific rows of a grid in place, keeping them visible while scrolling to another area of the grid.
 

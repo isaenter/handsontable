@@ -18,7 +18,7 @@ Create a custom cell editor function, to have full control over how editing work
 
 [[toc]]
 
-## Overview
+## 概述
 
 Handsontable separates the process of displaying the cell value from the process of changing the value. Renderers are responsible for presenting the data and Editors for altering it. As a renderer has only one simple task: _get actual value of the cell and return its representation as a HTML code_ they can be a single function. Editors, however, need to handle user input (that is, mouse and keyboard events), validate data and behave according to validation results, so putting all those functionalities into a single function wouldn't be a good idea. That's why Handsontable editors are represented by editor classes.
 
@@ -1248,9 +1248,9 @@ const hot = new Handsontable(container, {
 
 ::: only-for javascript
 
-## Related articles
+## 相关文章
 
-### Related guides
+### 相关指南
 <div class="boxes-list gray">
 
 - [Custom editor in React](@/react/guides/cell-functions/cell-editor/cell-editor.md)

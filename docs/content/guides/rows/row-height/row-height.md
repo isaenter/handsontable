@@ -29,7 +29,7 @@ Configure row heights, using a number, an array or a function. Let your users ma
 
 [[toc]]
 
-## Overview
+## 概述
 
 The default (and minimum) row height is calculated based on the used theme's padding and border values (in the classic theme it's 23 px - 22 px + 1 px of the row's bottom border). Unless configured otherwise, Handsontable assumes that your cell contents fit in this default row height.
 
@@ -156,6 +156,6 @@ You can adjust the size of one or multiple rows simultaneously, even if the sele
   - [`afterRowResize`](@/api/hooks.md#afterrowresize)
   - [`beforeRowResize`](@/api/hooks.md#beforerowresize)
   - [`modifyRowHeight`](@/api/hooks.md#modifyrowheight)
-- Plugins:
+- 插件:
   - [`AutoRowSize`](@/api/autoRowSize.md)
   - [`ManualRowResize`](@/api/manualRowResize.md)

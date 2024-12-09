@@ -20,7 +20,7 @@ Boost your grid's performance by setting a constant column size, suspending rend
 
 [[toc]]
 
-## Overview
+## 概述
 
 Handsontable performs multiple calculations to display the grid properly. The most demanding actions are performed on load, change, and scroll events. Every single operation decreases the performance, but most of them are unavoidable.
 
@@ -109,9 +109,9 @@ hot.batch(() => {
 
 See the [batch operations](@/guides/optimization/batch-operations/batch-operations.md) page to find more information on how to use batching.
 
-## Related articles
+## 相关文章
 
-### Related guides
+### 相关指南
 
 - [Batch operations](@/guides/optimization/batch-operations/batch-operations.md)
 - [Row virtualization](@/guides/rows/row-virtualization/row-virtualization.md)

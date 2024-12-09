@@ -35,9 +35,9 @@ Note that the `language` property is bound to the component separately using `la
 
 :::
 
-## Related articles
+## 相关文章
 
-### Related guides
+### 相关指南
 
 <div class="boxes-list gray">
 

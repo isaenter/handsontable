@@ -23,7 +23,7 @@ Configure Handsontable's locale settings, to properly handle locale-related data
 
 [[toc]]
 
-## Overview
+## 概述
 
 Handsontable's locale settings affect certain actions performed on your data, such as:
 - [Filtering](@/guides/columns/column-filter/column-filter.md)
@@ -115,9 +115,9 @@ const hot = new Handsontable(container, {
 
 :::
 
-## Related articles
+## 相关文章
 
-### Related guides
+### 相关指南
 
 <div class="boxes-list gray">
 

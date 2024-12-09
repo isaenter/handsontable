@@ -20,7 +20,7 @@ Create a custom cell renderer function, to have full control over how a cell loo
 
 ::: only-for javascript
 
-## Overview
+## 概述
 
 When you create a renderer, a good idea is to assign it as an alias that will refer to this particular renderer function. Handsontable defines 10 aliases by default:
 
@@ -41,7 +41,7 @@ It gives users a convenient way for defining which renderer should be used when 
 
 ::: only-for react
 
-## Overview
+## 概述
 
 A renderer is a function that determines how a cell looks.
 
@@ -112,7 +112,7 @@ All the sections below describe how to utilize the features available for the Ha
 
 :::
 
-### Overview
+### 概述
 
 When you create a renderer, a good idea is to assign it as an alias that will refer to this particular renderer function. Handsontable defines 10 aliases by default:
 
@@ -385,9 +385,9 @@ Cell renderers are called separately for every displayed cell, during every tabl
 
 ::: only-for javascript
 
-## Related articles
+## 相关文章
 
-### Related guides
+### 相关指南
 
 <div class="boxes-list gray">
 

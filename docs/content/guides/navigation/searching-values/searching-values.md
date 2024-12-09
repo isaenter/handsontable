@@ -22,7 +22,7 @@ Search data across Handsontable, using the built-in API methods of the [`Search`
 
 [[toc]]
 
-## Overview
+## 概述
 
 ::: only-for react
 
@@ -224,5 +224,5 @@ The example below displays the number of matching search results. To do this, it
 
 - 配置选项:
   - [`search`](@/api/options.md#search)
-- Plugins:
+- 插件:
   - [`Search`](@/api/search.md)

@@ -18,7 +18,7 @@ Use the select cell type to collect user input with an HTML `<select>` element t
 
 [[toc]]
 
-## Overview
+## 概述
 
 The select cell type is a simpler form of the [dropdown](@/guides/cell-types/dropdown-cell-type/dropdown-cell-type.md) cell type.
 
@@ -48,9 +48,9 @@ The select editor should be considered an example of how to write editors rather
 
 :::
 
-## Related articles
+## 相关文章
 
-### Related guides
+### 相关指南
 
 <div class="boxes-list gray">
 

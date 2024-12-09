@@ -125,9 +125,9 @@ When you use the parent-child row structure, the following Handsontable features
 | -------------------- | -------------------- | -------------------------------- | :-----: | :-----: |
 | <kbd>**Enter**</kbd> | <kbd>**Enter**</kbd> | Collapse or expand the row group | &cross; | &cross; |
 
-## Related articles
+## 相关文章
 
-### Related guides
+### 相关指南
 
 <div class="boxes-list gray">
 
@@ -149,7 +149,7 @@ When you use the parent-child row structure, the following Handsontable features
   - [`afterDetachChild`](@/api/hooks.md#afterdetachchild)
   - [`beforeAddChild`](@/api/hooks.md#beforeaddchild)
   - [`beforeDetachChild`](@/api/hooks.md#beforedetachchild)
-- Plugins:
+- 插件:
   - [`BindRowsWithHeaders`](@/api/bindRowsWithHeaders.md)
   - [`ContextMenu`](@/api/contextMenu.md)
   - [`NestedRows`](@/api/nestedRows.md)

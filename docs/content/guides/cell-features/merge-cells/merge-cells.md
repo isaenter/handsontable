@@ -18,7 +18,7 @@ Merge adjacent cells, using the <kbd>**Ctrl**</kbd>+<kbd>**M**</kbd> shortcut or
 
 [[toc]]
 
-## Overview
+## 概述
 
 By merging, you can combine two or more adjacent cells into a single cell that spans several rows or columns.
 
@@ -137,5 +137,5 @@ The example below uses virtualized merged cells. It's also recommended to increa
   - [`afterUnmergeCells`](@/api/hooks.md#afterunmergecells)
   - [`beforeMergeCells`](@/api/hooks.md#beforemergecells)
   - [`beforeUnmergeCells`](@/api/hooks.md#beforeunmergecells)
-- Plugins:
+- 插件:
   - [`MergeCells`](@/api/mergeCells.md)

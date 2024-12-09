@@ -64,9 +64,9 @@ While HOT-in-HOT is opened, the text field above the HOT-in-HOT remains focused 
 
 :::
 
-## Related articles
+## 相关文章
 
-### Related guides
+### 相关指南
 
 - [Cell type](@/guides/cell-types/cell-type/cell-type.md)
 

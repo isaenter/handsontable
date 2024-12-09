@@ -18,7 +18,7 @@ Create a custom cell renderer, and use it in your Vue 2 data grid by declaring i
 
 [[toc]]
 
-## Overview
+## 概述
 
 You can declare a custom renderer for the `HotTable` component by declaring it as a function in the Handsontable options or creating a rendering component.
 
@@ -33,9 +33,9 @@ The following example is an implementation of `@handsontable/vue` with a custom 
 
 :::
 
-## Related articles
+## 相关文章
 
-### Related guides
+### 相关指南
 
 <div class="boxes-list gray">
 

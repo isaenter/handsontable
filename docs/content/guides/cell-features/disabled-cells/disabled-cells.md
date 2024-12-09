@@ -24,7 +24,7 @@ Make specified cells read-only to protect them from unwanted changes but still a
 
 [[toc]]
 
-## Overview
+## 概述
 
 Disabling a cell makes the cell read-only or non-editable. Both have similar outcomes, with the following differences:
 

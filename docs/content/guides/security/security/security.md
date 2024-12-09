@@ -18,7 +18,7 @@ Learn about the security measures we take to make sure you can safely implement 
 
 [[toc]]
 
-## Overview
+## 概述
 
 At Handsontable, we take security very seriously. We integrate with Security Tools and Policies to provide a secure data grid. This document provides information on our Security Certification, Audits, and Policies.
 

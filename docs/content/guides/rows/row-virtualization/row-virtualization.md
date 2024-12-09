@@ -22,7 +22,7 @@ Render thousands of rows without freezing the browser, using row virtualization.
 
 [[toc]]
 
-## Overview
+## 概述
 
 Virtualization allows Handsontable to process hundreds of thousands of records without causing the browser to hang. This feature draws only the visible part of the grid, displaying the minimum items physically rendered in the DOM. The elements outside the viewport are rendered when you scroll across the grid. Depending on your configuration, there might be a small offset of columns or rows rendered outside the viewport to make the scrolling performance smoother.
 
@@ -73,9 +73,9 @@ Using row virtualization has the following side effects:
 - Screen readers may announce the wrong total number of rows. Read more in the
   [Accessibility](@/guides/accessibility/accessibility/accessibility.md#disabling-dom-virtualization-for-improved-accessibility) guide.
 
-## Related articles
+## 相关文章
 
-### Related guides
+### 相关指南
 
 - [Column virtualization](@/guides/columns/column-virtualization/column-virtualization.md)
 - [Performance](@/guides/optimization/performance/performance.md)

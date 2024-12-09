@@ -18,7 +18,7 @@ Display, format, sort, and filter numbers correctly by using the numeric cell ty
 
 [[toc]]
 
-## Overview
+## 概述
 
 The default cell type in Handsontable is text. The data of a text cell is processed as a `string`
 type that corresponds to the value of the text editor's internal `<textarea>` element. However,
@@ -152,9 +152,9 @@ you edit a numeric cell:
   separator is added automatically, based on your [`numericFormat`](@/api/options.md#numericformat)
   configuration.
 
-## Related articles
+## 相关文章
 
-### Related guides
+### 相关指南
 
 - [Cell type](@/guides/cell-types/cell-type/cell-type.md)
 

@@ -81,5 +81,5 @@ For the data separation to work properly, make sure that each instance of Handso
   - [`persistentStateLoad`](@/api/hooks.md#persistentstateload)
   - [`persistentStateReset`](@/api/hooks.md#persistentstatereset)
   - [`persistentStateSave`](@/api/hooks.md#persistentstatesave)
-- Plugins:
+- 插件:
   - [`PersistentState`](@/api/persistentState.md)

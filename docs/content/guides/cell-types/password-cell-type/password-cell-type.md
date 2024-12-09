@@ -18,7 +18,7 @@ Use the password cell type to mask confidential values by rendering entered char
 
 [[toc]]
 
-## Overview
+## 概述
 
 The password cell type behaves like a text cell, the only difference being that it masks its value using asterisks in the cell renderer. An `<input type="password">` field is used for the cell editor. Data is stored in the data source as plain text.
 
@@ -96,9 +96,9 @@ By default, every hash consists of asterisks `*`. Use the option `hashSymbol` to
 
 :::
 
-## Related articles
+## 相关文章
 
-### Related guides
+### 相关指南
 
 - [Cell type](@/guides/cell-types/cell-type/cell-type.md)
 

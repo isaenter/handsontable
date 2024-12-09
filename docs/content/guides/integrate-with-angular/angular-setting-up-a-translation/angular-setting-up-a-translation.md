@@ -29,9 +29,9 @@ The following example shows a Handsontable instance with translations set up in 
 
 :::
 
-## Related articles
+## 相关文章
 
-### Related guides
+### 相关指南
 
 - [Language](@/guides/internationalization/language/language.md)
 - [Layout direction](@/guides/internationalization/layout-direction/layout-direction.md)

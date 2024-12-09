@@ -20,7 +20,7 @@ Hide individual columns to reduce screen clutter and improve the grid's performa
 
 [[toc]]
 
-## Overview
+## 概述
 
 "Hiding a column" means that the hidden column doesn't get rendered as a DOM element.
 
@@ -323,5 +323,5 @@ hot.render();
   - [`afterUnhideColumns`](@/api/hooks.md#afterunhidecolumns)
   - [`beforeHideColumns`](@/api/hooks.md#beforehidecolumns)
   - [`beforeUnhideColumns`](@/api/hooks.md#beforeunhidecolumns)
-- Plugins:
+- 插件:
   - [`HiddenColumns`](@/api/hiddenColumns.md)

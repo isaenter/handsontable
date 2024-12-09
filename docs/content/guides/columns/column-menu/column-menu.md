@@ -20,7 +20,7 @@ Display a configurable dropdown menu, triggered by clicking on a button in a col
 
 [[toc]]
 
-## Overview
+## 概述
 
 The [`DropdownMenu`](@/api/dropdownMenu.md) plugin enables you to add a configurable dropdown menu to the table's column headers.
 The dropdown menu acts like the [context menu](@/guides/accessories-and-menus/context-menu/context-menu.md) but is triggered by clicking the button in the header.
@@ -84,9 +84,9 @@ To use the default dropdown contents, set it to `true`, or to customize it by se
 | <kbd>**Shift**</kbd>+<kbd>**Alt**</kbd>+<kbd>**↓**</kbd> | <kbd>**Shift**</kbd>+<kbd>**Option**</kbd>+<kbd>**↓**</kbd> | Open the column menu. Works in any cell, if the respective column header displays the menu button.           | &cross; | &cross; |
 | <kbd>**Shift**</kbd>+<kbd>**Enter**</kbd>                | <kbd>**Shift**</kbd>+<kbd>**Enter**</kbd>                   | Open the column menu. Works only when you're selecting a column header that displays the column menu button. | &cross; | &cross; |
 
-## Related articles
+## 相关文章
 
-### Related guides
+### 相关指南
 
 - [Context menu](@/guides/accessories-and-menus/context-menu/context-menu.md)
 
@@ -100,5 +100,5 @@ To use the default dropdown contents, set it to `true`, or to customize it by se
   - [`afterDropdownMenuShow`](@/api/hooks.md#afterdropdownmenushow)
   - [`beforeDropdownMenuSetItems`](@/api/hooks.md#beforedropdownmenusetitems)
   - [`beforeDropdownMenuShow`](@/api/hooks.md#beforedropdownmenushow)
-- Plugins:
+- 插件:
   - [`DropdownMenu`](@/api/dropdownMenu.md)

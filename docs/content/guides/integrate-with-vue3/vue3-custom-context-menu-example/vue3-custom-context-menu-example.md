@@ -31,9 +31,9 @@ The following example implements the `@handsontable/vue3` component, adding a cu
 
 :::
 
-## Related articles
+## 相关文章
 
-### Related guides
+### 相关指南
 
 <div class="boxes-list gray">
 
@@ -74,5 +74,5 @@ The following example implements the `@handsontable/vue3` component, adding a cu
   - [`beforeDropdownMenuSetItems`](@/api/hooks.md#beforedropdownmenusetitems)
   - [`beforeDropdownMenuShow`](@/api/hooks.md#beforedropdownmenushow)
   - [`beforeOnCellContextMenu`](@/api/hooks.md#beforeoncellcontextmenu)
-- Plugins:
+- 插件:
   - [`ContextMenu`](@/api/contextMenu.md)

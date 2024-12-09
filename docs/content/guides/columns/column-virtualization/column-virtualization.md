@@ -22,7 +22,7 @@ Render hundreds of columns without freezing the browser, using column virtualiza
 
 [[toc]]
 
-## Overview
+## 概述
 
 To process a large number of columns in a browser Handsontable utilizes the virtualization process to display only the visible part of the grid with a small
 offset for a better scrolling experience.
@@ -77,9 +77,9 @@ Using column virtualization has the following side effects:
 - Screen readers may announce the wrong total number of columns. Read more in the
   [Accessibility](@/guides/accessibility/accessibility/accessibility.md#disabling-dom-virtualization-for-improved-accessibility) guide.
 
-## Related articles
+## 相关文章
 
-### Related guides
+### 相关指南
 
 - [Row virtualization](@/guides/rows/row-virtualization/row-virtualization.md)
 - [Performance](@/guides/optimization/performance/performance.md)

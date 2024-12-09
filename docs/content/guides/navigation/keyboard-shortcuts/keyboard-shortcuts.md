@@ -26,7 +26,7 @@ category: Navigation
 
 Access all Handsontable features using just your keyboard. Use shortcuts you know from Google Sheets or Microsoft Excel.
 
-## Overview
+## 概述
 
 [[toc]]
 

@@ -22,7 +22,7 @@ Use default row headers (1, 2, 3), or set them to custom values provided by an a
 
 [[toc]]
 
-## Overview
+## 概述
 
 Row headers are gray-colored columns that are used to label each row. By default, these headers are filled with numbers displayed in ascending order.
 
@@ -66,9 +66,9 @@ To enable the plugin, set the [`bindRowsWithHeaders`](@/api/options.md#bindrowsw
 
 A tree grid enables you to represent the nested data structures within the data grid. To learn more about this feature, see the [Row parent-child](@/guides/rows/row-parent-child/row-parent-child.md) page.
 
-## Related articles
+## 相关文章
 
-### Related guides
+### 相关指南
 
 <div class="boxes-list gray">
 
@@ -92,5 +92,5 @@ A tree grid enables you to represent the nested data structures within the data 
   - [`beforeHighlightingRowHeader`](@/api/hooks.md#beforehighlightingrowheader)
   - [`modifyRowHeader`](@/api/hooks.md#modifyrowheader)
   - [`modifyRowHeaderWidth`](@/api/hooks.md#modifyrowheaderwidth)
-- Plugins:
+- 插件:
   - [`BindRowsWithHeaders`](@/api/bindRowsWithHeaders.md)

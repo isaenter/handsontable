@@ -18,7 +18,7 @@ Create a custom cell editor, and use it in your Vue 3 data grid by declaring it 
 
 [[toc]]
 
-## Overview
+## 概述
 
 You can declare a custom editor for the `HotTable` component by declaring it as a class and passing it to the Handsontable options or creating an editor component. You can use it many times and with different properties. To differentiate between editor instances, pass a `key` attribute.
 
@@ -35,9 +35,9 @@ The following example implements the `@handsontable/vue3` component with a custo
 
 :::
 
-## Related articles
+## 相关文章
 
-### Related guides
+### 相关指南
 
 <div class="boxes-list gray">
 

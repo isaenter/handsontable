@@ -18,7 +18,7 @@ Validate data added or changed by the user, with predefined or custom rules. Val
 
 [[toc]]
 
-## Overview
+## 概述
 
 When you create a validator, a good idea is to assign it as an alias that will refer to this particular validator function. Handsontable defines 5 aliases by default:
 

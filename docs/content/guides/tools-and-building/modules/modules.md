@@ -20,7 +20,7 @@ Reduce the size of your JavaScript bundle, by importing only the modules that yo
 
 [[toc]]
 
-## Overview
+## 概述
 
 Handsontable is a comprehensive tool with a broad range of features. If you don't use all of them, you can pick just the parts that you need, and get rid of the rest (e.g., unnecessary translations). This approach reduces Handsontable's impact on the overall size of your app.
 
@@ -1036,9 +1036,9 @@ You can also use modules with Handsontable's framework wrappers:
 
 :::
 
-## Related articles
+## 相关文章
 
-### Related guides
+### 相关指南
 
 <div class="boxes-list gray">
 

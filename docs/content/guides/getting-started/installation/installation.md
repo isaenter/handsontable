@@ -34,7 +34,7 @@ Install Handsontable through your preferred package manager, and control your gr
 
 ::: only-for javascript
 
-## Overview
+## 概述
 
 To start using Handsontable, follow these steps:
 
@@ -268,9 +268,9 @@ For more information on `@handsontable/react`, see the [14.6 documentation](http
 
 </div>
 
-## Related articles
+## 相关文章
 
-### Related guides
+### 相关指南
 
 - [Modules](@/guides/tools-and-building/modules/modules.md)
 

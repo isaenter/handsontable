@@ -27,7 +27,7 @@ Configure column widths, using an array or a function. Let your users manually c
 
 [[toc]]
 
-## Overview
+## 概述
 
 By default, the column width adjusts to the width of the content. However, if the width of the content is less than `50px`, including `1px` for borders on the sides, the column width remains constant at `50px`. You can pass the column size as a constant, an array, or a function.
 
@@ -228,6 +228,6 @@ Setting the dimensions of the container that holds Handsontable is described in 
   - [`beforeStretchingColumnWidth`](@/api/hooks.md#beforestretchingcolumnwidth)
   - [`modifyAutoColumnSizeSeed`](@/api/hooks.md#modifyautocolumnsizeseed)
   - [`modifyColWidth`](@/api/hooks.md#modifycolwidth)
-- Plugins:
+- 插件:
   - [`AutoColumnSize`](@/api/autoColumnSize.md)
   - [`ManualColumnResize`](@/api/manualColumnResize.md)
