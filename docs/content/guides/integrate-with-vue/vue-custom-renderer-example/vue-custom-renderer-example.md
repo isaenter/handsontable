@@ -49,7 +49,7 @@ The following example is an implementation of `@handsontable/vue` with a custom 
   - [`BasePlugin`](@/api/basePlugin.md)
 - 配置选项:
   - [`renderer`](@/api/options.md#renderer)
-- Core methods:
+- 核心方法:
   - [`getCellMeta()`](@/api/core.md#getcellmeta)
   - [`getCellMetaAtRow()`](@/api/core.md#getcellmetaatrow)
   - [`getCellsMeta()`](@/api/core.md#getcellsmeta)

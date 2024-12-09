@@ -150,7 +150,7 @@ You can adjust the size of one or multiple rows simultaneously, even if the sele
   - [`autoRowSize`](@/api/options.md#autorowsize)
   - [`manualRowResize`](@/api/options.md#manualrowresize)
   - [`rowHeights`](@/api/options.md#rowheights)
-- Core methods:
+- 核心方法:
   - [`getRowHeight()`](@/api/core.md#getrowheight)
 - Hooks:
   - [`afterRowResize`](@/api/hooks.md#afterrowresize)

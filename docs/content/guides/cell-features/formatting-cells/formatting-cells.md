@@ -1,6 +1,6 @@
 ---
 id: epmvqw9m
-title: Formatting cells
+title: 设置单元格格式
 metaTitle: Formatting cells - JavaScript Data Grid | Handsontable
 description: Change the appearance of cells, using custom CSS classes, inline styles, or custom cell borders.
 permalink: /formatting-cells
@@ -12,23 +12,22 @@ searchCategory: Guides
 category: Cell features
 ---
 
-# Formatting cells
+# 设置单元格格式
 
-Change the appearance of cells, using custom CSS classes, inline styles, or custom cell borders.
+使用自定义 CSS 类、内联样式或自定义单元格边框更改单元格的外观。
 
 [[toc]]
 
 ## 概述
 
-Handsontable uses the HTML `table` structure so customization is based either on referencing to the already existing elements, such as `TR`/`TD`, or by applying
-your own CSS classes to HTML elements.
+Handsontable 使用 HTML `table` 结构，因此自定义要么基于引用现有元素，例如 `TR`/`TD`，要么通过应用
+您自己的 CSS 类到 HTML 元素。
 
-You can format a cell either using a `CSS` class or with a style applied directly to the DOM element.
+您可以使用`CSS`类或直接应用于 DOM 元素的样式来格式化单元格。
 
-## Apply custom CSS class styles
+## 应用自定义 CSS 类样式
 
-In this example, we add a custom class `custom-cell` to the cell in the top left corner and add a `custom-table` CSS class that highlights the table headers.
-
+在此示例中，我们将自定义类`custom-cell`添加到左上角的单元格，并添加一个`custom-table`CSS 类来突出显示表格标题。
 ::: only-for javascript
 
 ::: example #example1 --css 1 --js 2 --ts 3
@@ -53,9 +52,9 @@ In this example, we add a custom class `custom-cell` to the cell in the top left
 
 :::
 
-## Apply inline styles
+## 应用内联样式
 
-You can apply inline styles directly to the DOM element using its `style` property. You can use the [`renderer`](@/api/options.md#renderer) option to do that.
+您可以使用`style`属性将内联样式直接应用于 DOM 元素。您可以使用 [`renderer`](@/api/options.md#renderer) 选项来执行此操作。
 
 ::: only-for javascript
 
@@ -79,13 +78,13 @@ You can apply inline styles directly to the DOM element using its `style` proper
 
 :::
 
-## Custom cell borders
+## 自定义单元格边框
 
-To enable the custom borders feature, set the [`customBorders`](@/api/options.md#customborders) option. This can either be set as `true` or initialized as an
-array with a pre-defined setup. For the list of available settings and methods, visit the [API reference](@/api/customBorders.md).
+要启用自定义边框功能，请设置 [`customBorders`](@/api/options.md#customborders) 选项。这可以设置为`true`或初始化为
+具有预定义设置的数组。有关可用设置和方法的列表，请访问 [API 参考](@/api/customBorders.md)。
 
-In the names of the API properties, the words `start` and `end` refer to the starting and ending edges of the
-[layout direction](@/guides/internationalization/layout-direction/layout-direction.md).
+在 API 属性的名称中，单词`start`和`end`指的是对象的起始边缘和结束边缘。
+[布局方向](@/guides/internationalization/layout-direction/layout-direction.md)。
 
 ::: only-for javascript
 
@@ -113,7 +112,7 @@ In the names of the API properties, the words `start` and `end` refer to the sta
 
 ### 相关指南
 
-- [Conditional formatting](@/guides/cell-features/conditional-formatting/conditional-formatting.md)
+- [条件格式](@/guides/cell-features/conditional-formatting/conditional-formatting.md)
 
 ### 相关API参考
 

@@ -75,7 +75,7 @@ The [`moveRows`](@/api/manualRowMove.md#moverows) function cannot perform some a
 
 - Options:
   - [`manualRowMove`](@/api/options.md#manualrowmove)
-- Core methods:
+- 核心方法:
   - [`toVisualRow`](@/api/core.md#tovisualrow)
 - Hooks:
   - [`afterRowMove`](@/api/hooks.md#afterrowmove)

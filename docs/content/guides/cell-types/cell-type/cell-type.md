@@ -501,7 +501,7 @@ Empty cells may be treated differently in different contexts, for example, the [
   - [`renderer`](@/api/options.md#renderer)
   - [`type`](@/api/options.md#type)
   - [`validator`](@/api/options.md#validator)
-- Core methods:
+- 核心方法:
   - [`getCellEditor()`](@/api/core.md#getcelleditor)
   - [`getCellMeta()`](@/api/core.md#getcellmeta)
   - [`getCellMetaAtRow()`](@/api/core.md#getcellmetaatrow)

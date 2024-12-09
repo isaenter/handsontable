@@ -240,7 +240,7 @@ For the list of [options](@/guides/getting-started/configuration-options/configu
   - [`enterBeginsEditing`](@/api/options.md#enterbeginsediting)
   - [`enterMoves`](@/api/options.md#entermoves)
   - [`tabMoves`](@/api/options.md#tabmoves)
-- Core methods:
+- 核心方法:
   - [`getShortcutManager()`](@/api/core.md#getshortcutmanager)
   - [`isListening()`](@/api/core.md#islistening)
   - [`listen()`](@/api/core.md#listen)

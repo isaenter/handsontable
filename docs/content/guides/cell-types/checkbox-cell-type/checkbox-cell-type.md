@@ -127,7 +127,7 @@ To add a label to the checkbox, use the [`label`](@/api/options.md#label) option
   - [`label`](@/api/options.md#label)
   - [`type`](@/api/options.md#type)
   - [`uncheckedTemplate`](@/api/options.md#uncheckedtemplate)
-- Core methods:
+- 核心方法:
   - [`getCellMeta()`](@/api/core.md#getcellmeta)
   - [`getCellMetaAtRow()`](@/api/core.md#getcellmetaatrow)
   - [`getCellsMeta()`](@/api/core.md#getcellsmeta)

@@ -1,6 +1,6 @@
 ---
 id: chduupye
-title: Text alignment
+title: 文本对齐
 metaTitle: Text alignment - JavaScript Data Grid | Handsontable
 description: "Align values within cells: horizontally (to the right, left, center, or by justifying them), and vertically (to the top, middle, or bottom of the cell)."
 permalink: /text-alignment
@@ -12,15 +12,15 @@ searchCategory: Guides
 category: Cell features
 ---
 
-# Text alignment
+# 文本对齐
 
-Align values within cells: horizontally (to the right, left, center, or by justifying them), and vertically (to the top, middle, or bottom of the cell).
+单元格内的值对齐：水平对齐（向右、向左、居中或通过对齐）和垂直对齐（向单元格的顶部、中间或底部）。
 
 [[toc]]
 
-## Horizontal and vertical alignment
+## 水平和垂直对齐
 
-To initialize Handsontable with predefined horizontal and vertical alignment globally, provide the alignment details in the [`className`](@/api/options.md#classname) option, for example:
+要使用全局预定义的水平和垂直对齐方式初始化 Handsontable，请在 [`className`](@/api/options.md#classname) 选项中提供对齐详细信息，例如：
 
 ::: only-for javascript
 
@@ -38,18 +38,17 @@ className="htCenter"
 
 :::
 
-You can also configure cells individually by setting up the [`cells`](@/api/options.md#cells) option. See the code sample below for an example.
+您还可以通过设置 [`cells`](@/api/options.md#cells) 选项来单独配置单元格。有关示例，请参阅下面的代码示例。
 
-Available class names:
+可用的类名：
 
-- Horizontal: `htLeft`, `htCenter`, `htRight`, `htJustify`,
-- Vertical: `htTop`, `htMiddle`, `htBottom`.
+- 水平：`htLeft`、`htCenter`、`htRight`、`htJustify`、
+- 垂直：`htTop`、`htMiddle`、`htBottom`。
 
-You can track alignment changes by using the [`afterSetCellMeta`](@/api/hooks.md#aftersetcellmeta) hook.
+您可以使用 [`afterSetCellMeta`](@/api/hooks.md#aftersetcellmeta) 挂钩跟踪对齐更改。
 
-## Basic example
-
-The following code sample configures the grid to use `htCenter` and configures individual cells to use different alignments.
+## 基本示例
+以下代码示例将网格配置为使用`htCenter`，并将各个单元格配置为使用不同的对齐方式。
 
 ::: only-for javascript
 

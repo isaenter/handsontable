@@ -142,7 +142,7 @@ When you use the parent-child row structure, the following Handsontable features
   - [`contextMenu`](@/api/options.md#contextmenu)
   - [`nestedRows`](@/api/options.md#nestedrows)
   - [`rowHeaders`](@/api/options.md#rowheaders)
-- Core methods:
+- 核心方法:
   - [`getRowHeader()`](@/api/core.md#getrowheader)
 - Hooks:
   - [`afterAddChild`](@/api/hooks.md#afteraddchild)

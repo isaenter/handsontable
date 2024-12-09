@@ -163,7 +163,7 @@ you edit a numeric cell:
 - 配置选项:
   - [`numericFormat`](@/api/options.md#numericformat)
   - [`type`](@/api/options.md#type)
-- Core methods:
+- 核心方法:
   - [`getCellMeta()`](@/api/core.md#getcellmeta)
   - [`getCellMetaAtRow()`](@/api/core.md#getcellmetaatrow)
   - [`getCellsMeta()`](@/api/core.md#getcellsmeta)

@@ -184,7 +184,7 @@ You can listen for two hooks, [`beforeRefreshDimensions`](@/api/hooks.md#beforer
   - [`layoutDirection`](@/api/options.md#layoutdirection)
   - [`preventOverflow`](@/api/options.md#preventoverflow)
   - [`width`](@/api/options.md#width)
-- Core methods:
+- 核心方法:
   - [`refreshDimensions()`](@/api/core.md#refreshdimensions)
   - [`updateSettings()`](@/api/core.md#updatesettings)
 - Hooks:

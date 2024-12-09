@@ -443,7 +443,7 @@ When working with a copy of data for Handsontable, it is best practice is to clo
 - 配置选项:
   - [`data`](@/api/options.md#data)
   - [`dataSchema`](@/api/options.md#dataschema)
-- Core methods:
+- 核心方法:
   - [`alter()`](@/api/core.md#alter)
   - [`clear()`](@/api/core.md#clear)
   - [`getData()`](@/api/core.md#getdata)

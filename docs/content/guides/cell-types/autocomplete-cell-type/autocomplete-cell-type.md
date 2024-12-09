@@ -136,7 +136,7 @@ Autocomplete can also be used with Ajax data sources. In the example below, sugg
   - [`trimDropdown`](@/api/options.md#trimdropdown)
   - [`type`](@/api/options.md#type)
   - [`visibleRows`](@/api/options.md#visiblerows)
-- Core methods:
+- 核心方法:
   - [`getCellMeta()`](@/api/core.md#getcellmeta)
   - [`getCellMetaAtRow()`](@/api/core.md#getcellmetaatrow)
   - [`getCellsMeta()`](@/api/core.md#getcellsmeta)

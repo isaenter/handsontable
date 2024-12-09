@@ -83,7 +83,7 @@ A tree grid enables you to represent the nested data structures within the data 
   - [`currentHeaderClassName`](@/api/options.md#currentheaderclassname)
   - [`bindRowsWithHeaders`](@/api/options.md#bindrowswithheaders)
   - [`rowHeaders`](@/api/options.md#rowheaders)
-- Core methods:
+- 核心方法:
   - [`getRowHeader()`](@/api/core.md#getrowheader)
   - [`hasRowHeaders()`](@/api/core.md#hasrowheaders)
 - Hooks:

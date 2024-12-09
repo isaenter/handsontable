@@ -220,7 +220,7 @@ Setting the dimensions of the container that holds Handsontable is described in 
   - [`colWidths`](@/api/options.md#colwidths)
   - [`manualColumnResize`](@/api/options.md#manualcolumnresize)
   - [`stretchH`](@/api/options.md#stretchh)
-- Core methods:
+- 核心方法:
   - [`getColWidth()`](@/api/core.md#getcolwidth)
 - Hooks:
   - [`afterColumnResize`](@/api/hooks.md#aftercolumnresize)

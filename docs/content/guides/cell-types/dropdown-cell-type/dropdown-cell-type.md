@@ -82,7 +82,7 @@ Internally, cell `type="dropdown"` is equivalent to cell `type="autocomplete" st
   - [`trimDropdown`](@/api/options.md#trimdropdown)
   - [`type`](@/api/options.md#type)
   - [`visibleRows`](@/api/options.md#visiblerows)
-- Core methods:
+- 核心方法:
   - [`getCellMeta()`](@/api/core.md#getcellmeta)
   - [`getCellMetaAtRow()`](@/api/core.md#getcellmetaatrow)
   - [`getCellsMeta()`](@/api/core.md#getcellsmeta)

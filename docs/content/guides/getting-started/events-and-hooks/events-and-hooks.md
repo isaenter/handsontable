@@ -232,7 +232,7 @@ The following demo uses [`beforeKeyDown`](@/api/hooks.md#beforekeydown) callback
 
 ## 相关API参考
 
-- Core methods:
+- 核心方法:
   - [`addHook()`](@/api/core.md#addhook)
   - [`addHookOnce()`](@/api/core.md#addhookonce)
   - [`hasHook()`](@/api/core.md#hashook)

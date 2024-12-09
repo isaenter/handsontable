@@ -2,11 +2,11 @@ import Handsontable from 'handsontable';
 import 'handsontable/styles/handsontable.css';
 import 'handsontable/styles/ht-theme-main.css';
 
-// generate an array of arrays with dummy data
-const data = new Array(1000) // number of rows
+// 生成带有虚拟数据的多维数组
+const data = new Array(1000) // 行数
   .fill(null)
   .map((_, row) =>
-    new Array(1000) // number of columns
+    new Array(1000) // 列数
       .fill(null)
       .map((_v, column) => `${row}, ${column}`)
   );

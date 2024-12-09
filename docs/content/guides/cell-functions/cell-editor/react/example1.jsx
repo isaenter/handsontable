@@ -17,9 +17,9 @@ const EditorComponent = () => {
     onPrepare: (_row, _column, _prop, TD, _originalValue, _cellProperties) => {
       const tdPosition = TD.getBoundingClientRect();
 
-      // As the `prepare` method is triggered after selecting
-      // any cell, we're updating the styles for the editor element,
-      // so it shows up in the correct position.
+      //由于选择后会触发`prepare`方法
+      //任何单元格，我们正在更新编辑器元素的样式，
+      //所以它显示在正确的位置。
       if (!mainElementRef.current) return;
       mainElementRef.current.style.left = `${
         tdPosition.left + window.pageXOffset

@@ -60,7 +60,7 @@ const ExampleComponent = () => {
         rowHeaders={true}
         colHeaders={true}
         outsideClickDeselects={false}
-        selectionMode="multiple" // 'single', 'range' or 'multiple',
+        selectionMode="multiple" // 'single', 'range' 或 'multiple',
         autoWrapRow={true}
         autoWrapCol={true}
         licenseKey="non-commercial-and-evaluation"

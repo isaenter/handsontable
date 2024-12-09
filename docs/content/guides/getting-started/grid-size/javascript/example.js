@@ -5,11 +5,11 @@ import 'handsontable/styles/ht-theme-main.css';
 const triggerBtn = document.querySelector('#triggerBtn');
 const example = document.querySelector('#example');
 const exampleParent = document.querySelector('#exampleParent');
-// generate an array of arrays with dummy data
-const data = new Array(100) // number of rows
+// 生成带有虚拟数据的多维数组
+const data = new Array(100) // 行数
   .fill(null)
   .map((_, row) =>
-    new Array(50) // number of columns
+    new Array(50) // 列数
       .fill(null)
       .map((_, column) => `${row}, ${column}`)
   );

@@ -106,7 +106,7 @@ By default, every hash consists of asterisks `*`. Use the option `hashSymbol` to
 
 - 配置选项:
   - [`type`](@/api/options.md#type)
-- Core methods:
+- 核心方法:
   - [`getCellMeta()`](@/api/core.md#getcellmeta)
   - [`getCellMetaAtRow()`](@/api/core.md#getcellmetaatrow)
   - [`getCellsMeta()`](@/api/core.md#getcellsmeta)

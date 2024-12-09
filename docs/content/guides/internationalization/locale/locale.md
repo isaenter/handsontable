@@ -133,7 +133,7 @@ const hot = new Handsontable(container, {
   - [`language`](@/api/options.md#language)
   - [`layoutDirection`](@/api/options.md#layoutdirection)
   - [`locale`](@/api/options.md#locale)
-- Core methods:
+- 核心方法:
   - [`getDirectionFactor()`](@/api/core.md#getdirectionfactor)
   - [`getTranslatedPhrase()`](@/api/core.md#gettranslatedphrase)
   - [`isLtr()`](@/api/core.md#isltr)

@@ -52,7 +52,7 @@ The following example implements the `@handsontable/vue3` component with a custo
 - 配置选项:
   - [`editor`](@/api/options.md#editor)
   - [`enterBeginsEditing`](@/api/options.md#enterbeginsediting)
-- Core methods:
+- 核心方法:
   - [`destroyEditor()`](@/api/core.md#destroyeditor)
   - [`getActiveEditor()`](@/api/core.md#getactiveeditor)
   - [`getCellEditor()`](@/api/core.md#getcelleditor)

@@ -73,7 +73,7 @@ For the data separation to work properly, make sure that each instance of Handso
 
 - 配置选项:
   - [`persistentState`](@/api/options.md#persistentstate)
-- Core methods:
+- 核心方法:
   - [`updateSettings()`](@/api/core.md#updatesettings)
 - Hooks:
   - [`afterCellMetaReset`](@/api/hooks.md#aftercellmetareset)

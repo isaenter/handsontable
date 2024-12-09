@@ -161,7 +161,7 @@ collapsibleColumns={[
 - 配置选项:
   - [`collapsibleColumns`](@/api/options.md#collapsiblecolumns)
   - [`nestedHeaders`](@/api/options.md#nestedheaders)
-- Core methods:
+- 核心方法:
   - [`isColumnModificationAllowed()`](@/api/core.md#iscolumnmodificationallowed)
 - Hooks:
   - [`afterColumnCollapse`](@/api/hooks.md#aftercolumncollapse)

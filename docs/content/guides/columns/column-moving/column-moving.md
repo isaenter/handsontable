@@ -124,7 +124,7 @@ The [`moveColumns`](@/api/manualColumnMove.md#movecolumns) function cannot perfo
 
 - 配置选项:
   - [`manualColumnMove`](@/api/options.md#manualcolumnmove)
-- Core methods:
+- 核心方法:
   - [`colToProp()`](@/api/core.md#coltoprop)
   - [`isColumnModificationAllowed()`](@/api/core.md#iscolumnmodificationallowed)
   - [`propToCol()`](@/api/core.md#proptocol)

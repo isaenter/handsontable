@@ -199,7 +199,7 @@ Mind that changes in table are applied after running all validators (both synchr
   - [`allowInvalid`](@/api/options.md#allowinvalid)
   - [`invalidCellClassName`](@/api/options.md#invalidcellclassname)
   - [`validator`](@/api/options.md#validator)
-- Core methods:
+- 核心方法:
   - [`getCellMeta()`](@/api/core.md#getcellmeta)
   - [`getCellMetaAtRow()`](@/api/core.md#getcellmetaatrow)
   - [`getCellsMeta()`](@/api/core.md#getcellsmeta)

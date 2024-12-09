@@ -177,7 +177,7 @@ More complex data structures can be displayed with multiple headers, each repres
   - [`currentHeaderClassName`](@/api/options.md#currentheaderclassname)
   - [`nestedHeaders`](@/api/options.md#nestedheaders)
   - [`title`](@/api/options.md#title)
-- Core methods:
+- 核心方法:
   - [`getColHeader()`](@/api/core.md#getcolheader)
   - [`hasColHeaders()`](@/api/core.md#hascolheaders)
 - Hooks:

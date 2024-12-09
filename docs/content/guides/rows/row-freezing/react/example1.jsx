@@ -6,11 +6,11 @@ import 'handsontable/styles/ht-theme-main.css';
 // 注册 Handsontable 的模块
 registerAllModules();
 
-// generate an array of arrays with dummy data
-const data = new Array(100) // number of rows
+// 生成带有虚拟数据的多维数组
+const data = new Array(100) // 行数
   .fill(0)
   .map((_item, row) =>
-    new Array(50) // number of columns
+    new Array(50) // 列数
       .fill(0)
       .map((_, column) => `${row}, ${column}`)
   );

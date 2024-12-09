@@ -710,7 +710,7 @@ In the example below, some cells are read-only, and some cells are editable:
   - [`cell`](@/api/options.md#cell)
   - [`cells`](@/api/options.md#cells)
   - [`columns`](@/api/options.md#columns)
-- Core methods:
+- 核心方法:
   - [`getCellMeta()`](@/api/core.md#getcellmeta)
   - [`getCellMetaAtRow()`](@/api/core.md#getcellmetaatrow)
   - [`getCellsMeta()`](@/api/core.md#getcellsmeta)

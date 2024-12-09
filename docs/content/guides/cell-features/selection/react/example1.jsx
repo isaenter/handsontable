@@ -26,9 +26,9 @@ const ExampleComponent = () => {
             onChange={(...args) => selectOptionChangeCallback(...args)}
             defaultValue="multiple"
           >
-            <option value="single">Single selection</option>
-            <option value="range">Range selection</option>
-            <option value="multiple">Multiple ranges selection</option>
+            <option value="single">单选</option>
+            <option value="range">范围选择</option>
+            <option value="multiple">多范围选择</option>
           </select>
         </label>
       </div>
@@ -51,7 +51,7 @@ const ExampleComponent = () => {
         rowHeights={23}
         rowHeaders={true}
         colHeaders={true}
-        selectionMode="multiple" // 'single', 'range' or 'multiple',
+        selectionMode="multiple" // 'single', 'range' 或 'multiple',
         autoWrapRow={true}
         autoWrapCol={true}
         licenseKey="non-commercial-and-evaluation"

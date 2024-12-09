@@ -65,7 +65,7 @@ The select editor should be considered an example of how to write editors rather
 - 配置选项:
   - [`selectOptions`](@/api/options.md#selectoptions)
   - [`type`](@/api/options.md#type)
-- Core methods:
+- 核心方法:
   - [`getCellMeta()`](@/api/core.md#getcellmeta)
   - [`getCellMetaAtRow()`](@/api/core.md#getcellmetaatrow)
   - [`getCellsMeta()`](@/api/core.md#getcellsmeta)

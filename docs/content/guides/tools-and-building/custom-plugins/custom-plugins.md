@@ -339,7 +339,7 @@ const pluginInstance = hotTableComponentRef.current.hotInstance.getPlugin(Custom
 
 - APIs:
   - [`BasePlugin`](@/api/basePlugin.md)
-- Core methods:
+- 核心方法:
   - [`getPlugin()`](@/api/core.md#getplugin)
 - Hooks:
   - [`afterPluginsInitialized`](@/api/hooks.md#afterpluginsinitialized)

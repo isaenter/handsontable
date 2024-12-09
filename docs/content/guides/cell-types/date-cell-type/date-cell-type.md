@@ -138,7 +138,7 @@ Click on one of the ▼ icons to open an interactive date editor.
   - [`datePickerConfig`](@/api/options.md#datepickerconfig)
   - [`defaultDate`](@/api/options.md#defaultdate)
   - [`type`](@/api/options.md#type)
-- Core methods:
+- 核心方法:
   - [`getCellMeta()`](@/api/core.md#getcellmeta)
   - [`getCellMetaAtRow()`](@/api/core.md#getcellmetaatrow)
   - [`getCellsMeta()`](@/api/core.md#getcellsmeta)

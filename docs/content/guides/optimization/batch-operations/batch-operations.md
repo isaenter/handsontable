@@ -244,7 +244,7 @@ The following examples show how much the [`batch()`](@/api/core.md#batch) method
   - [`observeDOMVisibility`](@/api/options.md#observedomvisibility)
   - [`renderAllColumns`](@/api/options.md#renderallcolumns)
   - [`renderAllRows`](@/api/options.md#renderallrows)
-- Core methods:
+- 核心方法:
   - [`batch()`](@/api/core.md#batch)
   - [`batchExecution()`](@/api/core.md#batchexecution)
   - [`batchRender()`](@/api/core.md#batchrender)
