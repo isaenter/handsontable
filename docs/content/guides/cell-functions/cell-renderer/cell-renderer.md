@@ -1,6 +1,6 @@
 ---
 id: ohjf69hj
-title: Cell renderer
+title: 单元格渲染器
 metaTitle: Cell renderer - JavaScript Data Grid | Handsontable
 description: Create a custom cell renderer function, to have full control over how a cell looks.
 permalink: /cell-renderer
@@ -12,9 +12,9 @@ searchCategory: Guides
 category: Cell functions
 ---
 
-# Cell renderer
+# 单元格渲染器
 
-Create a custom cell renderer function, to have full control over how a cell looks.
+创建自定义单元格渲染器函数，以完全控制单元格的外观。
 
 [[toc]]
 
@@ -22,42 +22,40 @@ Create a custom cell renderer function, to have full control over how a cell loo
 
 ## 概述
 
-When you create a renderer, a good idea is to assign it as an alias that will refer to this particular renderer function. Handsontable defines 10 aliases by default:
+创建渲染器时，一个好主意是将其指定为引用此特定渲染器函数的别名。 Handsontable默认定义了10个别名：
 
-- `autocomplete` for `Handsontable.renderers.AutocompleteRenderer`
-- `base` for `Handsontable.renderers.BaseRenderer`
-- `checkbox` for `Handsontable.renderers.CheckboxRenderer`
-- `date` for `Handsontable.renderers.DateRenderer`
-- `dropdown` for `Handsontable.renderers.DropdownRenderer`
-- `html` for `Handsontable.renderers.HtmlRenderer`
-- `numeric` for `Handsontable.renderers.NumericRenderer`
-- `password` for `Handsontable.renderers.PasswordRenderer`
-- `text` for `Handsontable.renderers.TextRenderer`
-- `time` for `Handsontable.renderers.TimeRenderer`
+- `autocomplete` 对应 `Handsontable.renderers.AutocompleteRenderer`
+- `base` 对应 `Handsontable.renderers.BaseRenderer`
+- `checkbox` 对应 `Handsontable.renderers.CheckboxRenderer`
+- `date` 对应 `Handsontable.renderers.DateRenderer`
+- `dropdown` 对应 `Handsontable.renderers.DropdownRenderer`
+- `html` 对应 `Handsontable.renderers.HtmlRenderer`
+- `numeric` 对应 `Handsontable.renderers.NumericRenderer`
+- `password` 对应 `Handsontable.renderers.PasswordRenderer`
+- `text` 对应 `Handsontable.renderers.TextRenderer`
+- `time` 对应 `Handsontable.renderers.TimeRenderer`
 
-It gives users a convenient way for defining which renderer should be used when table rendering was triggered. User doesn't need to know which renderer function is responsible for displaying the cell value, he does not even need to know that there is any function at all. What is more, you can change the render function associated with an alias without a need to change code that defines a table.
-
+它为用户提供了一种方便的方法来定义触发表渲染时应使用哪个渲染器。用户不需要知道哪个渲染器函数负责显示单元格值，他甚至不需要知道有任何函数。此外，您可以更改与别名关联的渲染函数，而无需更改定义表的代码。
 :::
 
 ::: only-for react
 
 ## 概述
 
-A renderer is a function that determines how a cell looks.
+渲染器是决定单元格外观的函数。
 
-Set together, a renderer, [editor](@/guides/cell-functions/cell-editor/cell-editor.md) and [validator](@/guides/cell-functions/cell-validator/cell-validator.md) form a [cell type](@/guides/cell-types/cell-type/cell-type.md).
+设置在一起，渲染器，[编辑器](@/guides/cell-functions/cell-editor/cell-editor.md) 和 [验证器](@/guides/cell-functions/cell-validator/cell-validator.md ）形成[细胞类型](@/guides/cell-types/cell-type/cell-type.md)。
 
-## Declare a custom renderer as a component
+## 将自定义渲染器声明为组件
 
-Handsontable's React wrapper lets you create custom cell renderers using React components.
-
-To use your component as a Handsontable renderer, pass it in the `renderer` prop if either `HotTable` or `HotColumn` components, as you would with any other config option.
+Handsontable 的 React 包装器允许您使用 React 组件创建自定义单元格渲染器。
+要将您的组件用作 Handsontable 渲染器，请在`HotTable`或`HotColumn`组件的`renderer`属性中将其传递，就像使用任何其他配置选项一样。
 
 ::: tip
 
-Handsontable's [`autoRowSize`](@/api/options.md#autorowsize) and [`autoColumnSize`](@/api/options.md#autocolumnsize) options require calculating the widths/heights of some of the cells before rendering them into the table. For this reason, it's not currently possible to use them alongside component-based renderers, as they're created after the table's initialization.
+Handsontable 的 [`autoRowSize`](@/api/options.md#autorowsize) 和 [`autoColumnSize`](@/api/options.md#autocolumnsize) 选项需要在将某些单元格渲染到之前计算它们的宽度/高度桌子。因此，目前无法将它们与基于组件的渲染器一起使用，因为它们是在表初始化后创建的。
 
-Be sure to turn those options off in your Handsontable configuration, as keeping them enabled may cause unexpected results. Please note that [`autoColumnSize`](@/api/options.md#autocolumnsize) is enabled by default.
+请务必在 Handsontable 配置中关闭这些选项，因为保持启用它们可能会导致意外结果。请注意，默认情况下启用 [`autoColumnSize`](@/api/options.md#autocolumnsize)。
 
 :::
 
@@ -68,9 +66,9 @@ Be sure to turn those options off in your Handsontable configuration, as keeping
 
 :::
 
-## Use the renderer component within React's Context
+## 在 React 的 Context 中使用渲染器组件
 
-In this example, React's `Context` passes information available in the main app component to the renderer. In this case, we're using just the renderer, but the same principle works with [editors](@/guides/cell-functions/cell-editor/cell-editor.md) as well.
+在此示例中，React 的`Context`将主应用程序组件中可用的信息传递给渲染器。在本例中，我们仅使用渲染器，但同样的原理也适用于 [editors](@/guides/cell-functions/cell-editor/cell-editor.md)。
 
 ::: example #example2 :react --css 1 --js 2 --ts 3
 
@@ -80,12 +78,12 @@ In this example, React's `Context` passes information available in the main app 
 
 :::
 
-## Declare a custom renderer as a function
+## 将自定义渲染器声明为函数
 
-You can also declare a custom renderer for the `HotTable` component by declaring it as a function. In the simplest scenario, you can pass the rendering function as the `hotRenderer` prop into `HotTable` or `HotColumn`.
-If you need the renderer to be a part of a `columns` config array, declare it under the `renderer` key. 
+您还可以通过将`HotTable`组件声明为函数来声明自定义渲染器。在最简单的场景中，您可以将渲染函数作为`hotRenderer`属性传递到`HotTable`或`HotColumn`中。
+如果您需要渲染器成为`columns`配置数组的一部分，请在`renderer`键下声明它。
 
-The following example implements `@handsontable/react-wrapper` with a custom renderer added to one of the columns. It takes an image URL as the input and renders the image in the edited cell.
+以下示例实现了`@handsontable/react-wrapper`，并将自定义渲染器添加到其中一列。它将图像 URL 作为输入，并在编辑的单元格中呈现图像。
 
 ::: example #example3 :react --js 1 --ts 2
 
@@ -98,9 +96,9 @@ The following example implements `@handsontable/react-wrapper` with a custom ren
 
 ::: only-for javascript
 
-## Use a cell renderer
+## 使用单元格渲染器
 
-Use the renderer name of your choice when configuring the column:
+配置列时使用您选择的渲染器名称：
 
 :::
 
@@ -108,30 +106,30 @@ Use the renderer name of your choice when configuring the column:
 
 ::: tip
 
-All the sections below describe how to utilize the features available for the Handsontable function-based renderers.
+以下所有部分描述了如何利用 Handsontable 基于函数的渲染器可用的功能。
 
 :::
 
 ### 概述
 
-When you create a renderer, a good idea is to assign it as an alias that will refer to this particular renderer function. Handsontable defines 10 aliases by default:
+创建渲染器时，一个好主意是将其指定为引用此特定渲染器函数的别名。 Handsontable默认定义了10个别名：
 
-- `autocomplete` for `Handsontable.renderers.AutocompleteRenderer`
-- `base` for `Handsontable.renderers.BaseRenderer`
-- `checkbox` for `Handsontable.renderers.CheckboxRenderer`
-- `date` for `Handsontable.renderers.DateRenderer`
-- `dropdown` for `Handsontable.renderers.DropdownRenderer`
-- `html` for `Handsontable.renderers.HtmlRenderer`
-- `numeric` for `Handsontable.renderers.NumericRenderer`
-- `password` for `Handsontable.renderers.PasswordRenderer`
-- `text` for `Handsontable.renderers.TextRenderer`
-- `time` for `Handsontable.renderers.TimeRenderer`
+- `autocomplete` 对应 `Handsontable.renderers.AutocompleteRenderer`
+- `base` 对应 `Handsontable.renderers.BaseRenderer`
+- `checkbox` 对应 `Handsontable.renderers.CheckboxRenderer`
+- `date` 对应 `Handsontable.renderers.DateRenderer`
+- `dropdown` 对应 `Handsontable.renderers.DropdownRenderer`
+- `html` 对应 `Handsontable.renderers.HtmlRenderer`
+- `numeric` 对应 `Handsontable.renderers.NumericRenderer`
+- `password` 对应 `Handsontable.renderers.PasswordRenderer`
+- `text` 对应 `Handsontable.renderers.TextRenderer`
+- `time` 对应 `Handsontable.renderers.TimeRenderer`
 
-It gives users a convenient way for defining which renderer should be used when table rendering was triggered. User doesn't need to know which renderer function is responsible for displaying the cell value, he does not even need to know that there is any function at all. What is more, you can change the render function associated with an alias without a need to change code that defines a table.
+它为用户提供了一种方便的方法来定义触发表渲染时应使用哪个渲染器。用户不需要知道哪个渲染器函数负责显示单元格值，他甚至不需要知道有任何函数。此外，您可以更改与别名关联的渲染函数，而无需更改定义表的代码。
 
 ::: tip
 
-You can set a cell's [`renderer`](@/api/options.md#renderer), [`editor`](@/api/options.md#editor) or [`validator`](@/api/options.md#validator) individually, but you still need to set that cell's [`type`](@/api/options.md#type). For example:
+您可以设置单元格的 [`renderer`](@/api/options.md#renderer)、[`editor`](@/api/options.md#editor) 或 [`validator`](@/api/options .md#validator) 单独，但您仍然需要设置该单元格的 [`type`](@/api/options.md#type)。例如：
 
 :::
 
@@ -142,9 +140,9 @@ validator: Handsontable.NumericValidator,
 type: 'numeric',
 ```
 
-### Use a cell renderer
+### 使用单元格渲染器
 
-It is possible to register your renderer and re-use it with the name you registered it under.
+可以注册您的渲染器并使用您注册时使用的名称重新使用它。
 
 :::
 
@@ -177,79 +175,78 @@ const hot = new Handsontable(container, {
 
 ::: only-for javascript
 
-## Register custom cell renderer
-
+## 注册自定义单元格渲染器
 :::
 
 ::: only-for react
 
-### Register custom cell renderer
+### 注册自定义单元格渲染器
 
 :::
 
-To register your own alias use `Handsontable.renderers.registerRenderer()` function. It takes two arguments:
+要注册您自己的别名，请使用`Handsontable.renderers.registerRenderer()`函数。它需要两个参数：
 
-- `rendererName` - a string representing a renderer function
-- `renderer` - a renderer function that will be represented by `rendererName`
+- `rendererName` -表示渲染器函数的字符串
+- `renderer` -将由 `rendererName` 表示的渲染器函数
 
-If you'd like to register `asterixDecoratorRenderer` under alias `asterix` you have to call:
+如果您想在别名`asterix`下注册`asterixDecoratorRenderer`，您必须调用：
 
 ```js
 Handsontable.renderers.registerRenderer('asterix', asterixDecoratorRenderer);
 ```
 
-Choose aliases wisely. If you register your renderer under name that is already registered, the target function will be overwritten:
+明智地选择别名。如果您使用已注册的名称注册渲染器，则目标函数将被覆盖：
 
 ```js
 Handsontable.renderers.registerRenderer('text', asterixDecoratorRenderer);
 ```
 
-Now 'text' alias points to `asterixDecoratorRenderer` function, not `Handsontable.renderers.TextRenderer`.
+现在`text`别名指向`asterixDecoratorRenderer`函数，而不是`Handsontable.renderers.TextRenderer`。
 
-So, unless you intentionally want to overwrite an existing alias, try to choose a unique name. A good practice is prefixing your aliases with some custom name (for example your GitHub username) to minimize the possibility of name collisions. This is especially important if you want to publish your renderer, because you never know aliases has been registered by the user who uses your renderer.
+因此，除非您有意要覆盖现有别名，否则请尝试选择一个唯一的名称。一个好的做法是在别名前添加一些自定义名称（例如您的 GitHub 用户名），以最大程度地减少名称冲突的可能性。如果您想发布渲染器，这一点尤其重要，因为您永远不知道使用您的渲染器的用户已注册别名。
 
 ```js
 Handsontable.renderers.registerRenderer('asterix', asterixDecoratorRenderer);
 ```
 
-Someone might already registered such alias
+有人可能已经注册了这样的别名
 
 ```js
 Handsontable.renderers.registerRenderer('my.asterix', asterixDecoratorRenderer);
 ```
 
-That's better.
+这样更好。
 
 ::: only-for javascript
 
-## Use an alias
+## 使用别名
 
 :::
 
 ::: only-for react
 
-### Use an alias
+### 使用别名
 
 :::
 
-The final touch is to using the registered aliases, so that users can easily refer to it without the need to now the actual renderer function is.
+最后一步是使用注册的别名，以便用户可以轻松引用它，而无需现在实际的渲染器函数。
 
-To sum up, a well prepared renderer function should look like this:
+总而言之，一个准备好的渲染器函数应该如下所示：
 
 ```js
 function customRenderer(hotInstance, td, row, column, prop, value, cellProperties) {
-  // Optionally include `BaseRenderer` which is responsible for
-  // adding/removing CSS classes to/from the table cells.
+  // 可选地包括`BaseRenderer`，它负责
+  // 在表格单元格中添加/删除 CSS 类。
   Handsontable.renderers.BaseRenderer.apply(this, arguments);
 
-  // ...your custom logic of the renderer
+  // ...您的渲染器的自定义逻辑
 }
 
-// Register an alias
+// 注册别名
 Handsontable.renderers.registerRenderer('my.custom', customRenderer);
 ```
 
-From now on, you can use `customRenderer` like so:
+从现在开始，您可以像这样使用`customRenderer`：
 
 ::: only-for javascript
 
@@ -280,22 +277,22 @@ const hot = new Handsontable(container, {
 
 ::: only-for javascript
 
-## Render custom HTML in cells
+## 在单元格中渲染自定义 HTML
 
 :::
 
 ::: only-for react
 
-### Render custom HTML in cells
+### 在单元格中渲染自定义 HTML
 
 :::
 
-This example shows how to use custom cell renderers to display HTML content in a cell. This is a very powerful feature. Just remember to escape any HTML code that could be used for XSS attacks. In the below configuration:
+此示例演示如何使用自定义单元格呈现器在单元格中显示 HTML 内容。这是一个非常强大的功能。请记住转义任何可用于 XSS 攻击的 HTML 代码。在下面的配置中：
 
-- **Title** column uses built-in HTML renderer that allows any HTML. This is unsafe if your code comes from untrusted source. Take notice that a Handsontable user can use it to enter `<script>` or other potentially malicious tags using the cell editor!
-- **Description** column also uses HTML renderer (same as above)
-- **Comments** column uses a custom renderer (`safeHtmlRenderer`). This should be safe for user input, because only certain tags are allowed
-- **Cover** column accepts image URL as a string and converts it to a `<img>` in the renderer
+- **标题**列使用允许任何 HTML 的内置 HTML 渲染器。如果您的代码来自不受信任的来源，这是不安全的。请注意，Handsontable 用户可以使用它使用单元格编辑器输入 `<script>` 或其他潜在的恶意标签！
+- **描述**列也使用 HTML 渲染器（与上面相同）
+- **注释**列使用自定义渲染器（`safeHtmlRenderer`）。这对于用户输入来说应该是安全的，因为只允许某些标签
+- **Cover**列接受图像 URL 作为字符串，并将其转换为渲染器中的 `<img>`
 
 ::: only-for javascript
 
@@ -321,17 +318,17 @@ This example shows how to use custom cell renderers to display HTML content in a
 
 ::: only-for javascript
 
-## Render custom HTML in header
+## 在标头中渲染自定义 HTML
 
 :::
 
 ::: only-for react
 
-### Render custom HTML in header
+### 在标头中渲染自定义 HTML
 
 :::
 
-You can also put HTML into row and column headers. If you need to attach events to DOM elements like the checkbox below, just remember to identify the element by class name, not by id. This is because row and column headers are duplicated in the DOM tree and id attribute must be unique.
+您还可以将 HTML 放入行标题和列标题中。如果您需要将事件附加到 DOM 元素（如下面的复选框），只需记住通过类名而不是 id 来标识元素。这是因为行标题和列标题在 DOM 树中是重复的，并且 id 属性必须是唯一的。
 
 ::: only-for javascript
 
@@ -358,30 +355,29 @@ You can also put HTML into row and column headers. If you need to attach events 
 
 ::: only-for javascript
 
-## Add event listeners in cell renderer function
+## 在单元格渲染器函数中添加事件监听器
 
 :::
 
 ::: only-for react
 
-### Add event listeners in cell renderer function
+### 在单元格渲染器函数中添加事件监听器
 
 :::
 
-If you are writing an advanced cell renderer, and you want to add some custom behavior after a certain user action (i.e. after user hover a mouse pointer over a cell) you might be tempted to add an event listener directly to table cell node passed as an argument to the `renderer` function. Unfortunately, this will almost always cause you trouble and you will end up with either performance issues or having the listeners attached to the wrong cell.
+如果您正在编写高级单元格渲染器，并且希望在某个用户操作之后（即用户将鼠标指针悬停在单元格上之后）添加一些自定义行为，您可能会想将事件侦听器直接添加到传递为的表单元格节点`renderer` 函数的参数。不幸的是，这几乎总是会给您带来麻烦，并且您最终会遇到性能问题或将侦听器连接到错误的单元。
 
-This is because Handsontable:
+这是因为 Handsontable：
 
-- Calls `renderer` functions multiple times per cell - this can lead to having multiple copies of the same event listener attached to a cell
-- Reuses table cell nodes during table scrolling and adding/removing new rows/columns - this can lead to having event listeners attached to the wrong cell
+- 每个单元多次调用`渲染器`函数 -这可能导致同一事件侦听器的多个副本附加到单元
+- 在表格滚动和添加/删除新行/列期间重用表格单元格节点 -这可能导致事件侦听器附加到错误的单元格
+- 
+在决定在单元格渲染器中附加事件侦听器之前，请确保没有适合您需求的 [Handsontable 事件](@/guides/getting-started/events-and-hooks/events-and-hooks.md)。使用_Handsontable events_系统是响应用户操作的最安全的方法。
 
-Before deciding to attach an event listener in cell renderer make sure, that there is no [Handsontable event](@/guides/getting-started/events-and-hooks/events-and-hooks.md) that suits your needs. Using _Handsontable events_ system is the safest way to respond to user actions.
+如果您没有找到合适的 _Handsontable 事件_，请将单元格内容放入包装`<div>`中，将事件侦听器附加到包装器，然后将其放入表格单元格中。
 
-If you did't find a suitable _Handsontable event_ put the cell content into a wrapping `<div>`, attach the event listener to the wrapper and then put it into the table cell.
-
-## Performance considerations
-
-Cell renderers are called separately for every displayed cell, during every table render. Table can be rendered multiple times during its lifetime (after table scroll, after table sorting, after cell edit etc.), therefore you should keep your `renderer` functions as simple and fast as possible or you might experience a performance drop, especially when dealing with large sets of data.
+## 性能考虑
+在每个表格渲染期间，为每个显示的单元格单独调用单元格渲染器。表格在其生命周期内可以多次渲染（表格滚动后、表格排序后、单元格编辑后等），因此您应该使您的`渲染器`函数尽可能简单和快速，否则您可能会遇到性能下降，特别是当处理大量数据。
 
 ::: only-for javascript
 
@@ -391,10 +387,10 @@ Cell renderers are called separately for every displayed cell, during every tabl
 
 <div class="boxes-list gray">
 
-- [Custom renderer in React](@/react/guides/cell-functions/cell-renderer/cell-renderer.md)
-- [Custom renderer in Angular](@/guides/integrate-with-angular/angular-custom-renderer-example/angular-custom-renderer-example.md)
-- [Custom renderer in Vue 2](@/guides/integrate-with-vue/vue-custom-renderer-example/vue-custom-renderer-example.md)
-- [Custom renderer in Vue 3](@/guides/integrate-with-vue3/vue3-custom-renderer-example/vue3-custom-renderer-example.md)
+- [React 中的自定义渲染器](@/react/guides/cell-functions/cell-renderer/cell-renderer.md)
+- [Angular 中的自定义渲染器](@/guides/integrate-with-angular/angular-custom-renderer-example/angular-custom-renderer-example.md)
+- [Vue 2 中的自定义渲染器](@/guides/integrate-with-vue/vue-custom-renderer-example/vue-custom-renderer-example.md)
+- [Vue 3 中的自定义渲染器](@/guides/integrate-with-vue3/vue3-custom-renderer-example/vue3-custom-renderer-example.md)
 
 </div>
 

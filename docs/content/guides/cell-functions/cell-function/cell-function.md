@@ -1,6 +1,6 @@
 ---
 id: neoo8dhv
-title: Cell functions
+title: 单元格函数
 metaTitle: Cell functions - JavaScript Data Grid | Handsontable
 description: Render, edit, and validate the contents of your cells, using Handsontable's cell functions. Quickly set up your cells, using cell types.
 permalink: /cell-function
@@ -12,78 +12,83 @@ searchCategory: Guides
 category: Cell functions
 ---
 
-# Cell functions
+# 单元格函数
 
-Render, edit, and validate the contents of your cells, using Handsontable's cell functions. Quickly set up your cells, using cell types.
+使用 Handsontable 的单元格函数渲染、编辑和验证单元格的内容。使用细胞类型快速设置细胞。
 
 [[toc]]
 
 ## 概述
 
-With every cell in the Handsontable there are 3 associated functions:
+Handsontable 中的每个单元格都有 3 个相关函数：
 
-- [Renderer](#renderer)
-- [Editor](#editor)
-- [Validator](#validator)
+- [单元格函数](#单元格函数)
+  - [概述](#概述)
+  - [渲染器](#渲染器)
+  - [编辑器](#编辑器)
+  - [验证器](#验证器)
+  - [细胞类型](#细胞类型)
+  - [单元格函数 getter](#单元格函数-getter)
+  - [相关文章](#相关文章)
+    - [相关指南](#相关指南)
+    - [相关API参考](#相关api参考)
 
-Each of those functions are responsible for a different cell behavior. You can define them separately or use a [cell type](#cell-type) to define all three at once.
+这些功能中的每一个都负责不同的细胞行为。您可以单独定义它们，也可以使用[单元类型](#cell-type)同时定义所有三个。
 
-## Renderer
+## 渲染器
 
-Handsontable does not display the values stored in the data source directly. Instead, every time a value from data source needs to be displayed in a table cell, it is passed to the cell `renderer` function, together with the table cell object of type `HTMLTableCellElement` (DOM node), along with other useful information.
+Handsontable 不直接显示数据源中存储的值。相反，每次需要在表格单元格中显示数据源中的值时，它都会与`HTMLTableCellElement`类型的表格单元格对象（DOM 节点）以及其他有用信息一起传递给单元格`renderer`函数。
+`Renderer` 预计会格式化传递的值并将其放置为单元格对象的内容。 `Renderer` 还可以更改单元格类列表，即它可以添加一个 `htInvalid` 类来让用户知道显示的值无效。
 
-`Renderer` is expected to format the passed value and place it as a content of the cell object. `Renderer` can also alter the cell class list, i.e. it can add a `htInvalid` class to let the user know, that the displayed value is invalid.
+## 编辑器
 
-## Editor
+单元格编辑器是最复杂的单元格功能。我们准备了一个单独的页面[自定义单元格编辑器](@/guides/cell-functions/cell-editor/cell-editor.md) 解释单元格编辑如何工作以及如何编写您自己的单元格编辑器。
 
-Cell editors are the most complex cell functions. We have prepared a separate page [custom cell editor](@/guides/cell-functions/cell-editor/cell-editor.md) explaining how cell edit works and how to write your own cell editor.
+## 验证器
+单元格验证器可以是函数或正则表达式。当验证器函数使用`true`或验证正则表达式 [`test()`](https://developer.mozilla. org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test) 方法返回`true`。由于值的有效性仅由传递给`callback`的参数确定，因此`validator`函数可以是同步的或异步的。
 
-## Validator
+与`渲染器`和`编辑器`函数相反，不必为每个单元格定义`验证器`函数。如果未定义`validator`函数，则单元格值始终有效。
 
-Cell validator can be either a function or a regular expression. A cell is considered valid, when the validator function calls a `callback` (passed as one of the `validator` arguments) with `true` or the validation regex [`test()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test) method returns `true`. Because the validity of a value is determined only by the argument that is passed to `callback`, `validator` function can be synchronous or asynchronous.
+## 细胞类型
 
-Contrary to `renderer` and `editor` functions, the `validator` function doesn't have to be defined for each cell. If the `validator` function is not defined, then a cell value is always valid.
+手动为单元格或列定义这些函数会很繁琐，因此为了简化配置，Handsontable 引入了[单元格类型](@/guides/cell-types/cell-type/cell-type.md)。
 
-## Cell type
-
-Manually defining those functions for cells or columns would be tedious, so to simplify the configuration, Handsontable introduced [cell types](@/guides/cell-types/cell-type/cell-type.md).
-
-## Cell functions getters
+## 单元格函数 getter
 
 ::: only-for react
 
 ::: tip
 
-To use the Handsontable API, you'll need access to the Handsontable instance. You can do that by utilizing a reference to the `HotTable` component, and reading its `hotInstance` property.
+要使用 Handsontable API，您需要访问 Handsontable 实例。您可以通过利用对`HotTable`组件的引用并读取其`hotInstance`属性来做到这一点。
 
-For more information, see the [Instance methods](@/guides/getting-started/react-methods/react-methods.md) page.
-
-:::
+有关更多信息，请参阅[实例方法](@/guides/getting-started/react-methods/react-methods.md)页面。
 
 :::
 
-If, for some reason, you need to get the `renderer`, `editor` or `validator` function of a specific cell,
-you can use the standard [`getCellMeta()`](@/api/core.md#getcellmeta) method to get all properties of a cell,
-and then refer to the cell functions like this:
+:::
+
+如果由于某种原因，您需要获取特定单元格的`渲染器`、`编辑器`或`验证器`功能，
+您可以使用标准的 [`getCellMeta()`](@/api/core.md#getcellmeta) 方法来获取单元格的所有属性，
+然后像这样引用单元格函数：
 
 ```js
-// get cell properties for cell [0, 0]
+// 获取单元格 [0, 0] 的单元格属性
 const cellProperties = hot.getCellMeta(0, 0);
 
-cellProperties.renderer; // get cell renderer
-cellProperties.editor; // get cell editor
-cellProperties.validator; // get cell validator
-cellProperties.type; // get cell type
+cellProperties.renderer; //获取单元格渲染器
+cellProperties.editor; //获取单元格编辑器
+cellProperties.validator; //获取单元格验证器
+cellProperties.type; //获取细胞类型
 ```
 
-You can also get specific cell functions by using the following getters:
+您还可以使用以下 getter 来获取特定的单元格函数：
 
 - [`getCellRenderer(row, col)`](@/api/core.md#getcellrenderer)
 - [`getCellEditor(row, col)`](@/api/core.md#getcelleditor)
 - [`getCellValidator(row, col)`](@/api/core.md#getcellvalidator)
 
-If a cell's functions are defined through a [cell type](#cell-type), the getters will return
-the `renderer`, `editor` or `validator` functions defined for that cell type. For example:
+如果单元格的函数是通过[单元格类型](#cell-type)定义的，则 getter 将返回
+为该单元格类型定义的`渲染器`、`编辑器`或`验证器`函数。例如：
 
 ::: only-for javascript
 
@@ -95,18 +100,18 @@ import 'handsontable/styles/ht-theme-main.css';
 const container = document.querySelector('#container');
 const hot = new Handsontable(container, {
   columns: [{
-    // set a cell type for the entire grid
+    //设置整个网格的单元格类型
     type: 'numeric'
   }]
 });
 
-// get cell properties for cell [0, 0]
+//获取单元格 [0, 0] 的单元格属性
 const cellProperties = hot.getCellMeta(0, 0);
 
-cellProperties.renderer; // numericRenderer
-cellProperties.editor; // NumericEditor
-cellProperties.validator; // numericValidator
-cellProperties.type; // numeric
+cellProperties.renderer; //数字渲染器
+cellProperties.editor; //数字编辑器
+cellProperties.validator; //数字验证器
+cellProperties.type; //数字
 ```
 
 :::
@@ -120,7 +125,7 @@ const ExampleComponent = () => {
   useEffect(() => {
     const hot = hotRef.current.hotInstance;
 
-    // get cell properties for cell [0, 0]
+    //获取单元格 [0, 0] 的单元格属性
     const cellProperties = hot.getCellMeta(0, 0);
 
     cellProperties.renderer; // "numeric"
@@ -132,7 +137,7 @@ const ExampleComponent = () => {
   return (
     <HotTable
       ref={hotRef}
-      // set a cell type for the entire grid
+      //设置整个网格的单元格类型
       type="numeric"
     />
   );
@@ -147,10 +152,10 @@ const ExampleComponent = () => {
 
 <div class="boxes-list gray">
 
-- [Cell editor](@/guides/cell-functions/cell-editor/cell-editor.md)
-- [Cell renderer](@/guides/cell-functions/cell-renderer/cell-renderer.md)
-- [Cell validator](@/guides/cell-functions/cell-validator/cell-validator.md)
-- [Cell type](@/guides/cell-types/cell-type/cell-type.md)
+- [单元格编辑器](@/guides/cell-functions/cell-editor/cell-editor.md)
+- [单元格渲染器](@/guides/cell-functions/cell-renderer/cell-renderer.md)
+- [单元格验证器](@/guides/cell-functions/cell-validator/cell-validator.md)
+- [细胞类型](@/guides/cell-types/cell-type/cell-type.md)
 
 </div>
 
