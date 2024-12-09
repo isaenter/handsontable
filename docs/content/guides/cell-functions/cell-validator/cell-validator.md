@@ -1,6 +1,6 @@
 ---
 id: h840od8r
-title: Cell validator
+title: 单元格验证器
 metaTitle: Cell validator - JavaScript Data Grid | Handsontable
 description: Validate data added or changed by the user, with predefined or custom rules. Validation helps you make sure that the data matches the expected format.
 permalink: /cell-validator
@@ -12,80 +12,79 @@ searchCategory: Guides
 category: Cell functions
 ---
 
-# Cell validator
+# 单元格验证器
 
-Validate data added or changed by the user, with predefined or custom rules. Validation helps you make sure that the data matches the expected format.
+使用预定义或自定义规则验证用户添加或更改的数据。验证可帮助您确保数据与预期格式匹配。
 
 [[toc]]
 
 ## 概述
 
-When you create a validator, a good idea is to assign it as an alias that will refer to this particular validator function. Handsontable defines 5 aliases by default:
+创建验证器时，一个好主意是将其指定为引用此特定验证器函数的别名。 Handsontable默认定义了5个别名：
 
-- `autocomplete` for `Handsontable.validators.AutocompleteValidator`
-- `date` for `Handsontable.validators.DateValidator`
-- `dropdown` for `Handsontable.validators.DropdownValidator`
-- `numeric` for `Handsontable.validators.NumericValidator`
-- `time` for `Handsontable.validators.TimeValidator`
+- `autocomplete` 对应 `Handsontable.validators.AutocompleteValidator`
+- `date` 对应 `Handsontable.validators.DateValidator`
+- `dropdown` 对应 `Handsontable.validators.DropdownValidator`
+- `numeric` 对应 `Handsontable.validators.NumericValidator`
+- `time` 对应 `Handsontable.validators.TimeValidator`
 
-It gives users a convenient way for defining which validator should be used when table validation was triggered. User doesn't need to know which validator function is responsible for checking the cell value, he does not even need to know that there is any function at all. What is more, you can change the validator function associated with an alias without a need to change code that defines a table.
+它为用户提供了一种方便的方法来定义触发表验证时应使用哪个验证器。用户不需要知道哪个验证器函数负责检查单元格值，他甚至不需要知道有任何函数。此外，您可以更改与别名关联的验证器函数，而无需更改定义表的代码。
 
-## Register custom cell validator
+## 注册自定义单元格验证器
 
-To register your own alias use `Handsontable.validators.registerValidator()` function. It takes two arguments:
+要注册您自己的别名，请使用 Handsontable.validators.registerValidator() 函数。它需要两个参数：
 
-- `validatorName` - a string representing a validator function
-- `validator` - a validator function that will be represented by `validatorName`
+-`validatorName` -表示验证器函数的字符串
+-`validator` -将由 `validatorName` 表示的验证器函数
 
-If you'd like to register `creditCardValidator` under alias `credit-card` you have to call:
+如果您想在别名`credit-card`下注册`creditCardValidator`，您必须调用：
 
 ```js
 Handsontable.validators.registerValidator('credit-card', creditCardValidator);
 ```
 
-Choose aliases wisely. If you register your validator under name that is already registered, the target function will be overwritten:
+明智地选择别名。如果您使用已注册的名称注册验证器，则目标函数将被覆盖：
 
 ```js
 Handsontable.validators.registerValidator('date', creditCardValidator);
 ```
-Now 'date' alias points to `creditCardValidator` function, not `Handsontable.validators.DateValidator`.
+现在`date`别名指向`creditCardValidator`函数，而不是`Handsontable.validators.DateValidator`。
 
-
-So, unless you intentionally want to overwrite an existing alias, try to choose a unique name. A good practice is prefixing your aliases with some custom name (for example your GitHub username) to minimize the possibility of name collisions. This is especially important if you want to publish your validator, because you never know aliases has been registered by the user who uses your validator.
+因此，除非您有意要覆盖现有别名，否则请尝试选择一个唯一的名称。一个好的做法是在别名前添加一些自定义名称（例如您的 GitHub 用户名），以最大程度地减少名称冲突的可能性。如果您想发布验证器，这一点尤其重要，因为您永远不知道使用您的验证器的用户已经注册了别名。
 
 ```js
 Handsontable.validators.registerValidator('credit-card', creditCardValidator);
 ```
 
-Someone might already registered such alias.
+有人可能已经注册了这样的别名。
 
 ```js
 Handsontable.validators.registerValidator('my.credit-card', creditCardValidator);
 ```
 
-That's better.
+这样更好。
 
-## Using an alias
+## 使用别名
 
-The final touch is to use the registered aliases, so that users can easily refer to it without the need to now the actual validator function is.
+最后一步是使用注册的别名，以便用户可以轻松引用它，而无需现在实际的验证器函数。
 
-To sum up, a well prepared validator function should look like this:
+总而言之，一个准备好的验证器函数应该如下所示：
 
 ```js
 (Handsontable => {
   function customValidator(query, callback) {
-    // ...your custom logic of the validator
+    // ...您的验证器的自定义逻辑
 
-    callback(/* Pass `true` or `false` based on your logic */);
+    callback(/* 根据您的逻辑传递`true`或`false`*/);
   }
 
-  // Register an alias
+  // 注册别名
   Handsontable.validators.registerValidator('my.custom', customValidator);
 
 })(Handsontable);
 ```
 
-From now on, you can use `customValidator` like so:
+从现在开始，您可以像这样使用`customValidator`：
 
 ::: only-for javascript
 
@@ -112,15 +111,14 @@ const hot = new Handsontable(container, {
 
 :::
 
-## Full featured example
+## 全功能示例
 
-Use the validator method to easily validate synchronous or asynchronous changes to a cell. If you need more control, [`beforeValidate`](@/api/hooks.md#beforevalidate) and [`afterValidate`](@/api/hooks.md#aftervalidate) hooks are available. In the below example, `email_validator_fn` is an async validator that resolves after 1000 ms.
+使用验证器方法可以轻松验证对单元格的同步或异步更改。如果您需要更多控制，可以使用 [`beforeValidate`](@/api/hooks.md#beforevalidate) 和 [`afterValidate`](@/api/hooks.md#aftervalidate) 挂钩。在下面的示例中，`email_validator_fn`是一个异步验证器，在 1000 毫秒后解析。
 
-Use the [`allowInvalid`](@/api/options.md#allowinvalid) option to define if the grid should accept input that does not validate. If you need to modify the input (e.g., censor bad words, uppercase first letter), use the plugin hook [`beforeChange`](@/api/hooks.md#beforechange).
+使用 [`allowInvalid`](@/api/options.md#allowinvalid) 选项定义网格是否应接受未验证的输入。如果您需要修改输入（例如，审查不良单词、大写首字母），请使用插件钩子 [`beforeChange`](@/api/hooks.md#beforechange)。
 
-By default, all invalid cells are marked by `htInvalid` CSS class. If you want to change class to another you can basically add the `invalidCellClassName` option to Handsontable settings. For example:
-
-For the entire table
+默认情况下，所有无效单元格都由`htInvalid`CSS 类标记。如果你想将类更改为另一个类，你基本上可以将 `invalidCellClassName` 选项添加到 Handsontable 设置中。例如：
+对于整个表
 
 ::: only-for javascript
 
@@ -136,7 +134,7 @@ invalidCellClassName: 'myInvalidClass'
 invalidCellClassName="myInvalidClass"
 ```
 
-For specific columns
+对于特定列
 
 ::: only-for javascript
 
@@ -161,7 +159,7 @@ columns={[
 
 :::
 
-Callback console log:
+回调控制台日志：
 
 ::: only-for javascript
 
@@ -186,9 +184,9 @@ Callback console log:
 
 :::
 
-Edit the above grid to see the `changes` argument from the callback.
+编辑上面的网格以查看回调中的`changes`参数。
 
-Mind that changes in table are applied after running all validators (both synchronous and and asynchronous) from every changed cell.
+请注意，在从每个更改的单元格运行所有验证器（同步和异步）后，将应用表中的更改。
 
 ## 相关API参考
 

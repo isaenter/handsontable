@@ -45,7 +45,7 @@ Handsontable 不直接显示数据源中存储的值。相反，每次需要在�
 单元格编辑器是最复杂的单元格功能。我们准备了一个单独的页面[自定义单元格编辑器](@/guides/cell-functions/cell-editor/cell-editor.md) 解释单元格编辑如何工作以及如何编写您自己的单元格编辑器。
 
 ## 验证器
-单元格验证器可以是函数或正则表达式。当验证器函数使用`true`或验证正则表达式 [`test()`](https://developer.mozilla. org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test) 方法返回`true`。由于值的有效性仅由传递给`callback`的参数确定，因此`validator`函数可以是同步的或异步的。
+单元格验证器可以是函数或正则表达式。当验证器函数使用`true`或验证正则表达式 [`test()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test) 方法返回`true`。由于值的有效性仅由传递给`callback`的参数确定，因此`validator`函数可以是同步的或异步的。
 
 与`渲染器`和`编辑器`函数相反，不必为每个单元格定义`验证器`函数。如果未定义`validator`函数，则单元格值始终有效。
 

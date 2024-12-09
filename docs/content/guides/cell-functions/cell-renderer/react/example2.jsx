@@ -3,10 +3,10 @@ import { HotTable, HotColumn } from '@handsontable/react-wrapper';
 import 'handsontable/styles/handsontable.css';
 import 'handsontable/styles/ht-theme-main.css';
 
-// a component
+//一个组件
 const HighlightContext = createContext(false);
 
-// a renderer component
+//渲染器组件
 function CustomRenderer(props) {
   const darkMode = useContext(HighlightContext);
 
@@ -31,7 +31,7 @@ const ExampleComponent = () => {
     <HighlightContext.Provider value={darkMode}>
       <div className="controls">
         <label>
-          <input type="checkbox" onClick={toggleDarkMode} /> Dark mode
+          <input type="checkbox" onClick={toggleDarkMode} /> 深色模式
         </label>
       </div>
       <HotTable

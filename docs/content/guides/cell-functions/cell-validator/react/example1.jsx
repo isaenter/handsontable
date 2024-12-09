@@ -102,15 +102,15 @@ const ExampleComponent = () => {
           const cellChanges = changes;
 
           for (let i = changes.length - 1; i >= 0; i--) {
-            // gently don't accept the word "foo" (remove the change at index i)
+            // 轻轻地不接受单词`foo`（删除索引 i 处的更改）
             if (cellChanges[i][3] === 'foo') {
               changes.splice(i, 1);
             }
-            // if any of pasted cells contains the word "nuke", reject the whole paste
+            // 如果任何粘贴的单元格包含单词`nuke`，则拒绝整个粘贴
             else if (cellChanges[i][3] === 'nuke') {
               return false;
             }
-            // capitalise first letter in column 1 and 2
+            // 第 1 列和第 2 列中的第一个字母大写
             else if (
               cellChanges[i][1] === 'name.first' ||
               cellChanges[i][1] === 'name.last'

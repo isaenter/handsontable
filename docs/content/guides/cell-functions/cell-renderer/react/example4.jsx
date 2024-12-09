@@ -45,8 +45,8 @@ const ExampleComponent = () => {
     value,
     _cellProperties
   ) {
-    // WARNING: Be sure you only allow certain HTML tags to avoid XSS threats.
-    // Sanitize the "value" before passing it to the innerHTML property.
+    // 警告：请确保仅允许某些 HTML 标记以避免 XSS 威胁。
+    // 在将`值`传递给innerHTML 属性之前对其进行清理。
     td.innerHTML = value;
   }
 
