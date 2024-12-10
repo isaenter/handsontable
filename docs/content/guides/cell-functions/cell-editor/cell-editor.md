@@ -21,7 +21,7 @@ category: Cell functions
 ## 概述
 
 
-Handsontable 将显示单元格值的过程与更改值的过程分开。渲染器负责呈现数据，编辑器负责更改数据。由于渲染器只有一个简单的任务：_获取单元格的实际值并将其表示形式返回为 HTML 代码_它们可以是单个函数。然而，编辑器需要处理用户输入（即鼠标和键盘事件）、验证数据并根据验证结果进行操作，因此将所有这些功能放入一个函数中并不是一个好主意。这就是为什么 Handsontable 编辑器由编辑器类表示。
+Handsontable 将显示单元格值的过程与更改值的过程分开。渲染器负责呈现数据，编辑器负责更改数据。由于渲染器只有一个简单的任务：_获取单元格的实际值并将其表示形式返回为 HTML 代码_它们可以是单个函数。然而，编辑器需要处理用户输入(即鼠标和键盘事件`)、验证数据并根据验证结果进行操作，因此将所有这些功能放入一个函数中并不是一个好主意。这就是为什么 Handsontable 编辑器由编辑器类表示。
 
 本教程将让您全面了解单元格编辑的整个过程如何工作、Handsontable Core 如何管理编辑器、编辑器生命周期如何以及最后如何创建自己的编辑器。
 
@@ -77,7 +77,7 @@ const EditorComponent = () => {
 
 ## 基于类的编辑器
 
-您还可以为`HotTable`组件声明一个自定义编辑器，方法是将其声明为一个类并将其作为`hotEditor`传递给 Handsontable 选项（或者在`columns`配置数组中使用时简称为`editor`）。
+您还可以为`HotTable`组件声明一个自定义编辑器，方法是将其声明为一个类并将其作为`hotEditor`传递给 Handsontable 选项(或者在`columns`配置数组中使用时简称为`editor``)。
 
 以下示例利用编辑器的`input`元素中的`placeholder`属性，实现了`@handsontable/react-wrapper`组件，并添加了自定义编辑器。
 
@@ -125,8 +125,8 @@ const EditorComponent = () => {
 
 - 为活动单元格选择合适的编辑器
 - 准备显示编辑器
-- 显示编辑器（基于用户行为）
-- 关闭编辑器（基于用户行为）。
+- 显示编辑器(基于用户行为`)
+- 关闭编辑器(基于用户行为`)。
 
 我们将详细讨论每一项任务。
 
@@ -143,9 +143,9 @@ const EditorComponent = () => {
 :::
 
 
-当用户选择一个单元格时，[`EditorManager`](@/api/baseEditor.md) 查找分配给该单元格的编辑器类，检查 [`editor`](@/api/options.md#editor) 配置的值选项。您可以全局（针对表中的所有单元格）、每列（针对列中的所有单元格）或单独为每个单元格定义 [`editor`](@/api/options.md#editor) 配置选项。有关更多详细信息，请参阅[配置选项](@/guides/getting-started/configuration-options/configuration-options.md#cascading-configuration)指南。
+当用户选择一个单元格时，[`EditorManager`](@/api/baseEditor.md) 查找分配给该单元格的编辑器类，检查 [`editor`](@/api/options.md#editor) 配置的值选项。您可以全局(针对表中的所有单元格`)、每列(针对列中的所有单元格`)或单独为每个单元格定义 [`editor`](@/api/options.md#editor) 配置选项。有关更多详细信息，请参阅[配置选项](@/guides/getting-started/configuration-options/configuration-options.md#cascading-configuration)指南。
 
-[`editor`](@/api/options.md#editor) 配置选项的值可以是表示编辑器的字符串（例如 'text'、'autocomplete'、'checkbox' 等），也可以是编辑器类。 [`EditorManager`](@/api/baseEditor.md) 然后将获取编辑器类的实例，要记住的第一件非常重要的事情是：**单个表中始终有某个编辑器类的一个实例**，换句话说，每个编辑器类对象**是单个表中的单例**，这意味着每个表仅调用其构造函数一次。如果一个页面上有 3 个表格，则每个表格都有自己的编辑器类实例。这有一些重要的含义，您必须考虑创建自己的编辑器。
+[`editor`](@/api/options.md#editor) 配置选项的值可以是表示编辑器的字符串(例如 'text'、'autocomplete'、'checkbox' 等`)，也可以是编辑器类。 [`EditorManager`](@/api/baseEditor.md) 然后将获取编辑器类的实例，要记住的第一件非常重要的事情是：**单个表中始终有某个编辑器类的一个实例**，换句话说，每个编辑器类对象**是单个表中的单例**，这意味着每个表仅调用其构造函数一次。如果一个页面上有 3 个表格，则每个表格都有自己的编辑器类实例。这有一些重要的含义，您必须考虑创建自己的编辑器。
 
 ::: only-for javascript
 
@@ -159,7 +159,7 @@ const EditorComponent = () => {
 
 :::
 
-当 [`EditorManager`](@/api/baseEditor.md) 获取编辑器类实例（编辑器对象）时，它会调用其 [`prepare()`](@/api/baseEditor.md#prepare) 方法。 [`prepare()`](@/api/baseEditor.md#prepare) 方法设置与所选单元格相关的编辑器对象属性，但不显示编辑器。每次用户选择一个单元格时都会调用 [`prepare()`](@/api/baseEditor.md#prepare)。在某些情况下，可以对同一单元格多次调用它，而无需更改选择。
+当 [`EditorManager`](@/api/baseEditor.md) 获取编辑器类实例(编辑器对象`)时，它会调用其 [`prepare()`](@/api/baseEditor.md#prepare) 方法。 [`prepare()`](@/api/baseEditor.md#prepare) 方法设置与所选单元格相关的编辑器对象属性，但不显示编辑器。每次用户选择一个单元格时都会调用 [`prepare()`](@/api/baseEditor.md#prepare)。在某些情况下，可以对同一单元格多次调用它，而无需更改选择。
 
 ::: only-for javascript
 
@@ -194,15 +194,15 @@ const EditorComponent = () => {
 
 当编辑器打开时，[`EditorManager`](@/api/baseEditor.md) 等待应结束单元格编辑的用户事件。这些事件是：
 
-- 单击另一个单元格（保存更改）
-- 按 <kbd>**Enter**</kbd>（保存更改并将选择内容向下移动一个单元格）
-- 按 <kbd>**Shift**</kbd>+<kbd>**Enter**</kbd> （保存更改并将选择内容向上移动一个单元格）
-- 按 <kbd>**Ctrl**</kbd>/<kbd>**Cmd**</kbd>+<kbd>**Enter**</kbd> 或 <kbd>**Alt**< /kbd>/<kbd>**Option**</kbd>+<kbd>**Enter**</kbd>（在单元格内添加新行）
-- 按<kbd>**Escape**</kbd>（中止更改）
-- 按 <kbd>**Tab**</kbd> （保存更改并向左或向右移动一个单元格，具体取决于您的[布局方向](@/guides/internationalization/layout-direction/layout-direction .md#受布局方向影响的元素））
-- 按 <kbd>**Shift**</kbd>+<kbd>**Tab**</kbd> （保存更改并向左或向右移动一个单元格，具体取决于您的[布局方向]( @/guides/internationalization/layout-direction/layout-direction.md#elements-affected-by-layout-direction))
-- 按 <kbd>**Page Up**</kbd>、<kbd>**Page Down**</kbd>（保存更改并向上/向下移动一个屏幕）
-如果触发任何这些事件，[`EditorManager`](@/api/baseEditor.md) 会调用编辑器的 [`finishEditing()`](@/api/baseEditor.md#finishediting) 方法，该方法应尝试保存更改（除非已按下 ESC 键）并关闭编辑器。
+- 单击另一个单元格(保存更改`)
+- 按 <kbd>**Enter**</kbd>(保存更改并将选择内容向下移动一个单元格`)
+- 按 <kbd>**Shift**</kbd>+<kbd>**Enter**</kbd> (保存更改并将选择内容向上移动一个单元格`)
+- 按 <kbd>**Ctrl**</kbd>/<kbd>**Cmd**</kbd>+<kbd>**Enter**</kbd> 或 <kbd>**Alt**< /kbd>/<kbd>**Option**</kbd>+<kbd>**Enter**</kbd>(在单元格内添加新行`)
+- 按<kbd>**Escape**</kbd>(中止更改`)
+- 按 <kbd>**Tab**</kbd> (保存更改并向左或向右移动一个单元格，具体取决于您的[布局方向](@/guides/internationalization/layout-direction/layout-direction.md#受布局方向影响的元素))
+- 按 <kbd>**Shift**</kbd>+<kbd>**Tab**</kbd> (保存更改并向左或向右移动一个单元格，具体取决于您的[布局方向]( @/guides/internationalization/layout-direction/layout-direction.md#elements-affected-by-layout-direction))
+- 按 <kbd>**Page Up**</kbd>、<kbd>**Page Down**</kbd>(保存更改并向上/向下移动一个屏幕`)
+如果触发任何这些事件，[`EditorManager`](@/api/baseEditor.md) 会调用编辑器的 [`finishEditing()`](@/api/baseEditor.md#finishediting) 方法，该方法应尝试保存更改(除非已按下 ESC 键`)并关闭编辑器。
 
 ::: only-for javascript
 
@@ -216,7 +216,7 @@ const EditorComponent = () => {
 :::
 
 
-您可能想要更改导致编辑器打开或关闭的默认事件。例如，您的编辑器可能使用 <kbd>**向上箭头**</kbd> 和 <kbd>**向下箭头**</kbd> 事件来执行某些操作（例如增加或减少单元格值），并且您当用户按下这些键时，不希望 [`EditorManager`](@/api/baseEditor.md) 关闭编辑器。这就是为什么 [`EditorManager`](@/api/baseEditor.md) 在处理用户事件之前运行 [`beforeKeyDown`](@/api/hooks.md#beforekeydown) 挂钩。如果您为 [`beforeKeyDown`](@/api/hooks.md#beforekeydown) 注册一个侦听器，则在 `event` 对象 [`EditorManager`](@/api/baseEditor.md) 上调用 `stopImmediatePropagation()` 会获胜执行其默认操作。有关覆盖 [`EditorManager`](@/api/baseEditor.md) 行为的更多信息，请参阅`SelectEditor -从头开始​​创建编辑器`部分。
+您可能想要更改导致编辑器打开或关闭的默认事件。例如，您的编辑器可能使用 <kbd>**向上箭头**</kbd> 和 <kbd>**向下箭头**</kbd> 事件来执行某些操作(例如增加或减少单元格值`)，并且您当用户按下这些键时，不希望 [`EditorManager`](@/api/baseEditor.md) 关闭编辑器。这就是为什么 [`EditorManager`](@/api/baseEditor.md) 在处理用户事件之前运行 [`beforeKeyDown`](@/api/hooks.md#beforekeydown) 挂钩。如果您为 [`beforeKeyDown`](@/api/hooks.md#beforekeydown) 注册一个侦听器，则在 `event` 对象 [`EditorManager`](@/api/baseEditor.md) 上调用 `stopImmediatePropagation()` 会获胜执行其默认操作。有关覆盖 [`EditorManager`](@/api/baseEditor.md) 行为的更多信息，请参阅`SelectEditor -从头开始​​创建编辑器`部分。
 
 您现在应该更好地了解 [`EditorManager`](@/api/baseEditor.md) 的工作原理。让我们更深入地了解每个编辑器类必须实现哪些方法以及这些方法的作用。
 
@@ -303,7 +303,7 @@ class CustomEditor extends BaseEditor {
 ##### finishEditing(restoreOriginalValue: 'Boolean' _\[optional\]_, ctrlDown: `Boolean` _\[optional\]_, callback: `Function`)
 :::
 
-尝试完成单元格版本。内部调用 [`saveValue()`](@/api/baseEditor.md#savevalue) 和 `discardEditor()`。如果`restoreOriginalValue`设置为`true`，则单元格值将设置为其原始值（来自版本之前的值）。 `ctrlDown` 值作为第二个参数传递给 [`saveValue()`](@/api/baseEditor.md#savevalue)。
+尝试完成单元格版本。内部调用 [`saveValue()`](@/api/baseEditor.md#savevalue) 和 `discardEditor()`。如果`restoreOriginalValue`设置为`true`，则单元格值将设置为其原始值(来自版本之前的值`)。 `ctrlDown` 值作为第二个参数传递给 [`saveValue()`](@/api/baseEditor.md#savevalue)。
 
 回调函数包含一个布尔参数 -如果新值有效或 [`allowInvalid`](@/api/options.md#allowinvalid) 配置选项设置为 `true`，否则参数为 `false`。
 
@@ -318,7 +318,7 @@ class CustomEditor extends BaseEditor {
 ##### discardEditor(result: `Boolean`)
 :::
 
-当单元格验证结束时调用。如果新值成功保存（`result` 设置为 `true` 或 [`allowInvalid`](@/api/options.md#allowinvalid) 属性为 `true`），它将调用 [`close()`](@ /api/baseEditor.md#close) 方法，否则调用 [`focus()`](@/api/baseEditor.md#focus) 方法并保持编辑器打开。
+当单元格验证结束时调用。如果新值成功保存(`result` 设置为 `true` 或 [`allowInvalid`](@/api/options.md#allowinvalid) 属性为 `true``)，它将调用 [`close()`](@ /api/baseEditor.md#close) 方法，否则调用 [`focus()`](@/api/baseEditor.md#focus) 方法并保持编辑器打开。
 
 返回值: `undefined`
 
@@ -522,7 +522,7 @@ class CustomEditor extends TextEditor {
 
 :::
 
-聚焦编辑器。当用户想要通过选择另一个单元格来关闭编辑器并且编辑器中的值不验证（且 [`allowInvalid`](@/api/options.md#allowinvalid) 为 `false`）时，会调用此方法。在大多数情况下，此方法可以很简单：
+聚焦编辑器。当用户想要通过选择另一个单元格来关闭编辑器并且编辑器中的值不验证(且 [`allowInvalid`](@/api/options.md#allowinvalid) 为 `false``)时，会调用此方法。在大多数情况下，此方法可以很简单：
 
 ```js
 class CustomEditor extends TextEditor {
@@ -545,14 +545,14 @@ class CustomEditor extends TextEditor {
 #### 常用编辑器属性
 :::
 
-所有下面提到的属性都可以通过`this`对象（例如`this.instance`）在编辑器实例中使用。
+所有下面提到的属性都可以通过`this`对象(例如`this.instance``)在编辑器实例中使用。
 
   | 属性           | 类型                | 描述                                                                                                                           |
   | -------------- | ------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
   | instance       | `Handsontable.Core` | 此编辑器对象所属的 Handsontable 实例。在类构造函数中设置，在编辑器的整个生命周期中不可变。                                     |
   | row            | `Number`            | 活动单元格行索引。对每个 [`prepare()`](@/api/baseEditor.md#prepare) 方法调用进行更新。                                         |
   | col            | `Number`            | 活跃单元格指数。对每个 [`prepare()`](@/api/baseEditor.md#prepare) 方法调用进行更新。                                             |
-  | prop           | `String`            | 与活动单元格关联的属性名称（仅当数据源是对象数组时相关）。对每个 [`prepare()`](@/api/baseEditor.md#prepare) 方法调用进行更新。 |
+  | prop           | `String`            | 与活动单元格关联的属性名称(仅当数据源是对象数组时相关`)。对每个 [`prepare()`](@/api/baseEditor.md#prepare) 方法调用进行更新。 |
   | TD             | `HTMLTableCellNode` | 活动单元格的节点对象。对每个 [`prepare()`](@/api/baseEditor.md#prepare) 方法调用进行更新。                                     |
   | cellProperties | `Object`            | 表示活动单元格属性的对象。对每个 [`prepare()`](@/api/baseEditor.md#prepare) 方法调用进行更新。                                 |
 
@@ -721,13 +721,13 @@ const SelectEditor = Handsontable.editors.BaseEditor.prototype.extend();
 - [`open()`](@/api/baseEditor.md#open) 方法
 
 选择最佳解决方案的关键是了解每个方法何时被调用。
-[`init()`](@/api/baseEditor.md#init) 方法在创建编辑器类对象期间被调用。每个表实例最多发生一次，因为一旦创建了对象，每次 [`EditorManager`](@/api/baseEditor.md) 请求此编辑器类实例时都会重用该对象（请参阅 [单例模式](http:///en.wikipedia.org/wiki/Singleton_pattern）了解详细信息）。
+[`init()`](@/api/baseEditor.md#init) 方法在创建编辑器类对象期间被调用。每个表实例最多发生一次，因为一旦创建了对象，每次 [`EditorManager`](@/api/baseEditor.md) 请求此编辑器类实例时都会重用该对象(请参阅 [单例模式](http:///en.wikipedia.org/wiki/Singleton_pattern`)了解详细信息)。
 
-每次用户选择将此特定编辑器类设置为 [`editor`](@/api/options.md 的单元格时，都会调用 [`prepare()`](@/api/baseEditor.md#prepare) 方法#editor) 配置选项。因此，如果我们将 SelectEditor 设置为整个列的编辑器，那么选择该列中的任何单元格都会调用 SelectEditor 的 [`prepare()`](@/api/baseEditor.md#prepare) 方法。换句话说，该方法在表生命周期内可以被调用数百次，尤其是在处理大数据时。 [`prepare()`](@/api/baseEditor.md#prepare) 的另一个重要方面是它不应该显示编辑器（这是 `open' 的工作）。显示编辑器是由用户事件触发的，例如按 ENTER、F2 或双击单元格，因此调用 [`prepare()`](@/api/baseEditor.md#prepare) 和实际显示编辑器之间有一些时间。尽管如此，[`prepare()`](@/api/baseEditor.md#prepare) 执行的操作应尽快完成，以提供最佳的用户体验。
+每次用户选择将此特定编辑器类设置为 [`editor`](@/api/options.md 的单元格时，都会调用 [`prepare()`](@/api/baseEditor.md#prepare) 方法#editor) 配置选项。因此，如果我们将 SelectEditor 设置为整个列的编辑器，那么选择该列中的任何单元格都会调用 SelectEditor 的 [`prepare()`](@/api/baseEditor.md#prepare) 方法。换句话说，该方法在表生命周期内可以被调用数百次，尤其是在处理大数据时。 [`prepare()`](@/api/baseEditor.md#prepare) 的另一个重要方面是它不应该显示编辑器(这是 `open' 的工作`)。显示编辑器是由用户事件触发的，例如按 ENTER、F2 或双击单元格，因此调用 [`prepare()`](@/api/baseEditor.md#prepare) 和实际显示编辑器之间有一些时间。尽管如此，[`prepare()`](@/api/baseEditor.md#prepare) 执行的操作应尽快完成，以提供最佳的用户体验。
 
-当需要显示编辑器时，会调用 [`open()`](@/api/baseEditor.md#open) 方法。在大多数情况下，此方法应将 CSS `display` 属性更改为 `block` 或执行类似的操作。用户希望在触发事件（按适当的键或双击单元格）后立即显示编辑器，因此 [`open()`](@/api/baseEditor.md#open) 方法应该与可能的。
+当需要显示编辑器时，会调用 [`open()`](@/api/baseEditor.md#open) 方法。在大多数情况下，此方法应将 CSS `display` 属性更改为 `block` 或执行类似的操作。用户希望在触发事件(按适当的键或双击单元格`)后立即显示编辑器，因此 [`open()`](@/api/baseEditor.md#open) 方法应该与可能的。
 
-知道了这一切，放置负责创建 `<select>` 输入的代码的最合理位置是 [`init()`](@/api/baseEditor.md#init) 方法中的某个位置。 DOM 操作被认为是相当昂贵的（就资源消耗而言）操作，因此最好执行一次并在编辑器的整个生命周期中重用生成的 HTML 节点。
+知道了这一切，放置负责创建 `<select>` 输入的代码的最合理位置是 [`init()`](@/api/baseEditor.md#init) 方法中的某个位置。 DOM 操作被认为是相当昂贵的(就资源消耗而言`)操作，因此最好执行一次并在编辑器的整个生命周期中重用生成的 HTML 节点。
 
 ```js
 import Handsontable from 'handsontable';
@@ -809,9 +809,9 @@ const hot = new Handsontable(container, {
 :::
 
 
-没有（简单）方法可以获取 [`selectOptions`](@/api/options.md#selectoptions) 的值。即使我们可以访问这个数组，如果我们在`init`函数中执行此操作，我们也只能用选项填充列表一次。如果我们有多个使用`SelectEditor`的列，并且每一列都有自己的选项列表怎么办？同一列中的两个单元格甚至可能有不同的选项列表（级联配置 -还记得吗？）很明显，我们必须为为列表创建项目的代码找到一个更好的位置。
+没有(简单`)方法可以获取 [`selectOptions`](@/api/options.md#selectoptions) 的值。即使我们可以访问这个数组，如果我们在`init`函数中执行此操作，我们也只能用选项填充列表一次。如果我们有多个使用`SelectEditor`的列，并且每一列都有自己的选项列表怎么办？同一列中的两个单元格甚至可能有不同的选项列表(级联配置 -还记得吗？`)很明显，我们必须为为列表创建项目的代码找到一个更好的位置。
 
-我们只剩下两个地方 [`prepare()`](@/api/baseEditor.md#prepare) 和 [`open()`](@/api/baseEditor.md#open)。后一种实现起来更简单，但正如我们之前所说，[`setvalue()`](@/api/baseEditor.md#setvalue) 应该尽可能快地工作并创建 `<option>` 节点并将它们附加到如果 [`selectOptions`](@/api/options.md#selectoptions) 包含很长的选项列表，DOM 可能会很耗时。因此，[`prepare()`](@/api/baseEditor.md#prepare) 似乎是进行此类工作的更安全的地方。唯一要记住的是，在重写 [`prepare()`](@/api/baseEditor.md#prepare 时，我们应该始终调用 [`BaseEditor`](@/api/baseEditor.md) 的原始方法）。 `BaseEditor.prototype.prepare()` 设置一些重要的属性，供其他编辑器方法使用。
+我们只剩下两个地方 [`prepare()`](@/api/baseEditor.md#prepare) 和 [`open()`](@/api/baseEditor.md#open)。后一种实现起来更简单，但正如我们之前所说，[`setvalue()`](@/api/baseEditor.md#setvalue) 应该尽可能快地工作并创建 `<option>` 节点并将它们附加到如果 [`selectOptions`](@/api/options.md#selectoptions) 包含很长的选项列表，DOM 可能会很耗时。因此，[`prepare()`](@/api/baseEditor.md#prepare) 似乎是进行此类工作的更安全的地方。唯一要记住的是，在重写 [`prepare()`](@/api/baseEditor.md#prepare) 时，我们应该始终调用 [`BaseEditor`](@/api/baseEditor.md) 的原始方法)。 `BaseEditor.prototype.prepare()` 设置一些重要的属性，供其他编辑器方法使用。
 
 ```js
 //在prepare()方法中创建选项
@@ -999,7 +999,7 @@ onBeforeKeyDown() {
   }
 }
 ```
-活动编辑器是最近调用 [`prepare()`](@/api/baseEditor.md#prepare) 方法的编辑器。例如，如果您选择编辑器为`Handsontable.TextEditor`的单元格，则`getActiveEditor()`将返回该编辑器类的对象。如果然后选择一个编辑器为`Handsontable.DateEditor`的单元格（可能在另一列中），则活动编辑器会发生变化，现在`getActiveEditor()`将返回`DateEditor`类的对象。
+活动编辑器是最近调用 [`prepare()`](@/api/baseEditor.md#prepare) 方法的编辑器。例如，如果您选择编辑器为`Handsontable.TextEditor`的单元格，则`getActiveEditor()`将返回该编辑器类的对象。如果然后选择一个编辑器为`Handsontable.DateEditor`的单元格(可能在另一列中`)，则活动编辑器会发生变化，现在`getActiveEditor()`将返回`DateEditor`类的对象。
 
 代码的其余部分应该很清楚。现在我们要做的就是注册我们的监听器。
 
@@ -1053,7 +1053,7 @@ Handsontable.editors.registerEditor('text', MyNewTextEditor);
 
 现在`text`别名指向 MyNewTextEditor 类，而不是`Handsontable.editors.TextEditor`。
 
-因此，除非您有意要覆盖现有别名，否则请尝试选择一个唯一的名称。一个好的做法是在别名前添加一些自定义名称（例如您的 GitHub 用户名），以最大程度地减少名称冲突的可能性。如果您想发布您的编辑器，这一点尤其重要，因为您永远不知道使用您的编辑器的用户已经注册了别名。
+因此，除非您有意要覆盖现有别名，否则请尝试选择一个唯一的名称。一个好的做法是在别名前添加一些自定义名称(例如您的 GitHub 用户名`)，以最大程度地减少名称冲突的可能性。如果您想发布您的编辑器，这一点尤其重要，因为您永远不知道使用您的编辑器的用户已经注册了别名。
 
 ```js
 Handsontable.editors.registerEditor('select', SelectEditor);
@@ -1079,7 +1079,7 @@ Handsontable.editors.registerEditor('my.select', SelectEditor);
 
 :::
 
-如果您计划发布您的编辑器或者只是想让您的代码保持美观和干净（就像我们所有人一样:)，这里有 3 个简单的步骤可以帮助您组织您的代码。
+如果您计划发布您的编辑器或者只是想让您的代码保持美观和干净(就像我们所有人一样:)，这里有 3 个简单的步骤可以帮助您组织您的代码。
 
 ::: only-for javascript
 
@@ -1104,7 +1104,7 @@ Handsontable.editors.registerEditor('my.select', SelectEditor);
 })(Handsontable);
 ```
 
-将`Handsontable`命名空间作为参数传递是可选的（因为它是全局定义的），但最好使用尽可能少的全局对象，以使模块化和依赖关系管理更容易。
+将`Handsontable`命名空间作为参数传递是可选的(因为它是全局定义的`)，但最好使用尽可能少的全局对象，以使模块化和依赖关系管理更容易。
 
 ::: only-for javascript
 

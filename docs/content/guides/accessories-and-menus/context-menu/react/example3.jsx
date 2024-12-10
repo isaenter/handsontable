@@ -40,7 +40,7 @@ const contextMenuSettings = {
       callback() {
         // 特定选项的回调
         setTimeout(() => {
-          alert('Hello world!'); // 菜单关闭后发出弹窗警报（超时）
+          alert('Hello world!'); // 菜单关闭后发出弹窗警报(超时`)
         }, 0);
       },
     },

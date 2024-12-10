@@ -16,7 +16,7 @@ const ExampleComponent = () => {
         [1, 2, 3, 4, 5],
         [6, 7, 8, 9, 10],
         [11, 12, 13, 14, 15],
-        // add an empty row
+        // 添加一个空行
         [null],
       ]}
       colHeaders={true}
@@ -25,20 +25,20 @@ const ExampleComponent = () => {
         {
           sourceColumn: 0,
           type: 'sum',
-          // for this column summary, count row coordinates backward
+          // 对于此列摘要，向后计算行坐标
           reversedRowCoords: true,
-          // now, to always display this column summary in the bottom row,
-          // set `destinationRow` to `0` (i.e. the last possible row)
+          // 现在，要始终在底行显示此列摘要，
+          // 将 `destinationRow` 设置为 `0` （即最后可能的行）
           destinationRow: 0,
           destinationColumn: 0,
         },
         {
           sourceColumn: 1,
           type: 'min',
-          // for this column summary, count row coordinates backward
+          // 对于此列摘要，向后计算行坐标
           reversedRowCoords: true,
-          // now, to always display this column summary in the bottom row,
-          // set `destinationRow` to `0` (i.e. the last possible row)
+          // 现在，要始终在底行显示此列摘要，
+          // 将 `destinationRow` 设置为 `0` （即最后可能的行）
           destinationRow: 0,
           destinationColumn: 1,
         },

@@ -1,6 +1,6 @@
 ---
 id: xv8sf6at
-title: Column virtualization
+title: 列虚拟化
 metaTitle: Column virtualization - JavaScript Data Grid | Handsontable
 description: Render hundreds of columns without freezing the browser, using column virtualization.
 permalink: /column-virtualization
@@ -16,36 +16,36 @@ searchCategory: Guides
 category: Columns
 ---
 
-# Column virtualization
+# 列虚拟化
 
-Render hundreds of columns without freezing the browser, using column virtualization.
+使用列虚拟化在不冻结浏览器的情况下渲染数百列。
 
 [[toc]]
 
 ## 概述
 
-To process a large number of columns in a browser Handsontable utilizes the virtualization process to display only the visible part of the grid with a small
-offset for a better scrolling experience.
+为了在浏览器中处理大量列，Handsontable 利用虚拟化过程仅显示网格的可见部分，并带有小
+偏移以获得更好的滚动体验。
 
-This feature is enabled by default and can be turned off by setting the [`renderAllColumns`](@/api/options.md#renderallcolumns) option to `true`.
+此功能默认启用，可以通过将 [`renderAllColumns`](@/api/options.md#renderallcolumns) 选项设置为 `true` 来关闭。
 
-## Configure the column virtualization
+## 配置列虚拟化
 
-You can experiment with the [`viewportColumnRenderingOffset`](@/api/options.md#viewportcolumnrenderingoffset) config option, which determines the number of
-columns being displayed outside the visible viewport. If the number passed to that option is greater than the total columns in your data set, the virtualization
-will be practically turned off.
+您可以尝试使用 [`viewportColumnRenderingOffset`](@/api/options.md#viewportcolumnrenderingoffset) 配置选项，该选项决定了
+显示在可见视口之外的列。如果传递给该选项的数字大于数据集中的总列数，则虚拟化
+实际上将被关闭。
 
-To make the grid scrollable, set the constant width and height to same as the container holding Handsontable and height and set the `overflow` property to
-`hidden` in the container's stylesheet. If the table contains enough rows or columns, it will be scrollable.
+要使网格可滚动，请将恒定宽度和高度设置为与容纳 Handsontable 和高度的容器相同，并将`overflow`属性设置为
+`隐藏`在容器的样式表中。如果表格包含足够的行或列，它将是可滚动的。
 
-The scrolling performance depends mainly on four factors:
+滚动性能主要取决于四个因素：
 
-- Number of cells - number of rows multiplied by the number of columns
-- Amount and complexity of custom renderers in cells
-- Number of options enabled in the configuration
-- Performance of your setup - physical machine and browser
-
-The demo below presents a data grid displaying one million cells (1000 rows x 1000 columns).
+- 单元格数量 -行数乘以列数
+- 单元格中自定义渲染器的数量和复杂性
+- 配置中启用的选项数量
+- 您的设置的性能 -物理机和浏览器
+  
+下面的演示展示了一个显示一百万个单元格的数据网格（1000 行 x 1000 列）。
 
 ::: only-for javascript
 
@@ -69,20 +69,20 @@ The demo below presents a data grid displaying one million cells (1000 rows x 10
 
 :::
 
-## Known limitations
+## 已知限制
 
-Using column virtualization has the following side effects:
+使用列虚拟化有以下副作用：
 
-- The browser's native search will work only for the visible part of the grid.
-- Screen readers may announce the wrong total number of columns. Read more in the
-  [Accessibility](@/guides/accessibility/accessibility/accessibility.md#disabling-dom-virtualization-for-improved-accessibility) guide.
+- 浏览器的本机搜索仅适用于网格的可见部分。
+- 屏幕阅读器可能会报出错误的总列数。阅读更多内容
+  [辅助功能](@/guides/accessibility/accessibility/accessibility.md#disabling-dom-virtualization-for-improved-accessibility) 指南。
 
 ## 相关文章
 
 ### 相关指南
 
-- [Row virtualization](@/guides/rows/row-virtualization/row-virtualization.md)
-- [Performance](@/guides/optimization/performance/performance.md)
+- [行虚拟化](@/guides/rows/row-virtualization/row-virtualization.md)
+- [表现](@/guides/optimization/performance/performance.md)
 
 ### 相关API参考
 

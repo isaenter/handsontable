@@ -40,7 +40,7 @@ Handsontable 的辅助功能包括：<br>Accessibility features of Handsontable 
 
 ## 符合标准
 
-大多数全球标准和法规都是根据 WCAG（Web 内容可访问性指南）制定的。Handsontable 符合[WCAG 2.1 AA](https://www.w3.org/WAI/WCAG21/quickref/)中概述的要求 （打开新窗口）指南，使其与大多数本地标准兼容，例如：
+大多数全球标准和法规都是根据 WCAG(Web 内容可访问性指南`)制定的。Handsontable 符合[WCAG 2.1 AA](https://www.w3.org/WAI/WCAG21/quickref/)中概述的要求 (打开新窗口`)指南，使其与大多数本地标准兼容，例如：
 
 ### 地区
 
@@ -61,17 +61,17 @@ Handsontable 不需要鼠标即可在网格元素间导航。对于暂时或永�
 
 我们对数百个实施的经验表明，Handsontable 倾向于用作电子表格应用程序或数据网格组件。虽然乍一看差异似乎很小，但它会显著影响用户对导航的期望。
 
-在典型的电子表格应用程序（例如 Microsoft Excel 或 Google Sheets）中，您无法将焦点移到标题上。如果不了解复杂的[键盘快捷键](@/guides/navigation/keyboard-shortcuts/keyboard-shortcuts.md)，就很难对数据进行排序或过滤。此外，打开[列菜单](@/guides/columns/column-menu/column-menu.md)并非易事。Handsontable 在这方面提供了灵活性，允许用户在数据网格和电子表格`模式`之间切换。要进行这种切换，您可以使用两个选项的组合：[`navigableHeaders`](@/api/options.md#navigableheaders)启用或禁用将焦点移到标题上，并[`tabNavigation`](@/api/options.md#tabnavigation)决定是否<kbd>**Tab**</kbd>可以使用该键在单元格和标题之间导航。
+在典型的电子表格应用程序(例如 Microsoft Excel 或 Google Sheets`)中，您无法将焦点移到标题上。如果不了解复杂的[键盘快捷键](@/guides/navigation/keyboard-shortcuts/keyboard-shortcuts.md)，就很难对数据进行排序或过滤。此外，打开[列菜单](@/guides/columns/column-menu/column-menu.md)并非易事。Handsontable 在这方面提供了灵活性，允许用户在数据网格和电子表格`模式`之间切换。要进行这种切换，您可以使用两个选项的组合：[`navigableHeaders`](@/api/options.md#navigableheaders)启用或禁用将焦点移到标题上，并[`tabNavigation`](@/api/options.md#tabnavigation)决定是否<kbd>**Tab**</kbd>可以使用该键在单元格和标题之间导航。
 
 下表提供了有关这两种情况的更多详细信息：
  
-| 方面                    | 数据网格模式                                                                                                                                                                                                                                         | 电子表格模式（默认）                                                                                                                                                                             |
+| 方面                    | 数据网格模式                                                                                                                                                                                                                                         | 电子表格模式(默认`)                                                                                                                                                                             |
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 配置             | [`navigableHeaders: true`](@/api/options.md#navigableheaders) <br>  [`tabNavigation: false`](@/api/options.md#tabnavigation)                                                                                                                            | [`navigableHeaders: false`](@/api/options.md#navigableheaders) <br> [`tabNavigation: true`](@/api/options.md#tabnavigation)                                                                             |
 | 主要导航方式 | 箭头键 keys                                                                                                                                                                                                                                              | <kbd>**Tab**</kbd> / <kbd>**Shift**</kbd>+<kbd>**Tab**</kbd>                                                                                                                                            |
 | 可导航的标题         | 是                                                                                                                                                                                                                                                     | 否                                                                                                                                                                                                     |
-| 导航                | 	使用箭头键在网格中导航。使用简单的快捷键（例如<kbd>**Enter**</kbd>或 ）<kbd>**Space**</kbd>打开菜单或与标题、单元格或单元格编辑器交互。<br><br>您不能使用<kbd>**Tab**</kbd>键进行导航。 | 使用 <kbd>**Tab**</kbd> /<kbd>**Shift**</kbd>+<kbd>**Tab**</kbd> 在网格中导航。<br>此行为类似于 Excel 或 Google Sheets。 <br><br>要打开菜单，请使用更复​​杂的快捷键。 |
-| 焦点行为            | 一个制表位。网格仅包含在页面选项卡序列中一次。                                                                                                                                                                                 | 多个制表位。网格的所有可选项卡元素（例如单元格）都包含在页面选项卡序列中。                                                                                            |
+| 导航                | 	使用箭头键在网格中导航。使用简单的快捷键(例如<kbd>**Enter**</kbd>或 `)<kbd>**Space**</kbd>打开菜单或与标题、单元格或单元格编辑器交互。<br><br>您不能使用<kbd>**Tab**</kbd>键进行导航。 | 使用 <kbd>**Tab**</kbd> /<kbd>**Shift**</kbd>+<kbd>**Tab**</kbd> 在网格中导航。<br>此行为类似于 Excel 或 Google Sheets。 <br><br>要打开菜单，请使用更复​​杂的快捷键。 |
+| 焦点行为            | 一个制表位。网格仅包含在页面选项卡序列中一次。                                                                                                                                                                                 | 多个制表位。网格的所有可选项卡元素(例如单元格`)都包含在页面选项卡序列中。                                                                                            |
 
 ## 导航快捷方式
 
@@ -91,7 +91,7 @@ Handsontable 提供了广泛的[键盘快捷键](@/guides/navigation/keyboard-sh
 
 ## 支持屏幕阅读器
 
-尽管语义 HTML 不需要任何附加属性即可由辅助技术正确解释，但 HTML 规范并未完全涵盖 Handsontable 的一些复杂功能。这就是为什么 Handsontable 为屏幕阅读器提供支持，并将 ARIA 属性（可访问的富互联网应用程序）应用于其 HTML 标记。
+尽管语义 HTML 不需要任何附加属性即可由辅助技术正确解释，但 HTML 规范并未完全涵盖 Handsontable 的一些复杂功能。这就是为什么 Handsontable 为屏幕阅读器提供支持，并将 ARIA 属性(可访问的富互联网应用程序`)应用于其 HTML 标记。
 
 Handsontable 的每个新版本都通过以下屏幕阅读器进行了全面的可访问性测试：
 
@@ -136,7 +136,7 @@ Handsontable 的每个新版本都通过以下屏幕阅读器进行了全面的�
 
 然而，辅助技术依赖于 DOM 中的元素以正确的顺序出现。
 否则，它们需要使用[附加 ARIA 属性](https://www.w3.org/WAI/ARIA/apg/practices/grid-and-table-properties)，
-例如`row-colindex`或`aria-rowindex`，以了解网格的结构并准确地向用户宣布（读取）它。
+例如`row-colindex`或`aria-rowindex`，以了解网格的结构并准确地向用户宣布(读取`)它。
 
 我们已经使用 ARIA 属性来描述数据排序、隐藏列或行以及合并单元格。
 不幸的是，我们的测试发现屏幕阅读器要么宣布不正确的索引，要么完全忽略 ARIA 属性。
@@ -178,7 +178,7 @@ const hot = new Handsontable(container, {
 
 ## 对开发者的要求
 
-当您自定义 Handsontable 时，您有责任确保解决方案的可访问性。特别是当您创建[自定义单元类型](@/guides/cell-types/cell-type/cell-type.md) 或[自定义插件](@/guides/tools-and-building/custom-plugins/custom-plugins.md），请记住让每个人都可以访问它们。
+当您自定义 Handsontable 时，您有责任确保解决方案的可访问性。特别是当您创建[自定义单元类型](@/guides/cell-types/cell-type/cell-type.md) 或[自定义插件](@/guides/tools-and-building/custom-plugins/custom-plugins.md)，请记住让每个人都可以访问它们。
 
 我们对定制开发的建议：
 

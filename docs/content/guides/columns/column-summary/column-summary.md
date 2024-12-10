@@ -1,6 +1,6 @@
 ---
 id: xndxqkoc
-title: Column summary
+title: 列摘要
 metaTitle: Column summary - JavaScript Data Grid | Handsontable
 description: Calculate sum, min, max, count, average or custom aggregates of individual columns' data, using Handsontable's aggregate functions.
 permalink: /column-summary
@@ -20,26 +20,26 @@ searchCategory: Guides
 category: Columns
 ---
 
-# Column summary
+# 列摘要
 
-Calculate sum, min, max, count, average or custom aggregates of individual columns' data, using Handsontable's aggregate functions.
+使用 Handsontable 的聚合函数计算各个列数据的总和、最小值、最大值、计数、平均值或自定义聚合。
 
 [[toc]]
 
 ## 概述
 
-The [`ColumnSummary`](@/api/columnSummary.md) plugin lets you quickly calculate and display a column summary.
+[`ColumnSummary`](@/api/columnSummary.md) 插件可让您快速计算和显示列摘要。
 
-To customize your column summaries, you can:
-- Decide how a summary is calculated:
-    - Either select one of the [built-in summary functions](#built-in-summary-functions)
-    - Or implement a [custom summary function](#implement-a-custom-summary-function)
-- [Select columns and ranges of rows](#step-2-select-cells-that-you-want-to-summarize) that you want to summarize
-- [Display your summary result](#step-4-provide-the-destination-cell-s-coordinates) in a specific cell
+要自定义列摘要，您可以：
+- 决定如何计算摘要：
+    - 选择[内置摘要函数](#built-in-summary-functions) 之一
+    - 或实现一个[自定义摘要函数](#implement-a-custom-summary-function)
+- [选择列和行范围](#step-2-select-cells-that-you-want-to-summarize) 要汇总的内容
+- 在特定单元格中[显示您的摘要结果](#step-4-provide-the-destination-cell-s-coordinates)
 
-### Column summary example
+### 列摘要示例
 
-This example calculates and displays five different column summaries:
+此示例计算并显示五个不同的列摘要：
 
 ::: only-for javascript
 
@@ -63,32 +63,32 @@ This example calculates and displays five different column summaries:
 
 :::
 
-### Built-in summary functions
+### 内置汇总函数
 
-To decide how a column summary is calculated, you can use one of the following summary functions:
+要决定如何计算列摘要，您可以使用以下摘要函数之一：
 
-| Function  | Description                                                                                            |
-| --------- | ------------------------------------------------------------------------------------------------------ |
-| `sum`     | Returns the sum of all values in a column.                                                             |
-| `min`     | Returns the lowest value in a column.                                                                  |
-| `max`     | Returns the highest value in a column.                                                                 |
-| `count`   | Returns the number of all non-empty cells in a column.                                                 |
-| `average` | Returns the sum of all values in a column,<br>divided by the number of non-empty cells in that column. |
-| `custom`  | Lets you implement a [custom summary function](#implement-a-custom-summary-function).                  |
+| Function  | Description                                                        |
+| --------- | ------------------------------------------------------------------ |
+| `sum`     | 返回列中所有值的总和。                                             |
+| `min`     | 返回列中的最小值。                                                 |
+| `max`     | 返回列中的最高值。                                                 |
+| `count`   | 返回列中所有非空单元格的数量。                                     |
+| `average` | 返回列中所有值的总和，<br>除以该列中非空单元格的数量。             |
+| `custom`  | 允许您实现[自定义摘要函数](#implement-a-custom-summary-function)。 |
 
-### Column summary options
+### 列摘要选项
 
-You can customize each of your column summaries with configuration options.
+您可以使用配置选项自定义每个列摘要。
 
-For the full list of available options, see the [API reference](@/api/columnSummary.md#options).
+有关可用选项的完整列表，请参阅 [API 参考](@/api/columnSummary.md#options)。
 
-## Set up a column summary
+## 设置栏目摘要
 
-To set up a column summary, follow the steps below.
+要设置列摘要，请按照以下步骤操作。
 
-### Step 1: Enable the [`ColumnSummary`](@/api/columnSummary.md) plugin
+### 第 1 步：启用 [`ColumnSummary`](@/api/columnSummary.md) 插件
 
-To enable the [`ColumnSummary`](@/api/columnSummary.md) plugin, set the [`columnSummary`](@/api/options.md#columnsummary) configuration option to an array of objects. Each object represents a single column summary.
+要启用 [`ColumnSummary`](@/api/columnSummary.md) 插件，请将 [`columnSummary`](@/api/options.md#columnsummary) 配置选项设置为对象数组。每个对象代表一个单列摘要。
 
 ::: only-for javascript
 
@@ -106,7 +106,7 @@ const hot = new Handsontable(document.querySelector('#example'), {
   ],
   colHeaders: true,
   rowHeaders: true,
-  // set the `columnSummary` configuration option to an array of objects
+  // 将 `columnSummary` 配置选项设置为对象数组
   columnSummary: [
     {},
     {}
@@ -151,26 +151,26 @@ const ExampleComponent = () => {
 
 :::
 
-You can also set the [`columnSummary`](@/api/options.md#columnsummary) option [to a function](#set-up-column-summaries-using-a-function).
+您还可以将 [`columnSummary`](@/api/options.md#columnsummary) 选项设置[为函数](#set-up-column-summaries-using-a-function)。
 
-### Step 2: Select cells that you want to summarize
+### 步骤 2：选择要汇总的单元格
 
-By default, a column summary takes all cells of the column in which it displays its result (see the [`destinationColumn`](@/api/columnSummary.md#options) option in [step 4](#step-4-provide-the-destination-cell-s-coordinates)).
+默认情况下，列摘要会显示显示结果的列的所有单元格（请参阅 [步骤 4](#step-4-provide) 中的 [`destinationColumn`](@/api/columnSummary.md#options) 选项-目标单元格坐标））。
 
-To summarize any other column, use the [`sourceColumn`](@/api/columnSummary.md#options) option:
+要汇总任何其他列，请使用 [`sourceColumn`](@/api/columnSummary.md#options) 选项：
 
 ::: only-for javascript
 
 ```js
 columnSummary: [
   {
-    // set this column summary to summarize the first column
-    // (i.e. a column with physical index `0`)
+    // 设置此列摘要以总结第一列
+    // （即物理索引为`0`的列）
     sourceColumn: 0,
   },
   {
-    // set this column summary to summarize the second column
-    // (i.e. a column with physical index `1`)
+    // 设置此列摘要以总结第二列
+    // （即物理索引为`1`的列）
     sourceColumn: 1,
   }
 ]
@@ -183,13 +183,13 @@ columnSummary: [
 ```jsx
 columnSummary={[
   {
-    // set this column summary to summarize the first column
-    // (i.e. a column with physical index `0`)
+    // 设置此列摘要以总结第一列
+    // （即物理索引为`0`的列）
     sourceColumn: 0,
   },
   {
-    // set this column summary to summarize the second column
-    // (i.e. a column with physical index `1`)
+    // 设置此列摘要以总结第二列
+    // （即物理索引为`1`的列）
     sourceColumn: 1,
   }
 ]}
@@ -197,7 +197,7 @@ columnSummary={[
 
 :::
 
-You can also summarize individual ranges of rows (rather than a whole column). To do this, set the [`ranges`](@/api/columnSummary.md#options) option to an array of arrays, where each array represents a single row range.
+您还可以汇总各个行范围（而不是整列）。为此，请将 [`ranges`](@/api/columnSummary.md#options) 选项设置为数组数组，其中每个数组代表一个行范围。
 
 ::: only-for javascript
 
@@ -205,14 +205,14 @@ You can also summarize individual ranges of rows (rather than a whole column). T
 columnSummary: [
   {
     sourceColumn: 0,
-    // set this column summary to only summarize rows with physical indexes 0-2, 4, and 6-8
+    // 设置此列摘要以仅汇总物理索引为 0-2、4 和 6-8 的行
     ranges: [
       [0, 2], [4], [6, 8]
     ],
   },
   {
     sourceColumn: 0,
-    // set this column summary to only summarize rows with physical indexes 0-5
+    // 设置此列摘要以仅汇总物理索引为 0-5 的行
     ranges: [
       [0, 5]
     ],
@@ -228,14 +228,14 @@ columnSummary: [
 columnSummary={[
   {
     sourceColumn: 0,
-    // set this column summary to only summarize rows with physical indexes 0-2, 4, and 6-8
+    // 设置此列摘要以仅汇总物理索引为 0-2、4 和 6-8 的行
     ranges: [
       [0, 2], [4], [6, 8]
     ],
   },
   {
     sourceColumn: 0,
-    // set this column summary to only summarize rows with physical indexes 0-5
+    // 设置此列摘要以仅汇总物理索引为 0-5 的行
     ranges: [
       [0, 5]
     ],
@@ -245,26 +245,25 @@ columnSummary={[
 
 :::
 
-### Step 3: Calculate your summary
+### 第 3 步：计算您的摘要
 
-Now, decide how you want to calculate your column summary.
+现在，决定如何计算列摘要。
 
-You can:
-- Either select one of the [built-in summary functions](#built-in-summary-functions)
-- Or implement a [custom summary function](#implement-a-custom-summary-function)
-
+你可以：
+- 选择[内置摘要函数](#built-in-summary-functions) 之一
+- 或实现[自定义摘要函数](#implement-a-custom-summary-function)
 ::: only-for javascript
 
 ```js
 columnSummary: [
   {
     sourceColumn: 0,
-    // set this column summary to return the sum all values in the summarized column
+    // 设置此列摘要以返回汇总列中所有值的总和
     type: 'sum',
   },
   {
     sourceColumn: 1,
-    // set this column summary to return the lowest value in the summarized column
+    // 设置此列摘要以返回汇总列中的最小值
     type: 'min',
   }
 ]
@@ -278,12 +277,12 @@ columnSummary: [
 columnSummary={[
   {
     sourceColumn: 0,
-    // set this column summary to return the sum all values in the summarized column
+    // 设置此列摘要以返回汇总列中所有值的总和
     type: 'sum',
   },
   {
     sourceColumn: 1,
-    // set this column summary to return the lowest value in the summarized column
+    // 设置此列摘要以返回汇总列中的最小值
     type: 'min',
   }
 ]}
@@ -291,11 +290,11 @@ columnSummary={[
 
 :::
 
-### Step 4: Provide the destination cell's coordinates
+### 步骤 4：提供目标单元格的坐标
 
-To display your column summary result in a cell, provide the destination cell's coordinates.
+要在单元格中显示列摘要结果，请提供目标单元格的坐标。
 
-Set the [`destinationRow`](@/api/columnSummary.md#options) and [`destinationColumn`](@/api/columnSummary.md#options) options to the physical coordinates of your required cell.
+将 [`destinationRow`](@/api/columnSummary.md#options) 和 [`destinationColumn`](@/api/columnSummary.md#options) 选项设置为所需单元格的物理坐标。
 
 ::: only-for javascript
 
@@ -304,14 +303,14 @@ columnSummary: [
   {
     sourceColumn: 0,
     type: 'sum',
-    // set this column summary to display its result in cell (4, 0)
+    // 设置此列摘要以在单元格 (4, 0) 中显示其结果
     destinationRow: 4,
     destinationColumn: 0
   },
   {
     sourceColumn: 1,
     type: 'min',
-    // set this column summary to display its result in cell (4, 1)
+    // 设置此列摘要以在单元格 (4, 1) 中显示其结果
     destinationRow: 4,
     destinationColumn: 1
   }
@@ -327,14 +326,14 @@ columnSummary={[
   {
     sourceColumn: 0,
     type: 'sum',
-    // set this column summary to display its result in cell (4, 0)
+    // 设置此列摘要以在单元格 (4, 0) 中显示其结果
     destinationRow: 4,
     destinationColumn: 0
   },
   {
     sourceColumn: 1,
     type: 'min',
-    // set this column summary to display its result in cell (4, 1)
+    // 设置此列摘要以在单元格 (4, 1) 中显示其结果
     destinationRow: 4,
     destinationColumn: 1
   }
@@ -345,23 +344,23 @@ columnSummary={[
 
 ::: tip
 
-Don't change the [`className`](@/api/options.md#classname) metadata of the summary row.
+不要更改摘要行的 [`className`](@/api/options.md#classname) 元数据。
 
-If you need to style the summary row, use the class name assigned automatically by the [`ColumnSummary`](@/api/columnSummary.md) plugin: `columnSummaryResult`.
+如果您需要设置摘要行的样式，请使用 [`ColumnSummary`](@/api/columnSummary.md) 插件自动分配的类名：`columnSummaryResult`。
 
 :::
 
-### Step 5: Make room for the destination cell
+### 步骤 5：为目标单元格腾出空间
 
-The [`ColumnSummary`](@/api/columnSummary.md) plugin doesn't automatically add new rows to display its summary results.
+[`ColumnSummary`](@/api/columnSummary.md) 插件不会自动添加新行来显示其摘要结果。
 
-So, if you always want to display your column summary result below your existing rows, you need to:
-1. Add an empty row to the bottom of your grid (to avoid overwriting your existing rows).
-2. Reverse row coordinates for your column summary (to always display your summary result at the bottom).
+因此，如果您始终希望在现有行下方显示列摘要结果，则需要：
+1. 在网格底部添加一个空行（以避免覆盖现有行）。
+2. 反转列摘要的行坐标（始终在底部显示摘要结果）。
 
 ::: tip
 
-To reverse row coordinates for your column summary, set the [`reversedRowCoords`](@/api/columnSummary.md#options) option to `true`, and adjust the [`destinationRow`](@/api/columnSummary.md#options) coordinate.
+要反转列摘要的行坐标，请将 [`reversedRowCoords`](@/api/columnSummary.md#options) 选项设置为 `true`，然后调整 [`destinationRow`](@/api/columnSummary.md#选项）坐标。
 
 :::
 
@@ -387,16 +386,16 @@ To reverse row coordinates for your column summary, set the [`reversedRowCoords`
 
 :::
 
-## Set up column summaries, using a function
+## 使用函数设置列摘要
 
-Instead of [setting up the column summary options manually](#set-up-a-column-summary), you can provide the whole column summary configuration as a function that returns a required array of objects.
+您可以将整个列摘要配置作为返回所需对象数组的函数提供，而不是[手动设置列摘要选项](#set-up-a-column-summary)。
 
-The example below sets up five different column summaries. To do this, it:
-- Defines a function named `generateData` which generates an array of arrays with dummy numeric data, and which lets you add an empty row at the bottom of the grid (to make room for displaying column summaries)
-- Sets Handsontable's [`columnSummary`](@/api/options.md#columnsummary) configuration option to a function that:
-    - Iterates over visible columns
-    - For each visible column, adds a column summary with a configuration
-    - To display the column summaries in the empty row added by `generateData`, sets the [`reversedRowCoords`](@/api/columnSummary.md#options) option to `true`, and the [`destinationRow`](@/api/columnSummary.md#options) option to `0`
+下面的示例设置了五个不同的列摘要。为此，它：
+- 定义一个名为`generateData`的函数，它生成一个包含虚拟数字数据的数组，并允许您在网格底部添加一个空行（为显示列摘要腾出空间）
+- 将 Handsontable 的 [`columnSummary`](@/api/options.md#columnsummary) 配置选项设置为以下函数：
+    - 迭代可见列
+    - 对于每个可见列，添加带有配置的列摘要
+    - 要在 `generateData` 添加的空行中显示列摘要，请将 [`reversedRowCoords`](@/api/columnSummary.md#options) 选项设置为 `true`，并将 [`destinationRow`](@/api/columnSummary.md#options) 选项为`0`
 
 ::: only-for javascript
 
@@ -420,7 +419,7 @@ The example below sets up five different column summaries. To do this, it:
 
 :::
 
-Using a function to provide a column summary configuration lets you set up all sorts of more complex column summaries. For example, you can sum subtotals for nested groups:
+使用函数提供列摘要配置，您可以设置各种更复杂的列摘要。例如，您可以对嵌套组进行小计求和：
 
 ::: only-for javascript
 
@@ -444,21 +443,21 @@ Using a function to provide a column summary configuration lets you set up all s
 
 :::
 
-## Implement a custom summary function
+## 实现自定义汇总函数
 
-Apart from using the [built-in summary functions](#built-in-summary-functions), you can also implement your own custom function that performs any summary calculation you want.
+除了使用[内置汇总函数](#built-in-summary-functions) 之外，您还可以实现自己的自定义函数来执行您想要的任何汇总计算。
 
-To implement a custom summary function:
+要实现自定义汇总函数：
 
-1. [Set up your column summary](#set-up-a-column-summary).
-2. In your [column summary object](#step-1-enable-the-columnsummary-plugin), set the [`type`](@/api/options.md#type) option to `'custom'`:
+1. [设置专栏摘要](#set-up-a-column-summary)。
+2. 在 [列摘要对象](#step-1-enable-the-columnsummary-plugin) 中，将 [`type`](@/api/options.md#type) 选项设置为 `'custom'`：
 
 ::: only-for javascript
 
 ```js
 columnSummary: [{
   sourceColumn: 1,
-  // set the `type` option to `'custom'`
+  // 将`类型`选项设置为`自定义`
   type: 'custom',
   destinationRow: 0,
   destinationColumn: 5,
@@ -473,7 +472,7 @@ columnSummary: [{
 ```js
 columnSummary={[{
     sourceColumn: 1,
-    // set the `type` option to `'custom'`
+    // 将`类型`选项设置为`自定义`
     type: 'custom',
     destinationRow: 0,
     destinationColumn: 5,
@@ -483,7 +482,7 @@ columnSummary={[{
 
 :::
 
-3. In your column summary object, add your custom summary function:
+3. 在您的列摘要对象中，添加自定义摘要函数：
 
 ::: only-for javascript
 
@@ -493,9 +492,9 @@ columnSummary: [{
     destinationRow: 0,
     destinationColumn: 5,
     reversedRowCoords: true,
-    // add your custom summary function
+    // 添加您的自定义摘要函数
     customFunction: function(endpoint) {
-      // implement your function here
+      // 在这里实现你的功能
     }
 }]
 ```
@@ -510,16 +509,16 @@ columnSummary={[{
     destinationRow: 0,
     destinationColumn: 5,
     reversedRowCoords: true,
-    // add your custom summary function
+    // 添加您的自定义摘要函数
     customFunction: function(endpoint) {
-      // implement your function here
+      // 在这里实现你的功能
     }
 }]}
 ```
 
 :::
 
-This example implements a function that counts the number of even values in a column:
+此示例实现一个计算列中偶数值数量的函数：
 
 ::: only-for javascript
 
@@ -543,12 +542,12 @@ This example implements a function that counts the number of even values in a co
 
 :::
 
-## Round a column summary result
+## 对列汇总结果进行四舍五入
 
-You can round a column summary result to a specific number of digits after the decimal point.
+您可以将列摘要结果四舍五入到小数点后的特定位数。
 
-To enable this feature, set the [`roundFloat`](@/api/columnSummary.md) option to your preferred number of digits between 0 and 100.
-See the following example:
+要启用此功能，请将 [`roundFloat`](@/api/columnSummary.md) 选项设置为 0 到 100 之间的首选位数。
+请参见以下示例：
 
 ::: only-for javascript
 
@@ -572,40 +571,40 @@ See the following example:
 
 :::
 
-The [`roundFloat`](@/api/columnSummary.md) option accepts the following values:
+[`roundFloat`](@/api/columnSummary.md) 选项接受以下值：
 
-| Value             | Behavior                                                |
-| ----------------- | ------------------------------------------------------- |
-| `false` (default) | Don't round the column summary result.                  |
-| `true`            | Round the result to 0 digits after the decimal point.   |
-| Integer 0-100 (n) | Round the result to n digits after the decimal point.   |
-| Integer < 0       | Round the result to 0 digits after the decimal point.   |
-| Integer > 100     | Round the result to 100 digits after the decimal point. |
+| Value             | Behavior                          |
+| ----------------- | --------------------------------- |
+| `false` (default) | 不要对列摘要结果进行四舍五入。    |
+| `true`            | 将结果四舍五入到小数点后 0 位。   |
+| Integer 0-100 (n) | 将结果四舍五入到小数点后 n 位。   |
+| Integer < 0       | 将结果四舍五入到小数点后 0 位。   |
+| Integer > 100     | 将结果四舍五入到小数点后 100 位。 |
 
-If you enable [`roundFloat`](@/api/columnSummary.md), the data type returned by Handsontable's data-retrieving methods 
-(like [`getDataAtCell()`](@/api/core.md#getdataatcell)) changes from `number` to `string`.
+如果启用 [`roundFloat`](@/api/columnSummary.md)，Handsontable 的数据检索方法返回的数据类型 
+（如 [`getDataAtCell()`](@/api/core.md#getdataatcell)）从 `number` 更改为 `string`。
 
-## Handle non-numeric values
+## 处理非数字值
 
-To summarize a column that contains non-numeric data, you can:
+要汇总包含非数字数据的列，您可以：
 
-- Either force your column summary to treat non-numeric values as numeric values
-- Or throw an error whenever a non-numeric value is passed to your column summary
-- Or make your column summary skip any non-numeric values
+- 强制列摘要将非数字值视为数字值
+- 或者每当非数字值传递到列摘要时抛出错误
+- 或者让您的列摘要跳过任何非数字值
 
-### Force numeric values
+### 强制数值
 
-You can force your column summary to treat non-numeric values as numeric values.
+您可以强制列摘要将非数字值视为数字值。
 
 ::: tip
 
-The [`forceNumeric`](@/api/columnSummary.md) option uses JavaScript's `parseFloat()` function.
+[`forceNumeric`](@/api/columnSummary.md) 选项使用 JavaScript 的 `parseFloat()` 函数。
 
-This means that e.g., `3c` is treated as `3`, but `c3` is still treated as `c3`.
+这意味着，例如，`3c`被视为`3`，但`c3`仍被视为`c3`。
 
 :::
 
-To enable this feature, set the [`forceNumeric`](@/api/columnSummary.md) option to `true` (by default, [`forceNumeric`](@/api/columnSummary.md) is set to `false`). For example:
+要启用此功能，请将 [`forceNumeric`](@/api/columnSummary.md) 选项设置为 `true` （默认情况下，[`forceNumeric`](@/api/columnSummary.md) 设置为 `false` ）。例如：
 
 ::: only-for javascript
 
@@ -629,11 +628,11 @@ To enable this feature, set the [`forceNumeric`](@/api/columnSummary.md) option 
 
 :::
 
-### Throw data type errors
+### 抛出数据类型错误
 
-You can throw a data type error whenever a non-numeric value is passed to your column summary.
+每当将非数字值传递到列摘要时，您都可以引发数据类型错误。
 
-To throw data type errors, set the [`suppressDataTypeErrors`](@/api/columnSummary.md) option to `false` (by default, [`suppressDataTypeErrors`](@/api/columnSummary.md) is set to `true`). For example:
+要引发数据类型错误，请将 [`suppressDataTypeErrors`](@/api/columnSummary.md) 选项设置为 `false`（默认情况下，[`suppressDataTypeErrors`](@/api/columnSummary.md) 设置为 `true` `）。例如：
 
 ::: only-for javascript
 

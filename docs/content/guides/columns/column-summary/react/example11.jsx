@@ -21,7 +21,7 @@ const ExampleComponent = () => {
           destinationRow: 0,
           destinationColumn: 0,
           reversedRowCoords: true,
-          // enable throwing data type errors for this column summary
+          // 启用此列摘要抛出数据类型错误
           suppressDataTypeErrors: false,
         },
         {
@@ -29,7 +29,7 @@ const ExampleComponent = () => {
           destinationRow: 0,
           destinationColumn: 1,
           reversedRowCoords: true,
-          // enable throwing data type errors for this column summary
+          // 启用此列摘要抛出数据类型错误
           suppressDataTypeErrors: false,
         },
       ]}

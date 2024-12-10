@@ -20,7 +20,7 @@ category: Cell types
 
 ## 用法
 
-要设置日期单元格类型，请在 [`columns`](@/api/options.md#columns) 数组或 [`cells`](@/api/options.md) 中使用选项 `type: 'date'` #cells）功能。日期单元格使用 [Pikaday datepicker](https://github.com/dbushell/Pikaday) 作为 UI 控件。 Pikaday 使用 [Moment.js](https://github.com/moment/moment) 作为日期格式化程序。
+要设置日期单元格类型，请在 [`columns`](@/api/options.md#columns) 数组或 [`cells`](@/api/options.md) 中使用选项 `type: 'date'` #cells)功能。日期单元格使用 [Pikaday datepicker](https://github.com/dbushell/Pikaday) 作为 UI 控件。 Pikaday 使用 [Moment.js](https://github.com/moment/moment) 作为日期格式化程序。
 
 请注意，日期单元格需要额外的模块：
 

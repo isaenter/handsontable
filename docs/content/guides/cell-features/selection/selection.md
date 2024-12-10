@@ -65,7 +65,7 @@ category: Cell features
 
 ## 获取选定范围内的数据
 
-要将选定的单元格作为数组的数组检索，请使用 [`getSelected()`](@/api/core.md#getselected) 或 [`getSelectedRange()`](@/api/core.md#getselectedrange) ） 方法。
+要将选定的单元格作为数组的数组检索，请使用 [`getSelected()`](@/api/core.md#getselected) 或 [`getSelectedRange()`](@/api/core.md#getselectedrange) ) 方法。
 
 ::: only-for javascript
 

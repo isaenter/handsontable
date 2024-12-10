@@ -31,7 +31,7 @@ category: Cell types
 
 ::: tip
 
-默认情况下，输入到时间类型列中的值不会被验证，因此如果您希望它们以正确的格式显示，请记住调用 [`hot.validateCells()`](@/api/core.md#validatecells ）在表初始化之后。
+默认情况下，输入到时间类型列中的值不会被验证，因此如果您希望它们以正确的格式显示，请记住调用 [`hot.validateCells()`](@/api/core.md#validatecells )在表初始化之后。
 
 :::
 

@@ -16,7 +16,7 @@ const ExampleComponent = () => {
 
     // 清除所有现有的过滤器
     filters?.clearConditions();
-    // 按`价格`列（索引 2 处的列）过滤数据
+    // 按`价格`列(索引 2 处的列`)过滤数据
     // 仅显示低于 ('lt') $200 的商品
     filters?.addCondition(2, 'lt', [200]);
     filters?.filter();

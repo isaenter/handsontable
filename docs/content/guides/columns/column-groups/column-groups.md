@@ -148,7 +148,7 @@ collapsibleColumns={[
 
 - 列标题最多可以跨越 1000 列，因为 [HTML 表格规范](https://html.spec.whatwg.org/multipage/tables.html#dom-tdth-colspan) 设置了
   `colspan` 的限制为 `1000`。
-- 嵌套列标题不能比其父元素宽（标题不能重叠）。
+- 嵌套列标题不能比其父元素宽(标题不能重叠`)。
 
 ## 相关键盘快捷键
 

@@ -1,6 +1,6 @@
 ---
 id: 25b7vhfs
-title: Column menu
+title: 列菜单
 metaTitle: Column menu - JavaScript Data Grid | Handsontable
 description: Display a configurable dropdown menu, triggered by clicking on a button in a column header.
 permalink: /column-menu
@@ -14,20 +14,20 @@ searchCategory: Guides
 category: Columns
 ---
 
-# Column menu
+# 列菜单
 
-Display a configurable dropdown menu, triggered by clicking on a button in a column header.
+显示可配置的下拉菜单，通过单击列标题中的按钮触发。
 
 [[toc]]
 
 ## 概述
 
-The [`DropdownMenu`](@/api/dropdownMenu.md) plugin enables you to add a configurable dropdown menu to the table's column headers.
-The dropdown menu acts like the [context menu](@/guides/accessories-and-menus/context-menu/context-menu.md) but is triggered by clicking the button in the header.
+[`DropdownMenu`](@/api/dropdownMenu.md) 插件使您能够向表的列标题添加可配置的下拉菜单。
+下拉菜单的作用类似于[上下文菜单](@/guides/accessories-and-menus/context-menu/context-menu.md)，但通过单击标题中的按钮来触发。
 
-## Quick setup
+## 快速设置
 
-To enable the plugin, set the [`dropdownMenu`](@/api/options.md#dropdownmenu) configuration option to `true` when initializing Handsontable.
+要启用该插件，请在初始化 Handsontable 时将 [`dropdownMenu`](@/api/options.md#dropdownmenu) 配置选项设置为 `true`。
 
 ::: only-for javascript
 
@@ -51,9 +51,9 @@ To enable the plugin, set the [`dropdownMenu`](@/api/options.md#dropdownmenu) co
 
 :::
 
-## Plugin configuration
+## 插件配置
 
-To use the default dropdown contents, set it to `true`, or to customize it by setting it to use a custom list of actions. For the available entry options reference, see the [Context Menu demo](@/guides/accessories-and-menus/context-menu/context-menu.md#page-specific).
+要使用默认下拉内容，请将其设置为`true`，或通过将其设置为使用自定义操作列表来自定义它。有关可用的条目选项参考，请参阅[上下文菜单演示](@/guides/accessories-and-menus/context-menu/context-menu.md#page-specific)。
 
 ::: only-for javascript
 
@@ -79,16 +79,16 @@ To use the default dropdown contents, set it to `true`, or to customize it by se
 
 ## 相关键盘快捷键
 
-| Windows                                                  | macOS                                                       | Action                                                                                                       |  Excel  | Sheets  |
-| -------------------------------------------------------- | ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ | :-----: | :-----: |
-| <kbd>**Shift**</kbd>+<kbd>**Alt**</kbd>+<kbd>**↓**</kbd> | <kbd>**Shift**</kbd>+<kbd>**Option**</kbd>+<kbd>**↓**</kbd> | Open the column menu. Works in any cell, if the respective column header displays the menu button.           | &cross; | &cross; |
-| <kbd>**Shift**</kbd>+<kbd>**Enter**</kbd>                | <kbd>**Shift**</kbd>+<kbd>**Enter**</kbd>                   | Open the column menu. Works only when you're selecting a column header that displays the column menu button. | &cross; | &cross; |
+| Windows                                                  | macOS                                                       | Action                                                         |  Excel  | Sheets  |
+| -------------------------------------------------------- | ----------------------------------------------------------- | -------------------------------------------------------------- | :-----: | :-----: |
+| <kbd>**Shift**</kbd>+<kbd>**Alt**</kbd>+<kbd>**↓**</kbd> | <kbd>**Shift**</kbd>+<kbd>**Option**</kbd>+<kbd>**↓**</kbd> | 打开列菜单。如果相应的列标题显示菜单按钮，则适用于任何单元格。 | &cross; | &cross; |
+| <kbd>**Shift**</kbd>+<kbd>**Enter**</kbd>                | <kbd>**Shift**</kbd>+<kbd>**Enter**</kbd>                   | 打开列菜单。仅当您选择显示列菜单按钮的列标题时才有效。         | &cross; | &cross; |
 
 ## 相关文章
 
 ### 相关指南
 
-- [Context menu](@/guides/accessories-and-menus/context-menu/context-menu.md)
+- [上下文菜单](@/guides/accessories-and-menus/context-menu/context-menu.md)
 
 ### 相关API参考
 

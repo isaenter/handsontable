@@ -102,7 +102,7 @@ const ExampleComponent = () => {
           const cellChanges = changes;
 
           for (let i = changes.length - 1; i >= 0; i--) {
-            // 轻轻地不接受单词`foo`（删除索引 i 处的更改）
+            // 轻轻地不接受单词`foo`(删除索引 i 处的更改`)
             if (cellChanges[i][3] === 'foo') {
               changes.splice(i, 1);
             }

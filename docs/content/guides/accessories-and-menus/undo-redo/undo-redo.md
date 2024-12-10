@@ -35,7 +35,7 @@ category: Accessories and menus
 
 ## 基本演示
 
-对下面的网格进行一些更改，然后使用 <kbd>**Ctrl**</kbd>/<kbd>**Cmd**</kbd>+<kbd>**Z**</kbd> 命令重做之前的状态。然后，使用 <kbd>**Ctrl**</kbd>/<kbd>**Cmd**</kbd>+<kbd>**Y**</kbd> （或 <kbd>**Ctrl**</kbd>/<kbd>**Cmd**</kbd>+<kbd>**Shift**</kbd>+<kbd>**Z**</kbd>）来恢复它。
+对下面的网格进行一些更改，然后使用 <kbd>**Ctrl**</kbd>/<kbd>**Cmd**</kbd>+<kbd>**Z**</kbd> 命令重做之前的状态。然后，使用 <kbd>**Ctrl**</kbd>/<kbd>**Cmd**</kbd>+<kbd>**Y**</kbd> (或 <kbd>**Ctrl**</kbd>/<kbd>**Cmd**</kbd>+<kbd>**Shift**</kbd>+<kbd>**Z**</kbd>`)来恢复它。
 
 ::: only-for javascript
 

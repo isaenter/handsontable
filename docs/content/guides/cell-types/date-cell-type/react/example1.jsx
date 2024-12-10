@@ -34,9 +34,9 @@ const ExampleComponent = () => {
           correctFormat: true,
           defaultDate: '01/01/1900',
           // datePicker 附加选项
-          // （参见https://github.com/dbushell/Pikaday#configuration）
+          // (参见https://github.com/dbushell/Pikaday#configuration`)
           datePickerConfig: {
-            // 一周的第一天（0：星期日，1：星期一等）
+            // 一周的第一天(0：星期日，1：星期一等`)
             firstDay: 0,
             showWeekNumber: true,
             disableDayFn(date) {

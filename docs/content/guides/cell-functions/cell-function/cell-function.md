@@ -37,7 +37,7 @@ Handsontable 中的每个单元格都有 3 个相关函数：
 
 ## 渲染器
 
-Handsontable 不直接显示数据源中存储的值。相反，每次需要在表格单元格中显示数据源中的值时，它都会与`HTMLTableCellElement`类型的表格单元格对象（DOM 节点）以及其他有用信息一起传递给单元格`renderer`函数。
+Handsontable 不直接显示数据源中存储的值。相反，每次需要在表格单元格中显示数据源中的值时，它都会与`HTMLTableCellElement`类型的表格单元格对象(DOM 节点`)以及其他有用信息一起传递给单元格`renderer`函数。
 `Renderer` 预计会格式化传递的值并将其放置为单元格对象的内容。 `Renderer` 还可以更改单元格类列表，即它可以添加一个 `htInvalid` 类来让用户知道显示的值无效。
 
 ## 编辑器

@@ -21,7 +21,7 @@ const ExampleComponent = () => {
           type: 'sum',
           destinationRow: 3,
           destinationColumn: 0,
-          // force this column summary to treat non-numeric values as numeric values
+          // 强制此列摘要将非数字值视为数字值
           forceNumeric: true,
         },
         {

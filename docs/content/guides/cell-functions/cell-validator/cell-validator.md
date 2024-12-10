@@ -50,7 +50,7 @@ Handsontable.validators.registerValidator('date', creditCardValidator);
 ```
 现在`date`别名指向`creditCardValidator`函数，而不是`Handsontable.validators.DateValidator`。
 
-因此，除非您有意要覆盖现有别名，否则请尝试选择一个唯一的名称。一个好的做法是在别名前添加一些自定义名称（例如您的 GitHub 用户名），以最大程度地减少名称冲突的可能性。如果您想发布验证器，这一点尤其重要，因为您永远不知道使用您的验证器的用户已经注册了别名。
+因此，除非您有意要覆盖现有别名，否则请尝试选择一个唯一的名称。一个好的做法是在别名前添加一些自定义名称(例如您的 GitHub 用户名`)，以最大程度地减少名称冲突的可能性。如果您想发布验证器，这一点尤其重要，因为您永远不知道使用您的验证器的用户已经注册了别名。
 
 ```js
 Handsontable.validators.registerValidator('credit-card', creditCardValidator);
@@ -115,7 +115,7 @@ const hot = new Handsontable(container, {
 
 使用验证器方法可以轻松验证对单元格的同步或异步更改。如果您需要更多控制，可以使用 [`beforeValidate`](@/api/hooks.md#beforevalidate) 和 [`afterValidate`](@/api/hooks.md#aftervalidate) 挂钩。在下面的示例中，`email_validator_fn`是一个异步验证器，在 1000 毫秒后解析。
 
-使用 [`allowInvalid`](@/api/options.md#allowinvalid) 选项定义网格是否应接受未验证的输入。如果您需要修改输入（例如，审查不良单词、大写首字母），请使用插件钩子 [`beforeChange`](@/api/hooks.md#beforechange)。
+使用 [`allowInvalid`](@/api/options.md#allowinvalid) 选项定义网格是否应接受未验证的输入。如果您需要修改输入(例如，审查不良单词、大写首字母`)，请使用插件钩子 [`beforeChange`](@/api/hooks.md#beforechange)。
 
 默认情况下，所有无效单元格都由`htInvalid`CSS 类标记。如果你想将类更改为另一个类，你基本上可以将 `invalidCellClassName` 选项添加到 Handsontable 设置中。例如：
 对于整个表
@@ -186,7 +186,7 @@ columns={[
 
 编辑上面的网格以查看回调中的`changes`参数。
 
-请注意，在从每个更改的单元格运行所有验证器（同步和异步）后，将应用表中的更改。
+请注意，在从每个更改的单元格运行所有验证器(同步和异步`)后，将应用表中的更改。
 
 ## 相关API参考
 

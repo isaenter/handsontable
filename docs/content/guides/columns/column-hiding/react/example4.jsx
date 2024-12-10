@@ -89,7 +89,7 @@ const ExampleComponent = () => {
       rowHeaders={true}
       // 启用上下文菜单
       contextMenu={true}
-      // 启用“HiddenColumns”插件
+      // 启用`HiddenColumns`插件
       // 自动添加上下文菜单的列隐藏项
       hiddenColumns={{
         columns: [3, 5, 9],

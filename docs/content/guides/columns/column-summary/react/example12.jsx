@@ -27,7 +27,7 @@ const ExampleComponent = () => {
           destinationRow: 0,
           destinationColumn: 1,
           reversedRowCoords: true,
-          // round this column summary result to two digits after the decimal point
+          // 将此列汇总结果四舍五入到小数点后两位
           roundFloat: 2,
         },
       ]}

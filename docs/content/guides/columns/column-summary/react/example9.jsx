@@ -7,7 +7,7 @@ import 'handsontable/styles/ht-theme-main.css';
 registerAllModules();
 
 const ExampleComponent = () => {
-  //  generate an array of arrays with dummy numeric data
+  //  生成具有虚拟数值数据的二维数组
   const generateData = (rows = 3, columns = 7, additionalRows = true) => {
     let counter = 0;
     const array2d = [...new Array(rows)].map((_) =>
@@ -32,19 +32,19 @@ const ExampleComponent = () => {
       colHeaders={true}
       rowHeaders={true}
       columnSummary={[
-        // configure a column summary
+        // 配置列摘要
         {
-          // set the `type` option to `'custom'`
+          // 将`类型`选项设置为`自定义`
           type: 'custom',
           destinationRow: 0,
           destinationColumn: 5,
           reversedRowCoords: true,
-          // add your custom summary function
+          // 添加您的自定义摘要函数
           customFunction(endpoint) {
-            // implement a function that counts the number of even values in the column
+            // 实现一个计算列中偶数值数量的函数
             const hotInstance = this.hot;
             let evenCount = 0;
-            // a helper function
+            // 辅助函数
             const checkRange = (rowRange) => {
               let i = rowRange[1] || rowRange[0];
               let counter = 0;
@@ -67,7 +67,7 @@ const ExampleComponent = () => {
               return counter;
             };
 
-            // go through all declared ranges
+            // 遍历所有声明的范围
             for (const r in endpoint.ranges) {
               if (endpoint.ranges.hasOwnProperty(r)) {
                 evenCount += checkRange(endpoint.ranges[r]);

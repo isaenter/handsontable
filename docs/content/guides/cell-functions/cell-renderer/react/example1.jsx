@@ -5,11 +5,11 @@ import 'handsontable/styles/ht-theme-main.css';
 //你的渲染器组件
 const RendererComponent = (props) => {
   // 可用的渲染器相关属性有：
-  // - `row`（行索引）
-  // - `col`（列索引）
-  // - `prop`（列属性名称）
-  // - `TD`（HTML 单元格元素）
-  // - `cellProperties` （已编辑单元格的 `cellProperties` 对象）
+  // - `row`(行索引`)
+  // - `col`(列索引`)
+  // - `prop`(列属性名称`)
+  // - `TD`(HTML 单元格元素`)
+  // - `cellProperties` (已编辑单元格的 `cellProperties` 对象`)
   return (
     <>
       <i style={{ color: '#a9a9a9' }}>

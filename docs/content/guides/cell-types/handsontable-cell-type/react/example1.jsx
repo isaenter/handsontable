@@ -50,7 +50,7 @@ const ExampleComponent = () => {
               const selection = this.getSelectedLast();
 
               // 获取点击行的制造商名称并忽略标题
-              // 坐标（负值）
+              // 坐标(负值`)
               return this.getSourceDataAtRow(Math.max(selection[0], 0)).name;
             },
           },

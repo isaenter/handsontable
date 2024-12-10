@@ -21,7 +21,7 @@ const ExampleComponent = () => {
           destinationRow: 0,
           destinationColumn: 0,
           reversedRowCoords: true,
-          // force this column summary to treat non-numeric values as numeric values
+          // 强制此列摘要将非数字值视为数字值
           forceNumeric: true,
         },
         {
@@ -29,7 +29,7 @@ const ExampleComponent = () => {
           destinationRow: 0,
           destinationColumn: 1,
           reversedRowCoords: true,
-          // force this column summary to treat non-numeric values as numeric values
+          // 强制此列摘要将非数字值视为数字值
           forceNumeric: true,
         },
       ]}

@@ -37,7 +37,7 @@ category: Cell features
 
 ## 只读网格
 
-您可以通过将 [`readOnly`](@/api/options.md#readonly) 设置为 `true` 作为 [顶级网格选项](@/guides/getting-started/configuration -选项/配置选项.md#set-grid-options）。
+您可以通过将 [`readOnly`](@/api/options.md#readonly) 设置为 `true` 作为 [顶级网格选项](@/guides/getting-started/configuration-options/configuration-options.md#set-grid-options)。
 
 ::: only-for javascript
 
@@ -63,7 +63,7 @@ category: Cell features
 
 ## 只读列
 
-在许多用例中，您需要将特定列配置为只读。此列可用于键盘导航和复制数据 (<kbd>**Ctrl**</kbd>/<kbd>**Cmd**</kbd>+<kbd>**C**</kbd> ）。将禁用编辑和粘贴数据。
+在许多用例中，您需要将特定列配置为只读。此列可用于键盘导航和复制数据 (<kbd>**Ctrl**</kbd>/<kbd>**Cmd**</kbd>+<kbd>**C**</kbd> )。将禁用编辑和粘贴数据。
 
 要将列设为只读，请在 [`columns`](@/api/options.md#columns) 配置选项中声明它。您还可以定义一个特殊的渲染器函数，该函数将使只读值变暗，为用户提供单元格只读的视觉提示。
 
@@ -91,7 +91,7 @@ category: Cell features
 
 ## 只读特定单元格
 
-此示例使包含单词`Nissan`的单元格变为只读。它强制所有单元格由 [`cells`](@/api/options.md#cells) 函数处理，该函数将决定单元格的元数据是否应具有 [`readOnly`](@/api/options.md#只读）属性集。
+此示例使包含单词`Nissan`的单元格变为只读。它强制所有单元格由 [`cells`](@/api/options.md#cells) 函数处理，该函数将决定单元格的元数据是否应具有 [`readOnly`](@/api/options.md#只读)属性集。
 
 ::: only-for javascript
 

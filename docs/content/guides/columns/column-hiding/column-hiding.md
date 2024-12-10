@@ -28,8 +28,8 @@ category: Columns
 
 - 源数据不会被修改。
 - [`HiddenColumns`](@/api/hiddenColumns.md) 插件不参与数据
-  转换<br>（由返回的数据的形状
-  [`getData*()` 方法]（@/api/core.md#getdata）保持不变）。
+  转换<br>(由返回的数据的形状
+  [`getData*()` 方法](@/api/core.md#getdata`)保持不变)。
 
 ## 启用列隐藏
 

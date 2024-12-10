@@ -143,7 +143,7 @@ category: Accessories and menus
 
 允许您导出带有 BOM 签名的数据。
 
-请注意，此属性将在内容前面添加 UTF-16BE BOM 签名 (_FE FF_)。浏览器会自动将签名转换为UTF-8值（_EF BB BF_）。
+请注意，此属性将在内容前面添加 UTF-16BE BOM 签名 (_FE FF_)。浏览器会自动将签名转换为UTF-8值(_EF BB BF_`)。
 
 您可以在所有[可用方法](#available-methods)中使用此属性。
 

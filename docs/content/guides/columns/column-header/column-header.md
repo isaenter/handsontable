@@ -14,7 +14,7 @@ category: Columns
 
 # 列标题
 
-使用默认列标题（A、B、C），或将它们设置为数组或函数提供的自定义值。
+使用默认列标题(A、B、C`)，或将它们设置为数组或函数提供的自定义值。
 
 [[toc]]
 
@@ -127,7 +127,7 @@ category: Columns
 
 :::
 
-如果要设置标题标签的样式，可以将任意数量的类名（以空格分隔）传递给 [`header ClassName`](@/api/options.md#headerclassname) 选项。
+如果要设置标题标签的样式，可以将任意数量的类名(以空格分隔`)传递给 [`header ClassName`](@/api/options.md#headerclassname) 选项。
 
 ::: only-for javascript
 

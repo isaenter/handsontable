@@ -24,7 +24,7 @@ category: Cell features
 
 ## 概述
 
-您可以手动将数据从 Handsontable 复制或剪切到系统剪贴板（使用上下文菜单或 <kbd>**Ctrl**</kbd>/<kbd>**Cmd**</kbd>+<kbd >**C**</kbd>/<kbd>**X**</kbd> 快捷方式）或以编程方式（使用 Handsontable 的 API 方法）。
+您可以手动将数据从 Handsontable 复制或剪切到系统剪贴板(使用上下文菜单或 <kbd>**Ctrl**</kbd>/<kbd>**Cmd**</kbd>+<kbd >**C**</kbd>/<kbd>**X**</kbd> 快捷方式`)或以编程方式(使用 Handsontable 的 API 方法`)。
 
 ## 复制和剪切
 
@@ -49,7 +49,7 @@ category: Cell features
 
 - 复制 -作为预定义键`复制`
 - 剪切 -作为预定义的键`剪切`
-您可以按照与 [上下文菜单](@/guides/accessories-and-menus/context-menu/context-menu.md#context-menu-with-specific-中的其余预定义项目相同的方式使用它们选项）。这些操作由`document.execCommand()`执行。
+您可以按照与 [上下文菜单](@/guides/accessories-and-menus/context-menu/context-menu.md#context-menu-with-specific-中的其余预定义项目相同的方式使用它们选项)。这些操作由`document.execCommand()`执行。
 
 ::: only-for javascript
 
@@ -217,7 +217,7 @@ copyPastePlugin.copy('with-column-headers');
 copyPastePlugin.copy('with-all-column-headers');
 
 // 复制最接近所选单元格的列标题
-//（不复制单元格本身）
+//(不复制单元格本身`)
 copyPastePlugin.copy('column-headers-only');
 ```
 

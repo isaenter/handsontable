@@ -1,6 +1,6 @@
 ---
 id: bpcuomaq
-title: Column widths
+title: 列宽
 metaTitle: Column widths - JavaScript Data Grid | Handsontable
 description: Configure column widths, using an array or a function. Let your users manually change column widths using Handsontable's interface.
 permalink: /column-width
@@ -21,21 +21,21 @@ searchCategory: Guides
 category: Columns
 ---
 
-# Column widths
+# 列宽
 
-Configure column widths, using an array or a function. Let your users manually change column widths using Handsontable's interface.
+使用数组或函数配置列宽。让您的用户使用 Handsontable 的界面手动更改列宽。
 
 [[toc]]
 
 ## 概述
 
-By default, the column width adjusts to the width of the content. However, if the width of the content is less than `50px`, including `1px` for borders on the sides, the column width remains constant at `50px`. You can pass the column size as a constant, an array, or a function.
+默认情况下，列宽会根据内容的宽度进行调整。但是，如果内容的宽度小于`50px`（包括侧面边框的`1px`），则列宽将保持恒定为`50px`。您可以将列大小作为常量、数组或函数传递。
 
-The content inside a cell will be wrapped if it doesn't fit the cell's width.
+如果单元格内的内容不适合单元格的宽度，则单元格内的内容将被换行。
 
-## Set the column width as a constant
+## 将列宽设置为常量
 
-In this example we set the same width of `100px` for all columns across the entire grid.
+在此示例中，我们为整个网格中的所有列设置相同的`100px`宽度。
 
 ::: only-for javascript
 
@@ -59,9 +59,9 @@ In this example we set the same width of `100px` for all columns across the enti
 
 :::
 
-## Set the column width in an array
+## 设置数组的列宽
 
-In this example, the width is only set for the first four columns. Each additional column would automatically adjust to the content.
+在此示例中，仅设置前四列的宽度。每个附加列都会自动调整以适应内容。
 
 ::: only-for javascript
 
@@ -85,9 +85,9 @@ In this example, the width is only set for the first four columns. Each addition
 
 :::
 
-## Set the column width using a function
+## 使用函数设置列宽
 
-In this example, the size of all columns is set using a function by taking a column `index` (1, 2 ...) and multiplying it by `40px` for each consecutive column.
+在此示例中，所有列的大小是使用函数设置的，方法是采用列`索引`(1, 2 ...) 并将其乘以每个连续列的`40px`。
 
 ::: only-for javascript
 
@@ -111,11 +111,11 @@ In this example, the size of all columns is set using a function by taking a col
 
 :::
 
-## Adjust the column width manually
+## 手动调整列宽
 
-Set the option [`manualColumnResize`](@/api/options.md#manualcolumnresize) to `true` to allow users to manually resize the column width by dragging the handle between the adjacent column headers. If you double-click on that handle, the width will be instantly adjusted to the size of the longest value in the column. Don't forget to enable column headers by setting [`colHeaders`](@/api/options.md#colheaders) to `true`.
+将选项 [`manualColumnResize`](@/api/options.md#manualcolumnresize) 设置为 `true` 以允许用户通过拖动相邻列标题之间的手柄来手动调整列宽。如果双击该手柄，宽度将立即调整为列中最长值的大小。不要忘记通过将 [`colHeaders`](@/api/options.md#colheaders) 设置为 `true` 来启用列标题。
 
-You can adjust the size of one or multiple columns simultaneously, even if the selected columns are not placed next to each other.
+您可以同时调整一列或多列的大小，即使选定的列不是彼此相邻放置的。
 
 ::: only-for javascript
 
@@ -139,9 +139,9 @@ You can adjust the size of one or multiple columns simultaneously, even if the s
 
 :::
 
-## Column stretching
+## 列拉伸
 
-You can adjust the width of the columns to make them fit the table's width automatically. The width of a particular column will be calculated based on the size and number of other columns in the grid. This option only makes sense when you have at least one column in your data set and fewer columns than needed to enable the horizontal scrollbar.
+您可以调整列的宽度，使它们自动适合表格的宽度。特定列的宽度将根据网格中其他列的大小和数量来计算。仅当数据集中至少有一列且列数少于启用水平滚动条所需的列数时，此选项才有意义。
 
 ::: tip
 
@@ -149,9 +149,9 @@ Use the [context menu](@/guides/accessories-and-menus/context-menu/context-menu.
 
 :::
 
-### Fit all columns equally
+### 同等地拟合所有列
 
-This example fits all columns to the container's width equally by setting the option [`stretchH: 'all'`](@/api/options.md#stretchh).
+此示例通过设置选项 [`stretchH: 'all'`](@/api/options.md#stretchh) 使所有列均等地适合容器的宽度。
 
 ::: only-for javascript
 
@@ -175,9 +175,9 @@ This example fits all columns to the container's width equally by setting the op
 
 :::
 
-### Stretch only the last column
+### 仅拉伸最后一列
 
-In this example, the first three columns are set to be 80px wide, and the last column automatically fills the remaining space. This is achieved by setting the option [`stretchH: 'last'`](@/api/options.md#stretchh).
+在此示例中，前三列设置为 80px 宽，最后一列自动填充剩余空间。这是通过设置选项 [`stretchH: 'last'`](@/api/options.md#stretchh) 来实现的。
 
 ::: only-for javascript
 
@@ -201,17 +201,17 @@ In this example, the first three columns are set to be 80px wide, and the last c
 
 :::
 
-## A note about the performance
+## 关于性能的说明
 
-As mentioned above, the default width of the column is based on the widest value in any cell within the column. You may be wondering how it's possible for data sets containing hundreds of thousands of records.
+如上所述，列的默认宽度基于列内任何单元格中的最宽值。您可能想知道如何处理包含数十万条记录的数据集。
 
-This feature is made possible thanks to the [`AutoColumnSize`](@/api/autoColumnSize.md) plugin, which is enabled by default. Internally it divides the data set into smaller sets and renders only some of them to measure their size. The size is then applied to the entire column based on the width of the widest found value.
+此功能的实现得益于 [`AutoColumnSize`](@/api/autoColumnSize.md) 插件，该插件默认启用。在内部，它将数据集划分为更小的集合，并仅渲染其中的一些集合来测量它们的大小。然后根据最宽的找到值的宽度将该大小应用于整个列。
 
-To increase the performance, you can turn off this feature by defining the fixed size for the specified column or all columns.
+为了提高性能，您可以通过为指定列或所有列定义固定大小来关闭此功能。
 
-## Size of the container
+## 容器的大小
 
-Setting the dimensions of the container that holds Handsontable is described in detail on the [Grid size](@/guides/getting-started/grid-size/grid-size.md) page.
+设置容纳 Handsontable 的容器的尺寸在[网格大小](@/guides/getting-started/grid-size/grid-size.md)页面上有详细描述。
 
 ## 相关API参考
 

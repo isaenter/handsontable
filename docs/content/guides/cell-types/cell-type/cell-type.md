@@ -14,7 +14,7 @@ category: Cell types
 
 # 细胞类型
 
-使用 Handsontable 的内置单元格类型（例如自动完成、日期、时间等），在单元格渲染器、编辑器和验证器之间实现一致的 UI。
+使用 Handsontable 的内置单元格类型(例如自动完成、日期、时间等`)，在单元格渲染器、编辑器和验证器之间实现一致的 UI。
 
 [[toc]]
 
@@ -93,7 +93,7 @@ Handsontable 有九种类型：
 - ["dropdown"](@/guides/cell-types/dropdown-cell-type/dropdown-cell-type.md) 或 `Handsontable.cellTypes.dropdown`
 - ["handsontable"](@/guides/cell-types/handsontable-cell-type/handsontable-cell-type.md) 或 `Handsontable.cellTypes.handsontable`
 - ["numeric"](@/guides/cell-types/numeric-cell-type/numeric-cell-type.md) 或 `Handsontable.cellTypes.numeric`
-- ["passw或d"](@/guides/cell-types/passw或d-cell-type/passw或d-cell-type.md) 或 `Handsontable.cellTypes.password`
+- ["password"](@/guides/cell-types/password-cell-type/password-cell-type.md) 或 `Handsontable.cellTypes.password`
 - ["select"](@/guides/cell-types/select-cell-type/select-cell-type.md) 或 `Handsontable.cellTypes.select`
 - ["time"](@/guides/cell-types/time-cell-type/time-cell-type.md) 或 `Handsontable.cellTypes.time`
 - "text" 或 `Handsontable.cellTypes.text`
@@ -174,7 +174,7 @@ columns={[{
 要注册您自己的别名，请使用`Handsontable.cellTypes.registerCellType()`函数。它需要两个参数：
 
 - `cellTypeName` -表示细胞类型对象的字符串
-- [`type`](@/api/options.md#type) -带有键的对象 [`editor`](@/api/options.md#editor), [`renderer`](@/api/options .md#renderer) 和 [`validator`](@/api/options.md#validator) 将由 `cellTypeName` 表示
+- [`type`](@/api/options.md#type) -带有键的对象 [`editor`](@/api/options.md#editor), [`renderer`](@/api/options.md#renderer) 和 [`validator`](@/api/options.md#validator) 将由 `cellTypeName` 表示
   
 如果您想在别名`copyable-password`下注册`copyablePasswordType`，您需要调用：
 
@@ -450,7 +450,7 @@ function customValidator(query, callback) {
 
 ## 空单元格
 
-值得一提的是，`''`（空字符串）、`null`和`undefined`等值被视为空值。对于大多数数据类型，具有空值的单元格以类似的方式显示（见下文）。
+值得一提的是，`''`(空字符串`)、`null`和`undefined`等值被视为空值。对于大多数数据类型，具有空值的单元格以类似的方式显示(见下文`)。
 
 ::: tip
 

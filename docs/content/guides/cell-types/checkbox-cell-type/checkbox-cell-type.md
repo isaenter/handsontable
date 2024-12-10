@@ -56,7 +56,7 @@ category: Cell types
 
 ## 复选框模板
 
-如果您想使用`true`和`false`以外的值，则必须使用 [`checkedTemplate`](@/api/options.md#checkedtemplate) 和 [`uncheckedTemplate`](@/api/options.md#uncheckedtemplate）。然后，Handsontable 将使用适当的模板更新您的数据。
+如果您想使用`true`和`false`以外的值，则必须使用 [`checkedTemplate`](@/api/options.md#checkedtemplate) 和 [`uncheckedTemplate`](@/api/options.md#uncheckedtemplate)。然后，Handsontable 将使用适当的模板更新您的数据。
 
 ::: only-for javascript
 

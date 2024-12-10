@@ -44,7 +44,7 @@ category: Cell functions
 
 渲染器是决定单元格外观的函数。
 
-设置在一起，渲染器，[编辑器](@/guides/cell-functions/cell-editor/cell-editor.md) 和 [验证器](@/guides/cell-functions/cell-validator/cell-validator.md ）形成[单元格类型](@/guides/cell-types/cell-type/cell-type.md)。
+设置在一起，渲染器，[编辑器](@/guides/cell-functions/cell-editor/cell-editor.md) 和 [验证器](@/guides/cell-functions/cell-validator/cell-validator.md )形成[单元格类型](@/guides/cell-types/cell-type/cell-type.md)。
 
 ## 将自定义渲染器声明为组件
 
@@ -129,7 +129,7 @@ Handsontable 的 [`autoRowSize`](@/api/options.md#autorowsize) 和 [`autoColumnS
 
 ::: tip
 
-您可以设置单元格的 [`renderer`](@/api/options.md#renderer)、[`editor`](@/api/options.md#editor) 或 [`validator`](@/api/options .md#validator) 单独，但您仍然需要设置该单元格的 [`type`](@/api/options.md#type)。例如：
+您可以设置单元格的 [`renderer`](@/api/options.md#renderer)、[`editor`](@/api/options.md#editor) 或 [`validator`](@/api/options.md#validator) 单独，但您仍然需要设置该单元格的 [`type`](@/api/options.md#type)。例如：
 
 :::
 
@@ -203,7 +203,7 @@ Handsontable.renderers.registerRenderer('text', asterixDecoratorRenderer);
 
 现在`text`别名指向`asterixDecoratorRenderer`函数，而不是`Handsontable.renderers.TextRenderer`。
 
-因此，除非您有意要覆盖现有别名，否则请尝试选择一个唯一的名称。一个好的做法是在别名前添加一些自定义名称（例如您的 GitHub 用户名），以最大程度地减少名称冲突的可能性。如果您想发布渲染器，这一点尤其重要，因为您永远不知道使用您的渲染器的用户已注册别名。
+因此，除非您有意要覆盖现有别名，否则请尝试选择一个唯一的名称。一个好的做法是在别名前添加一些自定义名称(例如您的 GitHub 用户名`)，以最大程度地减少名称冲突的可能性。如果您想发布渲染器，这一点尤其重要，因为您永远不知道使用您的渲染器的用户已注册别名。
 
 ```js
 Handsontable.renderers.registerRenderer('asterix', asterixDecoratorRenderer);
@@ -290,8 +290,8 @@ const hot = new Handsontable(container, {
 此示例演示如何使用自定义单元格呈现器在单元格中显示 HTML 内容。这是一个非常强大的功能。请记住转义任何可用于 XSS 攻击的 HTML 代码。在下面的配置中：
 
 - **标题**列使用允许任何 HTML 的内置 HTML 渲染器。如果您的代码来自不受信任的来源，这是不安全的。请注意，Handsontable 用户可以使用它使用单元格编辑器输入 `<script>` 或其他潜在的恶意标签！
-- **描述**列也使用 HTML 渲染器（与上面相同）
-- **注释**列使用自定义渲染器（`safeHtmlRenderer`）。这对于用户输入来说应该是安全的，因为只允许某些标签
+- **描述**列也使用 HTML 渲染器(与上面相同`)
+- **注释**列使用自定义渲染器(`safeHtmlRenderer``)。这对于用户输入来说应该是安全的，因为只允许某些标签
 - **Cover**列接受图像 URL 作为字符串，并将其转换为渲染器中的 `<img>`
 
 ::: only-for javascript
@@ -328,7 +328,7 @@ const hot = new Handsontable(container, {
 
 :::
 
-您还可以将 HTML 放入行标题和列标题中。如果您需要将事件附加到 DOM 元素（如下面的复选框），只需记住通过类名而不是 id 来标识元素。这是因为行标题和列标题在 DOM 树中是重复的，并且 id 属性必须是唯一的。
+您还可以将 HTML 放入行标题和列标题中。如果您需要将事件附加到 DOM 元素(如下面的复选框`)，只需记住通过类名而不是 id 来标识元素。这是因为行标题和列标题在 DOM 树中是重复的，并且 id 属性必须是唯一的。
 
 ::: only-for javascript
 
@@ -365,7 +365,7 @@ const hot = new Handsontable(container, {
 
 :::
 
-如果您正在编写高级单元格渲染器，并且希望在某个用户操作之后（即用户将鼠标指针悬停在单元格上之后）添加一些自定义行为，您可能会想将事件侦听器直接添加到传递为的表单元格节点`renderer` 函数的参数。不幸的是，这几乎总是会给您带来麻烦，并且您最终会遇到性能问题或将侦听器连接到错误的单元。
+如果您正在编写高级单元格渲染器，并且希望在某个用户操作之后(即用户将鼠标指针悬停在单元格上之后`)添加一些自定义行为，您可能会想将事件侦听器直接添加到传递为的表单元格节点`renderer` 函数的参数。不幸的是，这几乎总是会给您带来麻烦，并且您最终会遇到性能问题或将侦听器连接到错误的单元。
 
 这是因为 Handsontable：
 
@@ -377,7 +377,7 @@ const hot = new Handsontable(container, {
 如果您没有找到合适的 _Handsontable 事件_，请将单元格内容放入包装`<div>`中，将事件侦听器附加到包装器，然后将其放入表格单元格中。
 
 ## 性能考虑
-在每个表格渲染期间，为每个显示的单元格单独调用单元格渲染器。表格在其生命周期内可以多次渲染（表格滚动后、表格排序后、单元格编辑后等），因此您应该使您的`渲染器`函数尽可能简单和快速，否则您可能会遇到性能下降，特别是当处理大量数据。
+在每个表格渲染期间，为每个显示的单元格单独调用单元格渲染器。表格在其生命周期内可以多次渲染(表格滚动后、表格排序后、单元格编辑后等`)，因此您应该使您的`渲染器`函数尽可能简单和快速，否则您可能会遇到性能下降，特别是当处理大量数据。
 
 ::: only-for javascript
 

@@ -6,7 +6,7 @@ import 'handsontable/styles/ht-theme-main.css';
 // 注册 Handsontable 的模块
 registerAllModules();
 
-// a renderer component
+// 渲染器组件
 const ScoreRenderer = (props) => {
   const { value } = props;
   const color = value > 60 ? '#2ECC40' : '#FF4136';
@@ -14,7 +14,7 @@ const ScoreRenderer = (props) => {
   return <span style={{ color }}>{value}</span>;
 };
 
-// a renderer component
+// 渲染器组件
 const PromotionRenderer = (props) => {
   const { value } = props;
 
@@ -25,7 +25,7 @@ const PromotionRenderer = (props) => {
   return <span>&#10007;</span>;
 };
 
-// you can set `data` to an array of objects
+// 您可以将`data`设置为对象数组
 const data = [
   {
     id: 1,
