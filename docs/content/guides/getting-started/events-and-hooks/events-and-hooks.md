@@ -1,6 +1,6 @@
 ---
 id: own6evdy
-title: Events and hooks
+title: 事件和hooks
 metaTitle: Events and hooks - JavaScript Data Grid | Handsontable
 description: Run your code before or after specific data grid actions, using Handsontable's API hooks (callbacks). For example, control what happens with the user's input.
 permalink: /events-and-hooks
@@ -22,19 +22,19 @@ searchCategory: Guides
 category: Getting started
 ---
 
-# Events and hooks
+# 事件和hooks
 
-Run your code before or after specific data grid actions, using Handsontable's API hooks (callbacks). For example, control what happens with the user's input.
+使用 Handsontable 的 API hooks（回调）在特定数据网格操作之前或之后运行代码。例如，控制用户输入所发生的情况。
 
 [[toc]]
 
 ## 概述
 
-Callbacks are used to react before or after actions occur. We refer to them as hooks. Handsontable's hooks share some characteristics with events and middleware, combining them both in a unique structure.
+回调用于在操作发生之前或之后做出反应。我们将它们称为钩子。 Handsontable 的钩子与事件和中间件共享一些特征，将它们结合在一个独特的结构中。
 
 ## Events
 
-If you only react to emitted hooks and forget about all their other features, you can treat Handsontable's hooks as pure events. You would want to limit your scope to `after` prefixed hooks, so they are emitted after something has happened and the results of the actions are already committed.
+如果您只对发出的钩子做出反应而忘记了它们的所有其他功能，则可以将 Handsontable 的钩子视为纯事件。您可能希望将范围限制为`after`前缀挂钩，以便在发生某些事情并且操作结果已经提交后发出它们。
 
 ::: only-for react
 
@@ -56,9 +56,9 @@ hot.addHook('afterCreateRow', (row, amount) => {
 
 :::
 
-## Middleware
+## 中间件
 
-Middleware is a concept known in the JavaScript world from Node.js frameworks such as Express or Koa. Middleware is a callback that can pipe to a process and allow the developer to modify it. We're no longer just reacting to an emitted event, but we can influence what's happening inside the component and modify the process.
+中间件是 JavaScript 世界中 Node.js 框架（例如 Express 或 Koa）中众所周知的概念。中间件是一个回调，可以通过管道传输到进程并允许开发人员对其进行修改。我们不再只是对发出的事件做出反应，而是可以影响组件内部发生的事情并修改流程。
 
 ::: only-for react
 
@@ -84,15 +84,15 @@ hot.addHook('modifyColWidth', (width, column) => {
 
 :::
 
-Note that the first argument is the current width that we're going to modify. Later arguments are immutable, and additional information can be used to decide whether the data should be modified.
+请注意，第一个参数是我们要修改的当前宽度。后面的参数是不可变的，并且可以使用附加信息来决定是否应该修改数据。
 
 ## Handsontable hooks
 
-We refer to all callbacks as "Handsontable hooks" because, although they share some characteristics with events and middleware, they combine them both in a unique structure. You may already be familiar with the concept as we're not the only ones that use the hooks convention.
+我们将所有回调称为`Handsontable hooks`，因为尽管它们与事件和中间件共享一些特征，但它们将它们组合在一个独特的结构中。您可能已经熟悉这个概念，因为我们并不是唯一使用 hooks 约定的人。
 
-Almost all `before`-prefixed Handsontable hooks let you return `false` and, therefore, block the execution of an action. It may be used for validation, rejecting operation by the outside service, or blocking our native algorithm and replace it with a custom implementation.
+几乎所有以`before`为前缀的 Handsontable 挂钩都可以让您返回`false`，从而阻止操作的执行。它可用于验证、拒绝外部服务的操作，或阻止我们的本机算法并将其替换为自定义实现。
 
-A great example for this is our integration with HyperFormula engine where creating a new row is only possible if the engine itself will allow it:
+一个很好的例子是我们与 HyperFormula 引擎的集成，只有在引擎本身允许的情况下才能创建新行：
 
 ::: only-for react
 
@@ -119,7 +119,7 @@ hot.addHook('beforeCreateRow', (row, amount) => {
 
 :::
 
-The first argument may be modified and passed on through the Handsontable hooks that are next in the queue. This characteristic is shared between `before` and `after` hooks but is more common with the former. Before something happens, we can run the data through a pipeline of hooks that may modify or reject the operation. This provides many possibilities to extend the default Handsontable functionality and customize it for your application.
+第一个参数可以被修改并通过队列中下一个的 Handsontable 挂钩传递。这个特性在`before`和`after`钩子之间共享，但在前者中更常见。在事情发生之前，我们可以通过钩子管道运行数据，这些钩子可能会修改或拒绝操作。这为扩展默认的 Handsontable 功能并为您的应用程序自定义它提供了多种可能性。
 
 ::: only-for react
 
@@ -135,9 +135,9 @@ The first argument may be modified and passed on through the Handsontable hooks 
 
 :::
 
-## All available Handsontable hooks example
+## 所有可用的 Handsontable 挂钩示例
 
-Note that some callbacks are checked on this page by default.
+请注意，默认情况下，此页面上会检查某些回调。
 
 ::: example-without-tabs #example1
 
@@ -147,40 +147,41 @@ Note that some callbacks are checked on this page by default.
 
 :::
 
-## Definition for `source` argument
+## `source` 参数的定义
 
-It's worth mentioning that some Handsontable hooks are triggered from the Handsontable core and some from the plugins. In some situations, it is helpful to know what triggered the callback. Did Handsontable trigger it, or was it triggered by external code or a user action? That's why in crucial hooks, Handsontable delivers `source` as an argument informing you who triggered the action and providing detailed information about the source. Using the information retrieved in the `source`, you can create additional conditions.
 
-`source` argument is optional. It takes the following values:
+值得一提的是，一些 Handsontable 钩子是从 Handsontable 核心触发的，还有一些是从插件触发的。在某些情况下，了解触发回调的原因会很有帮助。 Handsontable 是否触发了它，或者是由外部代码或用户操作触发的？这就是为什么在关键的钩子中，Handsontable 将`source`作为参数传递，通知您谁触发了操作并提供有关源的详细信息。使用`源`中检索到的信息，您可以创建其他条件。
 
-| Value                                              | Description                                                                                                                                                                                                            |
-| -------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `auto`                                             | Action triggered by Handsontable, and the reason for it is related directly to the settings applied to Handsontable. For example, [`afterCreateRow`](@/api/hooks.md#aftercreaterow) will be fired with this when [`minSpareRows`](@/api/options.md#minsparerows) will be greater than 0. |
-| `edit`                                             | Action triggered by Handsontable after the data has been changed, e.g., after an edit or using `setData*` methods.                                                                                                     |
-| `loadData`                                         | Action triggered by Handsontable after the [`loadData`](@/api/core.md#loaddata) method has been called with the [`data`](@/api/options.md#data) property.
-| `updateData`                                         | Action triggered by Handsontable after the [`updateData`](@/api/core.md#updatedata) method has been called; e.g., before or after a data change.                                                                                                     |
-| `populateFromArray`                                | Action triggered by Handsontable after requesting for populating data.                                                                                                                                                 |
-| `spliceCol`                                        | Action triggered by Handsontable after the column data splicing has been done.                                                                                                                                         |
-| `spliceRow`                                        | Action triggered by Handsontable after the row data splicing has been done.                                                                                                                                            |
-| `timeValidate`                                     | Action triggered by Handsontable after the time validator has been called, e.g., after an edit.                                                                                                                        |
-| `dateValidate`                                     | Action triggered by Handsontable after the date validator has been called, e.g., after an edit.                                                                                                                        |
-| `validateCells`                                    | Action triggered by Handsontable after the validation process has been triggered.                                                                                                                                      |
-| [`Autofill.fill`](@/api/autofill.md)               | Action triggered by the AutoFill plugin.                                                                                                                                                                               |
-| [`ContextMenu.clearColumns`](@/api/contextMenu.md) | Action triggered by the ContextMenu plugin after the "Clear column" has been clicked.                                                                                                                                  |
-| [`ContextMenu.columnLeft`](@/api/contextMenu.md)   | Action triggered by the ContextMenu plugin after the "Insert column left" has been clicked.                                                                                                                            |
-| [`ContextMenu.columnRight`](@/api/contextMenu.md)  | Action triggered by the ContextMenu plugin after the "Insert column right" has been clicked.                                                                                                                           |
-| [`ContextMenu.removeColumn`](@/api/contextMenu.md) | Action triggered by the ContextMenu plugin after the "Remove column" has been clicked.                                                                                                                                 |
-| [`ContextMenu.removeRow`](@/api/contextMenu.md)    | Action triggered by the ContextMenu plugin after the "Remove Row" has been clicked.                                                                                                                                    |
-| [`ContextMenu.rowAbove`](@/api/contextMenu.md)     | Action triggered by the ContextMenu plugin after the "Insert row above" has been clicked.                                                                                                                              |
-| [`ContextMenu.rowBelow`](@/api/contextMenu.md)     | Action triggered by the ContextMenu plugin after the "Insert row below" has been clicked.                                                                                                                              |
-| [`CopyPaste.paste`](@/api/copyPaste.md)            | Action triggered by the CopyPaste plugin after the value has been pasted.                                                                                                                                              |
-| `MergeCells`                            | Action triggered by the MergeCells plugin when clearing the merged cells' underlying cells. |
-| [`UndoRedo.redo`](@/api/undoRedo.md)               | Action triggered by the UndoRedo plugin after the change has been redone.                                                                                                                                              |
-| [`UndoRedo.undo`](@/api/undoRedo.md)               | Action triggered by the UndoRedo plugin after the change has been undone.                                                                                                                                              |
-| [`ColumnSummary.set`](@/api/columnSummary.md)      | Action triggered by the ColumnSummary plugin after the calculation has been done.                                                                                                                                      |
-| [`ColumnSummary.reset`](@/api/columnSummary.md)    | Action triggered by the ColumnSummary plugin after the calculation has been reset.                                                                                                                                     |
+`source` 参数是可选的。它采用以下值：
 
-List of callbacks that operate on the `source` parameter:
+| Value                                              | 描述                                                                                                                                                                                                     |
+| -------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `auto`                                             | 由 Handsontable 触发的操作，其原因与应用于 Handsontable 的设置直接相关。例如，当 [`minSpareRows`](@/api/options.md#minsparerows) 大于 0 时，[`afterCreateRow`](@/api/hooks.md#aftercreaterow) 将被触发。 |
+| `edit`                                             | 数据更改后由 Handsontable 触发的操作，例如编辑或使用`setData*`方法后。                                                                                                                                   |
+| `loadData`                                         | 使用 [`data`](@/api/options.md#data) 属性调用 [`loadData`](@/api/core.md#loaddata) 方法后，由 Handsontable 触发的操作。                                                                                  |
+| `updateData`                                       | 调用 [`updateData`](@/api/core.md#updatedata) 方法后由 Handsontable 触发的操作；例如，数据更改之前或之后。                                                                                               |
+| `populateFromArray`                                | Handsontable 在请求填充数据后触发的操作。                                                                                                                                                                |
+| `spliceCol`                                        | 列数据拼接完成后由Handsontable触发的动作。                                                                                                                                                               |
+| `spliceRow`                                        | 行数据拼接完成后由 Handsontable 触发的操作。                                                                                                                                                             |
+| `timeValidate`                                     | 调用时间验证器后（例如编辑后）由 Handsontable 触发的操作。                                                                                                                                               |
+| `dateValidate`                                     | 调用日期验证器后（例如编辑后）由 Handsontable 触发的操作。                                                                                                                                               |
+| `validateCells`                                    | 触发验证过程后由 Handsontable 触发的操作。                                                                                                                                                               |
+| [`Autofill.fill`](@/api/autofill.md)               | 由自动填充插件触发的操作。                                                                                                                                                                               |
+| [`ContextMenu.clearColumns`](@/api/contextMenu.md) | 单击`清除列`后由 ContextMenu 插件触发的操作。                                                                                                                                                            |
+| [`ContextMenu.columnLeft`](@/api/contextMenu.md)   | 单击`向左插入列`后由 ContextMenu 插件触发的操作。                                                                                                                                                        |
+| [`ContextMenu.columnRight`](@/api/contextMenu.md)  | 单击`向右插入列`后由 ContextMenu 插件触发的操作。                                                                                                                                                        |
+| [`ContextMenu.removeColumn`](@/api/contextMenu.md) | 单击`删除列`后由 ContextMenu 插件触发的操作。                                                                                                                                                            |
+| [`ContextMenu.removeRow`](@/api/contextMenu.md)    | 单击`删除行`后由 ContextMenu 插件触发的操作。                                                                                                                                                            |
+| [`ContextMenu.rowAbove`](@/api/contextMenu.md)     | 单击`在上方插入行`后由 ContextMenu 插件触发的操作。                                                                                                                                                      |
+| [`ContextMenu.rowBelow`](@/api/contextMenu.md)     | 单击`在下面插入行`后由 ContextMenu 插件触发的操作。                                                                                                                                                      |
+| [`CopyPaste.paste`](@/api/copyPaste.md)            | 粘贴值后由 CopyPaste 插件触发的操作。                                                                                                                                                                    |
+| `MergeCells`                                       | 清除合并单元格的底层单元格时由 MergeCells 插件触发的操作。                                                                                                                                               |
+| [`UndoRedo.redo`](@/api/undoRedo.md)               | 重做更改后由 UndoRedo 插件触发的操作。                                                                                                                                                                   |
+| [`UndoRedo.undo`](@/api/undoRedo.md)               | 撤消更改后由 UndoRedo 插件触发的操作。                                                                                                                                                                   |
+| [`ColumnSummary.set`](@/api/columnSummary.md)      | 计算完成后由 ColumnSummary 插件触发的操作。                                                                                                                                                              |
+| [`ColumnSummary.reset`](@/api/columnSummary.md)    | 重置计算后由 ColumnSummary 插件触发的操作。                                                                                                                                                              |
+
+对`source`参数进行操作的回调列表：
 
 - [`afterChange`](@/api/hooks.md#afterchange)
 - [`afterCreateCol`](@/api/hooks.md#aftercreatecol)
@@ -201,12 +202,12 @@ List of callbacks that operate on the `source` parameter:
 - [`beforeRemoveRow`](@/api/hooks.md#beforeremoverow)
 - [`beforeValidate`](@/api/hooks.md#beforevalidate)
 
-## The [`beforeKeyDown`](@/api/hooks.md#beforekeydown) callback
+## [`beforeKeyDown`](@/api/hooks.md#beforekeydown) 回调
 
-The following demo uses [`beforeKeyDown`](@/api/hooks.md#beforekeydown) callback to modify some key bindings:
+以下演示使用 [`beforeKeyDown`](@/api/hooks.md#beforekeydown) 回调来修改一些按键绑定：
 
-- Pressing <kbd>**Delete**</kbd> or <kbd>**Backspace**</kbd> on a cell deletes the cell and shifts all cells beneath it in the column up resulting in the cursor, which doesn't move, having the value previously beneath it, now in the current cell.
-- Pressing <kbd>**Enter**</kbd> in a cell where the value remains unchanged pushes all the cells in the column beneath and including the current cell down one row. This results in a blank cell under the cursor which hasn't moved.
+- 在单元格上按 <kbd>**Delete**</kbd> 或 <kbd>**Backspace**</kbd> 会删除该单元格，并将列中其下方的所有单元格向上移动，从而导致光标移动不移动，之前在其下方的值现在位于当前单元格中。
+- 在值保持不变的单元格中按 <kbd>**Enter**</kbd> 会将下方列中的所有单元格（包括当前单元格）下移一行。这会导致光标下出现一个未移动的空白单元格。
 
 ::: only-for javascript
 

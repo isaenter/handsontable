@@ -64,13 +64,13 @@ const ExampleComponent = () => {
       columns={[
         {
           title: 'Model<br>(text)',
-          // set the type of the 'Model' column
+          // 设置`模型`列的类型
           type: 'text',
           data: 'model',
         },
         {
           title: 'Price<br>(numeric)',
-          // set the type of the 'Price' column
+          // 设置`价格`列的类型
           type: 'numeric',
           data: 'price',
           numericFormat: {
@@ -80,7 +80,7 @@ const ExampleComponent = () => {
         },
         {
           title: 'Sold on<br>(date)',
-          // set the type of the 'Date' column
+          // 设置`日期`列的类型
           type: 'date',
           data: 'sellDate',
           dateFormat: 'MMM D, YYYY',
@@ -89,7 +89,7 @@ const ExampleComponent = () => {
         },
         {
           title: 'Time<br>(time)',
-          // set the type of the 'Time' column
+          // 设置`时间`列的类型
           type: 'time',
           data: 'sellTime',
           timeFormat: 'hh:mm A',
@@ -98,14 +98,14 @@ const ExampleComponent = () => {
         },
         {
           title: 'In stock<br>(checkbox)',
-          // set the type of the 'In stock' column
+          // 设置`库存`列的类型
           type: 'checkbox',
           data: 'inStock',
           className: 'htCenter',
         },
         {
           title: 'Size<br>(dropdown)',
-          // set the type of the 'Size' column
+          // 设置`大小`列的类型
           type: 'dropdown',
           data: 'size',
           source: ['XS', 'S', 'M', 'L', 'XL'],
@@ -113,7 +113,7 @@ const ExampleComponent = () => {
         },
         {
           title: 'Color<br>(autocomplete)',
-          // set the type of the 'Size' column
+          // 设置`大小`列的类型
           type: 'autocomplete',
           data: 'color',
           source: ['White', 'Black', 'Yellow', 'Blue', 'Green'],
@@ -121,7 +121,7 @@ const ExampleComponent = () => {
         },
         {
           title: 'Email<br>(password)',
-          // set the type of the 'Email' column
+          // 设置`电子邮件`列的类型
           type: 'password',
           data: 'email',
         },

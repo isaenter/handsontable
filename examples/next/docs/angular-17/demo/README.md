@@ -1,6 +1,6 @@
 # Demo
 
-## Description
+## 描述
 
 This is a general purpose demo that showcases the most popular features of Handsontable in Angular.
 

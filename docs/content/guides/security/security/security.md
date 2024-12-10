@@ -1,6 +1,6 @@
 ---
 id: nb36sme6
-title: Security
+title: 安全
 metaTitle: Security - JavaScript Data Grid | Handsontable
 description: Learn about the security measures we take to make sure you can safely implement Handsontable in your client-side application.
 permalink: /security
@@ -12,113 +12,113 @@ searchCategory: Guides
 category: Security
 ---
 
-# Security
+# 安全
 
-Learn about the security measures we take to make sure you can safely implement Handsontable in your client-side application.
+了解我们为确保您可以在客户端应用程序中安全地实施 Handsontable 而采取的安全措施。
 
 [[toc]]
 
 ## 概述
 
-At Handsontable, we take security very seriously. We integrate with Security Tools and Policies to provide a secure data grid. This document provides information on our Security Certification, Audits, and Policies.
+在 Handsontable，我们非常重视安全性。我们与安全工具和策略集成以提供安全的数据网格。本文档提供有关我们的安全认证、审核和政策的信息。
 
-## Secure data transportation
+## 安全数据传输
 
-Handsontable's software is browser-based, and does not communicate with a server. We do not offer or provide recommendations for application-specific back-end solutions.
+Handsontable 的软件是基于浏览器的，不与服务器通信。我们不提供特定于应用程序的后端解决方案或提供建议。
 
-You need to ensure that the data transportation method that you use, both at the back-end and the front-end, is secure.
+您需要确保您在后端和前端使用的数据传输方法是安全的。
 
-## Content Security Policy (CSP)
+## 内容安全策略 (CSP)
 
-Content Security Policy (CSP) is an added layer of security, used by app vendors to detect and diminish certain types of attacks, such as cross-site scripting (XSS) or data theft.
+内容安全策略 (CSP) 是一个附加的安全层，应用程序供应商使用它来检测和减少某些类型的攻击，例如跨站点脚本 (XSS) 或数据盗窃。
 
-Handsontable doesn't use external fonts, images or scripts.
+Handsontable 不使用外部字体、图像或脚本。
 
-If you use CSP in your app, the only rules that you might need to add for Handsontable to run are `script-src` and `style-src`:
+如果您在应用程序中使用 CSP，则可能需要为 Handsontable 运行添加的唯一规则是`script-src`和`style-src`：
 
-- `script-src` loads Handsontable's script file. Point it at the origin (domain) where you placed your Handsontable assets.
-- `style-src ... 'unsafe-inline'` loads Handsontable's stylesheet file. Point it at the origin (domain) where you placed your Handsontable assets. Handsontable's XSS prevention logic (DOMPurify) needs the `'unsafe-inline'` source expression for certain features (for example, copy and paste).
+- `script-src` 加载 Handsontable 的脚本文件。将其指向您放置 Handsontable 资产的源（域）。
+- `style-src ... 'unsafe-inline'` 加载 Handsontable 的样式表文件。将其指向您放置 Handsontable 资产的源（域）。 Handsontable 的 XSS 预防逻辑 (DOMPurify) 需要`不安全内联`源表达式来实现某些功能（例如复制和粘贴）。
 
-An example CSP rule for Handsontable hosted on the same app's origin:
+托管在同一应用程序源上的 Handsontable 的 CSP 规则示例：
 
 ```html
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'">
 ```
-An example CSP rule for Handsontable hosted on a CDN (cdn.jsdelivr.net):
+CDN (cdn.jsdelivr.net) 上托管的 Handsontable 的 CSP 规则示例：
 
 ```html
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' cdn.jsdelivr.net">
 ```
 
-## Third-party software
+## 第三方软件
 
-We use dependencies in the form of third-party software, and we take a responsibility to keep them up to date and secure. We also use [Fossa](https://fossa.com), third-party software, to stay compliant with third-party license terms.
+我们以第三方软件的形式使用依赖项，并有责任使其保持最新且安全。我们还使用第三方软件 [Fossa](https://fossa.com) 来遵守第三方许可条款。
 
-## Content sanitizing
+## 内容清理
 
-We use [dompurify](https://www.npmjs.com/package/dompurify) to sanitize the content put into the data grid. But we strongly recommend additional server-side validation to protect your data.
+我们使用 [dompurify](https://www.npmjs.com/package/dompurify) 来清理放入数据网格中的内容。但我们强烈建议额外的服务器端验证来保护您的数据。
 
-## High-quality code pledge
+## 高质量代码承诺
 
-We pledge to deliver high-quality code. You can see our high-quality code score [here](https://lgtm.com/projects/g/handsontable/handsontable/context:javascript).
+我们承诺提供高质量的代码。您可以在[此处](https://lgtm.com/projects/g/handsontable/handsontable/context:javascript)查看我们的高质量代码分数。
 
-Our policy is to fix issues when they arise, as quickly as possible, and keep the library up to date. This requires from you, a user of this software, to keep your copy of Handsontable's software up to date.
+我们的政策是在问题出现时尽快解决问题，并使库保持最新状态。这要求您（该软件的用户）及时更新您的 Handsontable 软件副本。
 
-## Security certificates
+## 安全证书
 
-We regularly order security audits of the entire Handsontable codebase, carried out by independent cybersecurity experts.
+我们定期下令对整个 Handsontable 代码库进行安全审计，由独立的网络安全专家进行。
 
-The latest security audits:
+最新安全审核：
 
-| Handsontable version | Company   | Concluded on | Certificate                                             |
-|----------------------|-----------|--------------|---------------------------------------------------------|
-| 8.2.0                | Securitum | Nov 30, 2020 | [Download]({{$basePath}}/securitum-certificate.pdf)     |
-| 11.1.0               | Seqred    | Feb 21, 2022 | [Download]({{$basePath}}/seqred-certificate.pdf)        |
-| 12.3.3               | TestArmy  | Apr 28, 2023 | [Download]({{$basePath}}/testarmy-certificate.pdf)      |
-| 14.3.0               | TestArmy  | Apr 19, 2024 | [Download]({{$basePath}}/testarmy-certificate-2024.pdf) |                                                     |
+| Handsontable 版本 | 公司      | 结束于       | 证书                                                    |
+| ----------------- | --------- | ------------ | ------------------------------------------------------- |
+| 8.2.0             | Securitum | Nov 30, 2020 | [Download]({{$basePath}}/securitum-certificate.pdf)     |
+| 11.1.0            | Seqred    | Feb 21, 2022 | [Download]({{$basePath}}/seqred-certificate.pdf)        |
+| 12.3.3            | TestArmy  | Apr 28, 2023 | [Download]({{$basePath}}/testarmy-certificate.pdf)      |
+| 14.3.0            | TestArmy  | Apr 19, 2024 | [Download]({{$basePath}}/testarmy-certificate-2024.pdf) |  |
 
-The security audits were carried out in accordance with industry-standard methodologies, including:
-- OWASP Top 10
-- OWASP Application Security Verification Standard (ASVS)
+安全审核是根据行业标准方法进行的，包括：
+- OWASP 前 10 名
+- OWASP 应用程序安全验证标准 (ASVS)
 
-For detailed security reports, contact our [Technical Support Team](https://handsontable.com/contact?category=technical_support).
+如需详细的安全报告，请联系我们的[技术支持团队](https://handsontable.com/contact?category=technical_support)。
 
-## Code auditing
+## 代码审计
 
-We use [Snyk](https://snyk.io/test/github/handsontable/handsontable?targetFile=package.json) to audit our code. Snyk integrates seamlessly into our development workflows, checking for vulnerabilities in our source code and in any dependencies, including open-source dependencies.
+我们使用 [Snyk](https://snyk.io/test/github/handsontable/handsontable?targetFile=package.json) 来审核我们的代码。 Snyk 无缝集成到我们的开发工作流程中，检查源代码和任何依赖项（包括开源依赖项）中的漏洞。
 
-Snyk provides security status notifications via email or Slack, to:
- -  Monitor handsontable/handsontable:package.json in less than a minute
- -  Find vulnerabilities using Snyk’s market-leading database
+Snyk 通过电子邮件或 Slack 提供安全状态通知，以便：
+ - 在不到一分钟的时间内监控handsontable/handsontable:package.json
+ - 使用 Snyk 市场领先的数据库查找漏洞
 
-## Insurance
+## 保险
 
-We are insured by Lloyds of London. Our policy protects Handsontable and our customers:
+我们由伦敦劳合社承保。我们的政策保护 Handsontable 和我们的客户：
 
-| Our Customers                           | Handsoncode (Us)                                   |
-| --------------------------------------- | -------------------------------------------------- |
-| Cyber media liability                   | Loss or damage to the insured's data or networks   |
-| Privacy liability and loss of documents | Business interruption                               |
-| Breach of confidentiality liability     | Cyber theft                                        |
-| Cyber security liability                | Cyber extortion                                    |
-| Mitigation costs                        | Telephone hacking of the insured's telephone lines |
-| Regulatory actions and fines            | Notification expenses                              |
-| Damage to insured's reputation          | Damage of the insured's reputation                 |
+| 我们的客户         | Handsoncode (Us)               |
+| ------------------ | ------------------------------ |
+| 网络媒体责任       | 被保险人的数据或网络丢失或损坏 |
+| 隐私责任和文件丢失 | 业务中断                       |
+| 违反保密责任       | 网络盗窃                       |
+| 网络安全责任       | 网络勒索                       |
+| 缓解成本           | 窃听被保险人电话线的电话       |
+| 监管行动和罚款     | 通知费用                       |
+| 被保险人声誉受损   | 被保险人名誉受损               |
 
-## Code escrow
+## 代码托管
 
-**This service is available for an additional fee. [Ask our Sales Team](https://handsontable.com/contact?category=request_for_quotation) about the pricing.**
+**此服务需额外付费。 [向我们的销售团队询问](https://handsontable.com/contact?category=request_for_quotation) 有关定价的信息。**
 
-Code Escrow ensures that software is maintained, protected, and not abandoned.
+代码托管可确保软件得到维护、保护且不会被废弃。
 
-We host our code on GitHub, a trusted, safe platform hosted by Microsoft. In the unlikely event that something happened to our code on GitHub, a copy of our code is still protected and managed by [Codekeeper](https://codekeeper.co/), a source-code escrow company.
+我们将代码托管在 GitHub 上，这是一个由 Microsoft 托管的值得信赖的安全平台。万一我们在 GitHub 上的代码发生问题，我们的代码副本仍然受到源代码托管公司 [Codekeeper](https://codekeeper.co/) 的保护和管理。
 
-We deposit all of our code releases automatically into CodeKeeper. In the case of a release event, Codekeeper provides quick recovery 24/7/365.
+我们将所有代码版本自动存入 CodeKeeper。如果发生发布事件，Codekeeper 可以提供 24/7/365 的快速恢复。
 
-## Report a security breach
+## 报告安全漏洞
 
-Security of our software and its application in our customers' system is our top priority. Please report any suspicious activity or evidence to [security@handsontable.com](mailto:security@handsontable.com), and we will respond promptly.
+我们的软件及其在客户系统中的应用的安全性是我们的首要任务。请将任何可疑活动或证据报告给 [security@handsontable.com](mailto:security@handsontable.com)，我们将及时回复。
 
-## Bug bounty
+## 漏洞赏金
 
-We don't offer a bug bounty program, but we sincerely appreciate the work done by security researchers and independent developers.
+我们不提供错误赏金计划，但我们真诚地感谢安全研究人员和独立开发人员所做的工作。

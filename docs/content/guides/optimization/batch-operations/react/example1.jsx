@@ -41,7 +41,7 @@ const ExampleComponent = () => {
     hot?.alter('remove_row', 10, 10);
     hot?.setCellMeta(0, 5, 'className', 'red-bg');
     hot?.setCellMeta(10, 5, 'className', 'red-bg');
-    hot?.render(); // Render is needed here to populate the new "className"s
+    hot?.render(); // 这里需要渲染来填充新的`className`
   };
 
   const buttonWithoutClickCallback = () => {
@@ -74,14 +74,14 @@ const ExampleComponent = () => {
             className="button button--primary"
             onClick={() => buttonWithoutClickCallback()}
           >
-            Run without batch method
+            不使用批处理方法运行
           </button>
           <button
             id="buttonWith"
             className="button button--primary"
             onClick={() => buttonWithClickCallback()}
           >
-            Run with batch method
+            以批处理方式运行
           </button>
         </div>
         <output className="console" id="output">

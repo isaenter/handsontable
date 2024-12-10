@@ -1,6 +1,6 @@
 ---
 id: d2in9k81
-title: Row moving
+title: 行移动
 metaTitle: Row moving - JavaScript Data Grid | Handsontable
 description: Change the order of rows, either manually (dragging them to another location), or programmatically (using Handsontable's API methods).
 permalink: /row-moving
@@ -12,17 +12,17 @@ searchCategory: Guides
 category: Rows
 ---
 
-# Row moving
+# 行移动
 
-Change the order of rows, either manually (dragging them to another location), or programmatically (using Handsontable's API methods).
+手动（将它们拖到另一个位置）或以编程方式（使用 Handsontable 的 API 方法）更改行的顺序。
 
 [[toc]]
 
-## Enable the `ManualRowMove` plugin
+## 启用`ManualRowMove`插件
 
-To enable row moving, set the [`manualRowMove`](@/api/options.md#manualrowmove) option to `true`.
+要启用行移动，请将 [`manualRowMove`](@/api/options.md#manualrowmove) 选项设置为 `true`。
 
-A draggable move handle appears above the selected row header. You can click and drag it to any location in the row header body.
+可拖动的移动手柄出现在所选行标题上方。您可以单击并将其拖动到行标题正文中的任何位置。
 
 ::: only-for javascript
 
@@ -46,13 +46,13 @@ A draggable move handle appears above the selected row header. You can click and
 
 :::
 
-## Drag and move actions of `manualRowMove` plugin
+## `manualRowMove` 插件的拖动和移动动作
 
-There are significant differences between the plugin's [`dragRows`](@/api/manualRowMove.md#dragrows) and [`moveRows`](@/api/manualRowMove.md#moverows) API functions. Both of them change the order of rows, but they rely on different kinds of indexes. The differences between them are shown in the diagrams below.
+该插件的 [`dragRows`](@/api/manualRowMove.md#dragrows) 和 [`moveRows`](@/api/manualRowMove.md#moverows) API 函数之间存在显着差异。它们都改变行的顺序，但它们依赖于不同类型的索引。它们之间的差异如下图所示。
 
-Both of these methods trigger the [`beforeRowMove`](@/api/hooks.md#beforerowmove) and [`afterRowMove`](@/api/hooks.md#afterrowmove) hooks, but only [`dragRows`](@/api/manualRowMove.md#dragrows) passes the `dropIndex` argument to them.
+这两个方法都会触发 [`beforeRowMove`](@/api/hooks.md#beforerowmove) 和 [`afterRowMove`](@/api/hooks.md#afterrowmove) 挂钩，但只会触发 [`dragRows`](@ /api/manualRowMove.md#dragrows) 将 `dropIndex` 参数传递给它们。
 
-The [`dragRows`](@/api/manualRowMove.md#dragrows) method has a `dropIndex` parameter, which points to where the elements are being dropped.
+[`dragRows`](@/api/manualRowMove.md#dragrows) 方法有一个 `dropIndex` 参数，它指向要删除元素的位置。
 
 <span class="img-invert">
 
@@ -61,7 +61,7 @@ The [`dragRows`](@/api/manualRowMove.md#dragrows) method has a `dropIndex` param
 </span>
 
 
-The [`moveRows`](@/api/manualRowMove.md#moverows) method has a `finalIndex` parameter, which points to where the elements will be placed after the _moving_ action - `finalIndex` being the index of the first moved element.
+[`moveRows`](@/api/manualRowMove.md#moverows) 方法有一个 `finalIndex` 参数，它指向在 _moving_ 操作之后元素将被放置的位置 -`finalIndex` 是第一个移动元素的索引。
 
 <span class="img-invert">
 
@@ -69,7 +69,7 @@ The [`moveRows`](@/api/manualRowMove.md#moverows) method has a `finalIndex` para
 
 </span>
 
-The [`moveRows`](@/api/manualRowMove.md#moverows) function cannot perform some actions, e.g., more than one element can't be moved to the last position. In this scenario, the move will be cancelled. The Plugin's [`isMovePossible`](@/api/manualRowMove.md#ismovepossible) API method and the `movePossible` parameters `beforeRowMove` and `afterRowMove` hooks help in determine such situations.
+[`moveRows`](@/api/manualRowMove.md#moverows) 函数无法执行某些操作，例如，无法将多个元素移动到最后一个位置。在这种情况下，移动将被取消。插件的 [`isMovePossible`](@/api/manualRowMove.md#ismovepossible) API 方法和 `movePossible` 参数 `beforeRowMove` 和 `afterRowMove` 挂钩有助于确定此类情况。
 
 ## 相关API参考
 

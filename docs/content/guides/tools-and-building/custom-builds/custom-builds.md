@@ -1,6 +1,6 @@
 ---
 id: 7a5vawwl
-title: Custom builds
+title: 定制构建
 metaTitle: Custom builds - JavaScript Data Grid | Handsontable
 description: Handsontable's building process transforms the source files located in the code repository into dedicated packages.
 permalink: /custom-builds
@@ -16,33 +16,33 @@ searchCategory: Guides
 category: Tools and building
 ---
 
-# Custom builds
+# 定制构建
 
-Handsontable's building process transforms the source files located in the code repository into dedicated packages.
+Handsontable 的构建过程将位于代码存储库中的源文件转换为专用包。
 
 [[toc]]
 
 ## 概述
 
-### Monorepo
+### 莫诺雷波
 
-The Handsontable repository is a monorepo that contains the following projects:
+Handsontable 存储库是一个单一存储库，包含以下项目：
 
-| Project                 | Location                  | Description                                                                                                |
-| ----------------------- |---------------------------|------------------------------------------------------------------------------------------------------------|
-| `handsontable`          | `/handsontable`           | Main Handsontable project                                                                                  |
-| `@handsontable/react`   | `/wrappers/react`         | [React wrapper](@/react/guides/getting-started/introduction/introduction.md)                               |
-| `@handsontable/react-wrapper`  | `/wrappers/react-wrapper` | [React wrapper (functional components)](@/react/guides/getting-started/introduction/introduction.md)       |
-| `@handsontable/angular` | `/wrappers/angular`       | [Angular wrapper](@/javascript/guides/integrate-with-angular/angular-installation/angular-installation.md) |
-| `@handsontable/vue`     | `/wrappers/vue`           | [Vue 2 wrapper](@/javascript/guides/integrate-with-vue/vue-installation/vue-installation.md)               |
-| `@handsontable/vue3`    | `/wrappers/vue3`          | [Vue 3 wrapper](@/javascript/guides/integrate-with-vue3/vue3-installation/vue3-installation.md)            |
+| Project                       | Location                  | Description                                                                                                |
+| ----------------------------- | ------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `handsontable`                | `/handsontable`           | Main Handsontable project                                                                                  |
+| `@handsontable/react`         | `/wrappers/react`         | [React wrapper](@/react/guides/getting-started/introduction/introduction.md)                               |
+| `@handsontable/react-wrapper` | `/wrappers/react-wrapper` | [React wrapper (functional components)](@/react/guides/getting-started/introduction/introduction.md)       |
+| `@handsontable/angular`       | `/wrappers/angular`       | [Angular wrapper](@/javascript/guides/integrate-with-angular/angular-installation/angular-installation.md) |
+| `@handsontable/vue`           | `/wrappers/vue`           | [Vue 2 wrapper](@/javascript/guides/integrate-with-vue/vue-installation/vue-installation.md)               |
+| `@handsontable/vue3`          | `/wrappers/vue3`          | [Vue 3 wrapper](@/javascript/guides/integrate-with-vue3/vue3-installation/vue3-installation.md)            |
 
-All the projects are released together, under the same version number.
-But each project has its own [building](#build-processes) and [testing](@/guides/tools-and-building/testing/testing.md) processes.
+所有项目都以相同的版本号一起发布。
+但每个项目都有自己的[构建](#build-processes)和[测试](@/guides/tools-and-building/testing/testing.md)流程。
 
-### Build processes
+### 构建流程
 
-The building processes transform the source files located in the `/handsontable/src/` directory into the following output files:
+构建过程将位于`/handsontable/src/`目录中的源文件转换为以下输出文件：
 
 - `/handsontable/dist/handsontable.js`
 - `/handsontable/dist/handsontable.css`
@@ -54,13 +54,13 @@ The building processes transform the source files located in the `/handsontable/
 
 ::: tip
 
-Don't modify the output files mentioned above. Instead, make changes in the `/handsontable/src/` directory and then run a selected [build](#build-the-packages). This is especially important if you want to contribute your changes back to Handsontable through a pull request.
+不要修改上面提到的输出文件。相反，在 `/handsontable/src/` 目录中进行更改，然后运行选定的 [build](#build-the-packages)。如果您想通过拉取请求将更改贡献回 Handsontable，这一点尤其重要。
 
-For more information on the distribution packages, see [this file](https://github.com/handsontable/handsontable/blob/master/handsontable/dist/README.md).
+有关分发包的更多信息，请参阅[此文件](https://github.com/handsontable/handsontable/blob/master/handsontable/dist/README.md)。
 
 :::
 
-### Build requirements
+### 构建要求
 
 Handsontable building processes require:
 - [Node.js](https://nodejs.org/) (version **20.x**+)
@@ -69,7 +69,7 @@ Handsontable building processes require:
 
 ### `package.json` files
 
-Each Handsontable [project](#monorepo) has its own building processes defined in its own `package.json` file. Apart from that, the root directory has its own `package.json` file as well:
+每个 Handsontable [项目](#monorepo) 都有自己的构建过程，在其自己的`package.json`文件中定义。除此之外，根目录还有自己的`package.json`文件：
 
 | File                             | Holds tasks for building:                           |
 | -------------------------------- | --------------------------------------------------- |
@@ -80,122 +80,122 @@ Each Handsontable [project](#monorepo) has its own building processes defined in
 | `/wrappers/vue/package.json`     | The Vue 2 package                                   |
 | `/wrappers/vue3/package.json`    | The Vue 3 package                                   |
 
-## Run your first build
+## 运行你的第一个构建
 
-To run your first build:
-1. Install [Node.js](https://nodejs.org/) (version **20.x**+).
-2. Install [npm](https://www.npmjs.com/) (version **9.x**+).
-3. Clone the [Handsontable repository](https://github.com/handsontable/handsontable).
-4. From the root directory, run `npm install`.<br>All the required dependencies get installed.
-5. From the root directory, run `npm run build`.<br>All the Handsontable packages get built.
+要运行您的第一个构建：
+1. 安装[Node.js](https://nodejs.org/)（版本**20.x**+）。
+2. 安装[npm](https://www.npmjs.com/)（版本**9.x**+）。
+3. 克隆[Handsontable存储库](https://github.com/handsontable/handsontable)。
+4. 从根目录运行`npm install`。<br>所有必需的依赖项都会安装。
+5. 从根目录运行`npm run build`。<br>所有 Handsontable 包都已构建。
+   
+## 构建包
 
-## Build the packages
+您可以一次构建所有包，也可以单独构建每个包。
 
-You can either build all the packages at once, or build each package individually.
+### 构建所有包
 
-### Build all the packages
-
-To build all the packages at once:
-1. Make sure you meet the [build requirements](#build-requirements).
-2. Go to the root directory.
-3. Run `npm run build`.<br>The script builds the following packages:
+要一次构建所有包：
+1. 确保满足[构建要求](#build-requirements)。
+2. 进入根目录。
+3. 运行 `npm run build`。<br>该脚本构建以下包：
      - The JavaScript package
      - The React package
      - The Angular package
      - The Vue 2 package
      - The Vue 3 package
-     - A code examples package
+     - 代码示例包
 
-### Build the JavaScript package
+### 构建 JavaScript 包
 
-To build the JavaScript package:
-1. Make sure you meet the [build requirements](#build-requirements).
-2. Go to `/handsontable`.
-3. Run `npm run build`.<br>Only the JavaScript package builds.
+要构建 JavaScript 包：
+1. 确保满足[构建要求](#build-requirements)。
+2. 转到`/handsontable`。
+3. 运行 `npm run build`。<br>仅构建 JavaScript 包。
 
-To build the JavaScript package from the root directory:
-1. Make sure you meet the [build requirements](#build-requirements).
-2. Go to the root directory.
-3. Run `npm run in handsontable build`.<br>Only the JavaScript package builds.
+要从根目录构建 JavaScript 包：
+1. 确保满足[构建要求](#build-requirements)。
+2. 进入根目录。
+3. 运行 `npm run in handsontable build`。<br>仅构建 JavaScript 包。
 
-#### JavaScript build tasks
+#### JavaScript 构建任务
 
-From the `/handsontable` directory, you can also run individual JavaScript `build` tasks:
+在`/handsontable`目录中，您还可以运行单独的 JavaScript`build`任务：
 
 ::: details JavaScript build tasks
 
 `npm run build:commonjs`
-  - Transpiles the files into the CommonJS format.
+  - 将文件转换为 CommonJS 格式。
 
 `npm run build:es`
-  - Transpiles the files into the ESM format.
+  - 将文件转换为 ESM 格式。
 
 `npm run build:umd`
-  - Creates the following bundles compatible with the Universal Module Definition:
+  - 创建与通用模块定义兼容的以下捆绑包：
     - `/handsontable/dist/handsontable.js`
     - `/handsontable/dist/handsontable.css`
     - `/handsontable/dist/handsontable.full.js`
     - `/handsontable/dist/handsontable.full.css`
 
 `npm run build:umd.min`
-  - Creates the minified bundles compatible with the Universal Module Definition:
+  - 创建与通用模块定义兼容的缩小包：
     - `/handsontable/dist/handsontable.min.js`
     - `/handsontable/dist/handsontable.min.css`
     - `/handsontable/dist/handsontable.min.full.js`
     - `/handsontable/dist/handsontable.min.full.css`
 
 `npm run build:walkontable`
-  - Builds Walkontable, an essential part of Handsontable that's responsible for the rendering process.
+  - 构建 Walkontable，它是 Handsontable 的重要组成部分，负责渲染过程。
 
 `npm run build:languages`
-  - Creates the [language](@/guides/internationalization/language/language.md) bundles compatible with the Universal Module Definition, for example:
+  - 创建与通用模块定义兼容的[语言](@/guides/internationalization/language/language.md)包，例如：
     - `/handsontable/dist/languages/de-DE.js`
     - `/handsontable/dist/languages/all.js`
 
 `build:languages.es`
-  - Creates the [language](@/guides/internationalization/language/language.md) bundles compatible with the ESM format, for example:
+  - 创建与 ESM 格式兼容的 [语言](@/guides/internationalization/language/language.md) 捆绑包，例如：
     - `languages/en-US.mjs`
 
 `npm run build:languages.min`
-   - Creates the minified [language](@/guides/internationalization/language/language.md) bundles compatible with the Universal Module Definition, for example:
+   - 创建与通用模块定义兼容的缩小的[语言](@/guides/internationalization/language/language.md)包，例如：
      - `/handsontable/dist/languages/de-DE.min.js`
      - `/handsontable/dist/languages/all.min.js`
 
 :::
 
-### Build the React package
+### 构建 React 包
 
-To build the React package:
-1. Make sure you meet the [build requirements](#build-requirements).
-2. Go to `/wrappers/react`.
-3. Run `npm run build`.<br>Only the React package builds.
+构建 React 包：
+1. 确保满足[构建要求](#build-requirements)。
+2. 转到`/wrappers/react`。
+3. 运行 `npm run build`。<br>仅构建 React 包。
 
-To build the React package from the root directory:
-1. Make sure you meet the [build requirements](#build-requirements).
-2. Go to the root directory.
-3. Run `npm run in react build`.<br>Only the React package builds.
+要从根目录构建 React 包：
+1. 确保满足[构建要求](#build-requirements)。
+2. 进入根目录。
+3. 运行 `npm run in react build`。<br>仅构建 React 包。
 
-#### React build tasks
+#### React 构建任务
 
-From the `/wrappers/react` directory, you can also run individual React `build` tasks:
+从 `/wrappers/react` 目录中，您还可以运行单独的 React `build` 任务：
 
 ::: details React build tasks
 
 `npm run build:commonjs`
-  - Transpiles the files into the CommonJS format.
-  - Places the output in `/wrappers/react/commonjs/react-handsontable.js`
+  - 将文件转换为 CommonJS 格式。
+  - 将输出放置在 `/wrappers/react/commonjs/react-handsontable.js` 中
 
 `npm run build:umd`
-  - Creates the following bundles compatible with the Universal Module Definition:
+  - 创建与通用模块定义兼容的以下捆绑包：
     - `/wrappers/react/dist/react-handsontable.js`
     - `/wrappers/react/dist/react-handsontable.js.map`
 
 `npm run build:es`
-  - Transpiles the files into the ESM format.
-  - Places the output in `/wrappers/react/es/react-handsontable.mjs`
+  - 将文件转换为 ESM 格式。
+  - 将输出放置在 `/wrappers/react/es/react-handsontable.mjs` 中
 
 `npm run build:min`
-  - Creates the minified bundles:
+  - 创建缩小的捆绑包：
     - `/wrappers/react/dist/react-handsontable.min.js`
     - `/wrappers/react/dist/react-handsontable.min.js.map`
 
@@ -203,27 +203,27 @@ From the `/wrappers/react` directory, you can also run individual React `build` 
 
 ::: only-for javascript
 
-### Build the Angular package
+### 构建 Angular 包
 
-To build the Angular package:
-1. Make sure you meet the [build requirements](#build-requirements).
-3. Go to `/wrappers/angular`.
-4. Run `npm run build`.<br>Only the Angular package builds.
+构建 Angular 包：
+1. 确保满足[构建要求](#build-requirements)。
+3. 转到`/wrappers/angular`。
+4. 运行 `npm run build`。<br>仅构建 Angular 包。
 
-To build the Angular package from the root directory:
-1. Make sure you meet the [build requirements](#build-requirements).
-2. Go to the root directory.
-3. Run `npm run in angular build`.<br>Only the Angular package builds.
+要从根目录构建 Angular 包：
+1. 确保满足[构建要求](#build-requirements)。
+2. 进入根目录。
+3. 运行 `npm run in Angular build`。<br>仅构建 Angular 包。
 
-#### Angular build tasks
+#### Angular 构建任务
 
-From the `/wrappers/angular` directory, You can also run individual Angular `build` tasks:
+在`/wrappers/angular`目录中，您还可以运行单独的 Angular`build`任务：
 
 ::: details Angular build tasks
 
 `npm run build`
-  - Builds the `@handsontable/angular` package for multiple module systems.
-  - Places the output in the `/wrappers/angular/dist/hot-table/` directory.
+  - 为多模块系统构建`@handsontable/angular`包。
+  - 将输出放置在 `/wrappers/angular/dist/hot-table/` 目录中。
 
 :::
 
@@ -231,39 +231,39 @@ From the `/wrappers/angular` directory, You can also run individual Angular `bui
 
 ::: only-for javascript
 
-### Build the Vue 2 package
+### 构建 Vue 2 包
 
-To build the Vue 2 package:
-1. Make sure you meet the [build requirements](#build-requirements).
-2. Go to `/wrappers/vue`.
-3. Run `npm run build`.<br>Only the Vue 2 package builds.
+构建 Vue 2 包：
+1. 确保满足[构建要求](#build-requirements)。
+2. 转到`/wrappers/vue`。
+3. 运行 `npm run build`。<br>仅构建 Vue 2 包。
+   
+要从根目录构建 Vue 2 包：
+1. 确保满足[构建要求](#build-requirements)。
+2. 进入根目录。
+3. 运行 `npm run in vue build`。<br>仅构建 Vue 2 包。
 
-To build the Vue 2 package from the root directory:
-1. Make sure you meet the [build requirements](#build-requirements).
-2. Go to the root directory.
-3. Run `npm run in vue build`.<br>Only the Vue 2 package builds.
+#### Vue 2 构建任务
 
-#### Vue 2 build tasks
-
-From the `/wrappers/vue` directory, you can also run individual Vue 2 `build` tasks:
+从 `/wrappers/vue` 目录中，您还可以运行单独的 Vue 2 `build` 任务：
 
 ::: details Vue 2 build tasks
 
 `npm run build:commonjs`
-  - Transpiles the files into the CommonJS format.
-  - Places the output in `/wrappers/vue/commonjs/vue-handsontable.js`
+  - 将文件转换为 CommonJS 格式。
+  - 将输出放置在 `/wrappers/vue/commonjs/vue-handsontable.js` 中
 
 `npm run build:umd`
-  - Creates the following bundles compatible with the Universal Module Definition:
+  - 创建与通用模块定义兼容的以下捆绑包：
     - `/wrappers/vue/dist/vue-handsontable.js`
     - `/wrappers/vue/dist/vue-handsontable.js.map`
 
 `npm run build:es`
-  - Transpiles the files into the ESM format.
-  - Places the output in `/wrappers/vue/es/vue-handsontable.mjs`
-
+  - 将文件转换为 ESM 格式。
+  - 将输出放置在 `/wrappers/vue/es/vue-handsontable.mjs` 中
+  
 `npm run build:min`
-  - Creates the minified bundles:
+  - 创建缩小的捆绑包：
     - `/wrappers/vue/dist/vue-handsontable.min.js`
     - `/wrappers/vue/dist/vue-handsontable.min.js.map`
 
@@ -273,39 +273,39 @@ From the `/wrappers/vue` directory, you can also run individual Vue 2 `build` ta
 
 ::: only-for javascript
 
-### Build the Vue 3 package
+### 构建 Vue 3 包
 
-To build the Vue 3 package:
-1. Make sure you meet the [build requirements](#build-requirements).
-2. Go to `/wrappers/vue3 `.
-3. Run `npm run build`.<br>Only the Vue 3 package builds.
+构建 Vue 3 包：
+1. 确保满足[构建要求](#build-requirements)。
+2. 转到`/wrappers/vue3`。
+3. 运行 `npm run build`。<br>仅构建 Vue 3 包。
 
-To build the Vue 3 package from the root directory:
-1. Make sure you meet the [build requirements](#build-requirements).
-2. Go to the root directory.
-3. Run `npm run in vue3 build`.<br>Only the Vue 3 package builds.
+要从根目录构建 Vue 3 包：
+1. 确保满足[构建要求](#build-requirements)。
+2. 进入根目录。
+3. 运行 `npm run in vue3 build`。<br>仅构建 Vue 3 包。
 
-#### Vue 3 build tasks
+#### Vue 3 构建任务
 
-From the `/wrappers/vue3` directory, you can also run individual Vue 3 `build` tasks:
+从 `/wrappers/vue3` 目录中，您还可以运行单独的 Vue 3 `build` 任务：
 
 ::: details Vue 3 build tasks
 
 `npm run build:commonjs`
-  - Transpiles the files into the CommonJS format.
-  - Places the output in `/wrappers/vue3/commonjs/vue-handsontable.js`
+  - 将文件转换为 CommonJS 格式。
+  - 将输出放置在 `/wrappers/vue3/commonjs/vue-handsontable.js` 中
 
 `npm run build:umd`
-  - Creates the following bundles compatible with the Universal Module Definition:
+  - 创建与通用模块定义兼容的以下捆绑包：
     - `/wrappers/vue3/dist/vue-handsontable.js`
     - `/wrappers/vue3/dist/vue-handsontable.js.map`
 
 `npm run build:es`
-  - Transpiles the files into the ESM format.
-  - Places the output in `/wrappers/vue3/es/vue-handsontable.mjs`
+  - 将文件转换为 ESM 格式。
+  - 将输出放置在 `/wrappers/vue3/es/vue-handsontable.mjs` 中
 
 `npm run build:min`
-  - Creates the minified bundles:
+  - 创建缩小的捆绑包：
     - `/wrappers/vue3/dist/vue-handsontable.min.js`
     - `/wrappers/vue3/dist/vue-handsontable.min.js.map`
 
@@ -313,7 +313,7 @@ From the `/wrappers/vue3` directory, you can also run individual Vue 3 `build` t
 
 :::
 
-## Related guides
+## 相关指南
 
 <div class="boxes-list gray">
 

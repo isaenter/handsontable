@@ -72,10 +72,10 @@ const ExampleComponent = () => {
           for (let i = 0; i < changes.length; i++) {
             const cellChanges = changes;
 
-            // if oldVal is empty
+            // 如果 oldVal 为空
             if (cellChanges[i][2] === null && cellChanges[i][3] !== null) {
               if (isEmptyRow(instance, cellChanges[i][0])) {
-                // add this row/col combination to the cache so it will not be overwritten by the template
+                // 将此行/列组合添加到缓存中，这样它就不会被模板覆盖
                 rowColumnSeen[
                   `${cellChanges[i][0]}/${cellChanges[i][1]}`
                 ] = true;
@@ -87,7 +87,7 @@ const ExampleComponent = () => {
           for (const r in rowsToFill) {
             if (rowsToFill.hasOwnProperty(r)) {
               for (let c = 0; c < columns; c++) {
-                // if it is not provided by user in this change set, take the value from the template
+                // 如果此更改集中用户未提供，则从模板中获取值
                 if (!rowColumnSeen[`${r}/${c}`]) {
                   changes.push([r, c, null, templateValues[c]]);
                 }

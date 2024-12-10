@@ -1,6 +1,6 @@
 ---
 id: ivtc0o9b
-title: Row parent-child
+title: 嵌套行
 metaTitle: Row parent-child - JavaScript Data Grid | Handsontable
 description:
   Reflect the parent-child relationship of your data, using Handsontable's interactive UI elements such as expand and collapse buttons or an extended context
@@ -21,16 +21,16 @@ searchCategory: Guides
 category: Rows
 ---
 
-# Row parent-child
+# 嵌套行
 
-Reflect the parent-child relationship of your data, using the [`NestedRows`](@/api/nestedRows.md) plugin's interactive UI elements such as expand and collapse
-buttons or an extended context menu.
+使用 [`NestedRows`](@/api/nestedRows.md) 插件的交互式 UI 元素（例如展开和折叠）反映数据的父子关系
+按钮或扩展上下文菜单。
 
 [[toc]]
 
-## Quick setup
+## 快速设置
 
-To enable the [`NestedRows`](@/api/nestedRows.md) plugin, set the [`nestedRows`](@/api/options.md#nestedrows) option to `true`.
+要启用 [`NestedRows`](@/api/nestedRows.md) 插件，请将 [`nestedRows`](@/api/options.md#nestedrows) 选项设置为 `true`。
 
 ::: only-for javascript
 
@@ -50,19 +50,19 @@ const hot = new Handsontable(container, {
 
 :::
 
-Note that using all the functionalities provided by the plugin requires enabling the row headers and the Handsontable context menu. To do this set
-[`rowHeaders`](@/api/options.md#rowheaders) and [`contextMenu`](@/api/options.md#contextmenu) to `true`. The _collapse_ / _expand_ buttons are located in the
-row headers, and the row modification options _add row_, _insert child_, etc., are in the Context Menu.
+请注意，使用插件提供的所有功能需要启用行标题和 Handsontable 上下文菜单。要做这组
+[`rowHeaders`](@/api/options.md#rowheaders) 和 [`contextMenu`](@/api/options.md#contextmenu) 为 `true`。 _collapse_ /_expand_ 按钮位于
+行标题和行修改选项_添加行_、_插入子项_等位于上下文菜单中。
 
-## Prepare the data source
+## 准备数据源
 
-The data source must have a specific structure to be used with the _Nested Rows_ plugin.
+数据源必须具有与 _Nested Rows_ 插件一起使用的特定结构。
 
-The plugin requires the data source to be an array of objects. Each object in the array represents a single _0-level_ entry. _0-level_ refers to an entry, which
-is not a child of any other entry. If an entry has any child entries, they need to be declared again as an _array of objects_. To assign them to a row, create a
-`__children` property in the parent element.
+该插件要求数据源是对象数组。数组中的每个对象代表一个 _0-level_ 条目。 _0-level_ 指的是一个条目，其中
+不是任何其他条目的子项。如果一个条目有任何子条目，则需要将它们再次声明为_对象数组_。要将它们分配到一行，请创建一个
+父元素中的`__children`属性。
 
-Here's an example:
+这是一个例子：
 
 ::: only-for javascript
 
@@ -86,44 +86,44 @@ Here's an example:
 
 :::
 
-In the example above, we’ve created a data object consisting of 2016’s Grammy nominees of the `Rock` genre. Each _0-level_ entry declares a category, while
-their children declare nominees - assigned under the `__children` properties.
+在上面的示例中，我们创建了一个由 2016 年`摇滚`类型格莱美提名者组成的数据对象。每个_0-level_条目声明一个类别，而
+他们的孩子声明被提名者 -在`__children`属性下分配。
 
-Note that the first 0-level object in the array needs to have all columns defined to display the table properly. They can be declared as `null` or an empty
-string `''`, but they need to be defined. This is optional for the other objects.
+请注意，数组中的第一个 0 级对象需要定义所有列才能正确显示表格。它们可以声明为`null`或空的
+字符串`''`，但需要定义它们。对于其他对象来说，这是可选的。
 
-## User interface
+## 用户界面
 
-The _Nested Rows_ plugin's user interface is placed in the row headers and the Handsontable’s context menu.
+_Nested Rows_ 插件的用户界面位于行标题和 Handsontable 的上下文菜单中。
 
-### Row headers
+### 行标题
 
-Each _parent_ row header contains a `+`/`-` button. It is used to collapse or expand its child rows.
+每个 _parent_ 行标题都包含一个`+`/`-`按钮。它用于折叠或展开其子行。
 
-The child row headers have a bigger indentation, to enable the user to clearly recognize the child and parent elements.
+子行标题有更大的缩进，使用户能够清楚地识别子元素和父元素。
 
-### Context Menu
+### 上下文菜单
 
-The context menu has been extended with a few Nested Rows related options, such as:
+上下文菜单已扩展为一些与嵌套行相关的选项，例如：
 
-- Insert child row
-- Detach from parent
+- 插入子行
+- 与父母分离
 
-The `Insert row above` and `Insert row below` options were modified to work properly with the nested data structure.
+修改了`在上方插入行`和`在下方插入行`选项，以便与嵌套数据结构正常工作。
 
-## Known limitations
+## 已知限制
 
-When you use the parent-child row structure, the following Handsontable features are not supported:
+当您使用父子行结构时，不支持以下 Handsontable 功能：
 
-- [Data source as an array of arrays](@/guides/getting-started/binding-to-data/binding-to-data.md#array-of-arrays)
-- [Column filter](@/guides/columns/column-filter/column-filter.md)
-- [Rows sorting](@/guides/rows/rows-sorting/rows-sorting.md)
+- [数据源作为数组的数组](@/guides/getting-started/binding-to-data/binding-to-data.md#array-of-arrays)
+- [列过滤器](@/guides/columns/column-filter/column-filter.md)
+- [行排序](@/guides/rows/rows-sorting/rows-sorting.md)
 
 ## 相关键盘快捷键
 
-| Windows              | macOS                | Action                           |  Excel  | Sheets  |
-| -------------------- | -------------------- | -------------------------------- | :-----: | :-----: |
-| <kbd>**Enter**</kbd> | <kbd>**Enter**</kbd> | Collapse or expand the row group | &cross; | &cross; |
+| Windows              | macOS                | Action         |  Excel  | Sheets  |
+| -------------------- | -------------------- | -------------- | :-----: | :-----: |
+| <kbd>**Enter**</kbd> | <kbd>**Enter**</kbd> | 折叠或展开行组 | &cross; | &cross; |
 
 ## 相关文章
 
@@ -131,7 +131,7 @@ When you use the parent-child row structure, the following Handsontable features
 
 <div class="boxes-list gray">
 
-- [Row header](@/guides/rows/row-header/row-header.md)
+- [行标题](@/guides/rows/row-header/row-header.md)
 
 </div>
 

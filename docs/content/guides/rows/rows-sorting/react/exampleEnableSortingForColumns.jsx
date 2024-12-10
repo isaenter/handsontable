@@ -51,14 +51,14 @@ const ExampleComponent = () => {
           inStock: true,
         },
       ]}
-      // enable sorting for all columns
+      // 对所有列启用排序
       columnSorting={true}
       columns={[
         {
           title: 'Brand',
           type: 'text',
           data: 'brand',
-          // disable sorting for the 'Brand' column
+          // 禁用`品牌`列的排序
           columnSorting: {
             headerAction: false,
           },
@@ -76,7 +76,7 @@ const ExampleComponent = () => {
             pattern: '$ 0,0.00',
             culture: 'en-US',
           },
-          // disable sorting for the 'Price' column
+          // 禁用`价格`列的排序
           columnSorting: {
             headerAction: false,
           },
@@ -96,7 +96,7 @@ const ExampleComponent = () => {
           timeFormat: 'hh:mm A',
           correctFormat: true,
           className: 'htRight',
-          // disable sorting for the 'Time' column
+          // 禁用`时间`列的排序
           columnSorting: {
             headerAction: false,
           },

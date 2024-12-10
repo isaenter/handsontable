@@ -8,7 +8,7 @@ import 'handsontable/styles/ht-theme-main.css';
 registerAllModules();
 registerLanguageDictionary(arAR);
 
-//  generate random RTL data (e.g., Arabic)
+//  生成随机 RTL 数据（例如阿拉伯语）
 function generateArabicData() {
   const randomName = () =>
     ['عمر', 'علي', 'عبد الله', 'معتصم'][Math.floor(Math.random() * 3)];

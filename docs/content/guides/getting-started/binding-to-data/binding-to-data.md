@@ -1,6 +1,6 @@
 ---
 id: 66g0jo36
-title: Binding to data
+title: 绑定到数据
 metaTitle: Binding to data - JavaScript Data Grid | Handsontable
 description: Use Handsontable's configuration options or API methods to fill your data grid with various data structures, including an array of arrays or an array of objects.
 permalink: /binding-to-data
@@ -16,17 +16,17 @@ searchCategory: Guides
 category: Getting started
 ---
 
-# Binding to data
+# 绑定到数据
 
-Fill your data grid with various data structures, including an array of arrays or an array of objects.
+使用各种数据结构填充数据网格，包括数组的数组或对象的数组。
 
 [[toc]]
 
-## Compatible data types
+## 兼容的数据类型
 
-### Array of arrays
+### 数组的数组
 
-Array of arrays is a good choice for the more grid-like scenarios where you need to provide the end user with permission to manipulate the grid, e.g., insert columns, delete rows, decorate cells, etc.
+对于更多类似网格的场景，数组的数组是一个不错的选择，在这些场景中，您需要向最终用户提供操作网格的权限，例如插入列、删除行、装饰单元格等。
 
 ::: only-for javascript
 
@@ -50,9 +50,9 @@ Array of arrays is a good choice for the more grid-like scenarios where you need
 
 :::
 
-### Array of arrays with a selective display of columns
+### 具有选择性显示列的数组数组
 
-The following example shows how you would use the array of arrays with a selective display of columns. This scenario uses the same data source as in the previous example, this time omitting the `Tesla` column from the grid.
+以下示例显示如何使用数组的数组来选择性显示列。此场景使用与上一个示例相同的数据源，这次省略了网格中的`Tesla`列。
 
 ::: only-for javascript
 
@@ -76,9 +76,9 @@ The following example shows how you would use the array of arrays with a selecti
 
 :::
 
-### Array of objects
+### 对象数组
 
-An array of objects can be used as a data source as follows:
+对象数组可以用作数据源，如下所示：
 
 ::: only-for javascript
 
@@ -102,9 +102,9 @@ An array of objects can be used as a data source as follows:
 
 :::
 
-### Array of objects with column as a function
+### 以列作为函数的对象数组
 
-You can set the [`columns`](@/api/options.md#columns) configuration option to a function. This is good practice when you want to bind data more dynamically.
+您可以将 [`columns`](@/api/options.md#columns) 配置选项设置为函数。当您想要更动态地绑定数据时，这是一个很好的做法。
 
 ::: only-for javascript
 
@@ -128,9 +128,9 @@ You can set the [`columns`](@/api/options.md#columns) configuration option to a 
 
 :::
 
-### Array of objects with column mapping
+### 具有列映射的对象数组
 
-In a scenario where you have nested objects, you can use them as the data source by mapping the columns using the [`columns`](@/api/options.md#columns) option.
+在具有嵌套对象的场景中，您可以通过使用 [`columns`](@/api/options.md#columns) 选项映射列，将它们用作数据源。
 
 ::: only-for javascript
 
@@ -154,11 +154,11 @@ In a scenario where you have nested objects, you can use them as the data source
 
 :::
 
-### Array of objects with custom data schema
+### 具有自定义数据模式的对象数组
 
-When using object data binding, Handsontable needs to know what data structure to create when adding a new row. If your data source contains at least one row, Handsontable will figure out the data structure based on the first row.
+当使用对象数据绑定时，Handsontable 需要知道添加新行时要创建什么数据结构。如果您的数据源至少包含一行，Handsontable 将根据第一行计算出数据结构。
 
-In a scenario where you start with an empty data source, you will need to provide the [`dataSchema`](@/api/options.md#dataschema) option containing the data structure for any new row added to the grid. The example below shows a custom data schema with an empty data source:
+在从空数据源开始的情况下，您需要提供 [`dataSchema`](@/api/options.md#dataschema) 选项，其中包含添加到网格的任何新行的数据结构。下面的示例显示了具有空数据源的自定义数据架构：
 
 ::: only-for javascript
 
@@ -182,11 +182,11 @@ In a scenario where you start with an empty data source, you will need to provid
 
 :::
 
-### Function data source and schema
+### 函数数据源和架构
 
-If your [`dataSchema`](@/api/options.md#dataschema) is a constructor of an object that doesn't directly expose its members, you can specify functions for the [`data`](@/api/options.md#data) member of each [`columns`](@/api/options.md#columns) item.
+如果您的 [`dataSchema`](@/api/options.md#dataschema) 是一个不直接公开其成员的对象的构造函数，您可以为 [`data`](@/api/options.md#data) 每个 [`columns`](@/api/options.md#columns) 项的成员。
 
-The example below shows how to use such objects:
+下面的示例展示了如何使用此类对象：
 
 ::: only-for javascript
 
@@ -210,9 +210,9 @@ The example below shows how to use such objects:
 
 :::
 
-### No data
+### 没有数据
 
-By default, if you don't provide any data, Handsontable renders as an empty 5x5 grid.
+默认情况下，如果您不提供任何数据，Handsontable 会呈现为空的 5x5 网格。
 
 ::: only-for javascript
 
@@ -236,26 +236,26 @@ By default, if you don't provide any data, Handsontable renders as an empty 5x5 
 
 :::
 
-To change the number of rows or columns rendered by default, use the [`startRows`](@/api/options.md#startrows) and [`startCols`](@/api/options.md#startcols) options.
+要更改默认呈现的行数或列数，请使用 [`startRows`](@/api/options.md#startrows) 和 [`startCols`](@/api/options.md#startcols) 选项。
 
-## Data-manipulating API methods
+## 数据操作 API 方法
 
-### Understand binding as a reference
+### 理解绑定作为参考
 
-Handsontable binds to your data source by reference, not by values. We don't copy the input dataset, and we rely on
-JavaScript to handle the objects. Any data entered into the grid will alter the original data source.
+Handsontable 通过引用而不是值绑定到您的数据源。我们不复制输入数据集，我们依赖
+JavaScript 来处理对象。输入到网格中的任何数据都会改变原始数据源。
 
 ::: tip
 
-Handsontable initializes the source data for the table using a reference, but you shouldn't rely on it. For
-example, you shouldn't change values in the source data using the reference to the input dataset. Some mechanisms for
-handling data aren't prepared for external changes that are made in this way.
+Handsontable 使用引用初始化表的源数据，但您不应该依赖它。为了
+例如，您不应使用对输入数据集的引用来更改源数据中的值。一些机制
+处理数据没有为以这种方式进行的外部更改做好准备。
 
 :::
 
-To avoid this scenario, copy the data before you pass it to the grid. To change the data from outside Handsontable, you
-can use our API methods. For example, a change being made will be displayed immediately on the screen after calling
-the [`setDataAtCell()`](@/api/core.md#setdataatcell) method.
+为了避免这种情况，请在将数据传递到网格之前复制数据。要从 Handsontable 外部更改数据，您
+可以使用我们的API方法。例如，调用后，所做的更改将立即显示在屏幕上
+[`setDataAtCell()`](@/api/core.md#setdataatcell) 方法。
 
 ::: only-for javascript
 
@@ -279,17 +279,17 @@ the [`setDataAtCell()`](@/api/core.md#setdataatcell) method.
 
 :::
 
-There are multiple ways you can insert your data into Handsontable. Let's go through the most useful ones:
+您可以通过多种方式将数据插入 Handsontable。让我们来看看最有用的：
 
-### The [`data`](@/api/options.md#data) configuration option
+### [`data`](@/api/options.md#data) 配置选项
 
 ::: only-for javascript
 
-You will probably want to initialize the table with some data (if you don't, the table will render an empty 5x5 grid for you). The easiest way to do it is passing your data array as [`data`](@/api/options.md#data) option in the initial config object:
+您可能希望使用一些数据初始化表格（如果不这样做，表格将为您呈现一个空的 5x5 网格）。最简单的方法是将数据数组作为初始配置对象中的 [`data`](@/api/options.md#data) 选项传递：
 ```js
 const hot = new Handsontable(container, {
   data: newDataset,
-  // ... other config options
+  // ...其他配置选项
 });
 ```
 
@@ -297,59 +297,59 @@ const hot = new Handsontable(container, {
 
 ::: only-for react
 
-You will probably want to initialize the table with some data (if you don't, the table will render an empty 5x5 grid for
-you). The easiest way to do it is by passing your data array as the value of `HotTable`'s [`data`](@/api/options.md#data) prop:
+您可能想要用一些数据初始化表格（如果不这样做，表格将呈现一个空的 5x5 网格
+你）。最简单的方法是将数据数组作为 `HotTable` 的 [`data`](@/api/options.md#data) 属性的值传递：
 ```jsx
 <HotTable data={newDataset} />
 ```
 
 :::
 
-### The data-loading API methods
+### 数据加载API方法
 
 ::: only-for react
 
 ::: tip
 
-To use the Handsontable API, you'll need access to the Handsontable instance. You can do that by utilizing a reference
-to the `HotTable` component, and reading its `hotInstance` property.
+要使用 Handsontable API，您需要访问 Handsontable 实例。您可以通过使用参考来做到这一点
+到`HotTable`组件，并读取其`hotInstance`属性。
 
-For more information, see the [Instance methods](@/guides/getting-started/react-methods/react-methods.md) page.
+有关更多信息，请参阅[实例方法](@/guides/getting-started/react-methods/react-methods.md)页面。
 :::
 
 :::
 
-To replace the entire data in an already-initialized Handsontable instance, you can use one of the data-loading API methods:
+要替换已初始化的 Handsontable 实例中的整个数据，您可以使用其中一种数据加载 API 方法：
 - [`loadData()`](@/api/core.md#loaddata)<br>
-  Replaces the data used in Handsontable with the dataset provided as the method argument. <br> **Note:** Since version `12.0.0` this method causes the table to reset its configuration options and index mapper information, so some of the work done on the table since its initialization might be lost.
+  将 Handsontable 中使用的数据替换为作为方法参数提供的数据集。 <br> **注意：**从版本 `12.0.0` 开始，此方法会导致表重置其配置选项和索引映射器信息，因此自初始化以来在表上完成的一些工作可能会丢失。
   ```js
   hot.loadData(newDataset);
   ```
 - [`updateData()`](@/api/core.md#updatedata)<br>
-  Replaces the data used in Handsontable with the dataset provided as the method argument. Unlike [`loadData()`](@/api/core.md#loaddata), [`updateData()`](@/api/core.md#updatedata) does NOT reset the configuration options and/or index mapper information, so it can be safely used to replace just the data, leaving the rest of the table intact.
+  将 Handsontable 中使用的数据替换为作为方法参数提供的数据集。与 [`loadData()`](@/api/core.md#loaddata) 不同，[`updateData()`](@/api/core.md#updatedata) 不会重置配置选项和/或索引映射器信息，因此可以安全地使用它来仅替换数据，而使表的其余部分保持不变。
   ```js
   hot.updateData(newDataset);
   ```
 - [`updateSettings()`](@/api/core.md#updatesettings)<br>
-  Updates the configuration of the table, [`updateSettings()`](@/api/core.md#updatesettings) can be also used to replace the data being used. Since version `12.0.0`, under the hood it utilizes the [`updateData()`](@/api/core.md#updatedata) method to perform the data replacement (apart from the one automatic call done during the initialization, where it uses [`loadData()`](@/api/core.md#loaddata)).
+  更新表的配置，[`updateSettings()`](@/api/core.md#updatesettings)也可以用来替换正在使用的数据。从版本 `12.0.0` 开始，它在底层使用 [`updateData()`](@/api/core.md#updatedata) 方法来执行数据替换（除了在初始化期间完成的一个自动调用之外，它使用 [`loadData()`](@/api/core.md#loaddata))。
   ```js
   hot.updateSettings({
     data: newDataset,
-    // ... other config options
+    // ... 其他配置选项
   });
   ```
 
-### The data-modifying API methods
+### 数据修改API方法
 
-To modify just a subset of data passed to Handsontable, these are the methods you might want to check out:
+要仅修改传递给 Handsontable 的数据子集，您可能需要查看以下方法：
 
 - [`setDataAtCell()`](@/api/core.md#setdataatcell)<br>
-  Replaces data in a single cell or to perform a series of single-cell data replacements:
+  替换单个单元格中的数据或执行一系列单单元格数据替换：
   ```js
-  // Replaces the cell contents at the (0, 2) visual coordinates (0 being the visual row index, 2 - the visual column index) with the supplied value.
+  // 将 (0, 2) 视觉坐标处的单元格内容（0 是视觉行索引，2 -视觉列索引）替换为提供的值。
   hot.setDataAtCell(0, 2, 'New Value');
 
-  // Replaces the cells at `(0,2)`, `(1,2)` and `(2,2)` with the provided values.
+  // 将`(0,2)`、`(1,2)`和`(2,2)`处的单元格替换为提供的值。
   const changes = [
     [0, 2, 'New Value'],
     [1, 2, 'Different Value'],
@@ -359,12 +359,12 @@ To modify just a subset of data passed to Handsontable, these are the methods yo
   ```
 
 - [`setDataAtRowProp()`](@/api/core.md#setdataatrowprop)<br>
-  Replaces data in a single cell or to perform a series of single-cell data replacements, analogously to `setDataAtCell()`, but allows targeting the cells by the visual row index and data row *property*. Useful for the [Array of objects data type](#array-of-objects).
+  替换单个单元格中的数据或执行一系列单单元格数据替换，类似于`setDataAtCell()`，但允许通过可视行索引和数据行*属性*来定位单元格。对于[对象数组数据类型](#array-of-objects) 很有用。
   ```js
-  // Replaces the cell contents at the (0, 'title') coordinates (0 being the visual row index, 'title' - the data row object property) with the supplied value.
+  // 将 (0, 'title') 坐标处的单元格内容（0 是可视行索引，'title' -数据行对象属性）替换为提供的值。
   hot.setDataAtRowProp(0, 'title', 'New Value');
 
-  // Replaces the cells with the props of 'id', 'firstName' and 'lastName' in the first row with the provided values.
+  // 将第一行中具有 'id'、'firstName' 和 'lastName' 属性的单元格替换为提供的值。
   const changes = [
     [0, 'id', '22'],
     [0, 'firstName', 'John'],
@@ -374,15 +374,15 @@ To modify just a subset of data passed to Handsontable, these are the methods yo
   ```
 
 - [`setSourceDataAtCell()`](@/api/core.md#setsourcedataatcell)<br>
-  As the displayed data coordinates can differ from the way it's stored internally, sometimes you might need to target the cells more directly - that's when [`setSourceDataAtCell()`](@/api/core.md#setsourcedataatcell) comes in handy. The `row` and `columns`/`prop` arguments represent the *physical* indexes.
+  由于显示的数据坐标可能与其内部存储的方式不同，有时您可能需要更直接地定位单元格 -这时候 [`setSourceDataAtCell()`](@/api/core.md#setsourcedataatcell) 就派上用场了。 `row` 和 `columns`/`prop` 参数代表*物理*索引。
   ```js
-  // Replaces the cell contents at the (0, 2) coordinates (0 being the physical row index, 2 - the physical column index) with the supplied value.
+  // 将 (0, 2) 坐标处的单元格内容（0 是物理行索引，2 -物理列索引）替换为提供的值。
   hot.setSourceDataAtCell(0, 2, 'New Value');
 
-  // Replaces the cell contents at the (0, 'title') coordinates (0 being the physical row index, 'title' - the data row property) with the supplied value.
+  // 将 (0, 'title') 坐标处的单元格内容（0 是物理行索引，'title' -数据行属性）替换为提供的值。
   hot.setSourceDataAtCell(0, 'title', 'New Value');
 
-  // Replaces the cells with the props of 'id', 'firstName' and 'lastName' in the first physical row with the provided values.
+  // 将第一个物理行中的单元格替换为具有提供的值的 'id'、'firstName' 和 'lastName' 属性。
   const changes = [
     [0, 'id', '22'],
     [0, 'firstName', 'John'],
@@ -391,11 +391,11 @@ To modify just a subset of data passed to Handsontable, these are the methods yo
   hot.setSourceDataAtCell(changes);
   ```
 - [`populateFromArray()`](@/api/core.md#populatefromarray)<br>
-  Replaces a chunk of the dataset by provided the start (and optionally end) coordinates and a two-dimensional data array of new values.
+  通过提供起始（和可选的结束）坐标和新值的二维数据数组来替换数据集的一部分。
 
   ::: tip
 
-  The [`populateFromArray()`](@/api/core.md#populatefromarray) method can't change [read-only](@/guides/cell-features/disabled-cells/disabled-cells.md) cells.
+  [`populateFromArray()`](@/api/core.md#populatefromarray) 方法无法更改[只读](@/guides/cell-features/disabled-cells/disabled-cells.md) 单元格。
 
   :::
 
@@ -405,16 +405,16 @@ To modify just a subset of data passed to Handsontable, these are the methods yo
     ['D', 'E', 'F']
   ];
 
-  // Replaces the values from (1, 1) to (2, 3) visual cell coordinates with the values from the `newValues` array.
+  // 将 (1, 1) 到 (2, 3) 视觉单元坐标中的值替换为`newValues`数组中的值。
   hot.populateFromArray(1, 1, newValues);
 
-  // Replaces the values from (1, 1) to (2, 2) visual cell coordinates with the values from the `newValues` array, ommiting the values that would fall outside of the defined range.
+  // 将 (1, 1) 到 (2, 2) 视觉单元坐标中的值替换为`newValues`数组中的值，忽略超出定义范围的值。
   hot.populateFromArray(1, 1, newValues, 2, 2);
   ```
 
-## Working with a copy of data
+## 使用数据副本
 
-When working with a copy of data for Handsontable, it is best practice is to clone the data source before loading it into Handsontable. This can be done with `JSON.parse(JSON.stringify(data))` or another deep-cloning function.
+使用 Handsontable 的数据副本时，最佳做法是在将数据源加载到 Handsontable 之前克隆数据源。这可以使用 JSON.parse(JSON.stringify(data)) 或其他深度克隆函数来完成。
 
 ::: only-for javascript
 

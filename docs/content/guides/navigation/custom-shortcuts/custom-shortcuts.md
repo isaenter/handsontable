@@ -1,6 +1,6 @@
 ---
 id: g7139vli
-title: Custom shortcuts
+title: 自定义快捷键
 metaTitle: Custom shortcuts - JavaScript Data Grid | Handsontable
 description: Customize Handsontable's keyboard shortcuts.
 permalink: /custom-shortcuts
@@ -23,125 +23,125 @@ searchCategory: Guides
 category: Navigation
 ---
 
-# Custom shortcuts
+# 自定义快捷键
 
-Customize Handsontable's keyboard shortcuts.
+自定义 Handsontable 的键盘快捷键。
 
 [[toc]]
 
 ## 概述
 
-You can completely customize your keyboard shortcuts, using the [`ShortcutManager`](@/api/shortcutManager.md) API:
+您可以使用 [`ShortcutManager`](@/api/shortcutManager.md) API 完全自定义键盘快捷键：
 
 ::: only-for react
 
 ::: tip
 
-To use the Handsontable API, you'll need access to the Handsontable instance. You can do that by utilizing a reference to the `HotTable` component, and reading its `hotInstance` property.
+要使用 Handsontable API，您需要访问 Handsontable 实例。您可以通过利用对`HotTable`组件的引用并读取其`hotInstance`属性来做到这一点。
 
-For more information, see the [Instance methods](@/guides/getting-started/react-methods/react-methods.md) page.
-
-:::
+有关更多信息，请参阅[实例方法](@/guides/getting-started/react-methods/react-methods.md)页面。
 
 :::
 
-1. Access the [`ShortcutManager`](@/api/shortcutManager.md) API:
+:::
+
+1. 访问 [`ShortcutManager`](@/api/shortcutManager.md) API：
    ```js
    hot.getShortcutManager();
    ```
-2. Select a keyboard shortcut [context](#keyboard-shortcut-contexts), for example:
+2. 选择键盘快捷键[context](#keyboard-shortcut-contexts)，例如：
    ```js
    const gridContext = hot.getShortcutManager().getContext('grid');
    ```
-3. Use the selected context's [methods](@/api/shortcutContext.md). For example, to use the [`addShortcut()`](@/api/shortcutContext.md#addshortcut) method in the
-   `grid` context:
-
-   ```js
-   const gridContext = hot.getShortcutManager().getContext('grid');
-
-   gridContext.addShortcut({
-     group: 'group_ID', // a string value; the user can decide on its name. 
-     // Each shortcut should be assigned to the group.
-     keys: [['enter']],
-     callback: () => {},
-   });
-   ```
-
-## Keyboard shortcut contexts
-
-Every keyboard action is registered in a particular context:
-
-| Context  | Description                                                       | Type     |
-| -------- | ----------------------------------------------------------------- | -------- |
-| `grid`   | Activates when the user navigates the data grid (initial context) | Built-in |
-| `editor` | Activates when the user opens a cell editor                       | Built-in |
-| `menu`   | Activates when the user opens a cell's context menu               | Built-in |
-| Custom   | Your [custom context](#manage-keyboard-shortcut-contexts)         | Custom   |
-
-When the user interacts with the keyboard, only actions registered for the currently-active context are executed.
-
-Only one context is active at a time.
-
-### Manage keyboard shortcut contexts
-
-Using the [`ShortcutManager`](@/api/shortcutManager.md) API methods, you can:
-
-- Get the name of the currently-active context: [`getActiveContextName()`](@/api/shortcutManager.md#getactivecontextname)
-- Switch to a different context: [`setActiveContextName()`](@/api/shortcutManager.md#setactivecontextname)
-- Get an already-registered context: [`getContext()`](@/api/shortcutManager.md#getcontext)
-- Create and register a new context: [`addContext()`](@/api/shortcutManager.md#addcontext)
-
-For example: if you're using a complex [custom editor](@/guides/cell-functions/cell-editor/cell-editor.md#how-to-create-a-custom-editor), you can create a new shortcut context to navigate your editor's UI with the arrow keys (normally, the arrow keys would navigate the grid instead).
-
-## Add a custom keyboard shortcut
-
-To add a custom keyboard shortcut:
-
-1. Select a [context](#keyboard-shortcut-contexts) in which you want to add a shortcut, for example:
-   ```js
-   const gridContext = hot.getShortcutManager().getContext('grid');
-   ```
-2. Using the selected context's [`addShortcut()`](@/api/shortcutContext.md#addshortcut) method, add your keyboard shortcut:
+3. 使用所选上下文的[methods](@/api/shortcutContext.md)。例如，要使用 [`addShortcut()`](@/api/shortcutContext.md#addshortcut) 方法
+   `grid`上下文：
 
    ```js
    const gridContext = hot.getShortcutManager().getContext('grid');
 
    gridContext.addShortcut({
-     group: 'group_ID', // a string value; the user can decide on its name. 
-     // Each shortcut should be assigned to the group.
+     group: 'group_ID', // 字符串值；用户可以决定其名称。
+     // 每个快捷方式都应分配给该组。
      keys: [['enter']],
      callback: () => {},
    });
    ```
 
-   The [`keys`](@/api/shortcutContext.md#addshortcut) parameter:
+## 键盘快捷键上下文
 
-   - Accepts all the [`KeyboardEvent.key`](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key/Key_Values) key names.
-   - Accepts key names in both lowercase and uppercase (e.g., both `Enter` and `enter` work)
-   - Handles key-name discrepancies between browsers (e.g., both `'Spacebar'` and `' '` work)
-   - Accepts key names in any order (e.g., both `[['control', 'a']]` and `[['a', 'control']]`) work)
+每个键盘操作都在特定上下文中注册：
 
-### Add a conditional keyboard action
+| Context  | 描述                                                   | 类型     |
+| -------- | ------------------------------------------------------ | -------- |
+| `grid`   | 当用户导航数据网格时激活（初始上下文）                 | Built-in |
+| `editor` | 当用户打开单元格编辑器时激活                           | Built-in |
+| `menu`   | 当用户打开单元格的上下文菜单时激活                     | Built-in |
+| Custom   | 您的[自定义上下文](#manage-keyboard-shortcut-contexts) | Custom   |
 
-To make a keyboard action run on a certain condition, set the [`runOnlyIf`](@/api/shortcutContext.md#addshortcut) parameter to a function:
+当用户与键盘交互时，仅执行为当前活动上下文注册的操作。
+
+一次只有一个上下文处于活动状态。
+
+### 管理键盘快捷键上下文
+
+使用 [`ShortcutManager`](@/api/shortcutManager.md) API 方法，您可以：
+
+- 获取当前活动上下文的名称：[`getActiveContextName()`](@/api/shortcutManager.md#getactivecontextname)
+- 切换到不同的上下文：[`setActiveContextName()`](@/api/shortcutManager.md#setactivecontextname)
+- 获取已注册的上下文：[`getContext()`](@/api/shortcutManager.md#getcontext)
+- 创建并注册一个新上下文：[`addContext()`](@/api/shortcutManager.md#addcontext)
+
+例如：如果您使用复杂的[自定义编辑器](@/guides/cell-functions/cell-editor/cell-editor.md#how-to-create-a-custom-editor)，您可以创建一个新的快捷方式上下文，用于使用箭头键导航编辑器的 UI（通常，箭头键将导航网格）。
+
+## 添加自定义键盘快捷键
+
+要添加自定义键盘快捷键：
+
+1. 选择要在其中添加快捷方式的[上下文](#keyboard-shortcut-contexts)，例如：
+   ```js
+   const gridContext = hot.getShortcutManager().getContext('grid');
+   ```
+2. 使用所选上下文的 [`addShortcut()`](@/api/shortcutContext.md#addshortcut) 方法，添加键盘快捷键：
+
+   ```js
+   const gridContext = hot.getShortcutManager().getContext('grid');
+
+   gridContext.addShortcut({
+     group: 'group_ID', // 字符串值；用户可以决定其名称。
+     // 每个快捷方式都应分配给该组。
+     keys: [['enter']],
+     callback: () => {},
+   });
+   ```
+
+   [`keys`](@/api/shortcutContext.md#addshortcut) 参数：
+
+   - 接受所有 [`KeyboardEvent.key`](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key/Key_Values) 键名称。
+   - 接受小写和大写的键名（例如，`Enter`和`enter`都有效）
+   - 处理浏览器之间的键名差异（例如，`空格键`和``都有效）
+   - 接受任意顺序的键名（例如，`[['control', 'a']]` 和 `[['a', 'control']]`）都可以）
+
+### 添加条件键盘操作
+
+要使键盘操作在特定条件下运行，请将 [`runOnlyIf`](@/api/shortcutContext.md#addshortcut) 参数设置为函数：
 
 ```js
 const gridContext = hot.getShortcutManager().getContext('grid');
 
 gridContext.addShortcut({
-  group: 'group_ID', // a string value; the user can decide on its name. 
-     // Each shortcut should be assigned to the group.
+  group: 'group_ID', // 字符串值；用户可以决定其名称。
+     // 每个快捷方式都应分配给该组。
   runOnlyIf: () => hot.getSelected() !== void 0,
   keys: [['enter']],
   callback: () => {},
 });
 ```
 
-### Set the order of keyboard actions
+### 设置键盘操作的顺序
 
-You can assign multiple actions to a single keyboard shortcut.
+您可以将多个操作分配给单个键盘快捷键。
 
-By default, when you assign a new action, it runs after any other actions that were assigned previously. To set your own order of actions, use the [`position`](@/api/shortcutContext.md#addshortcut) and [`relativeToGroup`](@/api/shortcutContext.md#addshortcut) parameters of the [`addShortcut()`](@/api/shortcutContext.md#addshortcut) method:
+默认情况下，当您分配新操作时，它将在之前分配的任何其他操作之后运行。要设置您自己的操作顺序，请使用 [`addShortcut( )`](@/api/shortcutContext.md#addshortcut) 方法：
 
 ```js
 const gridContext = hot.getShortcutManager().getContext('grid');
@@ -156,31 +156,32 @@ gridContext.addShortcut({
   keys: [['F2']],
   callback: () => {
     if (hot.getActiveEditor().cellProperties.type === 'numeric') {
-      return false; // the `F2` shortcut won't work for `numeric` cells
+      return false; // `F2`快捷键不适用于`数字`单元格
     }
 
-    // another action
+    // 另一个动作
   },
 });
 ```
 
-## Remove a keyboard shortcut
+## 删除键盘快捷键
 
-To remove a keyboard shortcut (e.g., one of the [default](#default-custom-shortcuts) keyboard shortcuts):
+要删除键盘快捷键（例如，[默认](#default-custom-shortcuts) 键盘快捷键之一）：
 
-1. Select a [context](#keyboard-shortcut-contexts) in which you want to remove a keyboard shortcut.
-2. Use the selected context's [`removeShortcutsByKeys()`](@/api/shortcutContext.md#removeshortcutsbykeys) method.
 
+1. 选择要删除键盘快捷键的[上下文](#keyboard-shortcut-contexts)。
+2. 使用所选上下文的 [`removeShortcutsByKeys()`](@/api/shortcutContext.md#removeshortcutsbykeys) 方法。
+   
 ```js
 const gridContext = hot.getShortcutManager().getContext('grid');
 
 gridContext.removeShortcutsByKeys(['enter']);
 ```
 
-To remove all keyboard shortcuts registered in a certain group:
+要删除某个组中注册的所有键盘快捷键：
 
-1. Select a [context](#keyboard-shortcut-contexts).
-2. Use the selected context's [`removeShortcutsByGroup()`](@/api/shortcutContext.md#removeshortcutsbygroup) method.
+1. 选择一个[上下文](#keyboard-shortcut-contexts)。
+2. 使用所选上下文的 [`removeShortcutsByGroup()`](@/api/shortcutContext.md#removeshortcutsbygroup) 方法。
 
 ```js
 const gridContext = hot.getShortcutManager().getContext('grid');
@@ -188,15 +189,15 @@ const gridContext = hot.getShortcutManager().getContext('grid');
 gridContext.removeShortcutsByGroup('group_ID');
 ```
 
-## Replace a keyboard shortcut
+## 替换键盘快捷键
 
-To replace a keyboard shortcut:
+要替换键盘快捷键：
 
-1. Select a [context](#keyboard-shortcut-contexts) in which you want to replace a keyboard shortcut.
-2. Get the old keyboard shortcut, using the selected context's [`getShortcuts()`](@/api/shortcutContext.md#getshortcuts) method.
-3. Remove the old keyboard shortcut, using the selected context's [`removeShortcutsByKeys()`](@/api/shortcutContext.md#removeshortcutsbykeys) method.
-4. Replace the `keys` property of the old keyboard shortcut with your new array of keys.
-5. Add your new keyboard shortcut, using the selected context's [`addShortcuts()`](@/api/shortcutContext.md#addshortcuts) method.
+1. 选择要替换键盘快捷键的[上下文](#keyboard-shortcut-contexts)。
+2. 使用所选上下文的 [`getShortcuts()`](@/api/shortcutContext.md#getshortcuts) 方法获取旧键盘快捷键。
+3. 使用所选上下文的 [`removeShortcutsByKeys()`](@/api/shortcutContext.md#removeshortcutsbykeys) 方法删除旧键盘快捷键。
+4. 将旧键盘快捷键的`keys`属性替换为新的按键数组。
+5. 使用所选上下文的 [`addShortcuts()`](@/api/shortcutContext.md#addshortcuts) 方法添加新的键盘快捷键。
 
 ```js
 const gridContext = hot.getShortcutManager().getContext('grid');
@@ -211,15 +212,15 @@ undoShortcut.map((shortcut) => {
 gridContext.addShortcuts(undoShortcut);
 ```
 
-## Block a keyboard shortcut's actions
+## 阻止键盘快捷键的操作
 
-To block a keyboard shortcut's actions, return `false` in the [`beforeKeyDown`](@/api/hooks.md#beforekeydown) hook's callback:
+要阻止键盘快捷键的操作，请在 [`beforeKeyDown`](@/api/hooks.md#beforekeydown) 挂钩的回调中返回 `false`：
 
 ::: only-for javascript
 
 ```js
 hot.addHook('beforeKeyDown', (event) => {
-  // the `Enter` shortcut won't work
+  // `Enter`快捷键不起作用
   if (event.key === 'enter') {
     return false;
   }
@@ -233,7 +234,7 @@ hot.addHook('beforeKeyDown', (event) => {
 ```jsx
 <HotTable
   beforeKeyDown={(event) => {
-    // the `Enter` shortcut won't work
+    // `Enter`快捷键不起作用
     if (event.key === 'enter') {
       return false;
     }
@@ -243,9 +244,9 @@ hot.addHook('beforeKeyDown', (event) => {
 
 :::
 
-## API reference
+## API 参考
 
-For the list of [options](@/guides/getting-started/configuration-options/configuration-options.md), methods, and [Handsontable hooks](@/guides/getting-started/events-and-hooks/events-and-hooks.md) related to keyboard navigation, see the following API reference pages:
+有关[选项](@/guides/getting-started/configuration-options/configuration-options.md)、方法和[Handsontable hooks](@/guides/getting-started/events-and-hooks/events)的列表-and-hooks.md) 与键盘导航相关，请参阅以下 API 参考页：
 
 - APIs:
   - [`ShortcutContext`](@/api/shortcutContext.md)
@@ -263,16 +264,16 @@ For the list of [options](@/guides/getting-started/configuration-options/configu
   - [`afterDocumentKeyDown`](@/api/hooks.md#afterdocumentkeydown)
   - [`beforeKeyDown`](@/api/hooks.md#beforekeydown)
 
-## Troubleshooting
+## 故障排除
 
-Didn't find what you need? Try this:
+没有找到您需要的东西？试试这个：
 
 <div class="boxes-list gray">
 
-- [View related topics](https://github.com/handsontable/handsontable/issues) on GitHub
-- [Report an issue](https://github.com/handsontable/handsontable/issues/new/choose) on GitHub
-- [Ask a question](https://stackoverflow.com/questions/tagged/handsontable) on Stack Overflow
-- [Start a discussion](https://forum.handsontable.com/c/getting-help/questions) on Handsontable's forum
-- [Contact our technical support](https://handsontable.com/contact?category=technical_support) to get help
+- GitHub 上的[查看相关主题](https://github.com/handsontable/handsontable/issues)
+- GitHub 上的[报告问题](https://github.com/handsontable/handsontable/issues/new/choose)
+- Stack Overflow 上的[提问](https://stackoverflow.com/questions/tagged/handsontable)
+- 在 Handsontable 论坛上[开始讨论](https://forum.handsontable.com/c/getting-help/questions)
+- [联系我们的技术支持](https://handsontable.com/contact?category=technical_support) 获取帮助
 
 </div>

@@ -1,6 +1,6 @@
 ---
 id: vjcvrdeh
-title: Bundle size
+title: 打包尺寸
 metaTitle: Bundle size - JavaScript Data Grid | Handsontable
 description: Reduce the size of your JavaScript bundle by getting rid of redundant Handsontable modules and Moment.js locales.
 permalink: /bundle-size
@@ -14,17 +14,17 @@ searchCategory: Guides
 category: Optimization
 ---
 
-# Bundle size
+# 打包尺寸
 
-Reduce the size of your JavaScript bundle by getting rid of redundant Handsontable modules and Moment.js locales.
+通过摆脱冗余的 Handsontable 模块和 Moment.js 语言环境来减小 JavaScript 包的大小。
 
 [[toc]]
 
-## Use modules
+## 使用模块
 
-To reduce the bundle size and JavaScript parsing time, import only those of Handsontable's [modules](@/guides/tools-and-building/modules/modules.md) that you actually use, instead of importing the complete package.
+为了减少包的大小和 JavaScript 解析时间，请仅导入您实际使用的 Handsontable 的 [modules](@/guides/tools-and-building/modules/modules.md)，而不是导入完整的包。
 
-The following example shows how to import and register the [`ContextMenu`](@/api/contextMenu.md) plugin on top of the base module of Handsontable, without importing anything else.
+以下示例展示了如何在 Handsontable 基本模块之上导入和注册 [`ContextMenu`](@/api/contextMenu.md) 插件，而不导入任何其他内容。
 
 ::: only-for javascript
 
@@ -61,11 +61,11 @@ const App = () => {
 
 :::
 
-## Optimize Moment.js
+## 优化 Moment.js
 
-By default, [Moment.js](https://momentjs.com/) (Handsontable's dependency) comes with all possible locales, which increases the bundle size.
+默认情况下，[Moment.js](https://momentjs.com/)（Handsontable 的依赖项）附带所有可能的语言环境，这会增加包的大小。
 
-To [optimize Moment.js locales](https://github.com/jmblog/how-to-optimize-momentjs-with-webpack), use [webpack's `IgnorePlugin`](https://webpack.js.org/plugins/ignore-plugin/):
+要[优化 Moment.js 语言环境](https://github.com/jmblog/how-to-optimize-momentjs-with-webpack)，请使用 [webpack 的 `IgnorePlugin`](https://webpack.js.org/插件/忽略插件/):
 
 ```js
 const webpack = require('webpack');
@@ -73,13 +73,13 @@ const webpack = require('webpack');
 module.exports = {
   //...
   plugins: [
-    // ignore all Moment.js locale files
+    // 忽略所有 Moment.js 语言环境文件
     new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
   ],
 };
 ```
 
-And then explicitly load Moment.js, importing just those locales that you need:
+然后显式加载 Moment.js，仅导入您需要的区域设置：
 
 ::: only-for javascript
 
@@ -87,12 +87,12 @@ And then explicitly load Moment.js, importing just those locales that you need:
 import Handsontable from 'handsontable/base';
 import { registerCellType, DateCellType } from 'handsontable/cellTypes';
 
-// explicitly import Moment.js
+// 显式导入 Moment.js
 import moment from 'moment';
-// explicitly import a Moment.js locale of your choice
+// 显式导入您选择的 Moment.js 语言环境
 import 'moment/locale/ja';
 
-// register the Moment.js locale of your choice
+// 注册您选择的 Moment.js 语言环境
 moment.locale('ja');
 registerCellType(DateCellType);
 
@@ -109,12 +109,12 @@ import Handsontable from 'handsontable/base';
 import { HotTable } from '@handsontable/react-wrapper';
 import { registerCellType, DateCellType } from 'handsontable/cellTypes';
 
-// explicitly import Moment.js
+// 显式导入 Moment.js
 import moment from 'moment';
-// explicitly import a Moment.js locale of your choice
+// 显式导入您选择的 Moment.js 语言环境
 import 'moment/locale/ja';
 
-// register the Moment.js locale of your choice
+// 注册您选择的 Moment.js 语言环境
 moment.locale('ja');
 registerCellType(DateCellType);
 
@@ -129,6 +129,6 @@ const App = () => {
 
 :::
 
-## Related guides
+## 相关指南
 
 - [Modules](@/guides/tools-and-building/modules/modules.md)

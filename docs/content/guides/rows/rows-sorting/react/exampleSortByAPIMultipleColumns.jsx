@@ -10,7 +10,7 @@ registerAllModules();
 const ExampleComponent = () => {
   const hotTableComponentRef = useRef(null);
   const sort = () => {
-    // get the `MultiColumnSorting` plugin
+    // 获取`多列排序`插件
     const multiColumnSorting =
       hotTableComponentRef.current?.hotInstance?.getPlugin(
         'multiColumnSorting'

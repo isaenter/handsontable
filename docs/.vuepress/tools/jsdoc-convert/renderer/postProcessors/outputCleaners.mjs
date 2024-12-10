@@ -1,10 +1,10 @@
-const clearEmptyOptionHeaders = text => text.replace(/## Options\n## Members/g, '## Members');
-const clearEmptyMembersHeaders = text => text.replace(/## Members\n## Methods/g, '## Methods');
-const clearEmptyDescriptionHeaders = text => text.replace(/## Description\n*## Members/g, '## Members');
+const clearEmptyOptionHeaders = text => text.replace(/## 选项\n## 成员/g, '## 成员');
+const clearEmptyMembersHeaders = text => text.replace(/## 成员\n## 方法/g, '## 方法');
+const clearEmptyDescriptionHeaders = text => text.replace(/## 描述\n*## 成员/g, '## 成员');
 const clearEmptyFunctionsHeaders = text => text
-  .replace(/(## Methods\n)+$/g, '\n')
-  .replace(/(## Methods\n## Methods\n\n## Description)/g, '## Description')
-  .replace(/(\n## Methods)+/g, '\n## Methods');
+  .replace(/(## 方法\n)+$/g, '\n')
+  .replace(/(## 方法\n## 方法\n\n## 描述)/g, '## 描述')
+  .replace(/(\n## 方法)+/g, '\n## 方法');
 
 export const outputCleaners = [
   clearEmptyOptionHeaders,

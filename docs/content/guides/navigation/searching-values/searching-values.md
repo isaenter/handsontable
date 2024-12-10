@@ -1,6 +1,6 @@
 ---
 id: ct5f32ig
-title: Searching values
+title: 搜索值
 metaTitle: Searching values - JavaScript Data Grid | Handsontable
 description: Search data across Handsontable, using built-in API methods and implementing your own search UI.
 permalink: /searching-values
@@ -16,9 +16,9 @@ searchCategory: Guides
 category: Navigation
 ---
 
-# Searching values
+# 搜索值
 
-Search data across Handsontable, using the built-in API methods of the [`Search`](@/api/search.md) plugin, and implementing your own search UI.
+使用 [`Search`](@/api/search.md) 插件的内置 API 方法在 Handsontable 中搜索数据，并实现您自己的搜索 UI。
 
 [[toc]]
 
@@ -28,39 +28,39 @@ Search data across Handsontable, using the built-in API methods of the [`Search`
 
 ::: tip
 
-To use the Handsontable API, you'll need access to the Handsontable instance. You can do that by utilizing a reference to the `HotTable` component, and reading its `hotInstance` property.
+要使用 Handsontable API，您需要访问 Handsontable 实例。您可以通过利用对`HotTable`组件的引用并读取其`hotInstance`属性来做到这一点。
 
-For more information, see the [Instance methods](@/guides/getting-started/react-methods/react-methods.md) page.
-
-:::
+有关更多信息，请参阅[实例方法](@/guides/getting-started/react-methods/react-methods.md)页面。
 
 :::
 
-The [`Search`](@/api/search.md) plugin provides an easy API to search data across Handsontable.
+:::
 
-You should first enable the plugin by setting the [`search`](@/api/options.md#search) option to `true`. When enabled, the [`Search`](@/api/search.md) plugin exposes a new method [`query(queryStr)`](@/api/search.md#query), where [`queryStr`](@/api/search.md#query) is a string to find within the table. By default, the search is case insensitive.
+[`Search`](@/api/search.md) 插件提供了一个简单的 API 来在 Handsontable 中搜索数据。
 
-[`query(queryStr, [callback], [queryMethod])`](@/api/search.md#query) method does 2 things. First of all, it returns an array of search results. Every element is an objects containing 3 properties:
+您应该首先通过将 [`search`](@/api/options.md#search) 选项设置为 `true` 来启用该插件。启用后，[`Search`](@/api/search.md) 插件会公开一个新方法 [`query(queryStr)`](@/api/search.md#query)，其中 [`queryStr`]( @/api/search.md#query) 是要在表中查找的字符串。默认情况下，搜索不区分大小写。
 
-- `row` – index of the row where the value has been found
-- `col` – index of the column where the value has been found
-- `data` – the value that has been found
+[`query(queryStr, [callback], [queryMethod])`](@/api/search.md#query) 方法做了两件事。首先，它返回一个搜索结果数组。每个元素都是一个包含 3 个属性的对象：
 
-The second thing the [`query()`](@/api/search.md#query) method does is set the `isSearchResult` property for each cell. If a cell is in search results, then its `isSearchResult` is set to `true`, otherwise the property is set to `false`.
+- `row` – 找到值的行的索引
+- `col` – 找到值的列的索引
+- `data` – 已找到的值
 
-All you have to do now, is use the [`query()`](@/api/search.md#query) method inside search input listener and you're done.
+[`query()`](@/api/search.md#query) 方法执行的第二件事是为每个单元格设置 `isSearchResult` 属性。如果某个单元格位于搜索结果中，则其`isSearchResult`设置为`true`，否则该属性设置为`false`。
 
-## Search result class
+您现在所要做的就是在搜索输入侦听器中使用 [`query()`](@/api/search.md#query) 方法，然后就完成了。
 
-By default, the [`Search`](@/api/search.md) plugin adds `htSearchResult` class to every cell which `isSearchResult` property is `true`. You can change this class using [`searchResultClass`](@/api/options.md#search) configuration option.
+## 搜索结果类
 
-To change the result class, you use the [`var searchPlugin = hot.getPlugin('search'); searchPlugin.setSearchResultClass(className);`](@/api/search.md#setsearchresultclass) method.
+默认情况下，[Search`](@/api/search.md) 插件将 `htSearchResult` 类添加到 `isSearchResult` 属性为 `true` 的每个单元格。您可以使用 [`searchResultClass`](@/api/options.md#search) 配置选项更改此类。
 
-## Custom `queryMethod`
+要更改结果类，请使用 [`var searchPlugin = hot.getPlugin('search'); searchPlugin.setSearchResultClass(className);`](@/api/search.md#setsearchresultclass) 方法。
 
-The [`queryMethod()`](@/api/search.md#query) function is responsible for determining whether a `queryStr` matches the value stored in a cell. It takes 2 arguments: `queryStr` and `cellData`. The first is a string passed to [`query()`](@/api/search.md#query) method. The second is a value returned by [`getDataAtCell()`](@/api/core.md#getdataatcell). The [`queryMethod()`](@/api/options.md#search) function should return `true` if there is a match.
+## 自定义`queryMethod`
 
-The default [`queryMethod`](@/api/options.md#search) function is dead simple:
+[`queryMethod()`](@/api/search.md#query) 函数负责确定 `queryStr` 是否与存储在单元格中的值匹配。它需要 2 个参数：`queryStr`和`cellData`。第一个是传递给 [`query()`](@/api/search.md#query) 方法的字符串。第二个是 [`getDataAtCell()`](@/api/core.md#getdataatcell) 返回的值。如果存在匹配，则 [`queryMethod()`](@/api/options.md#search) 函数应返回 `true`。
+
+默认的 [`queryMethod`](@/api/options.md#search) 函数非常简单：
 
 ```js
 const DEFAULT_QUERY_METHOD = function(query, value) {
@@ -75,15 +75,15 @@ const DEFAULT_QUERY_METHOD = function(query, value) {
 };
 ```
 
-If you want to change the [`queryMethod`](@/api/search.md#query), use the [`queryMethod`](@/api/options.md#search) option. You can also pass the [`queryMethod`](@/api/options.md#search) as the third argument of [`query()`](@/api/search.md#query) method. To change the [`queryMethod`](@/api/options.md#search), use [`var searchPlugin = hot.getPlugin('search'); searchPlugin.setQueryMethod(myNewQueryMethod);`](@/api/search.md#setquerymethod).
+如果要更改 [`queryMethod`](@/api/search.md#query)，请使用 [`queryMethod`](@/api/options.md#search) 选项。您还可以将 [`queryMethod`](@/api/options.md#search) 作为 [`query()`](@/api/search.md#query) 方法的第三个参数传递。要更改 [`queryMethod`](@/api/options.md#search)，请使用 [`var searchPlugin = hot.getPlugin('search'); searchPlugin.setQueryMethod(myNewQueryMethod);`](@/api/search.md#setquerymethod).
 
-## Custom result callback
+## 自定义结果回调
 
-After calling [`queryMethod`](@/api/options.md#search) the [`Search`](@/api/search.md) plugin calls `callback(instance, rowIndex, colIndex, cellData, testResult)` for every cell.
+调用 [`queryMethod`](@/api/options.md#search) 后，[`Search`](@/api/search.md) 插件调用 `callback(instance, rowIndex, colIndex, cellData, testResult)`每个细胞。
 
-Just as the [`queryMethod`](@/api/options.md#search), you can override this callback, using [`var searchPlugin = hot.getPlugin('search'); searchPlugin.setCallback(myNewCallbackFunction);`](@/api/search.md#setcallback), or passing your callback as the second argument of [`query()`](@/api/search.md#query) method.
+就像 [`queryMethod`](@/api/options.md#search) 一样，您可以使用 [`var searchPlugin = hot.getPlugin('search'); 覆盖此回调。 searchPlugin.setCallback(myNewCallbackFunction);`](@/api/search.md#setcallback)，或将回调作为 [`query()`](@/api/search.md#query) 方法的第二个参数传递。
 
-The default `callback` is responsible for setting the `isSearchResult` property.
+默认的`callback`负责设置`isSearchResult`属性。
 
 ```js
 const DEFAULT_CALLBACK = function(instance, row, col, data, testResult) {
@@ -91,14 +91,14 @@ const DEFAULT_CALLBACK = function(instance, row, col, data, testResult) {
 };
 ```
 
-## Simplest use case
+## 最简单的用例
 
-The example below:
-- Enables the [`Search`](@/api/search.md) plugin (by setting the [`search`](@/api/options.md#search) configuration option to `true`)
-- Adds a search input listener
-- Inside the search input listener, gets the [`Search`](@/api/search.md) plugin's instance
-- Uses the [`Search`](@/api/search.md) plugin's [`query()`](@/api/search.md#query) method
-
+下面的例子：
+- 启用 [`Search`](@/api/search.md) 插件（通过将 [`search`](@/api/options.md#search) 配置选项设置为 `true`）
+- 添加搜索输入监听器
+- 在搜索输入侦听器中，获取 [`Search`](@/api/search.md) 插件的实例
+- 使用 [`Search`](@/api/search.md) 插件的 [`query()`](@/api/search.md#query) 方法
+  
 ::: only-for javascript
 
 ::: example #example1 --html 1 --js 2 --ts 3
@@ -122,14 +122,14 @@ The example below:
 
 :::
 
-## Custom search result class
+## 自定义搜索结果类
 
-You can style your search results with a custom CSS class, using the [`Search`](@/api/search.md) plugin's [`searchResultClass`](@/api/options.md#search) option.
+您可以使用 [`Search`](@/api/search.md) 插件的 [`searchResultClass`](@/api/options.md#search) 选项，使用自定义 CSS 类来设置搜索结果的样式。
 
-The example below highlights its search results in bold red. To do this, it:
-- Defines a custom CSS class called `my-custom-search-result-class`
-- Enables the [`Search`](@/api/search.md) plugin (by setting the [`search`](@/api/options.md#search) configuration option to an object)
-- Sets the [`Search`](@/api/search.md) plugin's [`searchResultClass`](@/api/options.md#search) option to `'my-custom-search-result-class'`
+下面的示例以粗体红色突出显示其搜索结果。为此，它：
+- 定义一个名为`my-custom-search-result-class`的自定义 CSS 类
+- 启用 [`Search`](@/api/search.md) 插件（通过将 [`search`](@/api/options.md#search) 配置选项设置为对象）
+- 将 [`Search`](@/api/search.md) 插件的 [`searchResultClass`](@/api/options.md#search) 选项设置为 `'my-custom-search-result-class'`
 
 ::: only-for javascript
 
@@ -156,14 +156,14 @@ The example below highlights its search results in bold red. To do this, it:
 
 :::
 
-## Custom query method
+## 自定义查询方法
 
-You can add a custom query method, using the [`Search`](@/api/search.md) plugin's [`queryMethod`](@/api/search.md#query).
+您可以使用 [`Search`](@/api/search.md) 插件的 [`queryMethod`](@/api/search.md#query) 添加自定义查询方法。
 
-The example below searches only for exact search query matches. To do this, it:
-- Defines a custom query method called `onlyExactMatch`
-- Enables the [`Search`](@/api/search.md) plugin (by setting the [`search`](@/api/options.md#search) configuration option to an object)
-- Sets the [`Search`](@/api/search.md) plugin's [`queryMethod`](@/api/options.md#search) option to `onlyExactMatch`
+下面的示例仅搜索精确的搜索查询匹配。为此，它：
+- 定义一个名为`onlyExactMatch`的自定义查询方法
+- 启用 [`Search`](@/api/search.md) 插件（通过将 [`search`](@/api/options.md#search) 配置选项设置为对象）
+- 将 [`Search`](@/api/search.md) 插件的 [`queryMethod`](@/api/options.md#search) 选项设置为 `onlyExactMatch`
 
 ::: only-for javascript
 
@@ -188,14 +188,14 @@ The example below searches only for exact search query matches. To do this, it:
 
 :::
 
-## Custom callback
+## 自定义回调
 
-You can add a custom callback function, using the [`Search`](@/api/search.md) plugin's [`callback`](@/api/search.md) option.
+您可以使用 [`Search`](@/api/search.md) 插件的 [`callback`](@/api/search.md) 选项添加自定义回调函数。
 
-The example below displays the number of matching search results. To do this, it:
-- Defines a custom callback function called `searchResultCounter`
-- Enables the [`Search`](@/api/search.md) plugin (by setting the [`search`](@/api/options.md#search) configuration option to an object)
-- Sets the [`Search`](@/api/search.md) plugin's [`callback`](@/api/search.md) option to `searchResultCounter`
+下面的示例显示匹配搜索结果的数量。为此，它：
+- 定义一个名为`searchResultCounter`的自定义回调函数
+- 启用 [`Search`](@/api/search.md) 插件（通过将 [`search`](@/api/options.md#search) 配置选项设置为对象）
+- 将 [`Search`](@/api/search.md) 插件的 [`callback`](@/api/search.md) 选项设置为 `searchResultCounter`
 
 ::: only-for javascript
 

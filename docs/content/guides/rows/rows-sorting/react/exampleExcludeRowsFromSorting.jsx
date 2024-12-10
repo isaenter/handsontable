@@ -14,12 +14,12 @@ const ExampleComponent = () => {
     const handsontableInstance = hotTableComponentRef.current?.hotInstance;
     const lastRowIndex = (handsontableInstance?.countRows() || 0) - 1;
 
-    // after each sorting, take row 1 and change its index to 0
+    // 每次排序后，取出第 1 行并将其索引更改为 0
     handsontableInstance?.rowIndexMapper.moveIndexes(
       handsontableInstance.toVisualRow(0),
       0
     );
-    // after each sorting, take row 16 and change its index to 15
+    // 每次排序后，取出第 16 行并将其索引更改为 15
     handsontableInstance?.rowIndexMapper.moveIndexes(
       handsontableInstance.toVisualRow(lastRowIndex),
       lastRowIndex
@@ -195,7 +195,7 @@ const ExampleComponent = () => {
       fixedRowsBottom={1}
       colHeaders={true}
       columnSorting={true}
-      // `afterColumnSort()` is a Handsontable hook: it's fired after each sorting
+      // `afterColumnSort()` 是一个 Handsontable 钩子：它在每次排序后触发
       afterColumnSort={exclude}
       cells={(row, col, prop) => {
         if (hotTableComponentRef.current != null) {

@@ -28,15 +28,15 @@ const ExampleComponent = () => {
       readOnly={false}
       cell={[
         {
-          // bottom-level cell options overwrite the top-level grid options
-          // apply only to a cell with coordinates (0, 0)
+          // 底层单元格选项覆盖顶层网格选项
+          // 仅适用于坐标为 (0, 0) 的单元格
           row: 0,
           col: 0,
           readOnly: true,
         },
         {
-          // bottom-level cell options overwrite the top-level grid options
-          // apply only to a cell with coordinates (1, 1)
+          // 底层单元格选项覆盖顶层网格选项
+          // 仅适用于坐标为 (1, 1) 的单元格
           row: 1,
           col: 1,
           readOnly: true,

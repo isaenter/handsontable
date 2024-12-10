@@ -2,17 +2,17 @@
 {{>hot-docs~}}
 {{/if}}{{/children~}}
 
-## Options
+## 选项
 {{#children inherited=undefined ~}}{{#unless (isConstructor)}}{{#unless (isFunction)}}{{#if isOption}}
 {{>hot-docs~}}
 {{/if}}{{/unless}}{{/unless}}{{/children~}}
 
-## Members
+## 成员
 {{#children inherited=undefined ~}}{{#unless (isConstructor)}}{{#unless (isFunction)}}{{#unless isOption}}
 {{>hot-docs~}}
 {{/unless}}{{/unless}}{{/unless}}{{/children~}}
 
-## Methods
+## 方法
 {{#children inherited=undefined ~}}{{#unless (isConstructor)}}{{#if (isFunction)}}
 {{>hot-docs~}}
 {{/if}}{{/unless}}{{/children~}}

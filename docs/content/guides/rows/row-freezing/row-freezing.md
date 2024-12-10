@@ -1,6 +1,6 @@
 ---
 id: jgrtvjxx
-title: Row freezing
+title: 行冻结
 metaTitle: Row freezing - JavaScript Data Grid | Handsontable
 description: Lock (freeze) the position of specified rows, keeping them visible while scrolling to another area of the grid. This feature is sometimes called "pinned rows".
 permalink: /row-freezing
@@ -16,21 +16,21 @@ searchCategory: Guides
 category: Rows
 ---
 
-# Row freezing
+# 行冻结
 
-Lock the position of specified rows, keeping them visible when scrolling.
+锁定指定行的位置，使它们在滚动时保持可见。
 
 [[toc]]
 
 ## 概述
 
-Row freezing locks specific rows of a grid in place, keeping them visible while scrolling to another area of the grid.
+行冻结将网格的特定行锁定在适当的位置，使它们在滚动到网格的另一个区域时保持可见。
 
-This feature is sometimes called "pinned rows".
+此功能有时称为`固定行`。
 
-## Example
+## 例子
 
-The following example specifies two fixed rows with `fixedRowsTop: 2`. Horizontal scroll bars are needed, so set a container `width` and `overflow: hidden` in CSS.
+以下示例使用`fixedRowsTop: 2`指定两个固定行。需要水平滚动条，所以在CSS中设置容器`width`和`overflow:hidden`。
 
 ::: only-for javascript
 

@@ -97,11 +97,11 @@ const ExampleComponent = () => {
       multiColumnSorting={{
         initialConfig: [
           {
-            // at initialization, sort the data by the 'Brand' column, in ascending order
+            // 初始化时，按`品牌`列对数据进行升序排序
             column: 0,
             sortOrder: 'asc',
           },
-          // at initialization, sort the data by the 'Model' column, in descending order
+          // 初始化时，按`模型`列对数据进行降序排序
           {
             column: 1,
             sortOrder: 'desc',

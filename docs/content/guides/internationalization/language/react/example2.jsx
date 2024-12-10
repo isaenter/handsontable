@@ -65,7 +65,7 @@ const ExampleComponent = () => {
     <div>
       <div className="controls select-language">
         <label>
-          Select language of the context menu:{' '}
+          选择上下文菜单的语言:{' '}
           <select value={language} onChange={updateHotLanguage}>
             {languageList.map(({ languageCode }) => (
               <option key={languageCode} value={languageCode}>

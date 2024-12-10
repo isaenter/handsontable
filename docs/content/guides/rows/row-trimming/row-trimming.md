@@ -1,6 +1,6 @@
 ---
 id: 4q2wi29j
-title: Row trimming
+title: 行修剪
 metaTitle: Row trimming - JavaScript Data Grid | Handsontable
 description: Hide individual rows from your interface and exclude them from the rendering process and DataMap. This feature is similar, but not the same, as "hiding rows".
 permalink: /row-trimming
@@ -12,26 +12,26 @@ searchCategory: Guides
 category: Rows
 ---
 
-# Row trimming
+# 行修剪
 
-Hide individual rows from your interface and exclude them from the rendering process and `DataMap`.
+从界面中隐藏各个行，并将它们从渲染过程和`DataMap`中排除。
 
 [[toc]]
 
 ## 概述
 
-Row trimming is similar to [row hiding](@/guides/rows/row-hiding/row-hiding.md), but works a bit differently.
+行修剪类似于[行隐藏](@/guides/rows/row-hiding/row-hiding.md)，但工作方式略有不同。
 
-The [`TrimRows`](@/api/trimRows.md) plugin allows the trimming of specific rows from the table. Rows being trimmed aren't rendered and aren't included in the `DataMap`, which can be retrieved by calling the [`getData`](@/api/core.md#getdata) method.
+[`TrimRows`](@/api/trimRows.md) 插件允许修剪表中的特定行。被修剪的行不会呈现，也不包含在`DataMap`中，可以通过调用 [`getData`](@/api/core.md#getdata) 方法来检索。
 
-## Setup
+## 设置
 
-To enable row trimming, set the [`trimRows`](@/api/options.md#trimrows) option to `true`.
+要启用行修剪，请将 [`trimRows`](@/api/options.md#trimrows) 选项设置为 `true`。
 
 ::: only-for javascript
 
 ```js
-// enable the `TrimRows` plugin
+// 启用`TrimRows`插件
 trimRows: true,
 ```
 
@@ -40,7 +40,7 @@ trimRows: true,
 ::: only-for react
 
 ```jsx
-// enable the `TrimRows` plugin
+// 启用`TrimRows`插件
 
 <HotTable
   trimRows={true}
@@ -49,13 +49,13 @@ trimRows: true,
 
 :::
 
-To both enable row trimming and trim selected rows at Handsontable's initialization, set the [`trimRows`](@/api/options.md#trimrows) option to an array of physical row indexes.
+要在 Handsontable 初始化时启用行修剪并修剪选定的行，请将 [`trimRows`](@/api/options.md#trimrows) 选项设置为物理行索引数组。
 
 ::: only-for javascript
 
 ```js
-// enable the `TrimRows` plugin
-// at Handsontable's initialization, trim rows 5, 10, and 15
+// 启用`TrimRows`插件
+// 在 Handsontable 初始化时，修剪第 5、10 和 15 行
 trimRows: [5, 10, 15],
 ```
 
@@ -64,8 +64,8 @@ trimRows: [5, 10, 15],
 ::: only-for react
 
 ```jsx
-// enable the `TrimRows` plugin
-// at Handsontable's initialization, trim rows 5, 10, and 15
+// 启用`TrimRows`插件
+// 在 Handsontable 初始化时，修剪第 5、10 和 15 行
 
 <HotTable
   trimRows={[5, 10, 15]}
@@ -74,9 +74,9 @@ trimRows: [5, 10, 15],
 
 :::
 
-## Example
+## 例子
 
-Note that the second, third, and sixth rows are missing in the following example:
+请注意，以下示例中缺少第二、第三和第六行：
 
 ::: only-for javascript
 
@@ -100,40 +100,40 @@ Note that the second, third, and sixth rows are missing in the following example
 
 :::
 
-## API examples
+## API示例
 
 ::: only-for react
 
 ::: tip
 
-To use the Handsontable API, you'll need access to the Handsontable instance. You can do that by utilizing a reference to the `HotTable` component, and reading its `hotIntance` property.
+要使用 Handsontable API，您需要访问 Handsontable 实例。您可以通过利用对`HotTable`组件的引用并读取其`hotIntance`属性来做到这一点。
 
-For more information, see the [Instance methods](@/guides/getting-started/react-methods/react-methods.md) page.
-
-:::
+有关更多信息，请参阅[实例方法](@/guides/getting-started/react-methods/react-methods.md)页面。
 
 :::
 
-The plugin instance can be accessed by calling:
+:::
+
+可以通过调用以下方式访问插件实例：
 
 ```js
 const plugin = hot.getPlugin('trimRows');
 ```
 
-To trim a single row, call the [`trimRow()`](@/api/trimRows.md#trimrow) method of the plugin object:
+要修剪单行，请调用插件对象的 [`trimRow()`](@/api/trimRows.md#trimrow) 方法：
 
 ```js
 plugin.trimRow(4);
 ```
-To trim multiple rows, either pass them as arguments to the [`trimRow()`](@/api/trimRows.md#trimrow) method, or pass an array of physical row indexes to the [`trimRows()`](@/api/trimRows.md#trimrows) method:
+要修剪多行，请将它们作为参数传递给 [`trimRows()`](@/api/trimRows.md#trimrow) 方法，或者将物理行索引数组传递给 [`trimRows()`]( @/api/trimRows.md#trimrows) 方法：
 
 ```js
 plugin.trimRow(0, 4, 6);
-// or
+// 或者
 plugin.trimRows([0, 4, 6]);
 ```
 
-To restore the trimmed row(s), use the following methods:
+要恢复修剪的行，请使用以下方法：
 
 ```js
 plugin.untrimRow(4);
@@ -145,7 +145,7 @@ plugin.untrimRow(0, 4, 6);
 plugin.untrimRows([0, 4, 6]);
 ```
 
-To see the changes made, call `hot.render();` to re-render the table.
+要查看所做的更改，请调用`hot.render();`重新渲染表。
 
 ## 相关API参考
 

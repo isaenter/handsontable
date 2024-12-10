@@ -94,7 +94,7 @@ const ExampleComponent = () => {
           className: 'htCenter',
         },
       ]}
-      // enable sorting by multiple columns, for all columns
+      // 对所有列启用按多列排序
       multiColumnSorting={true}
       height="auto"
       stretchH="all"

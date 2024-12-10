@@ -1,6 +1,6 @@
 ---
 id: hpr42b2a
-title: Documentation license
+title: 文件许可
 metaTitle: Documentation license - JavaScript Data Grid | Handsontable
 description: Learn about the licensing terms of Handsontable's documentation.
 permalink: /documentation-license
@@ -12,22 +12,22 @@ searchCategory: Guides
 category: Technical specification
 ---
 
-# Documentation license
+# 文件许可
 
-Learn about the licensing terms of Handsontable's documentation.
+了解 Handsontable 文档的许可条款。
 
 [[toc]]
 
-## Documentation license summary
+## 文档许可证摘要
 
-This documentation is available under the terms and conditions listed in the [Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0) document.
+本文档根据 [Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0) 文档中列出的条款和条件提供。
 
-You are free to:
+您可以自由地：
 
-- **Share** — copy and redistribute the material in any medium or format,
-- **Adapt** — remix, transform, and build upon the material for any purpose, even commercially.
+- **共享**— 以任何媒介或格式复制和重新分发材料，
+- **改编**— 出于任何目的（甚至商业目的）重新混合、转换和构建材料。
 
-Under the following terms:
+根据以下条款：
 
-- **Attribution** — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
-- **No additional restrictions** — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.
+- **归属**— 您必须给出适当的信用，提供许可证的链接，并表明是否进行了更改。您可以以任何合理的方式这样做，但不得以任何暗示许可方认可您或您的使用的方式。
+- **无额外限制**— 您不得应用法律条款或技术措施来合法限制他人执行许可证允许的任何操作。

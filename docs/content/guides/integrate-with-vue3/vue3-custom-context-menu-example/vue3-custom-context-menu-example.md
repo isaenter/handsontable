@@ -1,6 +1,6 @@
 ---
 id: 38qivuj4
-title: Custom context menu in Vue 3
+title: Vue 3 中的自定义上下文菜单
 metaTitle: Custom context menu - Vue 3 Data Grid | Handsontable
 description: Customize the context menu of your Vue 3 data grid, by creating a custom function for each menu item.
 permalink: /vue3-custom-context-menu-example
@@ -12,17 +12,17 @@ searchCategory: Guides
 category: Integrate with Vue 3
 ---
 
-# Custom context menu example in Vue 3
+# Vue 3 中的自定义上下文菜单示例
 
-Customize the context menu of your Vue 3 data grid, by creating a custom function for each menu item.
+通过为每个菜单项创建自定义函数来自定义 Vue 3 数据网格的上下文菜单。
 
 [[toc]]
 
-## Example
+## 例子
 
-The following example implements the `@handsontable/vue3` component, adding a custom Context Menu.
+以下示例实现了`@handsontable/vue3`组件，添加了自定义上下文菜单。
 
-[Find out which Vue 3 versions are supported](@/guides/integrate-with-vue3/vue3-installation/vue3-installation.md#vue-3-version-support)
+[了解支持哪些 Vue 3 版本](@/guides/integrate-with-vue 3/vue 3-installation/vue3-installation.md#vue-3-version-support)
 
 ::: example #example1 :vue3 --html 1 --js 2
 

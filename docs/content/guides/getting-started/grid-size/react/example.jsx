@@ -24,7 +24,7 @@ const ExampleComponent = () => {
   };
 
   useEffect(() => {
-    // simulate layout change outside of React lifecycle
+    // 模拟 React 生命周期之外的布局变化
     // @ts-ignore
     document.getElementById('exampleParent').style.height = isContainerExpanded
       ? '410px'
@@ -40,7 +40,7 @@ const ExampleComponent = () => {
           className="button button--primary"
           onClick={() => triggerBtnClickCallback()}
         >
-          {isContainerExpanded ? 'Collapse container' : 'Expand container'}
+          {isContainerExpanded ? '折叠容器' : '展开容器'}
         </button>
       </div>
       <div id="exampleParent" className="exampleParent">

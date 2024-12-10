@@ -1,6 +1,6 @@
 ---
 id: 39o3uw0q
-title: Custom plugins
+title: 自定义插件
 metaTitle: Custom plugins - JavaScript Data Grid | Handsontable
 description: Extend Handsontable's functionality by writing your custom plugin. Use the BasePlugin for a quick start.
 permalink: /custom-plugins
@@ -16,51 +16,51 @@ searchCategory: Guides
 category: Tools and building
 ---
 
-# Custom plugins
+# 自定义插件
 
-Extend Handsontable's functionality by writing your custom plugin. Use the BasePlugin for a quick start.
+通过编写自定义插件来扩展 Handsontable 的功能。使用 BasePlugin 快速启动。
 
 [[toc]]
 
 ## 概述
 
-Plugins are a great way of extending Handsontable's capabilities. In fact, most Handsontable features are provided by plugins.
+插件是扩展 Handsontable 功能的好方法。事实上，大多数 Handsontable 功能都是由插件提供的。
 
 ::: only-for react
 
-You can create a custom plugin in JavaScript, and then reference it from within your React app.
+您可以在 JavaScript 中创建自定义插件，然后从 React 应用程序中引用它。
 
 :::
 
-### 1. Prerequisites
+### 1. 先决条件
 
-Import the following:
-- [`BasePlugin`](@/api/basePlugin.md) - a built-in interface that lets you work within Handsontable's lifecycle,
-- `registerPlugin` - a utility to register a plugin in the Handsontable plugin registry.
+导入以下内容：
+- [`BasePlugin`](@/api/basePlugin.md) - 一个内置界面，可让您在 Handsontable 的生命周期内工作，
+- `registerPlugin` - 用于在 Handsontable 插件注册表中注册插件的实用程序。
 
 
 ```js
 import { BasePlugin, registerPlugin } from 'handsontable/plugins';
 ```
 
-### 2. Extend the [`BasePlugin`](@/api/basePlugin.md)
-The best way to start creating your own plugin is to extend the [`BasePlugin`](@/api/basePlugin.md).
+### 2. 扩展 [`BasePlugin`](@/api/basePlugin.md)
+开始创建自己的插件的最佳方法是扩展 [`BasePlugin`](@/api/basePlugin.md)。
 
-The [`BasePlugin`](@/api/basePlugin.md) interface takes care of:
-- Backward compatibility
-- Memory leak prevention
-- Properly binding your plugin's instance to Handsontable
+[`BasePlugin`](@/api/basePlugin.md) 接口负责：
+- 向后兼容性
+- 内存泄漏预防
+- 将插件实例正确绑定到 Handsontable
 
 ```js
 export class CustomPlugin extends BasePlugin {
  /**
-  * Define a unique key (a string) for your plugin.
-  * The key becomes the plugin's alias.
-  * Handsontable registers the plugin under that alias.
-  * When an `updateSettings()` call includes the plugin's alias,
-  * your plugin's state gets updated.
-  * You can also use the alias to recognize the plugin's
-  * options passed through the Setting object at Handsontable's initialization.
+  * 为您的插件定义一个唯一的键（字符串）。
+  * 键成为插件的别名。
+  * Handsontable 在该别名下注册插件。
+  * 当 `updateSettings()` 调用包含插件的别名时，
+  * 你的插件的状态得到更新。
+  * 您还可以使用别名来识别插件的
+  * Handsontable 初始化时通过Setting 对象传递的选项。
   *
   * @returns {string}
   */
@@ -69,11 +69,11 @@ export class CustomPlugin extends BasePlugin {
   }
 
  /**
-  * Define additional setting keys (an array of strings) for your plugin.
-  * When an `updateSettings()` call includes at least one of those setting keys,
-  * your plugin's state gets updated.
-  * If you set SETTING_KEYS() to return `true`, your plugin updates on every `updateSettings()` call.
-  * If you set SETTING_KEYS() to return `false`, your plugin never updates on any `updateSettings()` call.
+  * 为您的插件定义附加设置键（字符串数组）。
+  * 当`updateSettings()`调用至少包含这些设置键之一时，
+  * 你的插件的状态得到更新。
+  * 如果您将 SETTING_KEYS() 设置为返回`true`，则您的插件会在每次`updateSettings()`调用时更新。
+  * 如果您将 SETTING_KEYS() 设置为返回`false`，则您的插件永远不会在任何`updateSettings()`调用上更新。
   *
   * @returns {Array|boolean}
   */
@@ -82,21 +82,21 @@ export class CustomPlugin extends BasePlugin {
   }
 
   /**
-   * Extend the default constructor and define internal properties for your plugin.
+   * 扩展默认构造函数并定义插件的内部属性。
    *
    * @param {Handsontable} hotInstance
    */
   constructor(hotInstance) {
      /**
-     * The [`BasePlugin`](@/api/basePlugin.md)'s constructor adds a `this.hot` property to your plugin.
-     * The `this.hot` property:
-     * - Is a reference to the Handsontable instance.
-     * - Can't be overwritten.
-     * - Gives you access to columns' and rows' index mappers.
+     * [`BasePlugin`](@/api/basePlugin.md) 的构造函数向您的插件添加一个 `this.hot` 属性。
+     * `this.hot` 属性：
+     * - 是对 Handsontable 实例的引用。
+     * - 不能被覆盖。
+     * - 使您可以访问列和行的索引映射器。
      */
     super(hotInstance);
 
-    // Initialize all your public properties in the class' constructor.
+    // 在类的构造函数中初始化所有公共属性。
     this.configuration = {
       enabled: false,
       msg: ''
@@ -104,7 +104,7 @@ export class CustomPlugin extends BasePlugin {
   }
 
   /**
-   * Unifies configuration passed to settings object.
+   * 统一传递给设置对象的配置。
    *
    * @returns {object}
    * @throws {Error}
@@ -146,7 +146,7 @@ export class CustomPlugin extends BasePlugin {
   }
 
   /**
-   * Checks if the plugin is enabled in the settings.
+   * 检查设置中是否启用了该插件。
    */
   isEnabled() {
     const pluginSettings = this.getUnifiedConfig();
@@ -155,49 +155,49 @@ export class CustomPlugin extends BasePlugin {
   }
 
   /**
-   * The `enablePlugin` method is triggered on the `beforeInit` hook.
-   * It should contain your plugin's initial setup and hook connections.
-   * This method is run only if the `isEnabled` method returns `true`.
+   * `enablePlugin` 方法在 `beforeInit` 钩子上触发。
+   * 它应该包含您的插件的初始设置和挂钩连接。
+   * 仅当`isEnabled`方法返回`true`时，此方法才会运行。
    */
   enablePlugin() {
-    // Get the plugin's configuration from the initialization object.
+    // 从初始化对象获取插件的配置。
     this.configuration = this.getUnifiedConfig();
 
-    // Add all your plugin hooks here. It's a good idea to use arrow functions to keep the plugin as a context.
+    // 在这里添加所有插件挂钩。使用箭头函数将插件保留为上下文是一个好主意。
     this.addHook('afterChange', (changes, source) => this.onAfterChange(changes, source));
 
-    // The `super` method sets the `this.enabled` property to `true`.
-    // It is a necessary step to update the plugin's settings properly.
+    // `super` 方法将 `this.enabled` 属性设置为 `true`。
+    // 这是正确更新插件设置的必要步骤。
     super.enablePlugin();
   }
 
   /**
-   * The `disablePlugin` method disables the plugin.
+   * `disablePlugin` 方法禁用插件。
    */
   disablePlugin() {
-    // Reset all of your plugin class properties to their default values here.
+    // 在此处将所有插件类属性重置为其默认值。
     this.configuration = null;
 
-    // The `BasePlugin.disablePlugin` method takes care of clearing the hook connections
-    // and assigning the 'false' value to the 'this.enabled' property.
+    // `BasePlugin.disablePlugin` 方法负责清除钩子连接
+    // 并将`false`值分配给`this.enabled`属性。
     super.disablePlugin();
   }
 
   /**
-   * The `updatePlugin` method is called on the `afterUpdateSettings` hook
-   * (unless the `updateSettings` method turned the plugin off),
-   * but only if the config object passed to the `updateSettings` method
-   * contains entries relevant to that particular plugin.
-   *
-   * The `updatePlugin` method should contain anything that your plugin needs to do to work correctly
-   * after updating the Handsontable instance settings.
+   * 在 `afterUpdateSettings` 钩子上调用 `updatePlugin` 方法
+   * （除非`updateSettings`方法关闭了插件），
+   * 但前提是配置对象传递给 `updateSettings` 方法
+   * 包含与该特定插件相关的条目。
+   * 
+   * `updatePlugin` 方法应该包含您的插件正常工作所需的任何内容
+   * 更新 Handsontable 实例设置后。
    */
   updatePlugin() {
-    // The `updatePlugin` method needs to contain all the code needed to properly re-enable the plugin.
-    // In most cases simply disabling and enabling the plugin should do the trick.
+    // `updatePlugin` 方法需要包含正确重新启用插件所需的所有代码。
+    // 在大多数情况下，只需禁用和启用插件就可以解决问题。
     const { enabled, msg } = this.getUnifiedConfig();
 
-    // You can decide if updating the settings triggers the the disable->enable routine or not.
+    // 您可以决定更新设置是否触发禁用->启用例程。
     if (enabled === false && this.enabled === true) {
       this.disablePlugin();
 
@@ -205,7 +205,7 @@ export class CustomPlugin extends BasePlugin {
       this.enablePlugin();
     }
 
-    // If you need to update just a single option.
+    // 如果您只需要更新一个选项。
     if (this.configuration !== null && msg && this.configuration.msg !== msg) {
       this.configuration.msg = msg;
     }
@@ -214,20 +214,20 @@ export class CustomPlugin extends BasePlugin {
   }
 
   /**
-   * Define your external methods.
+   * 定义您的外部方法。
    */
   externalMethodExample() {
-    // Method definition.
+    // 方法定义。
   }
 
   /**
-   * The afterChange hook callback.
+   * afterChange 钩子回调。
    *
-   * @param {CellChange[]} changes An array of changes.
-   * @param {string} source Describes the source of the change.
+   * @param {CellChange[]} changes 一系列的变化。
+   * @param {string} source 描述变化的来源。
    */
   onAfterChange(changes, source) {
-    // afterChange callback goes here.
+    // afterChange 回调位于此处。
     console.log(
       `${CustomPlugin.PLUGIN_KEY}.onAfterChange - ${this.configuration.msg}`,
       changes,
@@ -236,33 +236,33 @@ export class CustomPlugin extends BasePlugin {
   }
 
   /**
-   * The `destroy` method is the best place to clean up any instances,
-   * objects or index mappers created during the plugin's lifecycle.
+   * `destroy` 方法是清理任何实例的最佳位置，
+   * 在插件生命周期期间创建的对象或索引映射器。
    */
   destroy() {
-    // The `super` method cleans up the plugin's event callbacks, hook connections, and properties.
+    // `super`方法清理插件的事件回调、挂钩连接和属性。
     super.destroy();
   }
 }
 ```
 
-### 3. Register CustomPlugin
-Now, register your plugin.
+### 3.注册自定义插件
+现在，注册您的插件。
 
-There are two ways to register a plugin:
+注册插件有两种方法：
 
-- **Option 1**: Define a static getter named `PLUGIN_KEY` that the `registerPlugin` utility uses as the plugin's alias. Check the example in the code snippet above.
+- **选项 1**：定义一个名为`PLUGIN_KEY`的静态 getter，`registerPlugin`实用程序将其用作插件的别名。检查上面代码片段中的示例。
   ```js
-  // You need to register your plugin in order to use it within Handsontable.
+  // 您需要注册您的插件才能在 Handsontable 中使用它。
   registerPlugin(CustomPlugin);
   ```
-- **Option 2**: Use a custom alias. Put a string in the first argument. The registerer uses that string as an alias, instead of the `PLUGIN_KEY` getter from `CustomPlugin`.
+- **选项 2**：使用自定义别名。将字符串放入第一个参数中。注册器使用该字符串作为别名，而不是`CustomPlugin`中的`PLUGIN_KEY` getter。
   ```js
   registerPlugin('CustomAlias', CustomPlugin);
   ```
 
-### 4. Use your plugin in Handsontable
-To control the plugin's options, pass a boolean or an object at the plugin's initialization:
+### 4. 在 Handsontable 中使用您的插件
+要控制插件的选项，请在插件初始化时传递布尔值或对象：
 
 ::: only-for javascript
 
@@ -271,13 +271,13 @@ import Handsontable from 'handsontable';
 import { CustomPlugin } from './customPlugin';
 
 const hotInstance = new Handsontable(container, {
-  // Pass `true` to enable the plugin with default options.
+  // 传递`true`以使用默认选项启用插件。
   [CustomPlugin.PLUGIN_KEY]: true,
-  // You can also enable the plugin by passing an object with options.
+  // 您还可以通过传递带有选项的对象来启用该插件。
   [CustomPlugin.PLUGIN_KEY]: {
     msg: 'user-defined message',
   },
-  // You can also initialize the plugin without enabling it at the beginning.
+  // 您还可以初始化插件而不在一开始就启用它。
   [CustomPlugin.PLUGIN_KEY]: false,
 });
 ```
@@ -291,21 +291,21 @@ import Handsontable from 'handsontable';
 import { CustomPlugin } from './customPlugin';
 
 <HotTable
-  // Pass `true` to enable the plugin with default options.
+  // 传递`true`以使用默认选项启用插件。
   customPlugin={true}
-  // You can also enable the plugin by passing an object with options.
+  // 您还可以通过传递带有选项的对象来启用该插件。
   customPlugin={{
     msg: 'user-defined message',
   }}
-  // You can also initialize the plugin without enabling it at the beginning.
+  // 您还可以初始化插件而不在一开始就启用它。
   customPlugin={false}
 />
 ```
 
 :::
 
-### 5. Get a reference to the plugin's instance
-To use the plugin's API, call the [`getPlugin`](@/api/core.md#getplugin) method to get a reference to the plugin's instance.
+### 5. 获取插件实例的引用
+要使用插件的 API，请调用 [`getPlugin`](@/api/core.md#getplugin) 方法来获取对插件实例的引用。
 
 ::: only-for javascript
 
@@ -321,9 +321,9 @@ pluginInstance.externalMethodExample();
 
 ::: tip
 
-To use the Handsontable API, create a reference to the `HotTable` component, and read its `hotInstance` property.
+要使用 Handsontable API，请创建对`HotTable`组件的引用，并读取其`hotInstance`属性。
 
-For more information, see the [Instance methods](@/guides/getting-started/react-methods/react-methods.md) page.
+有关更多信息，请参阅[实例方法](@/guides/getting-started/react-methods/react-methods.md)页面。
 
 :::
 

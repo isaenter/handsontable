@@ -1,6 +1,6 @@
 ---
 id: vasj6t6t
-title: Row virtualization
+title: 行虚拟化
 metaTitle: Row virtualization - JavaScript Data Grid | Handsontable
 description: Render thousands of rows without freezing the browser, using row virtualization.
 permalink: /row-virtualization
@@ -16,32 +16,32 @@ searchCategory: Guides
 category: Rows
 ---
 
-# Row virtualization
+# 行虚拟化
 
-Render thousands of rows without freezing the browser, using row virtualization.
+使用行虚拟化在不冻结浏览器的情况下渲染数千行。
 
 [[toc]]
 
 ## 概述
 
-Virtualization allows Handsontable to process hundreds of thousands of records without causing the browser to hang. This feature draws only the visible part of the grid, displaying the minimum items physically rendered in the DOM. The elements outside the viewport are rendered when you scroll across the grid. Depending on your configuration, there might be a small offset of columns or rows rendered outside the viewport to make the scrolling performance smoother.
+虚拟化允许 Handsontable 处理数十万条记录，而不会导致浏览器挂起。此功能仅绘制网格的可见部分，显示 DOM 中物理渲染的最少项目。当您滚动网格时，将渲染视口之外的元素。根据您的配置，在视口之外渲染的列或行可能会有少量偏移，以使滚动性能更平滑。
 
-This feature is enabled by default and can be turned off by setting the [`renderAllRows`](@/api/options.md#renderallrows) option to `true`.
+此功能默认启用，可以通过将 [`renderAllRows`](@/api/options.md#renderallrows) 选项设置为 `true` 来关闭。
 
-## Configuring row virtualization
+## 配置行虚拟化
 
-You can experiment with the [`viewportRowRenderingOffset`](@/api/options.md#viewportrowrenderingoffset) configuration option, which determines the number of rows displayed outside the visible viewport. If the number passed to that option is greater than the total columns in your data set, then the virtualization will be practically turned off.
+您可以尝试使用 [`viewportRowRenderingOffset`](@/api/options.md#viewportrowrenderingoffset) 配置选项，该选项确定可见视口之外显示的行数。如果传递给该选项的数字大于数据集中的总列数，则虚拟化实际上将被关闭。
 
-To make the grid scrollable, set the constant width and height to the same as the container holding Handsontable and set the `overflow` property to `hidden` in the container's stylesheet. If the table contains enough rows or columns, it will be scrollable.
+要使网格可滚动，请将恒定宽度和高度设置为与包含 Handsontable 的容器相同，并将容器样式表中的`overflow`属性设置为`hidden`。如果表格包含足够的行或列，它将是可滚动的。
 
-The scrolling performance depends mainly on four factors:
+滚动性能主要取决于四个因素：
 
-- Number of cells - number of rows multiplied by the number of columns
-- Amount and complexity of custom renderers in cells
-- Number of options enabled in the configuration
-- Performance of your setup - physical machine and a browser
+- 单元格数量 -行数乘以列数
+- 单元格中自定义渲染器的数量和复杂性
+- 配置中启用的选项数量
+- 设置的性能 -物理机和浏览器
 
-The example below presents a data grid displaying 1 million cells (1000 rows x 1000 columns):
+下面的示例展示了一个显示 100 万个单元格的数据网格（1000 行 x 1000 列）：
 
 ::: only-for javascript
 
@@ -65,20 +65,20 @@ The example below presents a data grid displaying 1 million cells (1000 rows x 1
 
 :::
 
-## Known limitations
+## 已知限制
 
-Using row virtualization has the following side effects:
+使用行虚拟化有以下副作用：
 
-- The browser's native search will work only for the visible part of the grid.
-- Screen readers may announce the wrong total number of rows. Read more in the
-  [Accessibility](@/guides/accessibility/accessibility/accessibility.md#disabling-dom-virtualization-for-improved-accessibility) guide.
+- 浏览器的本机搜索仅适用于网格的可见部分。
+- 屏幕阅读器可能会报出错误的总行数。阅读更多内容
+  [辅助功能](@/guides/accessibility/accessibility/accessibility.md#disabling-dom-virtualization-for-improved-accessibility) 指南。
 
 ## 相关文章
 
 ### 相关指南
 
-- [Column virtualization](@/guides/columns/column-virtualization/column-virtualization.md)
-- [Performance](@/guides/optimization/performance/performance.md)
+- [列虚拟化](@/guides/columns/column-virtualization/column-virtualization.md)
+- [优化](@/guides/optimization/performance/performance.md)
 
 ### 相关API参考
 

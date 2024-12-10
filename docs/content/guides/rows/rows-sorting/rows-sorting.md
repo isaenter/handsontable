@@ -1,6 +1,6 @@
 ---
 id: 6o0zftmc
-title: Rows sorting
+title: 行排序
 metaTitle: Rows sorting - JavaScript Data Grid | Handsontable
 description: Sort rows alphabetically or numerically, in ascending, descending or a custom order, by one or multiple columns.
 permalink: /rows-sorting
@@ -31,30 +31,30 @@ searchCategory: Guides
 category: Rows
 ---
 
-# Rows sorting
+# 行排序
 
-Sort data alphabetically or numerically, in ascending, descending or a custom order, by one or multiple columns.
+按字母或数字、升序、降序或自定义顺序、一列或多列对数据进行排序。
 
 [[toc]]
 
 ## 概述
 
-With sorting, you can easily rearrange rows of data, based on the values in specific columns. This is particularly useful for analyzing and organizing large
-data sets, which helps you identify patterns and trends.
+通过排序，您可以根据特定列中的值轻松重新排列数据行。这对于分析和组织大型
+数据集，可帮助您识别模式和趋势。
 
-You can sort data in different ways:
+您可以通过不同的方式对数据进行排序：
 
-- Alphabetically, numerically, or based on a custom sorting logic
-- In ascending, descending, or a custom order
-- By a single column, or by multiple columns
-- Using Handsontable's UI or API
+- 按字母顺序、数字或基于自定义排序逻辑
+- 按升序、降序或自定义顺序
+- 按单列或多列
+- 使用 Handsontable 的 UI 或 API
 
-Handsontable sorts data only visually, so your source data remains in the original order. To save your sorting changes in the data source, see this guide:
-[Saving data](@/guides/getting-started/saving-data/saving-data.md).
+Handsontable 仅以视觉方式对数据进行排序，因此源数据仍保持原始顺序。要在数据源中保存排序更改，请参阅本指南：
+[保存数据](@/guides/getting-started/saving-data/saving-data.md)。
 
-## Sorting demo
+## 排序演示
 
-Click on one of the column names to sort the values in ascending (↑) or descending (↓) order, or to go back to the original order.
+单击某一列名称可按升序 (↑) 或降序 (↓) 对值进行排序，或返回到原始顺序。
 
 ::: only-for javascript
 
@@ -79,15 +79,15 @@ Click on one of the column names to sort the values in ascending (↑) or descen
 
 :::
 
-## Enable sorting
+## 启用排序
 
-To enable sorting for all columns, set [`columnSorting`](@/api/options.md#columnsorting) to `true`.
+要对所有列启用排序，请将 [`columnSorting`](@/api/options.md#columnsorting) 设置为 `true`。
 
 ::: only-for javascript
 
 ```js
 const configurationOptions = {
-  // enable sorting for all columns
+  // 对所有列启用排序
   columnSorting: true,
 };
 ```
@@ -98,15 +98,15 @@ const configurationOptions = {
 
 ```jsx
 <HotTable
-  // enable sorting for all columns
+  // 对所有列启用排序
   columnSorting={true}
 />
 ```
 
 :::
 
-To enable sorting only for specific columns, set [`headerAction`](@/api/options.md#columnsorting) to `false` for those columns that you don't want to sort. In
-the following example, only columns **Model**, **Date** and **In stock** are sortable.
+要仅对特定列启用排序，请将您不想排序的列的 [`headerAction`](@/api/options.md#columnsorting) 设置为 `false`。在
+在以下示例中，只有 **型号**、**日期**和 **库存**列可排序。
 
 ::: only-for javascript
 
@@ -131,42 +131,42 @@ the following example, only columns **Model**, **Date** and **In stock** are sor
 
 :::
 
-## Configure sorting
+## 配置排序
 
-You can configure the sorting UI, set an [initial sort order](#set-an-initial-sort-order), and implement your own [comparator](#add-a-custom-comparator).
+您可以配置排序 UI，设置[初始排序顺序](#set-an-initial-sort-order)，并实现您自己的[比较器](#add-a-custom-comparator)。
 
-By default:
+默认情况下：
 
-- Sorting is enabled for all columns.
-- The end user can sort data by clicking on the column name.
-- The sort order indicator is visible.
-- At Handsontable's initialization, no rows are sorted.
+- 对所有列启用排序。
+- 最终用户可以通过单击列对数据进行排序name.
+- 排序顺序指示器可见。
+- 在 Handsontable 初始化时，没有对任何行进行排序。
 
-You can configure the following options:
+您可以配置以下选项：
 
 ::: only-for javascript
 
 ```js
 const configurationOptions = {
   columnSorting: {
-    // let the end user sort data by clicking on the column name (set by default)
+    // 让最终用户通过单击列名称（默认设置）对数据进行排序
     headerAction: true,
-    // don't sort empty cells – move rows that contain empty cells to the bottom (set by default)
+    // 不对空单元格进行排序 -将包含空单元格的行移动到底部（默认设置）
     sortEmptyCells: false,
-    // enable the sort order icon that appears next to the column name (set by default)
+    // 启用列名称旁边显示的排序顺序图标（默认设置）
     indicator: true,
 
-    // at initialization, sort data by the first column, in descending order
+    // 初始化时，按第一列对数据进行降序排序
     initialConfig: {
       column: 1,
       sortOrder: 'desc',
     },
 
-    // implement your own comparator
+    // 实现你自己的比较器
     compareFunctionFactory(sortOrder, columnMeta) {
       return function (value, nextValue) {
-        // here, add a compare function
-        // that returns `-1`, or `0`, or `1`
+        // 在这里，添加一个比较函数
+        // 返回`-1`、`0`或`1`
       };
     },
   },

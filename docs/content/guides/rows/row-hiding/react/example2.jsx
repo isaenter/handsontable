@@ -30,7 +30,7 @@ const ExampleComponent = () => {
       colHeaders={true}
       rowHeaders={true}
       hiddenRows={{
-        // specify rows hidden by default
+        // 指定默认隐藏的行
         rows: [3, 5, 9],
       }}
     />

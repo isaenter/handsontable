@@ -29,7 +29,7 @@ const ExampleComponent = () => {
     fetch('{{$basePath}}/scripts/json/load.json').then((response) => {
       response.json().then((data) => {
         hot?.loadData(data.data);
-        // or, use `updateData()` to replace `data` without resetting states
+        // 或者，使用 updateData() 替换 data 而不重置状态
         setOutput('Data loaded');
       });
     });
@@ -38,7 +38,7 @@ const ExampleComponent = () => {
   const saveClickCallback = (event) => {
     const hot = hotRef.current?.hotInstance;
 
-    // save all cell's data
+    // 保存所有单元格的数据
     fetch('{{$basePath}}/scripts/json/save.json', {
       method: 'POST',
       mode: 'no-cors',
@@ -48,7 +48,7 @@ const ExampleComponent = () => {
       body: JSON.stringify({ data: hot?.getData() }),
     }).then(() => {
       setOutput('Data saved');
-      console.log('The POST request is only used here for the demo purposes');
+      console.log('POST 请求仅用于演示目的');
     });
   };
 
@@ -61,7 +61,7 @@ const ExampleComponent = () => {
             className="button button--primary button--blue"
             onClick={loadClickCallback}
           >
-            Load data
+            加载数据
           </button>
           &nbsp;
           <button
@@ -69,7 +69,7 @@ const ExampleComponent = () => {
             className="button button--primary button--blue"
             onClick={saveClickCallback}
           >
-            Save data
+            保存数据
           </button>
           <label>
             <input
@@ -79,7 +79,7 @@ const ExampleComponent = () => {
               checked={isAutosave}
               onClick={autosaveClickCallback}
             />
-            Autosave
+            自动保存
           </label>
         </div>
         <output className="console" id="output">
@@ -98,7 +98,7 @@ const ExampleComponent = () => {
         licenseKey="non-commercial-and-evaluation"
         afterChange={function (change, source) {
           if (source === 'loadData') {
-            return; // don't save this change
+            return; // 不保存此更改
           }
 
           if (!isAutosave) {
@@ -119,7 +119,7 @@ const ExampleComponent = () => {
               })`
             );
             console.log(
-              'The POST request is only used here for the demo purposes'
+              'POST 请求仅用于演示目的'
             );
           });
         }}

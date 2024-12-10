@@ -24,11 +24,11 @@ const ExampleComponent = () => {
       layoutDirection="rtl"
       columns={[
         {},
-        // align this column's text to the left
+        // 将此列的文本左对齐
         { className: 'htLeft' },
-        // align this column's text to the center
+        // 将此列的文本居中对齐
         { className: 'htCenter' },
-        // align this column's text to the right
+        // 将此列的文本右对齐
         { className: 'htRight' },
         {},
       ]}

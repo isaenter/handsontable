@@ -1,6 +1,6 @@
 ---
 id: 42px61id
-title: Row pre-populating
+title: 行预填充
 metaTitle: Row pre-populating - JavaScript Data Grid | Handsontable
 description: Populate newly-added rows with predefined template values, using cell renderers.
 permalink: /row-prepopulating
@@ -17,15 +17,15 @@ searchCategory: Guides
 category: Rows
 ---
 
-# Row pre-populating
+# 行预填充
 
-Populate newly-added rows with predefined template values, using cell renderers.
+使用单元格渲染器用预定义的模板值填充新添加的行。
 
 [[toc]]
 
-## Example
+## 例子
 
-The example below shows how cell renderers can be used to populate the template values in empty rows. When a cell in the empty row is edited, the [`beforeChange`](@/api/hooks.md#beforechange) callback fills the row with the template values.
+下面的示例显示了如何使用单元格渲染器来填充空行中的模板值。当编辑空行中的单元格时，[`beforeChange`](@/api/hooks.md#beforechange) 回调会使用模板值填充该行。
 
 ::: only-for javascript
 

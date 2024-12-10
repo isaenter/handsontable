@@ -17,7 +17,7 @@ const ExampleComponent = () => {
     ['Volvo', 2020, 'white', 'gray'],
   ];
 
-  //  define your custom callback function
+  //  定义您的自定义回调函数
   function searchResultCounter(_instance, _row, _col, _value, result) {
     const DEFAULT_CALLBACK = function (instance, row, col, _data, testResult) {
       instance.getCellMeta(row, col).isSearchResult = testResult;
@@ -59,9 +59,9 @@ const ExampleComponent = () => {
         ref={hot4Ref}
         data={data}
         colHeaders={true}
-        // enable the `Search` plugin
+        // 启用`搜索`插件
         search={{
-          // add your custom callback function
+          // 添加您的自定义回调函数
           callback: searchResultCounter,
         }}
         height="auto"

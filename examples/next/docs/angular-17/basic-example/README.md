@@ -1,6 +1,6 @@
 # Angular Basic Example
 
-## Description
+## 描述
 
 This is a demonstration code example in Angular.
 

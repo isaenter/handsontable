@@ -21,16 +21,16 @@ const ExampleComponent = () => {
         if (!selection) return;
         console.log(selection);
 
-        // BACKSPACE or DELETE
+        // 退格键或删除
         if (e.keyCode === 8 || e.keyCode === 46) {
           e.stopImmediatePropagation();
-          // remove data at cell, shift up
+          // 删除单元格中的数据，向上移动
           hot.spliceCol(selection[1], selection[0], 1);
           e.preventDefault();
         }
         // ENTER
         else if (e.keyCode === 13) {
-          // if last change affected a single cell and did not change it's values
+          // 如果最后的更改影响了单个单元格并且没有更改其值
           if (
             lastChange &&
             lastChange.length === 1 &&
@@ -38,9 +38,9 @@ const ExampleComponent = () => {
           ) {
             e.stopImmediatePropagation();
             hot.spliceCol(selection[1], selection[0], 0, '');
-            // add new cell
+            // 添加新单元格
             hot.selectCell(selection[0], selection[1]);
-            // select new cell
+            // 选择新单元格
           }
         }
 

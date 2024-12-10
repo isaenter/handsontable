@@ -33,7 +33,7 @@ const ExampleComponent = () => {
       hiddenRows={{
         rows: [3, 5, 9],
         indicators: true,
-        // exclude hidden rows from copying and pasting
+        // 从复制和粘贴中排除隐藏行
         copyPasteEnabled: false,
       }}
     />

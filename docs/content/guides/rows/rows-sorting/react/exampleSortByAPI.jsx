@@ -10,7 +10,7 @@ registerAllModules();
 const ExampleComponent = () => {
   const hotTableComponentRef = useRef(null);
   const sortAsc = () => {
-    // get the `ColumnSorting` plugin
+    // 获取`ColumnSorting`插件
     const columnSorting =
       hotTableComponentRef.current?.hotInstance?.getPlugin('columnSorting');
 
@@ -21,7 +21,7 @@ const ExampleComponent = () => {
   };
 
   const unsort = () => {
-    // get the `ColumnSorting` plugin
+    // 获取`ColumnSorting`插件
     const columnSorting =
       hotTableComponentRef.current?.hotInstance?.getPlugin('columnSorting');
 
@@ -33,9 +33,9 @@ const ExampleComponent = () => {
       <div className="example-controls-container">
         <div className="controls">
           <button onClick={sortAsc}>
-            Sort by the "Brand" column, in ascending order
+            按`品牌`列升序排序
           </button>
-          <button onClick={unsort}>Go back to the original order</button>
+          <button onClick={unsort}>返回原来的顺序</button>
         </div>
       </div>
       <HotTable

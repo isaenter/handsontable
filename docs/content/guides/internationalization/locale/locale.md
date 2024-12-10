@@ -1,6 +1,6 @@
 ---
 id: 97k6p9p7
-title: Locale
+title: 本地化
 metaTitle: Locale - JavaScript Data Grid | Handsontable
 description: Configure Handsontable's locale settings, to properly handle locale-related data and actions such as filtering, searching, or sorting.
 permalink: /locale
@@ -17,38 +17,43 @@ searchCategory: Guides
 category: Internationalization
 ---
 
-# Locale
+# 本地化
 
-Configure Handsontable's locale settings, to properly handle locale-related data and actions such as filtering, searching, or sorting.
+配置 Handsontable 的区域设置，以正确处理与区域设置相关的数据和操作，例如过滤、搜索或排序。
 
 [[toc]]
 
 ## 概述
 
-Handsontable's locale settings affect certain actions performed on your data, such as:
-- [Filtering](@/guides/columns/column-filter/column-filter.md)
-- [Searching](@/guides/navigation/searching-values/searching-values.md)
-- Comparing locale-based data
+Handsontable 的区域设置会影响对数据执行的某些操作，例如：
+- [过滤](@/guides/columns/column-filter/column-filter.md)
+- [搜索](@/guides/navigation/searching-values/searching-values.md)
+- 比较基于区域设置的数据
 
-Without a properly-set locale, the above operations can work incorrectly.
+如果没有正确设置区域设置，上述操作可能无法正常工作。
 
-You can configure your locale settings, using the [`locale`](@/api/options.md#locale) configuration option.
+您可以使用 [`locale`](@/api/options.md#locale) 配置选项来配置您的区域设置。
 
-You can set the [`locale`](@/api/options.md#locale) option to any valid and canonicalized Unicode BCP 47 locale tag. By default, Handsontable's locale is `en-US`.
+您可以将 [`locale`](@/api/options.md#locale) 选项设置为任何有效且规范化的 Unicode BCP 47 区域设置标记。默认情况下，Handsontable 的区域设置是`en-US`。
 
-You can configure the locale setting:
-- [For the entire grid](#set-the-grid-s-locale)
-- [For individual columns](#set-a-column-s-locale)
+您可以配置区域设置：
+- [本地化](#本地化)
+  - [概述](#概述)
+  - [设置网格的区域设置](#设置网格的区域设置)
+  - [设置列的区域设置](#设置列的区域设置)
+  - [相关文章](#相关文章)
+    - [相关指南](#相关指南)
+    - [相关API参考](#相关api参考)
 
-## Set the grid's locale
+## 设置网格的区域设置
 
-To configure the locale of the entire grid, set the [`locale`](@/api/options.md#locale) configuration option as a top-level grid option:
+要配置整个网格的区域设置，请将 [`locale`](@/api/options.md#locale) 配置选项设置为顶级网格选项：
 
 ::: only-for javascript
 
 ```js
 const hot = new Handsontable(container, {
-  // set the entire grid's locale to Polish
+  // 将整个网格的区域设置设置为波兰语
   locale: 'pl-PL',
 });
 ```
@@ -59,18 +64,18 @@ const hot = new Handsontable(container, {
 
 ```jsx
 <HotTable
-  // set the entire grid's locale to Polish
+  // 将整个网格的区域设置设置为波兰语
   locale="pl-PL"
 />
 ```
 
 :::
 
-You can set the [`locale`](@/api/options.md#locale) option to any valid and canonicalized Unicode BCP 47 locale tag.
+您可以将 [`locale`](@/api/options.md#locale) 选项设置为任何有效且规范化的 Unicode BCP 47 区域设置标记。
 
-## Set a column's locale
+## 设置列的区域设置
 
-To configure the locale of an individual column, set the [`locale`](@/api/options.md#locale) configuration option as a mid-level column option:
+要配置单个列的区域设置，请将 [`locale`](@/api/options.md#locale) 配置选项设置为中级列选项：
 
 ::: only-for javascript
 
@@ -78,15 +83,15 @@ To configure the locale of an individual column, set the [`locale`](@/api/option
 const hot = new Handsontable(container, {
   columns: [
     {
-      // set the first column's locale to Polish
+      // 将第一列的区域设置设置为波兰语
       locale: 'pl-PL',
     },
     {
-      // set the second column's locale to German
+      // 将第二列的区域设置设置为德语
       locale: 'de-DE',
     },
     {
-      // set the third column's locale to Japanese
+      // 将第三列的区域设置设置为日语
       locale: 'ja-JP',
     },
   ],
@@ -100,13 +105,13 @@ const hot = new Handsontable(container, {
 ```jsx
 <HotTable
   columns={[{
-      // set the first column's locale to Polish
+      // 将第一列的区域设置设置为波兰语
       locale: 'pl-PL',
     }, {
-      // set the second column's locale to German
+      // 将第二列的区域设置设置为德语
       locale: 'de-DE',
     }, {
-      // set the third column's locale to Japanese
+      // 将第三列的区域设置设置为日语
       locale: 'ja-JP',
     },
   ]}
@@ -121,9 +126,9 @@ const hot = new Handsontable(container, {
 
 <div class="boxes-list gray">
 
-- [Language](@/guides/internationalization/language/language.md)
-- [Layout direction](@/guides/internationalization/layout-direction/layout-direction.md)
-- [IME support](@/guides/internationalization/ime-support/ime-support.md)
+- [语言](@/guides/internationalization/language/language.md)
+- [布局方向](@/guides/internationalization/layout-direction/layout-direction.md)
+- [输入法支持](@/guides/internationalization/ime-support/ime-support.md)
 
 </div>
 

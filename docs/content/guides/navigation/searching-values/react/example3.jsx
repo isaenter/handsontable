@@ -20,7 +20,7 @@ const ExampleComponent = () => {
     (event) => {
       const hot = hotRef.current?.hotInstance;
       const search = hot?.getPlugin('search');
-      // use the `Search`'s `query()` method
+      // 使用`Search`的`query()`方法
       const queryResult = search?.query(event.currentTarget.value);
 
       console.log(queryResult);
@@ -29,7 +29,7 @@ const ExampleComponent = () => {
     [hotRef.current]
   );
 
-  //  define your custom query method
+  //  定义您的自定义查询方法
   function onlyExactMatch(queryStr, value) {
     return queryStr.toString() === value.toString();
   }
@@ -50,9 +50,9 @@ const ExampleComponent = () => {
         ref={hotRef}
         data={data}
         colHeaders={true}
-        // enable the `Search` plugin
+        // 启用`搜索`插件
         search={{
-          // add your custom query method
+          // 添加您的自定义查询方法
           queryMethod: onlyExactMatch,
         }}
         height="auto"

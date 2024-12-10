@@ -1,6 +1,6 @@
 ---
 id: j1zswn3i
-title: Row headers
+title: 行标题
 metaTitle: Row headers - JavaScript Data Grid | Handsontable
 description: Use default row headers (1, 2, 3), or set them to custom values provided by an array or a function.
 permalink: /row-header
@@ -16,29 +16,29 @@ searchCategory: Guides
 category: Rows
 ---
 
-# Row headers
+# 行标题
 
-Use default row headers (1, 2, 3), or set them to custom values provided by an array or a function.
+使用默认行标题（1、2、3），或将它们设置为数组或函数提供的自定义值。
 
 [[toc]]
 
 ## 概述
 
-Row headers are gray-colored columns that are used to label each row. By default, these headers are filled with numbers displayed in ascending order.
+行标题是灰色的列，用于标记每一行。默认情况下，这些标题填充有按升序显示的数字。
 
-To turn the headers on, set the option [`rowHeaders`](@/api/options.md#rowheaders) to `true`.
+要打开标题，请将选项 [`rowHeaders`](@/api/options.md#rowheaders) 设置为 `true`。
 
-## Bind rows with headers
+## 将行与标题绑定
 
-You can bind row numbers with row headers. This is used mostly to differentiate two business cases in which Handsontable is most often used.
+您可以将行号与行标题绑定。这主要用于区分 Handsontable 最常使用的两种业务案例。
 
-1. When moving a row in a typical grid-like application, the numbers in the row headers remain intact. Only the content is moved.
+1. 在典型的类似网格的应用程序中移动行时，行标题中的数字保持不变。仅移动内容。
 
-2. In a data grid, each row has its unique ID. Therefore, the column header should follow its row whenever it changes its position in the grid.
+2. 在数据网格中，每一行都有其唯一的ID。因此，无论何时更改其在网格中的位置，列标题都应跟随其行。
 
-### Basic example
+### 基本示例
 
-To enable the plugin, set the [`bindRowsWithHeaders`](@/api/options.md#bindrowswithheaders) property to `true`. Move the rows in the example below to see what this plugin does.
+要启用该插件，请将 [`bindRowsWithHeaders`](@/api/options.md#bindrowswithheaders) 属性设置为 `true`。移动下面示例中的行以查看该插件的作用。
 
 ::: only-for javascript
 
@@ -62,9 +62,9 @@ To enable the plugin, set the [`bindRowsWithHeaders`](@/api/options.md#bindrowsw
 
 :::
 
-## Tree grid
+## 树形网格
 
-A tree grid enables you to represent the nested data structures within the data grid. To learn more about this feature, see the [Row parent-child](@/guides/rows/row-parent-child/row-parent-child.md) page.
+树形网格使您能够表示数据网格内的嵌套数据结构。要了解有关此功能的更多信息，请参阅 [行父子](@/guides/rows/row-parent-child/row-parent-child.md) 页面。
 
 ## 相关文章
 
@@ -72,7 +72,7 @@ A tree grid enables you to represent the nested data structures within the data 
 
 <div class="boxes-list gray">
 
-- [Row parent-child](@/guides/rows/row-parent-child/row-parent-child.md)
+- [父子行](@/guides/rows/row-parent-child/row-parent-child.md)
 
 </div>
 

@@ -1,6 +1,6 @@
 ---
 id: w6bvsin5
-title: Performance
+title: 优化
 metaTitle: Performance - JavaScript Data Grid | Handsontable
 description: Boost your grid's performance by setting a constant column size, suspending rendering, deciding how many rows and columns are pre-rendered, and more.
 permalink: /performance
@@ -14,21 +14,21 @@ searchCategory: Guides
 category: Optimization
 ---
 
-# Performance
+# 优化
 
-Boost your grid's performance by setting a constant column size, suspending rendering, deciding how many rows and columns are pre-rendered, and more.
+通过设置恒定的列大小、暂停渲染、确定预渲染的行数和列数等来提高网格的性能。
 
 [[toc]]
 
 ## 概述
 
-Handsontable performs multiple calculations to display the grid properly. The most demanding actions are performed on load, change, and scroll events. Every single operation decreases the performance, but most of them are unavoidable.
+Handsontable 执行多项计算以正确显示网格。最苛刻的操作是在加载、更改和滚动事件上执行的。每一个操作都会降低性能，但大多数操作都是不可避免的。
 
-To measure Handsontable's execution times in various configurations, we use our own library called [Performance Lab](https://github.com/handsontable/performance-lab). Some tests have shown that there are methods that may potentially boost the performance of your application. These only work in certain cases, but we hope they can be successfully applied to your app as well.
+为了测量 Handsontable 在各种配置下的执行时间，我们使用我们自己的库，称为 [Performance Lab](https://github.com/handsontable/performance-lab)。一些测试表明，有些方法可能会提高应用程序的性能。这些仅在某些情况下有效，但我们希望它们也能成功应用于您的应用程序。
 
-## Set constant row and column sizes
+## 设置行和列的大小不变
 
-Configure your [column widths](@/guides/columns/column-width/column-width.md) and [row heights](@/guides/rows/row-height/row-height.md) in advance. This way, Handsontable doesn't have to calculate them.
+提前配置[列宽](@/guides/columns/column-width/column-width.md)和[行高](@/guides/rows/row-height/row-height.md)。这样，Handsontable 就不必计算它们。
 
 ::: only-for javascript
 
@@ -52,42 +52,42 @@ const hot = new Handsontable(obj, {
 
 :::
 
-When taking this approach, make sure that the contents of your cells fit in your row and column sizes, or let the user change [column widths](@/guides/columns/column-width/column-width.md#adjust-the-column-width-manually) and [row heights](@/guides/rows/row-height/row-height.md#adjust-row-heights-manually) manually.
+采用这种方法时，请确保单元格的内容适合行和列的大小，或者让用户更改[列宽度](@/guides/columns/column-width/column-width.md#adjust-the -column-width-manually) 和 [row height](@/guides/rows/row-height/row-height.md#adjust-row-heights-manually) 手动。
 
-Read more:
-- [Grid size](@/guides/getting-started/grid-size/grid-size.md)
-- [Column widths](@/guides/columns/column-width/column-width.md)
-- [Row heights](@/guides/rows/row-height/row-height.md)
+阅读更多：
+- [网格尺寸](@/guides/getting-started/grid-size/grid-size.md)
+- [列宽](@/guides/columns/column-width/column-width.md)
+- [行高](@/guides/rows/row-height/row-height.md)
 - [`colWidths`](@/api/options.md#colwidths)
 - [`rowHeights`](@/api/options.md#rowheights)
 
-## Turn off autoRowSize and/or autoColumnSize
+## 关闭 autoRowSize 和/或 autoColumnSize
 
-You can configure the value of the [`autoRowSize`](@/api/options.md#autorowsize) and [`autoColumnSize`](@/api/options.md#autocolumnsize) options. These allow you to define the amount of width/height-related calculations made during the table's initialization.
+您可以配置 [`autoRowSize`](@/api/options.md#autorowsize) 和 [`autoColumnSize`](@/api/options.md#autocolumnsize) 选项的值。这些允许您定义在表初始化期间进行的与宽度/高度相关的计算量。
 
-For more information, see our documentation for [rows](@/api/options.md#autorowsize) and [columns](@/api/options.md#autocolumnsize).
+有关更多信息，请参阅我们的 [行](@/api/options.md#autorowsize) 和 [列](@/api/options.md#autocolumnsize) 文档。
 
-## Define the number of pre-rendered rows and columns
+## 定义预渲染的行数和列数
 
-You can explicitly specify the number of rows and columns to be rendered outside of the visible part of the table. Better results can be achieved by setting a lower number, as fewer elements get rendered in some cases. However, sometimes setting a larger number may also work well as fewer operations are being made on each scroll event. Fine-tuning these settings and finding the sweet spot may improve the feeling of your Handsontable implementation.
+您可以显式指定要在表的可见部分之外呈现的行数和列数。通过设置较低的数字可以获得更好的结果，因为在某些情况下渲染的元素较少。但是，有时设置较大的数字也可能有效，因为对每个滚动事件进行的操作较少。微调这些设置并找到最佳点可能会改善 Handsontable 实现的感觉。
 
-For more information, see our documentation for [rows](@/api/options.md#viewportrowrenderingoffset) and [columns](@/api/options.md#viewportcolumnrenderingoffset).
+有关更多信息，请参阅我们的 [行](@/api/options.md#viewportrowrenderingoffset) 和 [列](@/api/options.md#viewportcolumnrenderingoffset) 文档。
 
-## Rule of thumb: don't use too much styling
+## 经验法则：不要使用太多样式
 
-Changing your background, font colors, etc., shouldn't lower the performance. However, adding too many CSS animations, transitions, and other calculation-consuming attributes may impact the performance, so keep them at a reasonable level.
+更改背景、字体颜色等不会降低性能。但是，添加过多的 CSS 动画、过渡和其他消耗计算的属性可能会影响性能，因此请将它们保持在合理的水平。
 
-## Suspend rendering
+## 暂停渲染
 
-By default, Handsontable will call the render after each CRUD operation. Usually, this is expected behavior, but you may find it slightly excessive in some use cases. By using one of the batching methods, you can suspend rendering and call it just once at the end. For example:
+默认情况下，Handsontable 将在每次 CRUD 操作后调用渲染。通常，这是预期的行为，但在某些用例中您可能会发现它有点过度。通过使用其中一种批处理方法，您可以暂停渲染并在最后调用它一次。例如：
 
 ::: only-for react
 
 ::: tip
 
-To use the Handsontable API, you'll need access to the Handsontable instance. You can do that by utilizing a reference to the `HotTable` component, and reading its `hotInstance` property.
+要使用 Handsontable API，您需要访问 Handsontable 实例。您可以通过利用对`HotTable`组件的引用并读取其`hotInstance`属性来做到这一点。
 
-For more information, see the [Instance methods](@/guides/getting-started/react-methods/react-methods.md) page.
+有关更多信息，请参阅[实例方法](@/guides/getting-started/react-methods/react-methods.md)页面。
 
 :::
 
@@ -103,21 +103,21 @@ hot.batch(() => {
   filters.addCondition(2, 'contains', ['3']);
   filters.filter();
   hot.getPlugin('columnSorting').sort({ column: 1, sortOrder: 'desc' });
-  // The table cache will be recalculated and table render will be called once after executing the callback
+  // 执行回调后，将重新计算表缓存并调用一次表渲染
 });
 ```
 
-See the [batch operations](@/guides/optimization/batch-operations/batch-operations.md) page to find more information on how to use batching.
+请参阅[批处理操作](@/guides/optimization/batch-operations/batch-operations.md)页面以查找有关如何使用批处理的更多信息。
 
 ## 相关文章
 
 ### 相关指南
 
-- [Batch operations](@/guides/optimization/batch-operations/batch-operations.md)
-- [Row virtualization](@/guides/rows/row-virtualization/row-virtualization.md)
-- [Column virtualization](@/guides/columns/column-virtualization/column-virtualization.md)
-- [Modules](@/guides/tools-and-building/modules/modules.md)
-- [Bundle size](@/guides/optimization/bundle-size/bundle-size.md)
+- [批量操作](@/guides/optimization/batch-operations/batch-operations.md)
+- [行虚拟化](@/guides/rows/row-virtualization/row-virtualization.md)
+- [列虚拟化](@/guides/columns/column-virtualization/column-virtualization.md)
+- [模块](@/guides/tools-and-building/modules/modules.md)
+- [打包尺寸](@/guides/optimization/bundle-size/bundle-size.md)
 
 ### 相关API参考
 

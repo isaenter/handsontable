@@ -204,7 +204,7 @@ const ExampleComponent = () => {
             onChange={handleChange('fixedRowsTop', [0, 2])}
             type="checkbox"
           />
-          Add fixed rows
+          添加固定行
         </label>
         <br />
 
@@ -213,7 +213,7 @@ const ExampleComponent = () => {
             onChange={handleChange('fixedColumnsStart', [0, 2])}
             type="checkbox"
           />
-          Add fixed columns
+          添加固定列
         </label>
         <br />
 
@@ -222,7 +222,7 @@ const ExampleComponent = () => {
             onChange={handleChange('rowHeaders', [false, true])}
             type="checkbox"
           />
-          Enable row headers
+          启用行标题
         </label>
         <br />
 
@@ -231,7 +231,7 @@ const ExampleComponent = () => {
             onChange={handleChange('colHeaders', [false, true])}
             type="checkbox"
           />
-          Enable column headers
+          启用列标题
         </label>
         <br />
       </div>

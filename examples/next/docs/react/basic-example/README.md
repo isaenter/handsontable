@@ -1,6 +1,6 @@
 # Demo
 
-## Description
+## 描述
 
 A general purpose demo showcasing some of the most popular features of Handsontable in React.
 

@@ -95,7 +95,7 @@ const ExampleComponent = () => {
           className: 'htCenter',
         },
       ]}
-      // enable sorting for all columns
+      // 对所有列启用排序
       columnSorting={true}
       height="auto"
       stretchH="all"

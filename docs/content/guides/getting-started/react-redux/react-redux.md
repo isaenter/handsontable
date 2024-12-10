@@ -1,6 +1,6 @@
 ---
 id: kbk0pm8t
-title: Integration with Redux
+title: 与 Redux 集成
 metaTitle: Integration with Redux - JavaScript Data Grid | Handsontable
 description: Maintain the data and configuration options of your grid by using the Redux state container.
 permalink: /redux
@@ -19,23 +19,23 @@ onlyFor: react
 category: Getting started
 ---
 
-# Integration with Redux
+# 与 Redux 集成
 
-Maintain the data and configuration options of your grid by using the Redux state container.
+使用 Redux 状态容器维护网格的数据和配置选项。
 
 [[toc]]
 
-## Integrate with Redux
+## 与 Redux 集成
 
 ::: tip
 
-Before using any state management library, make sure you know how Handsontable handles data: see the [Binding to data](@/guides/getting-started/binding-to-data/binding-to-data.md#understand-binding-as-a-reference) page.
+在使用任何状态管理库之前，请确保您了解 Handsontable 如何处理数据：请参阅[绑定到数据](@/guides/getting-started/binding-to-data/binding-to-data.md#understand-binding-作为参考）页面。
 
 :::
 
-The following example implements the `@handsontable/react-wrapper` component with a [`readOnly`](@/api/options.md#readonly) toggle switch and the Redux state manager.
+以下示例使用 [`readOnly`](@/api/options.md#readonly) 切换开关和 Redux 状态管理器实现 `@handsontable/react-wrapper` 组件。
 
-## Simple example
+## 简单的例子
 
 ::: example #example1 :react-redux --js 1 --ts 2
 
@@ -44,13 +44,13 @@ The following example implements the `@handsontable/react-wrapper` component wit
 
 :::
 
-## Advanced example
+## 高级示例
 
-This example shows:
-- A [custom editor](@/guides/cell-functions/cell-editor/cell-editor.md#component-based-editors) component (built with an external dependency, `HexColorPicker`). This component acts both as an editor and as a renderer.
-- A [custom renderer](@/guides/cell-functions/cell-renderer/cell-renderer.md#declare-a-custom-renderer-as-a-component) component, built with an external dependency (`StarRatingComponent`).
+这个例子显示：
+- [自定义编辑器](@/guides/cell-functions/cell-editor/cell-editor.md#component-based-editors) 组件（使用外部依赖项`HexColorPicker`构建）。该组件既充当编辑器又充当渲染器。
+- 一个[自定义渲染器](@/guides/cell-functions/cell-renderer/cell-renderer.md#declare-a-custom-renderer-as-a-component)组件，使用外部依赖项(`StarRatingComponent`)构建。
 
-The editor component changes the behavior of the renderer component, by passing information through Redux (and the `connect()` method of `react-redux`).
+编辑器组件通过 Redux（以及`react-redux`的`connect()`方法）传递信息来更改渲染器组件的行为。
 
 ::: example #example6 :react-advanced --js 1 --ts 2
 

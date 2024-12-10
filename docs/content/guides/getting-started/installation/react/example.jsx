@@ -20,7 +20,7 @@ const ExampleComponent = () => {
       height="auto"
       autoWrapRow={true}
       autoWrapCol={true}
-      licenseKey="non-commercial-and-evaluation" // for non-commercial use only
+      licenseKey="non-commercial-and-evaluation" // 仅供非商业用途
     />
   );
 };

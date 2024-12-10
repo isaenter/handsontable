@@ -1,6 +1,6 @@
 ---
 id: jn1po47i
-title: Themes
+title: 主题
 metaTitle: Themes - JavaScript Data Grid | Handsontable
 description: Use one of the built-in themes - light and dark - or the auto version, which switches between light and dark modes automatically.
 permalink: /themes
@@ -25,21 +25,21 @@ searchCategory: Guides
 category: Styling
 ---
 
-# Themes
+# 主题
 
 [[toc]]
 
-Use Handsontable's built-in themes or customize its look by adjusting available CSS variables.
+使用 Handsontable 的内置主题或通过调整可用的 CSS 变量来自定义其外观。
 
 ## 概述
 
-Handsontable themes manage most visual elements of the design and are simple to customize. By default, two built-in themes are available: `main` and `horizon`. Both themes feature dark and light modes that automatically adjust to your app's preferred color scheme.
+可操作的主题管理设计的大多数视觉元素，并且易于定制。默认情况下，有两个内置主题可用：`main`和`horizo​​n`。这两个主题都具有深色和浅色模式，可以自动调整为您的应用程序的首选配色方案。
 
-The themes give you control over grid elements and components, allowing you to customize properties like colors and sizes.
+主题使您可以控制网格元素和组件，允许您自定义颜色和大小等属性。
 
-## Themes demo
+## 主题演示
 
-Below is a demo featuring two built-in themes and a custom theme inspired by Douglas Adams' book The Hitchhiker's Guide to the Galaxy. Use the dropdown above the grid to explore how different grid elements change with each theme.
+下面是一个演示，其中包含两个内置主题和一个受道格拉斯·亚当斯 (Douglas Adams) 的《银河系漫游指南》一书启发的自定义主题。使用网格上方的下拉菜单探索不同网格元素如何随每个主题变化。
 
 <div :class="['theme-examples', $parent.$parent.themeName]">
 <div class="theme-examples-controls">
@@ -81,59 +81,58 @@ Below is a demo featuring two built-in themes and a custom theme inspired by Dou
 
 </div>
 
-## Built-in themes
+## 内置主题
 
-Handsontable includes two built-in themes. The `main` theme offers a spreadsheet-like interface, perfect for batch-editing tasks and providing users with a familiar experience, similar to other popular spreadsheet software on the market.
+Handsontable 包括两个内置主题。 `main`主题提供了类似电子表格的界面，非常适合批量编辑任务，并为用户提供熟悉的体验，类似于市场上其他流行的电子表格软件。
 
-The `horizon` theme, on the other hand, is better suited for data display and analysis. It hides the vertical lines between columns, giving it a cleaner and more lightweight feel.
+另一方面，`地平线`主题更适合数据显示和分析。它隐藏了列之间的垂直线，给人一种更干净、更轻盈的感觉。
 
-## Light and dark modes
-
-Each theme comes with three modes:
+## 浅色和深色模式
+每个主题都具有三种模式：
 
 - Light mode
 - Dark mode
 - Auto-dark mode
 
-The light and dark modes ignore the parent container's color scheme and remain either light or dark regardless the `prefers-color-scheme` media query value. The auto-dark mode automatically follow the preferred color of the parent container.
+浅色和深色模式忽略父容器的配色方案，并保持浅色或深色，无论`prefers-color-scheme`媒体查询值如何。自动变暗模式会自动遵循父容器的首选颜色。
 
-Here's a summary of each available theme, mode, and their corresponding file names.
+以下是每个可用主题、模式及其相应文件名的摘要。
 
 <div class="table-small">
 
-| File name                                        | Root CSS class                                                                       | Description                                                                                                                                                                        |
-| ------------------------------------------------ | ------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ht-theme-main.css<br>ht-theme-main.min.css       | <span>ht-theme-main<br>ht-theme-main-dark<br>ht-theme-main-dark-auto</span>          | The main theme resembles spreadsheet software, featuring soft colors primarily from a white and grey palette, with blue accents.                                                   |
-| ht-theme-horizon.css<br>ht-theme-horizon.min.css | <span>ht-theme-horizon<br>ht-theme-horizon-dark<br>ht-theme-horizon-dark-auto</span> | A sleek and elegant theme designed to feel like an enterprise data grid, optimized for improved data readability in internal applications.                                         |
-| handsontable.css<br>handsontable.min.css         | Not required                                                                         | The classic theme, available only in light mode. While it will continue to be supported and tested in future Handsontable releases, it is not recommended for use in new projects. |
+| File name                                        | Root CSS class                                                                       | 描述                                                                                                           |
+| ------------------------------------------------ | ------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------- |
+| ht-theme-main.css<br>ht-theme-main.min.css       | <span>ht-theme-main<br>ht-theme-main-dark<br>ht-theme-main-dark-auto</span>          | 主题类似于电子表格软件，具有主要来自白色和灰色调色板的柔和颜色，并带有蓝色口音。                               |
+| ht-theme-horizon.css<br>ht-theme-horizon.min.css | <span>ht-theme-horizon<br>ht-theme-horizon-dark<br>ht-theme-horizon-dark-auto</span> | 时尚优雅的主题，旨在感觉像企业数据网格，并针对提高内部应用程序中的数据可读性进行了优化。                       |
+| handsontable.css<br>handsontable.min.css         | Not required                                                                         | 经典主题，仅在浅色模式下可用。虽然它将在未来的 Handsontable 版本中继续受到支持和测试，但不建议在新项目中使用。 |
 
 </div>
 
-## Load CSS files
+##加载CSS文件
 
-To ensure Handsontable works correctly, it's essential to load both the base and theme CSS files. The base file contains structural styles, while the theme file includes colors, sizes, and other crucial variables needed for the grid.
+为了确保 Handsontable 正常工作，必须加载基础 CSS 文件和主题 CSS 文件。基本文件包含结构样式，而主题文件包含颜色、大小和网格所需的其他关键变量。
 
-### Import CSS files (recommended)
+### 导入 CSS 文件（推荐）
 
 ```js
-// Import minified base
+// 导入压缩后的基础样式
 import "handsontable/styles/handsontable.min.css";
-// Import minified theme
+// 导入压缩后的主题样式
 import "handsontable/styles/ht-theme-main.min.css";
 ```
 
-### Load CSS from CDN
+### 从 CDN 加载 CSS
 
-Load the necessary files from the recommended CDNs such as [JSDelivr](https://www.jsdelivr.com/package/npm/handsontable) or [cdnjs](https://cdnjs.com/libraries/handsontable).
+从推荐的 CDN（例如 [JSDelivr](https://www.jsdelivr.com/package/npm/handsontable) 或 [cdnjs](https://cdnjs.com/libraries/handsontable)）加载必要的文件。
 
 ```js
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/handsontable/styles/handsontable.min.css" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/handsontable/styles/ht-theme-main.min.css" />
 ```
 
-### Use with bundlers
+### 与捆绑器一起使用
 
-If you use Vite, Webpack, Parcel, or any other bundler, you can import CSS files like so:
+如果您使用 Vite、Webpack、Parcel 或任何其他捆绑器，您可以像这样导入 CSS 文件：
 
 ```js
 // ESM (ECMAScript modules)
@@ -145,9 +144,9 @@ require("handsontable/styles/handsontable.css");
 require("handsontable/styles/ht-theme-main.min.css");
 ```
 
-## Use a theme
+## 使用主题
 
-To use a theme in your app, you need to add the specific class name to the div container that holds Handsontable. For the `main` theme, you can choose from the following CSS classes:
+要在应用程序中使用主题，您需要将特定的类名称添加到保存 Handsontable 的 div 容器中。对于`main`主题，您可以从以下 CSS 类中进行选择：
 
 - `ht-theme-main`
 - `ht-theme-main-dark`
@@ -157,38 +156,38 @@ To use a theme in your app, you need to add the specific class name to the div c
 <div id="handsontable-example" class="ht-theme-main-dark-auto"></div>
 ```
 
-Alternatively, you can specify the theme name in the data grid's global settings object. This method will automatically inject the class name for you, overriding any class name passed in the `div` constructor.
+或者，您可以在数据网格的全局设置对象中指定主题名称。此方法将自动为您注入类名，覆盖`div`构造函数中传递的任何类名。
 
-Use either this method or the class name in the `div`, but not both.
+使用此方法或`div`中的类名，但不能同时使用两者。
 
 ```js
 const container = document.querySelector("#handsontable-example");
 
 const hot = new Handsontable(container, {
-  // theme name with obligatory `ht-theme` prefix
+  // 带有强制性`ht-theme`前缀的主题名称
   themeName: "ht-theme-main-dark-auto",
-  // some other options
+  // 其他一些选择
 });
 ```
 
-## Create custom theme
+## 创建自定义主题
 
-In order to create
+为了创造
 
-## Known limitations
+## 已知限制
 
-In some cases global styles enforced by the browser or operating system might affect Handsontable's appearance.
+在某些情况下，浏览器或操作系统强制执行的全局样式可能会影响 Handsontable 的外观。
 
-- The size of the grid and its sub-elements in most cases cannot be set with just CSS. We're working on making this possible by the end of 2024.
-- High contrast mode in Microsoft Windows. To handle this, use the `forced-colors` media query.
-- Auto dark theme in Google Chrome. To detect the Auto Dark Theme, follow the official [Chrome guide](https://developer.chrome.com/blog/auto-dark-theme).
+- 大多数情况下，网格及其子元素的大小不能仅用 CSS 设置。我们正在努力在 2024 年底之前实现这一目标。
+- Microsoft Windows 中的高对比度模式。要处理此问题，请使用`forced-colors`媒体查询。
+- Google Chrome 中的自动深色主题。要检测自动黑暗主题，请遵循官方 [Chrome 指南](https://developer.chrome.com/blog/auto-dark-theme)。
 
-## Troubleshooting
+## 故障排除
 
-Didn't find what you need? Try this:
+没有找到您需要的东西？试试这个：
 
-- [View related topics](https://github.com/handsontable/handsontable/issues/) on GitHub
-- [Report an issue](https://github.com/handsontable/handsontable/issues/new/choose) on GitHub
-- [Ask a question](https://stackoverflow.com/questions/tagged/handsontable) on Stack Overflow
-- [Start a discussion](https://forum.handsontable.com/c/getting-help/questions) on Handsontable's forum
-- [Contact our technical support](https://handsontable.com/contact?category=technical_support) to get help
+- GitHub 上的[查看相关主题](https://github.com/handsontable/handsontable/issues/)
+- GitHub 上的[报告问题](https://github.com/handsontable/handsontable/issues/new/choose)
+- Stack Overflow 上的[提问](https://stackoverflow.com/questions/tagged/handsontable)
+- 在 Handsontable 论坛上[开始讨论](https://forum.handsontable.com/c/getting-help/questions)
+- [联系我们的技术支持](https://handsontable.com/contact?category=technical_support) 获取帮助

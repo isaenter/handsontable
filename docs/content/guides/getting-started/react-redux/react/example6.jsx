@@ -121,7 +121,7 @@ const ColorPickerRenderer = ({ value }) => {
   );
 };
 
-// a Redux component
+// Redux 组件
 const initialReduxStoreState = {
   activeColors: [],
   inactiveColors: [],
@@ -175,7 +175,7 @@ const appReducer = (state = initialReduxStoreState, action) => {
 
 const actionReducers = combineReducers({ appReducer });
 const reduxStore = createStore(actionReducers);
-// a custom renderer component
+// 自定义渲染器组件
 const UnconnectedStarRatingRenderer = ({
   row,
   col,

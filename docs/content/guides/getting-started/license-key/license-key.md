@@ -1,6 +1,6 @@
 ---
 id: zbx8ayzw
-title: License key
+title: 许可证密钥
 metaTitle: License key - JavaScript Data Grid | Handsontable
 description: Activate Handsontable, passing your license key in the configuration object. Use a special key for non-commercial and evaluation purposes.
 permalink: /license-key
@@ -12,32 +12,32 @@ searchCategory: Guides
 category: Getting started
 ---
 
-# License key
+# 许可证密钥
 
-Activate Handsontable, passing your license key in the configuration object. Use a special key for non-commercial and evaluation purposes.
+激活 Handsontable，在配置对象中传递您的许可证密钥。将特殊密钥用于非商业和评估目的。
 
 [[toc]]
 
 ## 概述
 
-Handsontable is available under Commercial and Free licenses, depending on your usage.
+Handsontable 可在商业和免费许可证下使用，具体取决于您的使用情况。
 
-We require you to specify which terms apply to your usage, by passing a license key in Handsontable's [`licenseKey`](@/api/options.md#licensekey) configuration option.
+我们要求您通过在 Handsontable 的 [`licenseKey`](@/api/options.md#licensekey) 配置选项中传递许可证密钥来指定哪些条款适用于您的使用。
 
-## Commercial license
+## 商业许可
 
-If you use the paid version of Handsontable, pass the string of numbers delivered to you after the purchase. Note that the license key is a string, so you need to wrap it in quotes `''`.
+如果您使用付费版本的 Handsontable，请传递购买后发送给您的一串数字。请注意，许可证密钥是一个字符串，因此您需要将其用引号`''`括起来。
 
 ::: only-for javascript
 
 ```js
 const settings = {
   licenseKey: '00000-00000-00000-00000-00000',
-  //... other options
+  //... 其他选择
 }
 ```
 
-To use it with a framework, pass the string to a [`licenseKey`](@/api/options.md#licensekey) prop:
+要将其与框架一起使用，请将字符串传递给 [`licenseKey`](@/api/options.md#licensekey) 属性：
 
 <code-group>
 <code-block title="React" active>
@@ -80,16 +80,16 @@ To use it with a framework, pass the string to a [`licenseKey`](@/api/options.md
 
 :::
 
-## Non-Commercial license
+## 非商业许可
 
-If you use Handsontable for purposes not intended toward monetary compensation such as, but not limited to, teaching, academic research, evaluation, testing and experimentation, pass the string  `'non-commercial-and-evaluation'`.
+如果您将 Handsontable 用于非金钱补偿的目的，例如但不限于教学、学术研究、评估、测试和实验，请传递字符串`'non-commercial-and-evaluation'`。
 
 ::: only-for javascript
 
 ```js
 const settings = {
   licenseKey: 'non-commercial-and-evaluation',
-  //... other options
+  //... 其他选择
 }
 ```
 
@@ -106,29 +106,29 @@ const settings = {
 
 :::
 
-## The validation process
+## 验证过程
 
-We validate the license key to determine whether you are entitled to use the software. To do that, we compare the time between two dates. These dates come from two sources of information. One is the `build date` that is provided in each version of Handsontable. The other is the `creation date` that comes with the license key. This process does not trigger any connection to any server.
+我们验证许可证密钥以确定您是否有权使用该软件。为此，我们比较两个日期之间的时间。这些日期来自两个信息来源。其中之一是 Handsontable 每个版本中提供的`构建日期`。另一个是许可证密钥附带的`创建日期`。此过程不会触发与任何服务器的任何连接。
 
-## Notifications
+## 通知
 
-If your license key is missing, invalid, or expired, Handsontable will display an appropriate notification. The notification is displayed in two places, below the table as HTML text and in the console. The messages are as follows:
+如果您的许可证密钥丢失、无效或过期，Handsontable 将显示相应的通知。该通知显示在两个位置：表格下方的 HTML 文本和控制台中。消息如下：
 
-### Missing license key
+### 缺少许可证密钥
 
-_The license key for Handsontable is missing. Use your purchased key to activate the product. Alternatively, you can activate Handsontable to use for non-commercial purposes by passing the key: ‘non-commercial-and-evaluation’.  Read more about it in the documentation or contact us at `[email]`._
+_Handsontable 的许可证密钥丢失。使用您购买的密钥来激活产品。或者，您可以通过传递密钥`non-commercial-and-evaluation`来激活 Handsontable 以用于非商业目的。  请在文档中阅读更多相关信息或通过`[电子邮件]`联系我们。_
 
-### Invalid license key
+### 许可证密钥无效
 
-_The license key for Handsontable is invalid.  Read more on how to install it properly or contact us at `[email]`._
+_Handsontable 的许可证密钥无效。  了解有关如何正确安装的更多信息或通过`[电子邮件]`联系我们。_
 
-### Expired license key
+### 许可证密钥过期
 
-_The license key for Handsontable expired on `[expiration_date]`, and is not valid for the installed version `[handsontable_version]`.  Renew your license key or downgrade to a version released prior to `[expiration_dates]`. If you need any help, contact us at `[email]`._
+_Handsontable 的许可证密钥已于`[expiration_date]`过期，并且对于已安装的版本`[handsontable_version]`无效。  续订您的许可证密钥或降级到`[expiration_dates]`之前发布的版本。如果您需要任何帮助，请通过`[电子邮件]`联系我们。_
 
-## Get a license key
+## 获取许可证密钥
 
-To get a commercial license key for your Handsontable copy, contact our [Sales Team](https://handsontable.com/get-a-quote).
+要获取 Handsontable 副本的商业许可证密钥，请联系我们的[销售团队](https://handsontable.com/get-a-quote)。
 
 ## 相关文章
 
@@ -136,7 +136,7 @@ To get a commercial license key for your Handsontable copy, contact our [Sales T
 
 <div class="boxes-list gray">
  
-- [Software license](@/guides/technical-specification/software-license/software-license.md)
+- [软件许可](@/guides/technical-specification/software-license/software-license.md)
 
 </div>
 

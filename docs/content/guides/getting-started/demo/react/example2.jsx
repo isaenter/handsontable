@@ -1219,7 +1219,7 @@ export function addClassesToRows(
   _value,
   cellProperties
 ) {
-  // Adding classes to `TR` just while rendering first visible `TD` element
+  // 在渲染第一个可见的`TD`元素时向`TR`添加类
   if (column !== 0) {
     return;
   }
@@ -1230,14 +1230,14 @@ export function addClassesToRows(
     return;
   }
 
-  // Add class to selected rows
+  // 将类添加到选定的行
   if (cellProperties.instance.getDataAtRowProp(row, '0')) {
     Handsontable.dom.addClass(parentElement, SELECTED_CLASS);
   } else {
     Handsontable.dom.removeClass(parentElement, SELECTED_CLASS);
   }
 
-  // Add class to odd TRs
+  // 将类别添加到奇数 TR
   if (row % 2 === 0) {
     Handsontable.dom.addClass(parentElement, ODD_ROW_CLASS);
   } else {

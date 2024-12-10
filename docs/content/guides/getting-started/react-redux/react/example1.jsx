@@ -38,7 +38,7 @@ const ExampleComponentContent = () => {
           <div className="controls">
             <label>
               <input onClick={toggleReadOnly} type="checkbox" />
-              Toggle <code>readOnly</code> for the entire table
+              切换整个表的<code>readOnly</code>
             </label>
           </div>
 
@@ -50,7 +50,7 @@ const ExampleComponentContent = () => {
             {...hotSettings}
           />
         </div>
-        <h3>Redux store dump</h3>
+        <h3>Redux 存储转储</h3>
         <pre id="redux-preview" className="table-container">
           {isHotData && (
             <div>

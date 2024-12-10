@@ -1,6 +1,6 @@
 ---
 id: rck7asx7
-title: Third-party licenses
+title: 第三方许可
 metaTitle: Third-party licenses - JavaScript Data Grid | Handsontable
 description: Learn about the licensing terms of Handsontable's software dependencies.
 permalink: /third-party-licenses
@@ -12,13 +12,13 @@ searchCategory: Guides
 category: Technical specification
 ---
 
-# Third-party licenses
+# 第三方许可
 
-Learn about the licensing terms of Handsontable's software dependencies.
+了解 Handsontable 的软件依赖项的许可条款。
 
 [[toc]]
 
-## Open-source software components
+## 开源软件组件
 
 <div class="boxes-list gray">
 
@@ -54,9 +54,9 @@ Learn about the licensing terms of Handsontable's software dependencies.
 
 </div>
 
-### Dependencies of the [`Formulas`](@/api/formulas.md) plugin
+### [`Formulas`](@/api/formulas.md) 插件的依赖项
 
-The dependencies below apply only if you use the [`Formulas`](@/api/formulas.md) [calculation plugin](@/guides/formulas/formula-calculation/formula-calculation.md):
+仅当您使用 [`Formulas`](@/api/formulas.md) [计算插件](@/guides/formulas/formula-calculation/formula-calculation.md) 时，以下依赖项才适用：
 
 <div class="boxes-list gray">
 

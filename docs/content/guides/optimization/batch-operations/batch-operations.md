@@ -1,6 +1,6 @@
 ---
 id: kgegbmgz
-title: Batch operations
+title: 批量操作
 metaTitle: Batch operations - JavaScript Data Grid | Handsontable
 description: Batch CRUD operations, to avoid unnecessary rendering cycles and boost your grid's performance.
 permalink: /batch-operations
@@ -16,9 +16,9 @@ searchCategory: Guides
 category: Optimization
 ---
 
-# Batch operations
+# 批量操作
 
-Batch CRUD operations, to avoid unnecessary rendering cycles and boost your grid's performance.
+批量 CRUD 操作，以避免不必要的渲染周期并提高网格的性能。
 
 [[toc]]
 
@@ -47,40 +47,40 @@ Batch CRUD operations, to avoid unnecessary rendering cycles and boost your grid
 
 ## 概述
 
-Within Handsontable, every CRUD operation ends with a [`render()`](@/api/core.md#render). In most cases, this is considered expected behaviour. The table has to reflect the requested changes at some point. However, sometimes you may find this mechanism slightly excessive.
+在 Handsontable 中，每个 CRUD 操作都以 [`render()`](@/api/core.md#render) 结束。在大多数情况下，这被认为是预期行为。该表必须反映在某个时刻所请求的更改。然而，有时你可能会发现这个机制有点多余。
 
-For example, if you wrote a custom function that uses several CRUD operations, those CRUD operations will call a [`render()`](@/api/core.md#render) for each API method. You only need one render at the end, which is sufficient to reflect all the changes. You can treat those combined operations as a single action and let the render wait for them to complete. To do this, use suspend the render to batch the operations.
+例如，如果您编写了一个使用多个 CRUD 操作的自定义函数，这些 CRUD 操作将为每个 API 方法调用一个 [`render()`](@/api/core.md#render)。最后只需要一次渲染，就足以反映所有更改。您可以将这些组合操作视为单个操作，并让渲染等待它们完成。为此，请使用暂停渲染来批处理操作。
 
-This can improve the overall performance of the application. Batching several operations can decrease the number of renders, so any API call that ends with a render will benefit from this improvement. It results in less layout trashing, fewer freezes, and a more responsive feel.
+这可以提高应用程序的整体性能。批处理多个操作可以减少渲染次数，因此任何以渲染结束的 API 调用都将从这一改进中受益。它可以减少布局垃圾、减少冻结并提高响应速度。
 
-There are several API methods you can use for suspending, but [`batch()`](@/api/core.md#batch) is the most universal method. It is a callback function where the [`render()`](@/api/core.md#render) is executed after all operations provided inside of the body are completed. It is best practice to use this method as it's safer and easier to use. You just need to place all operations that you want to batch inside a closure. Handsontable takes care of the suspending and performs a single [`render()`](@/api/core.md#render) at the end.
+您可以使用多种 API 方法来暂停，但 [`batch()`](@/api/core.md#batch) 是最通用的方法。它是一个回调函数，在主体内部提供的所有操作完成后执行 [`render()`](@/api/core.md#render)。最佳做法是使用此方法，因为它更安全且更易于使用。您只需将要批处理的所有操作放入闭包内即可。 Handsontable 负责暂停并在最后执行单个 [`render()`](@/api/core.md#render)。
 
-The following snippet shows a simple example of a few operations batched. Three API operations are called one after another. Without placing them inside the batch callback, every single operation would end with a [`render()`](@/api/core.md#render). Thanks to the batching feature, you can skip two renders and end the whole action with one render at the end. This is more optimal, and the gain increases with the number of operations placed inside the [`batch()`](@/api/core.md#batch).
+以下代码片段显示了一些批处理操作的简单示例。三个API操作依次被调用。如果不将它们放在批处理回调中，每个操作都会以 [`render()`](@/api/core.md#render) 结束。借助批处理功能，您可以跳过两次渲染，并在最后以一次渲染结束整个操作。这是更优化的，并且增益随着 [`batch()`](@/api/core.md#batch) 内放置的操作数量的增加而增加。
 
 ::: only-for react
 
 ::: tip
 
-To use the Handsontable API, you'll need access to the Handsontable instance. You can do that by utilizing a reference to the `HotTable` component, and reading its `hotInstance` property.
+要使用 Handsontable API，您需要访问 Handsontable 实例。您可以通过利用对`HotTable`组件的引用并读取其`hotInstance`属性来做到这一点。
 
-For more information, see the [Instance methods](@/guides/getting-started/react-methods/react-methods.md) page.
+有关更多信息，请参阅[实例方法](@/guides/getting-started/react-methods/react-methods.md)页面。
 
 :::
 
 :::
 
 ```js
-// call the batch method on an instance
+// 在实例上调用批处理方法
 hot.batch(() => {
-  // run the operations as needed
+  // 根据需要运行操作
   hot.alter('insert_row_above', 5, 45);
   hot.setDataAtCell(1, 1, 'x');
   hot.selectCell(0, 0);
-  // the render is executed right after all of the operations are completed
+  // 所有操作完成后立即执行渲染
 });
 ```
 
-Suspending the render results in better performance, which is especially noticeable when numerous operations are batched. The diagram shows a comparison where the same operations were performed with (deep blue columns) and without the batch (light blue columns). The gain in speed of execution time increases with the number of operations batched.
+暂停渲染可以带来更好的性能，这在批处理大量操作时尤其明显。该图显示了使用批次（深蓝色柱）和不使用批次（浅蓝色柱）执行相同操作的比较。执行速度的提高随着批处理操作数量的增加而增加。
 
 <span class="img-invert">
 
@@ -90,13 +90,13 @@ Suspending the render results in better performance, which is especially noticea
 
 ::: tip
 
-Note that other methods can be used to batch operations, but they are slightly more advanced and should be used with caution. Flickering, glitches or other visual distortion may happen when you forget to `resume` render after suspending it several times. Mixing methods of a render type with those focused on operations can also result in some unexpected behavior. Above all, [`batch()`](@/api/core.md#batch) should be sufficient in most use cases, and it is safe to work with.
+请注意，其他方法也可用于批量操作，但它们稍微高级一些，应谨慎使用。当您在多次暂停渲染后忘记`恢复`渲染时，可能会发生闪烁、故障或其他视觉失真。将渲染类型的方法与专注于操作的方法混合也可能会导致一些意外的行为。最重要的是，[`batch()`](@/api/core.md#batch) 在大多数用例中应该足够了，并且使用起来是安全的。
 
 :::
 
-## API methods
+## API 方法
 
-The following API methods allow suspending:
+以下 API 方法允许暂停：
 
 - [`batch()`](@/api/core.md#batch)
 - [`batchRender()`](@/api/core.md#batchrender)
@@ -104,22 +104,22 @@ The following API methods allow suspending:
 - [`suspendRender()`](@/api/core.md#suspendrender) and [`resumeRender()`](@/api/core.md#resumerender)
 - [`suspendExecution()`](@/api/core.md#suspendexecution) and [`resumeExecution()`](@/api/core.md#resumeexecution)
 
-By using these methods, you can suspend:
+通过使用这些方法，您可以暂停：
 
-- rendering
-- execution
-- both rendering and the execution.
+- 渲染
+- 执行
+- 渲染和执行.
 
-The term "rendering" refers directly to DOM rendering, and the term "execution" refers to all operations that are different from DOM rendering. Currently, only the indexing recalculation allows you to postpone the process.
+术语`渲染`直接指DOM渲染，术语`执行`指与DOM渲染不同的所有操作。目前，只有索引重新计算允许您推迟该过程。
 
-Method names that are prefixed with `batch\*`, i.e., [`batch()`](@/api/core.md#batch), [`batchRender()`](@/api/core.md#batchrender), and [`batchExecution()`](@/api/core.md#batchexecution) are recommended to be used as the first choice if you don't need to batch async operations.
-Methods names that are prefixed with `suspend\*`, i.e., [`suspendRender()`](@/api/core.md#suspendrender) and [`suspendExecution()`](@/api/core.md#suspendexecution), are the second choice. These are useful when you need to batch async operations. Essentially they work the same way as `batch\*` methods, but the render has to be resumed manually.
+以`batch\*`为前缀的方法名称，即 [`batch()`](@/api/core.md#batch)、[`batchRender()`](@/api/core.md#batchrender ) 和 [`batchExecution()`](@/api/core.md#batchexecution) 如果不需要批量异步操作，建议首选。
+以 `suspend\*` 为前缀的方法名称，即 [`suspendRender()`](@/api/core.md#suspendrender) 和 [`suspendExecution()`](@/api/core.md#suspendexecution) ），是第二选择。当您需要批处理异步操作时，这些非常有用。本质上它们的工作方式与`batch\*`方法相同，但渲染必须手动恢复。
 
-### batch* methods
+### 批处理*方法
 
-#### batch
+#### 批
 
-This method supsends both rendering and other operations. It is universal and especially useful if you want to batch multiple API calls within the application.
+此方法会暂停渲染和其他操作。它是通用的，如果您想在应用程序中批量处理多个 API 调用，它尤其有用。
 
 ```js
 hot.batch(() => {
@@ -131,25 +131,25 @@ hot.batch(() => {
   filters.addCondition(2, 'contains', ['3']);
   filters.filter();
   hot.getPlugin('columnSorting').sort({ column: 1, sortOrder: 'desc' });
-  // The table cache will be recalculated, and table render will be called once after executing the callback
+  // 执行回调后会重新计算table cache，并调用一次table render
 });
 ```
 
-#### batchRender
+#### 批量渲染
 
-The [`batchRender()`](@/api/core.md#batchrender) method is a callback function. Excessive renders can be skipped by placing the API calls inside it. The table will be rendered after executing the callback. It is less prone to errors as you don't have to remember to resume the render. The only drawback to this method is that it doesn't support async operations.
+[`batchRender()`](@/api/core.md#batchrender) 方法是一个回调函数。通过将 API 调用放入其中，可以跳过过多的渲染。该表将在执行回调后呈现。它不太容易出错，因为您不必记住恢复渲染。此方法的唯一缺点是它不支持异步操作。
 
 ```js
 hot.batchRender(() => {
   hot.alter('insert_row_above', 5, 45);
   hot.setDataAtCell(1, 1, 'x');
-  // The table will be rendered once after executing the callback
+  // 执行回调后，表格将渲染一次
 });
 ```
 
-#### batchExecution
+#### 批量执行
 
-The [`batchExecution()`](@/api/core.md#batchexecution) is a callback function. Excessive renders can be skipped by placing the API calls inside of it. The table will be rendered after executing the callback. It is less prone to errors as you don't have to remember to resume the operations. The only drawback to this method is that it doesn't support async operations.
+[`batchExecution()`](@/api/core.md#batchexecution) 是一个回调函数。通过将 API 调用放在其中，可以跳过过多的渲染。该表将在执行回调后呈现。它不太容易出错，因为您不必记住恢复操作。此方法的唯一缺点是它不支持异步操作。
 
 ```js
 hot.batchExecution(() => {
@@ -158,28 +158,28 @@ hot.batchExecution(() => {
   filters.addCondition(2, 'contains', ['3']);
   filters.filter();
   hot.getPlugin('columnSorting').sort({ column: 1, sortOrder: 'desc' });
-  // The table cache will be recalculated once after executing the callback
+  // 执行回调后，表缓存会重新计算一次
 });
 ```
 
-### suspend* and resume* methods
+### 挂起*和恢复*方法
 
 #### [`suspendRender()`](@/api/core.md#suspendrender) and [`resumeRender()`](@/api/core.md#resumerender)
 
-To suspend the rendering process, call the [`suspendRender()`](@/api/core.md#suspendrender) method just before the actions you want to batch. This is a manual approach.
+要暂停渲染过程，请在要批处理的操作之前调用 [`suspendRender()`](@/api/core.md#suspendrender) 方法。这是一种手动方法。
 
-After suspending, resume the process with the [`resumeRender()`](@/api/core.md#resumerender) method. Every [`suspendRender()`](@/api/core.md#suspendrender) call needs to correspond with one [`resumeRender()`](@/api/core.md#resumerender) call. For example, if you call [`suspendRender()`](@/api/core.md#suspendrender) 5 times, you need to call [`resumeRender()`](@/api/core.md#resumerender) 5 times as well.
+挂起后，使用 [`resumeRender()`](@/api/core.md#resumerender) 方法恢复进程。每个 [`suspendRender()`](@/api/core.md#suspendrender) 调用都需要与一个 [`resumeRender()`](@/api/core.md#resumerender) 调用相对应。例如，如果调用 [`suspendRender()`](@/api/core.md#suspendrender) 5 次，则需要调用 [`resumeRender()`](@/api/core.md#resumerender) 5次也是如此。
 
 ```js
-hot.suspendRender(); // suspend rendering
+hot.suspendRender(); // 暂停渲染
 hot.alter('insert_row_above', 5, 45);
 hot.setDataAtCell(1, 1, 'x');
-hot.resumeRender(); // remember to resume rendering
+hot.resumeRender(); // 记得恢复渲染
 ```
 
-#### suspendExecution and resumeExecution
+#### 暂停执行和恢复执行
 
-To suspend the rendering process, you can call the [`suspendExecution()`](@/api/core.md#suspendexecution) method just before the actions you want to batch. This is a manual approach. After suspending, you must remember to resume the process with the [`resumeExecution()`](@/api/core.md#resumeexecution) method.
+要暂停渲染过程，您可以在要批处理的操作之前调用 [`suspendExecution()`](@/api/core.md#suspendexecution) 方法。这是一种手动方法。挂起后，您必须记住使用 [`resumeExecution()`](@/api/core.md#resumeexecution) 方法恢复进程。
 
 ```js
 hot.suspendExecution();
@@ -188,12 +188,12 @@ const filters = hot.getPlugin('filters');
 filters.addCondition(2, 'contains', ['3']);
 filters.filter();
 hot.getPlugin('columnSorting').sort({ column: 1, sortOrder: 'desc' });
-hot.resumeExecution(); // It updates the cache internally
+hot.resumeExecution(); // 它在内部更新缓存
 ```
 
-## Live demo of the suspend feature
+## 暂停功能的现场演示
 
-The following examples show how much the [`batch()`](@/api/core.md#batch) method can decrease the render time. Both of the examples share the same dataset and operations. The first one shows how much time lapsed when the [`batch()`](@/api/core.md#batch) method was used. Run the second example to check how much time it takes to render without the [`batch()`](@/api/core.md#batch) method.
+以下示例显示了 [`batch()`](@/api/core.md#batch) 方法可以在多大程度上减少渲染时间。这两个示例共享相同的数据集和操作。第一个显示使用 [`batch()`](@/api/core.md#batch) 方法时经过的时间。运行第二个示例来检查在不使用 [`batch()`](@/api/core.md#batch) 方法的情况下渲染需要多长时间。
 
 ::: only-for javascript
 
@@ -228,7 +228,7 @@ The following examples show how much the [`batch()`](@/api/core.md#batch) method
 
 </div>
 
-### Related blog articles
+### 相关博客文章
 
 <div class="boxes-list">
 

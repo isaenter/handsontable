@@ -1,6 +1,6 @@
 ---
 id: bhst4cl4
-title: IME support
+title: 输入法支持
 metaTitle: IME support - JavaScript Data Grid | Handsontable
 description: Convert keystrokes to characters not available on the keyboard, using the Input Method Editor. This feature is always enabled and available for cell editors.
 permalink: /ime-support
@@ -18,25 +18,25 @@ searchCategory: Guides
 category: Internationalization
 ---
 
-# IME support
+# 输入法支持
 
-Convert keystrokes to characters not available on the keyboard, using the Input Method Editor. This feature is always enabled and available for cell editors.
+使用输入法编辑器将击键转换为键盘上不可用的字符。此功能始终启用并可供单元格编辑器使用。
 
 [[toc]]
 
-## What is IME
+## 什么是输入法
 
-An Input Method Editor (IME) is a component that is part of the Operating System (OS) that enables users to generate characters that are not natively available on their keyboard by using input sequences from keystrokes or mouse movements. An example scenario would be to add Chinese characters using a Latin Keyboard; IME support would enable you to generate the characters you need.
+输入法编辑器 (IME) 是操作系统 (OS) 的一部分，它使用户能够通过击键或鼠标移动的输入序列来生成键盘上本来不可用的字符。一个示例场景是使用拉丁键盘添加中文字符； IME 支持将使您能够生成所需的字符。
 
-## IME support in Handsontable
+## Handsontable 中的 IME 支持
 
-IME support is built-in to the OS, and therefore, there's no need or ability to enable/disable it. It is always on and is activated when a user switches to one of the three supported languages. Upon activation, the IME will appear below the text editor (subject to the correct configuration in the OS). When using IME with Handsontable, it always applies to the entire grid.
+IME 支持内置于操作系统中，因此无需或无法启用/禁用它。它始终处于打开状态，并在用户切换到三种受支持语言之一时激活。激活后，IME 将出现在文本编辑器下方（取决于操作系统中的正确配置）。将 IME 与 Handsontable 一起使用时，它始终适用于整个网格。
 
-## Test IME support
+## 测试 IME 支持
 
-To test the IME support, you will need to change your language preferences for your keyboard in your OS. Next, set up the input source as Korean, Japanese, or Chinese and then start to edit any of the cell editors within Handsontable.
+要测试 IME 支持，您需要更改操作系统中键盘的语言首选项。接下来，将输入源设置为韩语、日语或中文，然后开始在 Handsontable 中编辑任何单元格编辑器。
 
-## Watch IME in action
+## 观看 IME 实际操作
 
 <video controls loop v-bind:src="'/docs/'+ $page.currentVersion + '/img/pages/ime-support/ime-support-in-handsontable.mp4'" width="100%"></video>
 

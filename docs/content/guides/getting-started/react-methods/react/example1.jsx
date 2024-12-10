@@ -17,14 +17,14 @@ const ExampleComponent = () => {
 
   const hotTableComponentRef = useRef(null);
   const selectCell = () => {
-    // The Handsontable instance is stored under the `hotInstance` property of the wrapper component.
+    // Handsontable 实例存储在包装器组件的`hotInstance`属性下。
     hotTableComponentRef.current?.hotInstance?.selectCell(1, 1);
   };
 
   return (
     <>
       <div className="controls">
-        <button onClick={selectCell}>Select cell B2</button>
+        <button onClick={selectCell}>选择单元格 B2</button>
       </div>
       <HotTable
         ref={hotTableComponentRef}

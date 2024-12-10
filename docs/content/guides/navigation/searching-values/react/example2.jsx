@@ -44,9 +44,9 @@ const ExampleComponent = () => {
         ref={hotRef}
         data={data}
         colHeaders={true}
-        // enable the `Search` plugin
+        // 启用`搜索`插件
         search={{
-          // add your custom CSS class
+          // 添加您的自定义 CSS 类
           searchResultClass: 'my-custom-search-result-class',
         }}
         height="auto"

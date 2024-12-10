@@ -24,7 +24,7 @@ const ExampleComponent = () => (
     width="auto"
     columns={[
       { data: 0 },
-      // skip the second column
+      // 跳过第二列
       { data: 2 },
       { data: 3 },
       { data: 4 },

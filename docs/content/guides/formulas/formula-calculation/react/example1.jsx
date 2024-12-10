@@ -24,10 +24,10 @@ const ExampleComponent = () => {
     ['Number of sheets in this workbook', '=SHEETS()'],
   ];
 
-  //  create an external HyperFormula instance
+  //  创建外部 HyperFormula 实例
   const hyperformulaInstance = HyperFormula.buildEmpty({
-    // to use an external HyperFormula instance,
-    // initialize it with the `'internal-use-in-handsontable'` license key
+    // 要使用外部 HyperFormula 实例，
+    // 使用`internal-use-in-handsontable`许可证密钥对其进行初始化
     licenseKey: 'internal-use-in-handsontable',
   });
 

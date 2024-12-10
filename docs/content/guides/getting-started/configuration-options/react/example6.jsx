@@ -27,7 +27,7 @@ const ExampleComponent = () => {
       rowHeaders={true}
       colHeaders={true}
       columns={[
-        // each cell in the first (by physical index) column is editable
+        // 第一列（按物理索引）中的每个单元格都是可编辑的
         { readOnly: false, className: '' },
         {},
         {},
@@ -40,11 +40,11 @@ const ExampleComponent = () => {
         {},
       ]}
       cell={[
-        // cell (0, 0) is read-only
+        // 单元格 (0, 0) 是只读的
         { row: 0, col: 0, readOnly: true },
       ]}
       cells={(row, col) => {
-        // cell (2, 2) is editable
+        // 单元格 (2, 2) 是可编辑的
         if (row === 2 && col === 2) {
           return { readOnly: false, className: '' };
         }

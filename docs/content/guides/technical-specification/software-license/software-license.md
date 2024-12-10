@@ -1,6 +1,6 @@
 ---
 id: jgk5hkn4
-title: Software license
+title: 软件许可
 metaTitle: Software license - JavaScript Data Grid | Handsontable
 description: Learn about the licensing terms of the Handsontable data grid.
 permalink: /software-license
@@ -12,42 +12,42 @@ searchCategory: Guides
 category: Technical specification
 ---
 
-# Software license
+# 软件许可
 
-Learn about the licensing terms of the Handsontable data grid.
+了解 Handsontable 数据网格的许可条款。
 
 [[toc]]
 
 ## 概述
 
-Handsontable's source code is available under two types of licenses, to make it a better fit for different types of projects. You are required to specify which type of license you use.
+Handsontable 的源代码有两种类型的许可证，以使其更好地适合不同类型的项目。您需要指定您使用的许可证类型。
 
-For more details on entering the license key, see the [License key](@/guides/getting-started/license-key/license-key.md) page.
+有关输入许可证密钥的更多详细信息，请参阅[许可证密钥](@/guides/getting-started/license-key/license-key.md) 页面。
 
-## Available licenses
+## 可用许可证
 
 | Name                                                                                                                         | Type        |
 | ---------------------------------------------------------------------------------------------------------------------------- | ----------- |
 | [Non-Commercial License](https://handsontable.com/static/licenses/non-commercial/v2/handsontable-non-commercial-license.pdf) | Proprietary |
 | Commercial License Agreement                                                                                                 | Proprietary |
 
-## Non-commercial use
+## 非商业用途
 
-We allow you to use this software for such non-commercial purposes as, but not limited to, research, private study, and evaluation. Your use in commercial settings is strictly limited to evaluation, development and testing tier of a software deployment architecture.
+我们允许您将此软件用于非商业目的，例如但不限于研究、私人学习和评估。您在商业环境中的使用严格限于软件部署架构的评估、开发和测试层。
 
-**In other words, you can’t enter the production stage if your project is in any way connected with your commercial activity.**
+**换句话来说，如果您的项目与您的商业活动有任何联系，您就无法进入生产阶段。**
 
-To use Handsontable in a non-commercial or open-source project, see the [License key](@/guides/getting-started/license-key/license-key.md) page.
+要在非商业或开源项目中使用 Handsontable，请参阅[许可证密钥](@/guides/getting-started/license-key/license-key.md) 页面。
 
-## Commercial use
+## 商业用途
 
-To obtain a commercial license key, contact our Sales Team directly, either through the [contact form](https://handsontable.com/contact?category=request_for_quotation) or by email at [sales@handsontable.com](mailto:sales@handsontable.com).
+要获取商业许可证密钥，请通过[联系表](https://handsontable.com/contact?category=request_for_quotation) 或发送电子邮件至 [sales@handsontable.com](mailto:sales) 直接联系我们的销售团队@handsontable.com）。
 
-An enterprise license is available on demand.
+可按需提供企业许可证。
 
-## How to use the license key
+## 如何使用许可证密钥
 
-In your Handsontable configuration, enter either a corresponding keyword, or a generated commercial license key:
+在您的 Handsontable 配置中，输入相应的关键字或生成的商业许可证密钥：
 
 ::: only-for javascript
 
@@ -65,11 +65,11 @@ licenseKey="00000-00000-00000-00000-00000"
 
 :::
 
-For more details on entering the license key, see the [License key](@/guides/getting-started/license-key/license-key.md) page.
+有关输入许可证密钥的更多详细信息，请参阅[许可证密钥](@/guides/getting-started/license-key/license-key.md) 页面。
 
-## Open-source license
+## 开源许可证
 
-For many years Handsontable was available as an open-source software, and released under the MIT license. The last version available under permissive terms was [6.2.2](https://github.com/handsontable/handsontable/tree/6.2.2) released on December 19, 2018.
+多年来，Handsontable 一直作为开源软件提供，并在 MIT 许可下发布。根据许可条款提供的最后一个版本是 2018 年 12 月 19 日发布的 [6.2.2](https://github.com/handsontable/handsontable/tree/6.2.2)。
 
 ## 相关文章
 

@@ -1,6 +1,6 @@
 ---
 id: g7i1xok4
-title: Formula calculation
+title: 公式计算
 metaTitle: Formula calculation - JavaScript Data Grid | Handsontable
 description: Perform calculations on cells' values, using a powerful calculation engine that handles nearly 400 functions, custom functions, named expressions, and more.
 permalink: /formula-calculation
@@ -22,38 +22,38 @@ searchCategory: Guides
 category: Formulas
 ---
 
-# Formula calculation
+# 公式计算
 
-Perform calculations on cells' values, using a powerful calculation engine that handles nearly 400
-functions, custom functions, named expressions, and more.
+使用强大的计算引擎对单元格的值进行计算，可处理近 400
+函数、自定义函数、命名表达式等等。
 
 [[toc]]
 
 ## 概述
 
-The _Formulas_ plugin provides you an extensive calculation capabilities based on formulas using the
-spreadsheet notation. Under the hood, it uses an engine called
-[HyperFormula](https://hyperformula.handsontable.com/) created by the Handsontable team as an
-independent library to help developers build complex data management apps.
+_Formulas_ 插件为您提供基于使用以下公式的广泛计算功能
+电子表格符号。在引擎盖下，它使用一个名为
+[HyperFormula](https://hyperformula.handsontable.com/) 由 Handsontable 团队创建，作为
+独立的库帮助开发人员构建复杂的数据管理应用程序。
 
-This plugin comes with a library of 386 functions grouped into categories, such as Math and
-trigonometry, Engineering, Statistical, Financial, and Logical. Using these, you can create complex
-data entry rules in business apps and much more. Below are some ideas on what you can do with it:
+该插件附带了一个包含 386 个函数的库，这些函数按类别分组，例如数学和
+三角学、工程、统计、金融和逻辑。使用这些，您可以创建复杂的
+商业应用程序等中的数据输入规则。以下是一些关于您可以用它做什么的想法：
 
-- Fully-featured spreadsheet apps
-- Smart documents
-- Educational apps
-- Business logic builders
-- Forms and form builders
-- Online calculators
-- Low connectivity apps
+- 功能齐全的电子表格应用程序
+- 智能文档
+- 教育应用程序
+- 业务逻辑构建者
+- 表格和表格生成器
+- 在线计算器
+- 低连接应用程序
 
-## Basic multi-sheet example
+## 基本的多表示例
 
-You can use formulas in a single-sheet mode or with multiple Handsontable instances with
-cross-sheet references.
+您可以在单表模式下或在多个 Handsontable 实例中使用公式
+跨表参考。
 
-Double click on a cell to open the editor and preview the formula.
+双击单元格打开编辑器并预览公式。
 
 ::: only-for javascript
 
@@ -80,10 +80,10 @@ Double click on a cell to open the editor and preview the formula.
 
 :::
 
-## Data grid example
+## 数据网格示例
 
-This example is more typical of data grids than spreadsheets. Calculations are present in two places
-– in column `Total due (fx)`, and in the summary row at the bottom.
+此示例更典型的是数据网格而不是电子表格。计算存在于两个地方
+– 在`到期总额（fx）`列和底部的摘要行中。
 
 ::: only-for javascript
 
@@ -107,36 +107,36 @@ This example is more typical of data grids than spreadsheets. Calculations are p
 
 :::
 
-## Initialization methods
+## 初始化方法
 
-There are multiple ways of initializing the Formulas plugin. You can select the most convenient one
-depending on your use case.
+有多种方法可以初始化公式插件。您可以选择最方便的一个
+取决于您的用例。
 
-In all cases, it is required to either pass in the `HyperFormula` object or a HyperFormula instance:
+在所有情况下，都需要传入 `HyperFormula` 对象或 HyperFormula 实例：
 
 ```js
 import { HyperFormula } from 'hyperformula';
 ```
 
-There are also other installation methods available. Check out
-[HyperFormula's installation documentation](https://handsontable.github.io/hyperformula/guide/client-side-installation.html).
+还有其他可用的安装方法。查看
+[HyperFormula 的安装文档](https://handsontable.github.io/hyperformula/guide/client-side-installation.html)。
 
 ::: tip HyperFormula instance
 
-To use the [`Formulas`](@/api/formulas.md) plugin with an external HyperFormula instance, initialize
-HyperFormula with the `'internal-use-in-handsontable'` license key:
+要将 [`Formulas`](@/api/formulas.md) 插件与外部 HyperFormula 实例结合使用，请初始化
+带有`internal-use-in-handsontable`许可证密钥的 HyperFormula：
 
 :::
 
 ```js
-// create an external HyperFormula instance
+// 创建外部 HyperFormula 实例
 const hyperformulaInstance = HyperFormula.buildEmpty({
-  // initialize it with the `'internal-use-in-handsontable'` license key
+  // 使用`internal-use-in-handsontable`许可证密钥对其进行初始化
   licenseKey: 'internal-use-in-handsontable',
 });
 ```
 
-### Pass the HyperFormula class/instance to Handsontable
+### 将 HyperFormula 类/实例传递给 Handsontable
 
 ::: only-for javascript
 
@@ -144,7 +144,7 @@ const hyperformulaInstance = HyperFormula.buildEmpty({
 {
   formulas: {
     engine: HyperFormula,
-    // [plugin configuration]
+    // [插件配置]
   }
 }
 ```
@@ -157,7 +157,7 @@ const hyperformulaInstance = HyperFormula.buildEmpty({
 <HotTable
   formulas={{
     engine: HyperFormula,
-    // [plugin configuration]
+    // [插件配置]
   }}
 />
 ```
@@ -172,12 +172,12 @@ or
 {
   formulas: {
     engine: {
-      hyperformula: HyperFormula, // or `engine: hyperformulaInstance`
+      hyperformula: HyperFormula, // 或 `engine: hyperformulaInstance`
       leapYear1900: false,
-      // ...and more engine configuration options.
-      // See https://handsontable.github.io/hyperformula/api/interfaces/configparams.html#number
+      // ...以及更多引擎配置选项。
+      // 请参阅https://handsontable.github.io/hyperformula/api/interfaces/configparams.html#number
     },
-    // [plugin configuration]
+    // [插件配置]
   }
 }
 ```
@@ -190,26 +190,26 @@ or
 <HotTable
   formulas={{
     engine: {
-      hyperformula: HyperFormula, // or `engine: hyperformulaInstance`
+      hyperformula: HyperFormula, // 或 `engine: hyperformulaInstance`
       leapYear1900: false,
-      // ...and more engine configuration options.
-      // See https://handsontable.github.io/hyperformula/api/interfaces/configparams.html#number
+      // ...以及更多引擎配置选项。
+      // 请参阅https://handsontable.github.io/hyperformula/api/interfaces/configparams.html#number
     },
-    // [plugin configuration]
+    // [插件配置]
   }}
 />
 ```
 
 :::
 
-### Single Handsontable instance with an external HyperFormula instance
+### 具有外部 HyperFormula 实例的单个 Handsontable 实例
 
 ::: only-for javascript
 
 ```js
 const hyperformulaInstance = HyperFormula.buildEmpty({
-  // to use an external HyperFormula instance,
-  // initialize it with the `'internal-use-in-handsontable'` license key
+  // 要使用外部 HyperFormula 实例，
+  // 使用`internal-use-in-handsontable`许可证密钥对其进行初始化
   licenseKey: 'internal-use-in-handsontable',
 });
 
@@ -227,8 +227,8 @@ const hyperformulaInstance = HyperFormula.buildEmpty({
 ```jsx
 const ExampleComponent = () => {
   const hyperformulaInstance = HyperFormula.buildEmpty({
-    // to use an external HyperFormula instance,
-    // initialize it with the `'internal-use-in-handsontable'` license key
+    // 要使用外部 HyperFormula 实例，
+    // 使用`internal-use-in-handsontable`许可证密钥对其进行初始化
     licenseKey: 'internal-use-in-handsontable',
   });
 
@@ -244,24 +244,24 @@ const ExampleComponent = () => {
 
 :::
 
-### Multiple independent Handsontable instances
+### 多个独立的 Handsontable 实例
 
 ::: only-for javascript
 
 ```js
-// Instance 1
+// 实例1
 {
   formulas: {
     engine: HyperFormula,
-    // [plugin configuration]
+    // [插件配置]
   }
 }
 
-// Instance 2
+// 实例2
 {
   formulas: {
     engine: HyperFormula,
-    // [plugin configuration]
+    // [插件配置]
   }
 }
 ```
@@ -277,13 +277,13 @@ const ExampleComponent = () => {
       <HotTable
         formulas={{
           engine: HyperFormula,
-          // [plugin configuration]
+          // [插件配置]
         }}
       />
       <HotTable
         formulas={{
           engine: HyperFormula,
-          // [plugin configuration]
+          // [插件配置]
         }}
       />
     </>
@@ -295,56 +295,56 @@ const ExampleComponent = () => {
 
 ::: only-for javascript
 
-### Multiple Handsontable instances with a shared HyperFormula instance
+### 具有共享 HyperFormula 实例的多个 Handsontable 实例
 
 ```js
-// Instance 1
+// 实例1
 {
   formulas: {
     engine: HyperFormula,
     sheetName: 'Sheet1'
-    // [plugin configuration]
+    // [插件配置]
   }
 }
 
-// Instance 2
+// 实例2
 {
   formulas: {
     engine: hot1.getPlugin('formulas').engine,
     sheetName: 'Sheet2'
-    // [plugin configuration]
+    // [插件配置]
   }
 }
 ```
 
 :::
 
-### Multiple Handsontable instances with an external shared HyperFormula instance
+### 具有外部共享 HyperFormula 实例的多个 Handsontable 实例
 
 ::: only-for javascript
 
 ```js
 const hyperformulaInstance = HyperFormula.buildEmpty({
-  // to use an external HyperFormula instance,
-  // initialize it with the `'internal-use-in-handsontable'` license key
+  // 要使用外部 HyperFormula 实例，
+  // 使用`internal-use-in-handsontable`许可证密钥对其进行初始化
   licenseKey: 'internal-use-in-handsontable',
 });
 
-// Instance 1
+// 实例1
 {
   formulas: {
     engine: hyperformulaInstance,
     sheetName: 'Sheet1'
-    // [plugin configuration]
+    // [插件配置]
   }
 }
 
-// Instance 2
+// 实例2
 {
   formulas: {
     engine: hyperformulaInstance,
     sheetName: 'Sheet2'
-    // [plugin configuration]
+    // [插件配置]
   }
 }
 ```
@@ -356,8 +356,8 @@ const hyperformulaInstance = HyperFormula.buildEmpty({
 ```jsx
 const ExampleComponent = () => {
   const hyperformulaInstance = HyperFormula.buildEmpty({
-    // to use an external HyperFormula instance,
-    // initialize it with the `'internal-use-in-handsontable'` license key
+    // 要使用外部 HyperFormula 实例，
+    // 使用`internal-use-in-handsontable`许可证密钥对其进行初始化
     licenseKey: 'internal-use-in-handsontable',
   });
 
@@ -367,14 +367,14 @@ const ExampleComponent = () => {
         formulas={{
           engine: hyperformulaInstance,
           sheetName: 'Sheet1',
-          // [plugin configuration]
+          // [插件配置]
         }}
       />
       <HotTable
         formulas={{
           engine: hyperformulaInstance,
           sheetName: 'Sheet2',
-          // [plugin configuration]
+          // [插件配置]
         }}
       />
     </>
@@ -384,20 +384,20 @@ const ExampleComponent = () => {
 
 :::
 
-## Available options and methods
+## 可用选项和方法
 
-For the list of available settings and methods, visit the [API reference](@/api/formulas.md).
+有关可用设置和方法的列表，请访问 [API 参考](@/api/formulas.md)。
 
-## Available functions
+## 可用功能
 
-This plugin inherits the calculation powers from _HyperFormula_. The complete functions reference
-can be found in the
-[HyperFormula documentation](https://handsontable.github.io/hyperformula/guide/built-in-functions.html).
+该插件继承了_HyperFormula_的计算能力。完整功能参考
+可以在
+[HyperFormula 文档](https://handsontable.github.io/hyperformula/guide/built-in-functions.html)。
 
-## [`afterFormulasValuesUpdate`](@/api/hooks.md#afterformulasvaluesupdate) hook
+## [`afterFormulasValuesUpdate`](@/api/hooks.md#afterformulasvaluesupdate) 钩子
 
-This hook listens for any changes to cells in the calculation engine, including dependent cells
-containing formulas.
+该钩子侦听计算引擎中单元格的任何更改，包括依赖单元格
+含有公式。
 
 ::: only-for javascript
 
@@ -441,11 +441,11 @@ const ExampleComponent = () => {
 
 :::
 
-## Named expressions
+## 命名表达式
 
-You can use custom-named expressions in your formula expressions. A named expression can be either
-plain values or formulas with references to absolute cell addresses. To register a named expression,
-pass an array with `name` and `expression` to your `formulas` configuration object:
+您可以在公式表达式中使用自定义命名的表达式。命名表达式可以是
+引用绝对单元格地址的纯值或公式。要注册命名表达式，
+将带有`名称`和`表达式`的数组传递给`公式`配置对象：
 
 ::: only-for javascript
 
@@ -459,7 +459,7 @@ pass an array with `name` and `expression` to your `formulas` configuration obje
 
 :::
 
-[//]: # 'TODO: [react-docs] Requires rewriting the input submission logic'
+[//]: # 'TODO: [react-docs] 需要重写输入提交逻辑'
 
 ::: only-for react
 
@@ -472,65 +472,65 @@ pass an array with `name` and `expression` to your `formulas` configuration obje
 
 :::
 
-For more information about named expressions, refer to the
-[HyperFormula docs](https://hyperformula.handsontable.com/guide/cell-references.html#relative-references).
+有关命名表达式的更多信息，请参阅
+[HyperFormula 文档](https://hyperformula.handsontable.com/guide/cell-references.html#relative-references).
 
-## View the explainer video
+## 查看讲解视频
 
 <iframe width="100%" height="425px" src="https://www.youtube.com/embed/JJXUmACTDdk"></iframe>
 
-## Known limitations
+## 已知限制
 
-- Using the [`IndexMapper`](@/api/indexMapper.md) API to programmatically [move rows](@/guides/rows/row-moving/row-moving.md) or [columns](@/guides/columns/column-moving/column-moving.md) that contain formulas is not supported. Instead, use the [`ManualRowMove`](@/api/manualRowMove.md) or [`ManualColumnMove`](@/api/manualColumnMove.md) APIs.
-- Formulas don't support [`getSourceData()`](@/api/core.md#getsourcedata), as this method operates on source data (using [physical indexes](@/api/indexMapper.md)), whereas formulas operate on visual data (using visual indexes).
-- Formulas don't support nested data, i.e., when Handsontable's [`data`](@/api/options.md#data) is set to an [array of nested objects](@/guides/getting-started/binding-to-data/binding-to-data.md#array-of-objects).
+- 使用 [`IndexMapper`](@/api/indexMapper.md) API 以编程方式[移动行](@/guides/rows/row-moving/row-moving.md) 或 [列](@/guides/columns/column-moving/column-moving.md)。请改用 [`ManualRowMove`](@/api/manualRowMove.md) 或 [`ManualColumnMove`](@/api/manualColumnMove.md) API。
+- 公式不支持 [`getSourceData()`](@/api/core.md#getsourcedata)，因为此方法对源数据进行操作（使用 [物理索引](@/api/indexMapper.md)），而公式对视觉数据进行运算（使用视觉索引）。
+- 公式不支持嵌套数据，即，当 Handsontable 的 [`data`](@/api/options.md#data) 设置为 [嵌套对象数组](@/guides/getting-started/binding-to-data/binding-to-data.md#array-of-objects）。
 
-### HyperFormula version support
+### HyperFormula 版本支持
 
-Different versions of Handsontable support different versions of HyperFormula.
+不同版本的 Handsontable 支持不同版本的 HyperFormula。
 
-To find out which HyperFormula version to use, see the table below:
+要了解要使用的 HyperFormula 版本，请参阅下表：
 
-| Handsontable version                                                                    | HyperFormula version                                                        |
-|-----------------------------------------------------------------------------------------|-----------------------------------------------------------------------------|
-| [`8.x.x`](https://github.com/handsontable/handsontable/releases/tag/8.0.0) and lower    | No HyperFormula support                                                     
-| [`9.x.x`](https://github.com/handsontable/handsontable/releases/tag/9.0.0)              | [`0.6.2`](https://github.com/handsontable/hyperformula/releases/tag/0.6.2)  |
-| [`10.x.x`](https://github.com/handsontable/handsontable/releases/tag/10.0.0)            | [`^1.2.0`](https://github.com/handsontable/hyperformula/releases/tag/1.2.0) |
-| [`11.x.x`](https://github.com/handsontable/handsontable/releases/tag/11.0.0)            | [`^1.2.0`](https://github.com/handsontable/hyperformula/releases/tag/1.2.0) |
-| [`12.x.x`](https://github.com/handsontable/handsontable/releases/tag/12.0.0)            | [`^2.0.0`](https://github.com/handsontable/hyperformula/releases/tag/2.0.0) |
-| [`13.x.x`](https://github.com/handsontable/handsontable/releases/tag/13.0.0)            | [`^2.4.0`](https://github.com/handsontable/hyperformula/releases/tag/2.4.0) |
-| [`14.x.x`](https://github.com/handsontable/handsontable/releases/tag/14.0.0)            | [`^2.4.0`](https://github.com/handsontable/hyperformula/releases/tag/2.4.0) |
-| [`14.3.x - 14.6.x`](https://github.com/handsontable/handsontable/releases/tag/14.3.0)   | [`^2.6.2`](https://github.com/handsontable/hyperformula/releases/tag/2.6.2) |
-| [`15.x.x`](https://github.com/handsontable/handsontable/releases/tag/15.0.0) and higher | [`^2.6.2`](https://github.com/handsontable/hyperformula/releases/tag/2.6.2) |
+| Handsontable 版本                                                                     | HyperFormula 版本                                                           |
+| ------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| [`8.x.x`](https://github.com/handsontable/handsontable/releases/tag/8.0.0)和更低      | 不支持 HyperFormula                                                         |
+| [`9.x.x`](https://github.com/handsontable/handsontable/releases/tag/9.0.0)            | [`0.6.2`](https://github.com/handsontable/hyperformula/releases/tag/0.6.2)  |
+| [`10.x.x`](https://github.com/handsontable/handsontable/releases/tag/10.0.0)          | [`^1.2.0`](https://github.com/handsontable/hyperformula/releases/tag/1.2.0) |
+| [`11.x.x`](https://github.com/handsontable/handsontable/releases/tag/11.0.0)          | [`^1.2.0`](https://github.com/handsontable/hyperformula/releases/tag/1.2.0) |
+| [`12.x.x`](https://github.com/handsontable/handsontable/releases/tag/12.0.0)          | [`^2.0.0`](https://github.com/handsontable/hyperformula/releases/tag/2.0.0) |
+| [`13.x.x`](https://github.com/handsontable/handsontable/releases/tag/13.0.0)          | [`^2.4.0`](https://github.com/handsontable/hyperformula/releases/tag/2.4.0) |
+| [`14.x.x`](https://github.com/handsontable/handsontable/releases/tag/14.0.0)          | [`^2.4.0`](https://github.com/handsontable/hyperformula/releases/tag/2.4.0) |
+| [`14.3.x - 14.6.x`](https://github.com/handsontable/handsontable/releases/tag/14.3.0) | [`^2.6.2`](https://github.com/handsontable/hyperformula/releases/tag/2.6.2) |
+| [`15.x.x`](https://github.com/handsontable/handsontable/releases/tag/15.0.0) 及更高   | [`^2.6.2`](https://github.com/handsontable/hyperformula/releases/tag/2.6.2) |
 
 ::: tip
 
-You can use the `'internal-use-in-handsontable'` license key only in those HyperFormula instances
-that are connected to a Handsontable instance.
+您只能在这些 HyperFormula 实例中使用`internal-use-in-handsontable`许可证密钥
+连接到 Handsontable 实例。
 
-To use HyperFormula outside of a Handsontable instance (e.g., on a server), you need a dedicated
-[HyperFormula license key](https://hyperformula.handsontable.com/guide/license-key.html). For
-details, [contact our Sales Team](https://handsontable.com/get-a-quote).
+要在 Handsontable 实例之外（例如，在服务器上）使用 HyperFormula，您需要一个专用的
+[HyperFormula 许可证密钥](https://hyperformula.handsontable.com/guide/license-key.html)。为了
+详细信息，[联系我们的销售团队](https://handsontable.com/get-a-quote)。
 
 :::
 
 ## 相关文章
 
-### HyperFormula documentation
+### HyperFormula 文档
 
 <div class="boxes-list gray">
 
-- [HyperFormula guides](https://handsontable.github.io/hyperformula/)
-- [HyperFormula API reference](https://handsontable.github.io/hyperformula/api/)
+- [HyperFormula 指南](https://handsontable.github.io/hyperformula/)
+- [HyperFormula API 参考](https://handsontable.github.io/hyperformula/api/)
 
 </div>
 
-### Related blog articles
+### 相关博客文章
 
 <div class="boxes-list gray">
 
-- [Handsontable 9.0.0: New formula plugin](https://handsontable.com/blog/handsontable-9.0.0-new-formula-plugin)
-- [8 examples of useful Excel functions in HyperFormula](https://handsontable.com/blog/8-examples-of-useful-excel-functions-in-hyperformula)
+- [Handsontable 9.0.0：新公式插件](https://handsontable.com/blog/handsontable-9.0.0-new-formula-plugin)
+- [HyperFormula 中 8 个有用的 Excel 函数示例](https://handsontable.com/blog/8-examples-of-useful-excel-functions-in-hyperformula)
 
 </div>
 

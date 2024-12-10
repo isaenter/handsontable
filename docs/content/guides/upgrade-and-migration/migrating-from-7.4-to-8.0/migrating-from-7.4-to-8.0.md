@@ -1,6 +1,6 @@
 ---
 id: g7ligsfi
-title: Migrate from 7.4 to 8.0
+title: 从 7.4 迁移到 8.0
 metaTitle: Migrate from 7.4 to 8.0 - JavaScript Data Grid | Handsontable
 description: Migrate from Handsontable 7.4 to Handsontable 8.0, released on August 5, 2020.
 permalink: /migration-from-7.4-to-8.0
@@ -13,15 +13,15 @@ searchCategory: Guides
 category: Upgrade and migration
 ---
 
-# Migrate from 7.4 to 8.0
+# 从 7.4 迁移到 8.0
 
-Migrate from Handsontable 7.4 to Handsontable 8.0, released on August 5, 2020.
+从 Handsontable 7.4 迁移到 2020 年 8 月 5 日发布的 Handsontable 8.0。
 
 [[toc]]
 
 ## 概述
 
-This guide helps you upgrade your Handsontable version to 8.0.0. We strongly recommend the upgrade, as it lets you benefit from a completely new architecture of row and column management.
+本指南帮助您将 Handsontable 版本升级到 8.0.0。我们强烈建议升级，因为它可以让您受益于全新的行和列管理架构。
 
 ## Context
 

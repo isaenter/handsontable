@@ -1,6 +1,6 @@
 ---
 id: ffimaicc
-title: Modules
+title: 模块
 metaTitle: Modules - JavaScript Data Grid | Handsontable
 description: Reduce the size of your JavaScript bundle, by importing only the modules that you need. The base module is mandatory, all other modules are optional.
 permalink: /modules
@@ -14,54 +14,54 @@ searchCategory: Guides
 category: Tools and building
 ---
 
-# Modules
+# 模块
 
-Reduce the size of your JavaScript bundle, by importing only the modules that you need. The base module is mandatory, all other modules are optional.
+通过仅导入您需要的模块来减小 JavaScript 包的大小。基本模块是强制性的，所有其他模块都是可选的。
 
 [[toc]]
 
 ## 概述
 
-Handsontable is a comprehensive tool with a broad range of features. If you don't use all of them, you can pick just the parts that you need, and get rid of the rest (e.g., unnecessary translations). This approach reduces Handsontable's impact on the overall size of your app.
+Handsontable 是一款具有广泛功能的综合工具。如果您不使用所有这些，您可以只选择您需要的部分，并删除其余部分（例如，不必要的翻译）。这种方法减少了 Handsontable 对应用程序整体大小的影响。
 
-To make this possible, Handsontable is divided into modules.
+为了实现这一点，Handsontable 被分为多个模块。
 
-### Use modules
+### 使用模块
 
-To get the most out of using Handsontable's modules:
-1. Import the [base module](#base-module).
-2. Import [optional modules](#optional-modules) of your choice.
-3. Remove redundant code (so-called tree shaking).
+要充分利用 Handsontable 的模块：
+1. 导入[基础模块](#base-module)。
+2. 导入您选择的[可选模块](#可选模块)。
+3. 删除冗余代码（所谓的tree shake）。
 
-#### Bundler support
+#### 捆绑器支持
 
-To use Handsontable's modules, your environment needs to support the `import` syntax, which is typically provided by a bundler.
+要使用 Handsontable 的模块，您的环境需要支持`import`语法，该语法通常由捆绑程序提供。
 
-We successfully tested Handsontable with the following bundlers:
+我们成功地使用以下捆绑器测试了 Handsontable：
 - webpack
 - Parcel
 - Rollup
 - Vite
 
-If Handsontable's modules don't work with your bundler, report it as a [bug](https://github.com/handsontable/handsontable/issues/new?assignees=&labels=&template=01-handsontable.md&title=).
+如果 Handsontable 的模块无法与您的捆绑器配合使用，请将其报告为 [bug](https://github.com/handsontable/handsontable/issues/new?assignees=&labels=&template=01-handsontable.md&title=)。
 
-## Base module
+## 基础模块
 
-No matter which of the optional modules you use, you always need to import the base module (`handsontable/base`), which covers:
-- Handsontable's core functionalities
-- The default cell type: [`text`](@/guides/cell-types/cell-type/cell-type.md#available-cell-types)
+无论您使用哪个可选模块，您始终需要导入基本模块（`handsontable/base`），其中包括：
+- Handsontable的核心功能
+- 默认单元格类型：[`text`](@/guides/cell-types/cell-type/cell-type.md#available-cell-types)
 
-### Import the base module
+### 导入基础模块
 
 ::: only-for javascript
 
-To get the base JavaScript module, import Handsontable from `handsontable/base` (not from `handsontable`, which would give you the [full distribution package](@/guides/tools-and-building/packages/packages.md)):
+要获取基本 JavaScript 模块，请从`handsontable/base`导入 Handsontable（而不是从`handsontable`导入，后者将为您提供[完整的分发包](@/guides/tools-and-building/packages/packages.md)） :
 
 :::
 
 ::: only-for react
 
-To get the base JavaScript module, import Handsontable from `handsontable/base` (not from `handsontable`, which would give you the full distribution package):
+要获取基本 JavaScript 模块，请从`handsontable/base`导入 Handsontable（而不是从`handsontable`导入，后者将为您提供完整的分发包）：
 
 :::
 
@@ -69,26 +69,26 @@ To get the base JavaScript module, import Handsontable from `handsontable/base` 
 import Handsontable from 'handsontable/base';
 ```
 
-Handsontable's CSS stylesheets are not modular. You need to import them separately:
-- [Import Handsontable's CSS](@/guides/getting-started/installation/installation.md#import-handsontable-s-css)
+Handsontable 的 CSS 样式表不是模块化的。您需要单独导入它们：
+- [导入 Handsontable 的 CSS](@/guides/getting-started/installation/installation.md#import-handsontable-s-css)
 
-Now, you're ready to use any [optional modules](#optional-modules) of your choice.
-## Optional modules
+现在，您可以使用您选择的任何[可选模块](#可选模块)。
+## 可选模块
 
-Handsontable's optional modules are grouped into:
-- [Cell type modules](#cell-type-modules)
-- [Plugin modules](#plugin-modules)
-- [Translation modules](#translation-modules)
+Handsontable 的可选模块分为：
+- [细胞类型模块](#cell-type-modules)
+- [插件模块](#plugin-modules)
+- [翻译模块](#translation-modules)
 
-### Cell type modules
+### 单元类型模块
 
-Cell type modules contain Handsontable's [cell types](@/guides/cell-types/cell-type/cell-type.md).
+单元类型模块包含 Handsontable 的[单元类型](@/guides/cell-types/cell-type/cell-type.md)。
 
-You can import the following cell type modules:
+您可以导入以下单元类型模块：
 
 ```js
 import {
-  registerCellType, // cell types' registering function
+  registerCellType, // 细胞类型的注册功能
   AutocompleteCellType,
   CheckboxCellType,
   DateCellType,
@@ -102,44 +102,44 @@ import {
 } from 'handsontable/cellTypes';
 ```
 
-Each cell type module contains a different cell type:
+每个细胞类型模块包含不同的细胞类型：
 
 ::: details Cell type modules
 
-| Module                 | Cell type alias |
-| ---------------------- | --------------- |
-| `AutocompleteCellType` | `autocomplete`  |
-| `CheckboxCellType`     | `checkbox`      |
-| `DateCellType`         | `date`          |
-| `DropdownCellType`     | `dropdown`      |
-| `HandsontableCellType` | `handsontable`  |
-| `NumericCellType`      | `numeric`       |
-| `PasswordCellType`     | `password`      |
-| `SelectCellType`       | `select`        |
-| `TextCellType`         | `text`          |
-| `TimeCellType`         | `time`          |
+| Module                 | 细胞类型别名   |
+| ---------------------- | -------------- |
+| `AutocompleteCellType` | `autocomplete` |
+| `CheckboxCellType`     | `checkbox`     |
+| `DateCellType`         | `date`         |
+| `DropdownCellType`     | `dropdown`     |
+| `HandsontableCellType` | `handsontable` |
+| `NumericCellType`      | `numeric`      |
+| `PasswordCellType`     | `password`     |
+| `SelectCellType`       | `select`       |
+| `TextCellType`         | `text`         |
+| `TimeCellType`         | `time`         |
 
 :::
 
-#### Import a cell type module
+#### 导入单元格类型模块
 
-1. Make sure you import the [base module](#base-module):
+1. 确保导入[基本模块](#base-module)：
     ```js
     import Handsontable from 'handsontable/base';
     ```
-2. Import the registering function and a cell type module of your choice. For example:
+2. 导入注册函数和您选择的单元类型模块。例如：
     ```js
     import {
       registerCellType,
       NumericCellType,
     } from 'handsontable/cellTypes';
     ```
-3. Register your cell type module, to let Handsontable recognize it. For example:
+3. 注册您的细胞类型模块，以便让 Handsontable 识别它。例如：
     ```js
     registerCellType(NumericCellType);
     ```
 
-    A full example:
+    一个完整的例子：
 
     ```js
     import Handsontable from 'handsontable/base';
@@ -151,24 +151,24 @@ Each cell type module contains a different cell type:
     registerCellType(NumericCellType);
     ```
 
-#### Renderer, editor, and validator modules
+#### 渲染器、编辑器和验证器模块
 
-Each cell type module is made of:
-- A [renderer](@/guides/cell-functions/cell-renderer/cell-renderer.md) module
-- An [editor](@/guides/cell-functions/cell-editor/cell-editor.md) module
-- A [validator](@/guides/cell-functions/cell-validator/cell-validator.md) module (optionally)
+每个电池类型模块由以下部分组成：
+- [渲染器](@/guides/cell-functions/cell-renderer/cell-renderer.md) 模块
+- [编辑器](@/guides/cell-functions/cell-editor/cell-editor.md) 模块
+- [validator](@/guides/cell-functions/cell-validator/cell-validator.md) 模块（可选）
 
 ::: tip
 
-To find out which renderer, editor, and validator a given cell type is made of,
-see the API reference of the [`type`](@/api/options.md#type) configuration option.
+要找出给定单元格类型由哪个渲染器、编辑器和验证器组成，
+请参阅 [`type`](@/api/options.md#type) 配置选项的 API 参考。
 
 :::
 
-You can import renderer, editor, and validator modules individually.
-For the full list of those modules, see the [List of all modules](#list-of-all-modules) section.
+您可以单独导入渲染器、编辑器和验证器模块。
+有关这些模块的完整列表，请参阅[所有模块列表](#list-of-all-modules) 部分。
 
-For example, you can import the `numeric` cell type as a whole:
+例如，您可以将`numeric`单元格类型作为整体导入：
 
 ::: only-for javascript
 
@@ -219,7 +219,7 @@ const container = document.querySelector('#example1');
 
 :::
 
-Or, you can import the `numeric` cell type's renderer, editor, and validator individually (the effect is the same as above):
+或者，您可以单独导入`numeric`单元格类型的渲染器、编辑器和验证器（效果与上面相同）：
 
 ::: only-for javascript
 
@@ -295,15 +295,15 @@ registerValidator(numericValidator);
 
 :::
 
-### Plugin modules
+### 插件模块
 
-Plugin modules contain Handsontable's [plugins](@/api/plugins.md).
+插件模块包含 Handsontable 的 [plugins](@/api/plugins.md)。
 
-You can import the following plugin modules:
+您可以导入以下插件模块：
 
 ```js
 import {
-  registerPlugin, // plugins' registering function
+  registerPlugin, // 插件注册功能
   AutoColumnSize,
   AutoRowSize,
   Autofill,
@@ -342,7 +342,7 @@ import {
 } from 'handsontable/plugins';
 ```
 
-Each plugin module contains a different plugin:
+每个插件模块包含一个不同的插件：
 
 ::: details Plugin modules
 
@@ -386,25 +386,25 @@ Each plugin module contains a different plugin:
 
 :::
 
-#### Import a plugin module
+#### 导入插件模块
 
-1. Make sure you import the [base module](#base-module):
+1. 确保导入[基本模块](#base-module)：
     ```js
     import Handsontable from 'handsontable/base';
     ```
-2. Import registering function and a plugin module of your choice. For example:
+2. 导入注册功能和您选择的插件模块。例如：
     ```js
     import {
       registerPlugin,
       ContextMenu,
     } from 'handsontable/plugins';
     ```
-3. Register your plugin module, to let Handsontable recognize it. For example:
+3. 注册您的插件模块，让 Handsontable 识别它。例如：
     ```js
     registerPlugin(ContextMenu);
     ```
 
-    A full example:
+    一个完整的例子：
 
     ```js
     import Handsontable from 'handsontable/base';
@@ -416,15 +416,15 @@ Each plugin module contains a different plugin:
     registerPlugin(ContextMenu);
     ```
 
-### Translation modules
+### 翻译模块
 
-Translation modules contain Handsontable's [translations](@/guides/internationalization/language/language.md).
+翻译模块包含 Handsontable 的[翻译](@/guides/internationalization/language/language.md)。
 
-You can import the following translation modules:
+您可以导入以下翻译模块：
 
 ```js
 import {
-  registerLanguageDictionary, // translations' registering function
+  registerLanguageDictionary, // 翻译注册功能
   arAR,
   csCZ,
   deCH,
@@ -448,7 +448,7 @@ import {
 } from 'handsontable/i18n';
 ```
 
-Each translation module contains a different translation package:
+每个翻译模块包含不同的翻译包：
 
 ::: details Translation modules
 
@@ -477,25 +477,25 @@ Each translation module contains a different translation package:
 
 :::
 
-#### Import a translation module
+#### 导入翻译模块
 
-1. Make sure you import the [base module](#base-module):
+1. 确保导入[基本模块](#base-module)：
     ```js
     import Handsontable from 'handsontable/base';
     ```
-2. Import the registering function and and a translation module of your choice. For example:
+2. 导入注册函数和您选择的翻译模块。例如：
     ```js
     import {
       registerLanguageDictionary,
       plPL,
     } from 'handsontable/i18n';
     ```
-3. Register your translation module, to let Handsontable recognize it. For example:
+3. 注册您的翻译模块，让 Handsontable 识别它。例如：
     ```js
     registerLanguageDictionary(plPL);
     ```
 
-    A full example:
+    一个完整的例子：
 
     ```js
     import Handsontable from 'handsontable/base';
@@ -507,23 +507,23 @@ Each translation module contains a different translation package:
     registerLanguageDictionary(plPL);
     ```
 
-## List of all modules
+## 所有模块列表
 
-The table below lists all of Handsontable's modules:
+下表列出了 Handsontable 的所有模块：
 
-| Type                                                         | Modules                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | Required / optional |
-| ------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------- |
-| Core functionalities                                         | `handsontable/base`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | Required            |
-| [Cell types](@/guides/cell-types/cell-type/cell-type.md)               | `AutocompleteCellType`<br>`CheckboxCellType`<br>`DateCellType`<br>`DropdownCellType`<br>`HandsontableCellType`<br>`NumericCellType`<br>`PasswordCellType`<br>`SelectCellType`<br>`TextCellType`<br>`TimeCellType`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | Optional            |
-| [Cell renderers](@/guides/cell-functions/cell-renderer/cell-renderer.md)   | `baseRenderer`<br>`autocompleteRenderer`<br>`checkboxRenderer`<br>`dateRenderer`<br>`dropdownRenderer`<br>`handsontableRenderer`<br>`htmlRenderer`<br>`numericRenderer`<br>`passwordRenderer`<br>`selectRenderer`<br>`textRenderer`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | Optional            |
-| [Cell editors](@/guides/cell-functions/cell-editor/cell-editor.md)       | `AutocompleteEditor`<br>`BaseEditor`<br>`CheckboxEditor`<br>`DateEditor`<br>`DropdownEditor`<br>`HandsontableEditor`<br>`NumericEditor`<br>`PasswordEditor`<br>`SelectEditor`<br>`TextEditor`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | Optional            |
-| [Cell validators](@/guides/cell-functions/cell-validator/cell-validator.md) | `autocompleteValidator`<br>`dateValidator`<br>`dropdownValidator`<br>`numericValidator`<br>`timeValidator`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | Optional            |
-| [Plugins](@/api/plugins.md)                                  | [`AutoColumnSize`](@/api/autoColumnSize.md)<br>[`Autofill`](@/api/autofill.md)<br>[`AutoRowSize`](@/api/autoRowSize.md)<br>[`BasePlugin`](@/api/basePlugin.md)<br>[`BindRowsWithHeaders`](@/api/bindRowsWithHeaders.md)<br>[`CollapsibleColumns`](@/api/collapsibleColumns.md)<br>[`ColumnSorting`](@/api/columnSorting.md)<br>[`ColumnSummary`](@/api/columnSummary.md)<br>[`Comments`](@/api/comments.md)<br>[`ContextMenu`](@/api/contextMenu.md)<br>[`CopyPaste`](@/api/copyPaste.md)<br>[`CustomBorders`](@/api/customBorders.md)<br>[`DragToScroll`](@/api/dragToScroll.md)<br>[`DropdownMenu`](@/api/dropdownMenu.md)<br>[`ExportFile`](@/api/exportFile.md)<br>[`Filters`](@/api/filters.md)<br>[`Formulas`](@/api/formulas.md)<br>[`HiddenColumns`](@/api/hiddenColumns.md)<br>[`HiddenRows`](@/api/hiddenRows.md)<br>[`ManualColumnFreeze`](@/api/manualColumnFreeze.md)<br>[`ManualColumnMove`](@/api/manualColumnMove.md)<br>[`ManualColumnResize`](@/api/manualColumnResize.md)<br>[`ManualRowMove`](@/api/manualRowMove.md)<br>[`ManualRowResize`](@/api/manualRowResize.md)<br>[`MergeCells`](@/api/mergeCells.md)<br>[`MultiColumnSorting`](@/api/multiColumnSorting.md)<br>`MultipleSelectionHandles`<br>[`NestedHeaders`](@/api/nestedHeaders.md)<br>[`NestedRows`](@/api/nestedRows.md)<br>[`PersistentState`](@/api/persistentState.md)<br>[`Search`](@/api/search.md)<br>[`StretchColumns`](@/api/stretchColumns.md)<br>`TouchScroll`<br>[`TrimRows`](@/api/trimRows.md)<br>[`UndoRedo`](@/api/undoRedo.md) | Optional            |
-| [Translations](@/guides/internationalization/language/language.md)    | `arAR` `csCZ` `deCH` `deDE` `enUS` `esMX`<br>`frFR` `hrHR` `itIT` `jaJP` `koKR`<br>`lvLV` `nbNO` `nlNL` `plPL`<br>`ptBR` `ruRU` `srSP` `zhCN` `zhTW`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | Optional            |
+| Type                                                                        | Modules                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | Required / optional |
+| --------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------- |
+| Core functionalities                                                        | `handsontable/base`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | Required            |
+| [Cell types](@/guides/cell-types/cell-type/cell-type.md)                    | `AutocompleteCellType`<br>`CheckboxCellType`<br>`DateCellType`<br>`DropdownCellType`<br>`HandsontableCellType`<br>`NumericCellType`<br>`PasswordCellType`<br>`SelectCellType`<br>`TextCellType`<br>`TimeCellType`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | Optional            |
+| [Cell renderers](@/guides/cell-functions/cell-renderer/cell-renderer.md)    | `baseRenderer`<br>`autocompleteRenderer`<br>`checkboxRenderer`<br>`dateRenderer`<br>`dropdownRenderer`<br>`handsontableRenderer`<br>`htmlRenderer`<br>`numericRenderer`<br>`passwordRenderer`<br>`selectRenderer`<br>`textRenderer`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | Optional            |
+| [Cell editors](@/guides/cell-functions/cell-editor/cell-editor.md)          | `AutocompleteEditor`<br>`BaseEditor`<br>`CheckboxEditor`<br>`DateEditor`<br>`DropdownEditor`<br>`HandsontableEditor`<br>`NumericEditor`<br>`PasswordEditor`<br>`SelectEditor`<br>`TextEditor`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | Optional            |
+| [Cell validators](@/guides/cell-functions/cell-validator/cell-validator.md) | `autocompleteValidator`<br>`dateValidator`<br>`dropdownValidator`<br>`numericValidator`<br>`timeValidator`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | Optional            |
+| [Plugins](@/api/plugins.md)                                                 | [`AutoColumnSize`](@/api/autoColumnSize.md)<br>[`Autofill`](@/api/autofill.md)<br>[`AutoRowSize`](@/api/autoRowSize.md)<br>[`BasePlugin`](@/api/basePlugin.md)<br>[`BindRowsWithHeaders`](@/api/bindRowsWithHeaders.md)<br>[`CollapsibleColumns`](@/api/collapsibleColumns.md)<br>[`ColumnSorting`](@/api/columnSorting.md)<br>[`ColumnSummary`](@/api/columnSummary.md)<br>[`Comments`](@/api/comments.md)<br>[`ContextMenu`](@/api/contextMenu.md)<br>[`CopyPaste`](@/api/copyPaste.md)<br>[`CustomBorders`](@/api/customBorders.md)<br>[`DragToScroll`](@/api/dragToScroll.md)<br>[`DropdownMenu`](@/api/dropdownMenu.md)<br>[`ExportFile`](@/api/exportFile.md)<br>[`Filters`](@/api/filters.md)<br>[`Formulas`](@/api/formulas.md)<br>[`HiddenColumns`](@/api/hiddenColumns.md)<br>[`HiddenRows`](@/api/hiddenRows.md)<br>[`ManualColumnFreeze`](@/api/manualColumnFreeze.md)<br>[`ManualColumnMove`](@/api/manualColumnMove.md)<br>[`ManualColumnResize`](@/api/manualColumnResize.md)<br>[`ManualRowMove`](@/api/manualRowMove.md)<br>[`ManualRowResize`](@/api/manualRowResize.md)<br>[`MergeCells`](@/api/mergeCells.md)<br>[`MultiColumnSorting`](@/api/multiColumnSorting.md)<br>`MultipleSelectionHandles`<br>[`NestedHeaders`](@/api/nestedHeaders.md)<br>[`NestedRows`](@/api/nestedRows.md)<br>[`PersistentState`](@/api/persistentState.md)<br>[`Search`](@/api/search.md)<br>[`StretchColumns`](@/api/stretchColumns.md)<br>`TouchScroll`<br>[`TrimRows`](@/api/trimRows.md)<br>[`UndoRedo`](@/api/undoRedo.md) | Optional            |
+| [Translations](@/guides/internationalization/language/language.md)          | `arAR` `csCZ` `deCH` `deDE` `enUS` `esMX`<br>`frFR` `hrHR` `itIT` `jaJP` `koKR`<br>`lvLV` `nbNO` `nlNL` `plPL`<br>`ptBR` `ruRU` `srSP` `zhCN` `zhTW`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | Optional            |
 
-## List of all module imports
+## 所有模块导入的列表
 
-To quickly register all modules in bulk, use these registering functions:
+要快速批量注册所有模块，请使用以下注册函数：
 - `registerAllCellTypes()`
 - `registerAllRenderers()`
 - `registerAllEditors()`
@@ -534,10 +534,10 @@ To quickly register all modules in bulk, use these registering functions:
 ::: details Import and register all modules in bulk
 
 ```js
-// the base module
+// 基本模块
 import Handsontable from 'handsontable/base';
 
-// cell type modules
+// 细胞类型模块
 import {
   AutocompleteCellType,
   CheckboxCellType,
@@ -550,7 +550,7 @@ import {
   TimeCellType,
 } from 'handsontable/cellTypes';
 
-// renderer modules
+// 渲染器模块
 import {
   baseRenderer,
   autocompleteRenderer,
@@ -562,7 +562,7 @@ import {
   textRenderer,
 } from 'handsontable/renderers';
 
-// editor modules
+// 编辑器模块
 import {
   AutocompleteEditor,
   BaseEditor,
@@ -576,7 +576,7 @@ import {
   TextEditor,
 } from 'handsontable/editors';
 
-// validator modules
+// 验证器模块
 import {
   autocompleteValidator,
   dateValidator,
@@ -585,7 +585,7 @@ import {
   timeValidator,
 } from 'handsontable/validators';
 
-// plugin modules
+// 插件模块
 import {
   AutoColumnSize,
   AutoRowSize,
@@ -624,7 +624,7 @@ import {
   UndoRedo,
 } from 'handsontable/plugins';
 
-// translation modules
+// 翻译模块
 import {
   arAR,
   csCZ,
@@ -648,7 +648,7 @@ import {
   zhTW,
 } from 'handsontable/i18n';
 
-// registering functions that let you quickly register all modules at once
+// 注册功能可让您快速注册所有模块
 import {
   registerAllCellTypes,
   registerAllRenderers,
@@ -658,22 +658,22 @@ import {
   registerAllModules,
 } from 'handsontable/registry'
 
-// register all cell types at once
+// 一次注册所有细胞类型
 registerAllCellTypes();
 
-// register all renderers at once
+// 一次注册所有渲染器
 registerAllRenderers();
 
-// register all editors at once
+// 一次性注册所有编辑者
 registerAllEditors();
 
-// register all validators at once
+// 立即注册所有验证器
 registerAllValidators();
 
-// register all plugins at once
+// 一次注册所有插件
 registerAllPlugins();
 
-// register individual translations
+// 注册个人翻译
 registerLanguageDictionary(arAR);
 registerLanguageDictionary(deCH);
 registerLanguageDictionary(deDE);
@@ -694,13 +694,13 @@ registerLanguageDictionary(srSP);
 registerLanguageDictionary(zhCN);
 registerLanguageDictionary(zhTW);
 
-// or, register all of Handsontable's modules at once
+// 或者，立即注册 Handsontable 的所有模块
 registerAllModules();
 ```
 
 :::
 
-To register individual modules explicitly, use these registering functions:
+要显式注册各个模块，请使用以下注册函数：
 - `registerCellType()`
 - `registerRenderer()`
 - `registerEditor()`
@@ -711,12 +711,12 @@ To register individual modules explicitly, use these registering functions:
 ::: details Import and register all modules explicitly
 
 ```js
-// the base module
+// 基本模块
 import Handsontable from 'handsontable/base';
 
-// cell type modules
+// 细胞类型模块
 import {
-  registerCellType, // cell types' registering function
+  registerCellType, // 细胞类型的注册功能
   AutocompleteCellType,
   CheckboxCellType,
   DateCellType,
@@ -728,9 +728,9 @@ import {
   TimeCellType,
 } from 'handsontable/cellTypes';
 
-// renderer modules
+// 渲染器模块
 import {
-  registerRenderer, // renderers' registering function
+  registerRenderer, // 渲染器的注册函数
   baseRenderer,
   autocompleteRenderer,
   checkboxRenderer,
@@ -741,9 +741,9 @@ import {
   textRenderer,
 } from 'handsontable/renderers';
 
-// editor modules
+// 编辑器模块
 import {
-  registerEditor, // editors' registering function
+  registerEditor, // 编辑注册功能
   AutocompleteEditor,
   BaseEditor,
   CheckboxEditor,
@@ -756,9 +756,9 @@ import {
   TextEditor,
 } from 'handsontable/editors';
 
-// validator modules
+// 验证器模块
 import {
-  registerValidator, // validators' registering function
+  registerValidator, // 验证者的注册功能
   autocompleteValidator,
   dateValidator,
   dropdownValidator,
@@ -766,9 +766,9 @@ import {
   timeValidator,
 } from 'handsontable/validators';
 
-// plugin modules
+// 插件模块
 import {
-  registerPlugin, // plugins' registering function
+  registerPlugin, // 插件注册功能
   AutoColumnSize,
   AutoRowSize,
   Autofill,
@@ -806,9 +806,9 @@ import {
   UndoRedo,
 } from 'handsontable/plugins';
 
-// translation modules
+// 翻译模块
 import {
-  registerLanguageDictionary, // translations' registering function
+  registerLanguageDictionary, // 翻译注册功能
   arAR,
   csCZ,
   deCH,
@@ -831,7 +831,7 @@ import {
   zhTW,
 } from 'handsontable/i18n';
 
-// register individual cell types
+// 注册单个细胞类型
 registerCellType(AutocompleteCellType);
 registerCellType(CheckboxCellType);
 registerCellType(DateCellType);
@@ -842,7 +842,7 @@ registerCellType(PasswordCellType);
 registerCellType(TimeCellType);
 registerCellType(TextCellType);
 
-// register individual renderers
+// 注册单独的渲染器
 registerRenderer(baseRenderer);
 registerRenderer(autocompleteRenderer);
 registerRenderer(checkboxRenderer);
@@ -852,7 +852,7 @@ registerRenderer(numericRenderer);
 registerRenderer(passwordRenderer);
 registerRenderer(textRenderer);
 
-// register individual editors
+// 注册个人编辑
 registerEditor(BaseEditor);
 registerEditor(AutocompleteEditor);
 registerEditor(CheckboxEditor);
@@ -864,14 +864,14 @@ registerEditor(PasswordEditor);
 registerEditor(SelectEditor);
 registerEditor(TextEditor);
 
-// register individual validators
+// 注册个人验证者
 registerValidator(autocompleteValidator);
 registerValidator(dateValidator);
 registerValidator(dropdownValidator);
 registerValidator(numericValidator);
 registerValidator(timeValidator);
 
-// register individual plugins
+// 注册单独的插件
 registerPlugin(AutoColumnSize);
 registerPlugin(Autofill);
 registerPlugin(AutoRowSize);
@@ -907,7 +907,7 @@ registerPlugin(TouchScroll);
 registerPlugin(TrimRows);
 registerPlugin(UndoRedo);
 
-// register individual translations
+// 注册个人翻译
 registerLanguageDictionary(arAR);
 registerLanguageDictionary(deCH);
 registerLanguageDictionary(deDE);
@@ -933,7 +933,7 @@ registerLanguageDictionary(zhTW);
 
 ::: tip
 
-Parcel, webpack 3 (and older), and a few other bundlers require you to import modules one by one, from their respective files of origin. See the full list of such imports:
+Parcel、webpack 3（及更早版本）和其他一些捆绑器要求您从各自的原始文件中一一导入模块。查看此类进口的完整列表：
 
 :::
 
@@ -1021,9 +1021,9 @@ import { registerLanguageDictionary } from 'handsontable/i18n/registry';
 
 ::: only-for javascript
 
-## Using modules with frameworks
+## 将模块与框架一起使用
 
-You can also use modules with Handsontable's framework wrappers:
+您还可以将模块与 Handsontable 的框架包装器一起使用：
 
 <div class="boxes-list">
 
@@ -1056,11 +1056,11 @@ You can also use modules with Handsontable's framework wrappers:
 
 </div>
 
-### Related blog articles
+### 相关博客文章
 
 <div class="boxes-list">
 
-- [Modularizing to improve the developer experience](https://handsontable.com/blog/modularizing-to-improve-the-developer-experience)
-- [Handsontable 11.0.0: modularization for React, Angular, and Vue](https://handsontable.com/blog/handsontable-11.0.0-modularization-for-react-angular-and-vue)
+- [模块化以改善开发人员体验](https://handsontable.com/blog/modularizing-to-improve-the-developer-experience)
+- [Handsontable 11.0.0：React、Angular 和 Vue 的模块化](https://handsontable.com/blog/handsontable-11.0.0-modularization-for-react-angular-and-vue)
 
 </div>

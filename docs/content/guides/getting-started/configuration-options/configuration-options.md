@@ -1,6 +1,6 @@
 ---
 id: p7oq0ph7
-title: Configuration options
+title: 配置选项
 metaTitle: Configuration options - JavaScript Data Grid | Handsontable
 description: Configure the data grid down to each column, row, and cell, using various built-in options that control Handsontable's behavior and user interface.
 permalink: /configuration-options
@@ -16,9 +16,9 @@ searchCategory: Guides
 category: Getting started
 ---
 
-# Configuration options
+# 配置选项
 
-Configure your grid down to each column, row, and cell, using various built-in options that control Handsontable's behavior and user interface.
+使用控制 Handsontable 行为和用户界面的各种内置选项，将网格配置到每一列、行和单元格。
 
 [[toc]]
 
@@ -26,7 +26,7 @@ Configure your grid down to each column, row, and cell, using various built-in o
 
 ::: only-for javascript
 
-To apply configuration options, pass them as a second argument of the Handsontable constructor, using the object literal notation:
+要应用配置选项，请使用对象文字表示法将它们作为 Handsontable 构造函数的第二个参数传递：
 
 ```js
 import Handsontable from 'handsontable';
@@ -35,7 +35,7 @@ import 'handsontable/styles/ht-theme-main.css';
 
 const container = document.querySelector('#example');
 const hot = new Handsontable(container, {
-  // configuration options, in the object literal notation
+  // 配置选项，以对象文字表示法
   licenseKey: "non-commercial-and-evaluation",
   data: [
     ['A1', 'B1', 'C1', 'D1'],
@@ -58,7 +58,7 @@ const hot = new Handsontable(container, {
 
 ::: only-for react
 
-To apply configuration options, pass them as individual props of the [`HotTable`](@/guides/getting-started/installation/installation.md#_4-use-the-hottable-component) or [`HotColumn`](@/guides/columns/react-hot-column/react-hot-column.md) components.
+要应用配置选项，请将它们作为 [`HotTable`](@/guides/getting-started/installation/installation.md#_4-use-the-hottable-component) 或 [`HotColumn`](@ /guides/columns/react-hot-column/react-hot-column.md）组件。
 
 ```jsx
 <HotTable
@@ -84,76 +84,76 @@ To apply configuration options, pass them as individual props of the [`HotTable`
 
 :::
 
-Depending on your needs, you can apply configuration options to different elements of your grid, such as:
-- [The entire grid](#set-grid-options)
-- [Individual columns](#set-column-options)
-- [Individual rows](#set-row-options)
-- [Individual cells](#set-cell-options)
-- [Individual grid elements, based on any logic you implement](#implement-custom-logic)
+根据您的需要，您可以将配置选项应用于网格的不同元素，例如：
+- [整个网格](#set-grid-options)
+- [单个列](#set-column-options)
+- [单独行](#set-row-options)
+- [单个单元格](#set-cell-options)
+- [单独的网格元素，基于您实现的任何逻辑](#implement-custom-logic)
 
-For the full list of available configuration options, see the [configuration options' API reference](@/api/options.md).
+有关可用配置选项的完整列表，请参阅[配置选项的 API 参考](@/api/options.md)。
 
-### Cascading configuration
+### 级联配置
 
-Handsontable's configuration cascades down:
-- From the top-level grid options ([`GlobalMeta`](https://github.com/handsontable/handsontable/blob/master/handsontable/src/dataMap/metaManager/metaLayers/globalMeta.js))
-- Through the mid-level column options ([`ColumnMeta`](https://github.com/handsontable/handsontable/blob/master/handsontable/src/dataMap/metaManager/metaLayers/columnMeta.js))
-- To the bottom-level cell options ([`CellMeta`](https://github.com/handsontable/handsontable/blob/master/handsontable/src/dataMap/metaManager/metaLayers/cellMeta.js))
+Handsontable的配置向下级联：
+- 从顶级网格选项（[`GlobalMeta`](https://github.com/handsontable/handsontable/blob/master/handsontable/src/dataMap/metaManager/metaLayers/globalMeta.js)）
+- 通过中级列选项（[`ColumnMeta`](https://github.com/handsontable/handsontable/blob/master/handsontable/src/dataMap/metaManager/metaLayers/columnMeta.js)）
+- 到底层单元格选项（[`CellMeta`](https://github.com/handsontable/handsontable/blob/master/handsontable/src/dataMap/metaManager/metaLayers/cellMeta.js)）
 
-When you modify the mid-level column options (using the [`columns`](@/api/options.md#columns) option):
-- The options that you change overwrite the top-level grid options.
-- The options that you change cascade down to the bottom-level cell options.
-- Any unchanged options are inherited from the top-level grid options.
+当您修改中级列选项时（使用 [`columns`](@/api/options.md#columns) 选项）：
+- 您更改的选项将覆盖顶级网格选项。
+- 您更改的选项会级联到底层单元格选项。
+- 任何未更改的选项均继承自顶级网格选项。
 
-When you modify the bottom-level cell options (using the [`cell`](@/api/options.md#cell) option):
-- The options that you change overwrite the top-level grid options.
-- The options that you change overwrite the mid-level column options.
-- Any unchanged options are inherited from the mid-level column options or the top-level grid options.
-
-When you modify any options with the [`cells`](@/api/options.md#cells) function, the changes overwrite all other options.
+当您修改底层单元格选项时（使用 [`cell`](@/api/options.md#cell) 选项）：
+- 您更改的选项将覆盖顶级网格选项。
+- 您更改的选项将覆盖中级列选项。
+- 任何未更改的选项均继承自中级列选项或顶级网格选项。
+  
+当您使用 [`cells`](@/api/options.md#cells) 函数修改任何选项时，所做的更改会覆盖所有其他选项。
 
 ::: tip
 
-The [`cells`](@/api/options.md#cells) option is a function invoked before Handsontable's [rendering cycle](@/guides/optimization/batch-operations/batch-operations.md). Implemented incorrectly, it can slow Handsontable down. Use the [`cells`](@/api/options.md#cells) option only if the [`cell`](@/api/options.md#cell) option, the [`columns`](@/api/options.md#columns) option, and the [`setCellMeta()`](#change-cell-options) method don't meet your needs.
+[`cells`](@/api/options.md#cells) 选项是在 Handsontable 的[渲染周期](@/guides/optimization/batch-operations/batch-operations.md) 之前调用的函数。如果实施不当，可能会降低 Handsontable 的速度。仅当 [`cell`](@/api/options.md#cell) 选项、[`columns`](@/api /options.md#columns) 选项和 [`setCellMeta()`](#change-cell-options) 方法不能满足您的需求。
 
 :::
 
-For more details on Handsontable's cascading configuration, see the [MetaManager class](https://github.com/handsontable/handsontable/blob/master/handsontable/src/dataMap/metaManager/index.js).
+有关Handsontable的级联配置的更多详细信息，请参阅[MetaManager类](https://github.com/handsontable/handsontable/blob/master/handsontable/src/dataMap/metaManager/index.js)。
 
-### Plugin options
+### 插件选项
 
-Configuration options can come from:
-- Handsontable's [Core](@/api/core.md)
-- Handsontable's [plugins](@/api/plugins.md)
-- Handsontable's [hooks](@/api/hooks.md)
+配置选项可以来自：
+- Handsontable的[核心](@/api/core.md)
+- Handsontable 的 [插件](@/api/plugins.md)
+- Handsontable 的 [hooks](@/api/hooks.md)
 
-If you use Handsontable through [modules](@/guides/tools-and-building/modules/modules.md): to use an option that comes from a Handsontable plugin, you need to import and register that plugin when initializing your Handsontable instance.
+如果您通过 [modules](@/guides/tools-and-building/modules/modules.md) 使用 Handsontable：要使用来自 Handsontable 插件的选项，您需要在初始化 Handsontable 实例时导入并注册该插件。
 
-To find out if an option comes from a plugin, check the `Category` label in the [configuration options' API reference](@/api/options.md).
+要查明选项是否来自插件，请检查 [配置选项 API 参考](@/api/options.md) 中的`类别`标签。
 
-## Set grid options
+## 设置网格选项
 
 
 
 ::: only-for javascript
 
-To apply configuration options to the entire grid, pass your options as a second argument of the Handsontable constructor, using the object literal notation.
+要将配置选项应用于整个网格，请使用对象文字表示法将选项作为 Handsontable 构造函数的第二个参数传递。
 
 :::
 
 ::: only-for react
 
-To apply configuration options to the entire grid, pass your options as individual props of the [`HotTable`](@/guides/getting-started/installation/installation.md#_4-use-the-hottable-component) or [`HotColumn`](@/guides/columns/react-hot-column/react-hot-column.md) components.
+要将配置选项应用于整个网格，请将您的选项作为 [`HotTable`](@/guides/getting-started/installation/installation.md#_4-use-the-hottable-component) 或 [` HotColumn`](@/guides/columns/react-hot-column/react-hot-column.md) 组件。
 
 :::
 
-For example, to set the entire grid's [width](@/api/options.md#width) and [height](@/api/options.md#height):
+例如，设置整个网格的[宽度](@/api/options.md#width)和[高度](@/api/options.md#height)：
 
 ::: only-for javascript
 
 ```js
 const hot = new Handsontable(container, {
-  // top-level grid options that apply to the entire grid
+  // 适用于整个网格的顶级网格选项
   width: 400,
   height: 300
 });
@@ -169,15 +169,15 @@ const hot = new Handsontable(container, {
 
 :::
 
-#### Example
+#### 例子
 
-To configure each cell in the grid as read-only, apply the [`readOnly`](@/api/options.md#readonly) option as a top-level grid option.
+要将网格中的每个单元格配置为只读，请将 [`readOnly`](@/api/options.md#readonly) 选项应用为顶级网格选项。
 
-The top-level grid options cascade down:
-- To the mid-level column options
-- To the bottom-level cell options
+顶级网格选项向下级联：
+- 到中层栏选项
+- 到底层单元格选项
 
-As a result, each cell in the grid is read-only:
+因此，网格中的每个单元格都是只读的：
 
 ::: only-for javascript
 
@@ -201,9 +201,9 @@ As a result, each cell in the grid is read-only:
 
 :::
 
-## Set column options
+## 设置列选项
 
-To apply configuration options to an individual column (or a range of columns), use the [`columns`](@/api/options.md#columns) option.
+要将配置选项应用于单个列（或一系列列），请使用 [`columns`](@/api/options.md#columns) 选项。
 
 ::: only-for javascript
 
@@ -212,7 +212,7 @@ To apply configuration options to an individual column (or a range of columns), 
     columns: [
       {},
       {},
-      // column options, apply to each cell of the third (by physical index) column
+      // 列选项，应用于第三（按物理索引）列的每个单元格
       {
         readOnly: true,
       },
@@ -227,13 +227,13 @@ To apply configuration options to an individual column (or a range of columns), 
 ```jsx
 <HotTable
   columns={[
-    {width: 100}, // column options for the first (by physical index) column
-    {width: 100}, // column options for the second (by physical index) column
-    {width: 100}, // column options for the third (by physical index) column
+    {width: 100}, // 第一列（按物理索引）的列选项
+    {width: 100}, // 第二列（按物理索引）的列选项
+    {width: 100}, // 第三列（按物理索引）的列选项
   ]}
 />
 ```
-Alternatively, you can use the [`HotColumn`](@/guides/columns/react-hot-column/react-hot-column.md) component to configure columns declaratively:
+或者，您可以使用 [`HotColumn`](@/guides/columns/react-hot-column/react-hot-column.md) 组件以声明方式配置列：
 ```jsx
 <HotTable>
   <HotColumn width={100}/>
@@ -244,17 +244,17 @@ Alternatively, you can use the [`HotColumn`](@/guides/columns/react-hot-column/r
 
 :::
 
-#### Example
+#### 例子
 
-In the example below, the [`columns`](@/api/options.md#columns) option is set to a function.
+在下面的示例中，[`columns`](@/api/options.md#columns) 选项设置为一个函数。
 
-The function applies the [`readOnly: true`](@/api/options.md#readonly) option to each column that has a physical index of either `2` or `8`.
+该函数将 [`readOnly: true`](@/api/options.md#readonly) 选项应用于物理索引为`2`或`8`的每个列。
 
-The modified mid-level column options:
-- Overwrite the top-level grid options
-- Cascade down to the bottom-level cell options
+修改后的中层列选项：
+- 覆盖顶级网格选项
+- 级联到底层单元格选项
 
-As a result, each cell in the third and ninth columns is read-only:
+因此，第三列和第九列中的每个单元格都是只读的：
 
 ::: only-for javascript
 
@@ -278,28 +278,28 @@ As a result, each cell in the third and ninth columns is read-only:
 
 :::
 
-## Set row options
+## 设置行选项
 
-To apply configuration options to an individual row (or a range of rows), use the [`cells`](@/api/options.md#cells) option.
+要将配置选项应用于单个行（或一系列行），请使用 [`cells`](@/api/options.md#cells) 选项。
 
-Any options modified through [`cells`](@/api/options.md#cells) overwrite all other options.
+通过 [`cells`](@/api/options.md#cells) 修改的任何选项都会覆盖所有其他选项。
 
 ::: only-for javascript
 
- The function can take three arguments:<br>
-- `row`: a row coordinate (a physical index)
-- `col`: a column coordinate (a physical index)
-- `prop`: if your [`data`](@/api/options.md#data) is an [array of objects](@/guides/getting-started/binding-to-data/binding-to-data.md#array-of-objects), `prop` is a property name for a column's data source object.<br>
-If your [`data`](@/api/options.md#data) is an [array of arrays](@/guides/getting-started/binding-to-data/binding-to-data.md#array-of-arrays), `prop` is the same as `col`.
+该函数可以采用三个参数：<br>
+- `row`：行坐标（物理索引）
+- `col`：列坐标（物理索引）
+- `prop`：如果你的 [`data`](@/api/options.md#data) 是一个 [对象数组](@/guides/getting-started/binding-to-data/binding-to-data.md#array-of-objects)，`prop` 是列的数据源对象的属性名称。<br>
+如果你的 [`data`](@/api/options.md#data) 是一个 [数组的数组](@/guides/getting-started/binding-to-data/binding-to-data.md#array-of-arrays），`prop` 与 `col` 相同。
 
 ```js
 const hot = new Handsontable(container, {
-  // the `cells` options overwrite all other options
+  // `cells` 选项覆盖所有其他选项
   cells(row, col, prop) {
     if (row === 1 || row === 4) {
       return {
-        // row options, which apply to each cell of the second row
-        // and to each cell of the fifth row
+        // 行选项，适用于第二行的每个单元格
+        // 以及第五行的每个单元格
         readOnly: true,
       };
     }
@@ -311,21 +311,21 @@ const hot = new Handsontable(container, {
 
 ::: only-for react
 
-The function can take three arguments:<br>
+该函数可以采用三个参数：<br>
 
-- `row`: a row coordinate (a physical index)
-- `col`: a column coordinate (a physical index)
-- `prop`: if your [`data`](@/api/options.md#data) is
-  an [array of objects](@/guides/getting-started/binding-to-data/binding-to-data.md#array-of-objects), `prop` is a property name for a
-  column's data source object.<br>
-  If your [`data`](@/api/options.md#data) is
-  an [array of arrays](@/guides/getting-started/binding-to-data/binding-to-data.md#array-of-arrays), `prop` is the same as `col`.
+- `row`：行坐标（物理索引）
+- `col`：列坐标（物理索引）
+- `prop`：如果你的 [`data`](@/api/options.md#data) 是
+  一个[对象数组](@/guides/getting-started/binding-to-data/binding-to-data.md#array-of-objects)，`prop`是一个属性名称
+  列的数据源对象。<br>
+  如果你的 [`data`](@/api/options.md#data) 是
+  一个[数组的数组](@/guides/getting-started/binding-to-data/binding-to-data.md#array-of-arrays)， `prop` 与 `col` 相同。
 ```jsx
 <HotTable cells={(row, col, prop) => {
   if (row === 1 || row === 4) {
     return {
-      // row options, which apply to each cell of the second row
-      // and to each cell of the fifth row
+      // 行选项，适用于第二行的每个单元格
+      // 以及第五行的每个单元格
       readOnly: true,
     };
   }
@@ -334,11 +334,11 @@ The function can take three arguments:<br>
 
 :::
 
-#### Example
+#### 例子
 
-In the example below, the [`cells`](@/api/options.md#cells) option sets each cell in the first and fourth row as [`readOnly`](@/api/options.md#readonly).
+在下面的示例中， [`cells`](@/api/options.md#cells) 选项将第一行和第四行中的每个单元格设置为 [`readOnly`](@/api/options.md#readonly)。
 
-Options modified through [`cells`](@/api/options.md#cells) overwrite all other options.
+通过 [`cells`](@/api/options.md#cells) 修改的选项将覆盖所有其他选项。
 
 ::: only-for javascript
 
@@ -362,9 +362,9 @@ Options modified through [`cells`](@/api/options.md#cells) overwrite all other o
 
 :::
 
-## Set cell options
+## 设置单元格选项
 
-To apply configuration options to individual cells, use the [`cell`](@/api/options.md#cell) option.
+要将配置选项应用于单个单元，请使用 [`cell`](@/api/options.md#cell) 选项。
 
 ::: only-for javascript
 
@@ -372,13 +372,13 @@ To apply configuration options to individual cells, use the [`cell`](@/api/optio
 const hot = new Handsontable(container, {
   cell: [
     {
-      // cell options, apply only to a cell with coordinates (0, 0)
+      // 单元格选项，仅适用于坐标为 (0, 0) 的单元格
       row: 0,
       col: 0,
       readOnly: true,
     },
     {
-      // cell options, apply only to a cell with coordinates (1, 1)
+      // 单元格选项，仅适用于坐标为 (1, 1) 的单元格
       row: 1,
       col: 1,
       readOnly: true,
@@ -395,14 +395,14 @@ const hot = new Handsontable(container, {
 
 ```jsx
 <HotTable cell={[
-  { // bottom-level cell options overwrite the top-level grid options
-    // apply only to a cell with coordinates (0, 0)
+  { // 底层单元格选项覆盖顶层网格选项
+    // 仅适用于坐标为 (0, 0) 的单元格
     row: 0,
     col: 0,
   },
   {
-    // bottom-level cell options overwrite the top-level grid options
-    // apply only to a cell with coordinates (1, 1)
+    // 底层单元格选项覆盖顶层网格选项
+    // 仅适用于坐标为 (1, 1) 的单元格
     row: 1,
     col: 1,
   }
@@ -411,13 +411,13 @@ const hot = new Handsontable(container, {
 
 :::
 
-#### Example
+#### 例子
 
-In the example below, the [`cell`](@/api/options.md#cell) option sets cell `A1`(`0, 0`) and cell `B2`(`1, 1`) as [`readOnly`](@/api/options.md#readonly).
+在下面的示例中， [`cell`](@/api/options.md#cell) 选项将单元格 `A1`(`0, 0`) 和单元格 `B2`(`1, 1`) 设置为 [`只读`](@/api/options.md#readonly)。
 
-The modified [`cell`](@/api/options.md#cell) options:
-- Overwrite the top-level grid options
-- Overwrite mid-level column options
+修改后的 [`cell`](@/api/options.md#cell) 选项：
+- 覆盖顶级网格选项
+- 覆盖中级列选项
 
 ::: only-for javascript
 
@@ -441,15 +441,15 @@ The modified [`cell`](@/api/options.md#cell) options:
 
 :::
 
-### Read cell options
+### 读取单元格选项
 
-When Handsontable is running, you can check a cell's current options, using the [`getCellMeta()`](@/api/core.md#getcellmeta) method.
+当 Handsontable 运行时，您可以使用 [`getCellMeta()`](@/api/core.md#getcellmeta) 方法检查单元格的当前选项。
 
-The [`getCellMeta()`](@/api/core.md#getcellmeta) method returns an object with:
-- All built-in options (stored in the [`CellMeta`](https://github.com/handsontable/handsontable/blob/master/handsontable/src/dataMap/metaManager/metaLayers/cellMeta.js) [prototype](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes))
-- Any options you add
+[`getCellMeta()`](@/api/core.md#getcellmeta) 方法返回一个对象，其中包含：
+- 所有内置选项（存储在 [`CellMeta`](https://github.com/handsontable/handsontable/blob/master/handsontable/src/dataMap/metaManager/metaLayers/cellMeta.js) [原型]( https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes））
+- 您添加的任何选项
 
-For example:
+例如：
 
 ::: only-for javascript
 
@@ -460,7 +460,7 @@ import 'handsontable/styles/ht-theme-main.css';
 
 const container = document.querySelector('#example');
 const hot = new Handsontable(container, {
-  // top-level grid options that apply to the entire grid
+  // 适用于整个网格的顶级网格选项
   data: [
     ['A1', 'B1', 'C1', 'D1'],
     ['A2', 'B2', 'C2', 'D2'],
@@ -471,12 +471,12 @@ const hot = new Handsontable(container, {
   height: 'auto',
   rowHeaders: true,
   colHeaders: true,
-  // in the top-level grid options, all cells are read-only
+  // 在顶级网格选项中，所有单元格都是只读的
   readOnly: false,
   cell: [
     {
-      // bottom-level cell options overwrite the top-level grid options
-      // apply only to a cell with coordinates (1, 1)
+      // 底层单元格选项覆盖顶层网格选项
+      // 仅适用于坐标为 (1, 1) 的单元格
       row: 1,
       col: 1,
       readOnly: true,
@@ -484,11 +484,11 @@ const hot = new Handsontable(container, {
   ]
 });
 
-// for cell (0, 0), the `readOnly` option is the default (`false`)
+// 对于单元格 (0, 0)，`readOnly`选项是默认值 (`false`)
 // returns `false`
 hot.getCellMeta(0, 0).readOnly;
 
-// for cell (1, 1), the `cell` option overwrote the default `readOnly` value
+// 对于单元格 (1, 1)，`cell`选项覆盖默认的`readOnly`值
 // returns `true`
 hot.getCellMeta(1, 1).readOnly;
 ```
@@ -498,7 +498,7 @@ hot.getCellMeta(1, 1).readOnly;
 ::: only-for react
 
 ```jsx
-// Consider the HotTable component with the `cell` option declared:
+// 考虑声明了 `cell` 选项的 HotTable 组件：
 <HotTable
   cell={[
     {
@@ -509,22 +509,22 @@ hot.getCellMeta(1, 1).readOnly;
   ]}
 />
 
-// for cell (0, 0), the `readOnly` option is the default (`false`)
+// 对于单元格 (0, 0)，`readOnly`选项是默认值 (`false`)
 // returns `false`
 hot.getCellMeta(0, 0).readOnly;
 
-// for cell (1, 1), the `cell` option overwrote the default `readOnly` value
+// 对于单元格 (1, 1)，`cell`选项覆盖默认的`readOnly`值
 // returns `true`
 hot.getCellMeta(1, 1).readOnly;
 ```
 
 :::
 
-### Change cell options
+### 更改单元格选项
 
-When Handsontable is running, you can change the initial cell options, using the [`setCellMeta()`](@/api/core.md#setcellmeta) method.
+当 Handsontable 运行时，您可以使用 [`setCellMeta()`](@/api/core.md#setcellmeta) 方法更改初始单元格选项。
 
-For example:
+例如：
 
 ::: only-for javascript
 
@@ -535,7 +535,7 @@ import 'handsontable/styles/ht-theme-main.css';
 
 const container = document.querySelector('#example');
 const hot = new Handsontable(container, {
-  // top-level grid options that apply to the entire grid
+  // 适用于整个网格的顶级网格选项
   data: [
     ['A1', 'B1', 'C1', 'D1'],
     ['A2', 'B2', 'C2', 'D2'],
@@ -546,12 +546,12 @@ const hot = new Handsontable(container, {
   height: 'auto',
   rowHeaders: true,
   colHeaders: true,
-  // in the top-level grid options, all cells are read-only
+  // 在顶级网格选项中，所有单元格都是只读的
   readOnly: false,
   cell: [
     {
-      // bottom-level cell options overwrite the top-level grid options
-      // apply only to a cell with coordinates (1, 1)
+      // 底层单元格选项覆盖顶层网格选项
+      // 仅适用于坐标为 (1, 1) 的单元格
       row: 1,
       col: 1,
       readOnly: true,
@@ -559,11 +559,11 @@ const hot = new Handsontable(container, {
   ]
 });
 
-// for cell (0, 0), the `readOnly` option is the default (`false`)
+// 对于单元格 (0, 0)，`readOnly`选项是默认值 (`false`)
 // returns `false`
 hot.getCellMeta(0, 0).readOnly;
 
-// for cell (1, 1), the `cell` option overwrote the default `readOnly` value
+// 对于单元格 (1, 1)，`cell`选项覆盖默认的`readOnly`值
 // returns `true`
 hot.getCellMeta(1, 1).readOnly;
 ```
@@ -573,7 +573,7 @@ hot.getCellMeta(1, 1).readOnly;
 ::: only-for react
 
 ```jsx
-// change the `readOnly` option of cell (1, 1) back to `false`
+// 将单元格 (1, 1) 的 `readOnly` 选项更改回 `false`
 hot.setCellMeta(1, 1, 'readOnly', false);
 
 // returns `false`
@@ -582,19 +582,19 @@ hot.getCellMeta(1, 1).readOnly;
 
 :::
 
-## Implement custom logic
+## 实现自定义逻辑
 
-You can apply configuration options to individual grid elements (columns, rows, cells), based on any logic you implement, using the [`cells`](@/api/options.md#cells) option.
+您可以根据您实现的任何逻辑，使用 [`cells`](@/api/options.md#cells) 选项将配置选项应用于各个网格元素（列、行、单元格）。
 
-The [`cells`](@/api/options.md#cells) option overwrites all other options.
+[`cells`](@/api/options.md#cells) 选项会覆盖所有其他选项。
 
 ::: only-for javascript
 
-The function can take three arguments:<br>
-   - `row`: a row coordinate (a physical index)
-   - `col`: a column coordinate (a physical index)
-   - `prop`: if your [`data`](@/api/options.md#data) is an [array of objects](@/guides/getting-started/binding-to-data/binding-to-data.md#array-of-objects), `prop` is a property name for a column's data source object.<br>
-   If your [`data`](@/api/options.md#data) is an [array of arrays](@/guides/getting-started/binding-to-data/binding-to-data.md#array-of-arrays), `prop` is the same as `col`.
+该函数可以采用三个参数：<br>
+   - `row`：行坐标（物理索引）
+   - `col`：列坐标（物理索引）
+   - `prop`：如果你的 [`data`](@/api/options.md#data) 是一个 [对象数组](@/guides/getting-started/binding-to-data/binding-to-data.md#array-of-objects)，`prop` 是列的数据源对象的属性名称。<br>
+   如果你的 [`data`](@/api/options.md#data) 是一个 [数组的数组](@/guides/getting-started/binding-to-data/binding-to-data.md#array-of-arrays），`prop` 与 `col` 相同。
 
 ```js
 const hot = new Handsontable(container, {
@@ -612,15 +612,15 @@ const hot = new Handsontable(container, {
 
 ::: only-for react
 
-The function can take three arguments:<br>
+该函数可以采用三个参数：<br>
 
-- `row`: a row coordinate (a physical index)
-- `col`: a column coordinate (a physical index)
-- `prop`: if your [`data`](@/api/options.md#data) is
-  an [array of objects](@/guides/getting-started/binding-to-data/binding-to-data.md#array-of-objects), `prop` is a property name for a
-  column's data source object.<br>
-  If your [`data`](@/api/options.md#data) is
-  an [array of arrays](@/guides/getting-started/binding-to-data/binding-to-data.md#array-of-arrays), `prop` is the same as `col`.
+- `row`：行坐标（物理索引）
+- `col`：列坐标（物理索引）
+- `prop`：如果你的 [`data`](@/api/options.md#data) 是
+  一个[对象数组](@/guides/getting-started/binding-to-data/binding-to-data.md#array-of-objects)，`prop`是一个属性名称
+  列的数据源对象。<br>
+  如果你的 [`data`](@/api/options.md#data) 是
+  一个[数组的数组](@/guides/getting-started/binding-to-data/binding-to-data.md#array-of-arrays)， `prop` 与 `col` 相同。
 ```jsx
 <HotTable
   cells={(row, col) => {
@@ -634,9 +634,9 @@ The function can take three arguments:<br>
 ```
 
 :::
-#### Example
+#### 例子
 
-In the example below, the modified [`cells`](@/api/options.md#cells) options overwrite the top-level grid options.
+在下面的示例中，修改后的 [`cells`](@/api/options.md#cells) 选项将覆盖顶级网格选项。
 
 ::: only-for javascript
 
@@ -652,15 +652,15 @@ In the example below, the modified [`cells`](@/api/options.md#cells) options ove
 ::: only-for react
 
 ```jsx
-// for cell (0, 0), the `readOnly` option is the default (`false`)
+// 对于单元格 (0, 0)，`readOnly`选项是默认值 (`false`)
 // returns `false`
 hot.getCellMeta(0, 0).readOnly;
 
-// for cell (1, 1), the `cell` option overwrote the default `readOnly` value
+// 对于单元格 (1, 1)，`cell`选项覆盖默认的`readOnly`值
 // returns `true`
 hot.getCellMeta(1, 1).readOnly;
 
-// change the `readOnly` option of cell (1, 1) back to `false`
+// 将单元格 (1, 1) 的 `readOnly` 选项更改回 `false`
 hot.setCellMeta(1, 1, 'readOnly', false);
 
 // returns `false`
@@ -669,16 +669,16 @@ hot.getCellMeta(1, 1).readOnly;
 
 :::
 
-## Configuration example
+## 配置示例
 
-In the example below, some cells are read-only, and some cells are editable:
-- By default, all cells are read-only (as set in the top-level grid options).
-- For the first column, the mid-level column options overwrite the top-level grid options.<br>
-  As a result, the first column cells are editable.
-- For cell `A1` (`0, 0`), the bottom-level cell options overwrite both the mid-level column options, and the top-level grid options.<br>
-  As a result, cell `A1` (`0, 0`) is read-only, despite being part of the editable first column.
-- For cell `C3` (`3, 3`), the [`cells`](@/api/options.md#cells) option overwrites all other options.<br>
-  As a result, cell `C3` (`3, 3`) is editable, despite not being part of the editable first column.
+在下面的示例中，某些单元格是只读的，而某些单元格是可编辑的：
+- 默认情况下，所有单元格都是只读的（在顶级网格选项中设置）。
+- 对于第一列，中级列选项将覆盖顶级网格选项。<br>
+  因此，第一列单元格是可编辑的。
+- 对于单元格`A1`（`0, 0`），底层单元格选项会覆盖中层列选项和顶层网格选项。<br>
+  因此，单元格`A1`（`0, 0`）是只读的，尽管它是可编辑第一列的一部分。
+- 对于单元格 `C3` (`3, 3`)，[`cells`](@/api/options.md#cells) 选项会覆盖所有其他选项。<br>
+  因此，单元格`C3`(`3, 3`) 是可编辑的，尽管它不是可编辑第一列的一部分。
 
 ::: only-for javascript
 

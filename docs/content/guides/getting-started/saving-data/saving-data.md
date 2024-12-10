@@ -1,6 +1,6 @@
 ---
 id: 7js3d370
-title: Saving data
+title: 保存数据
 metaTitle: Saving data - JavaScript Data Grid | Handsontable
 description: Saving data after each change to the data set, using Handsontable's API hooks. Preserve the table's state by saving data to the local storage.
 permalink: /saving-data
@@ -16,17 +16,17 @@ searchCategory: Guides
 category: Getting started
 ---
 
-# Saving data
+# 保存数据
 
-Save data after each change to the data set, using Handsontable's API hooks. Preserve the table's state by saving data to the local storage.
+每次更改数据集后，使用 Handsontable 的 API 挂钩保存数据。通过将数据保存到本地存储来保留表的状态。
 
 [[toc]]
 
-## Save changes using a callback
+## 使用回调保存更改
 
-To track changes made in your data grid, use Handsontable's [`afterChange`](@/api/hooks.md#afterchange) hook.
+要跟踪数据网格中所做的更改，请使用 Handsontable 的 [`afterChange`](@/api/hooks.md#afterchange) 挂钩。
 
-The example below handles data by using `fetch`. Note that this is just a mockup, and nothing is actually saved. You need to implement the server-side part by yourself.
+下面的示例使用`fetch`处理数据。请注意，这只是一个模型，实际上没有保存任何内容。服务器端部分需要你自己实现。
 
 ::: only-for javascript
 
@@ -51,23 +51,23 @@ The example below handles data by using `fetch`. Note that this is just a mockup
 
 :::
 
-## Save data locally
+## 将数据保存到本地
 
-You can save any type of data in local storage to preserve the table state after page reloads. The [`persistentState`](@/api/options.md#persistentstate) option must be set to `true` to enable the data storage mechanism. You can set it either during the Handsontable initialization or using the [`updateSettings()`](@/api/core.md#updatesettings) method.
+您可以将任何类型的数据保存在本地存储中，以在页面重新加载后保留表状态。 [`persistentState`](@/api/options.md#persistentstate) 选项必须设置为 `true` 才能启用数据存储机制。您可以在 Handsontable 初始化期间或使用 [`updateSettings()`](@/api/core.md#updatesettings) 方法来设置它。
 
-Persistent state storage is particularly useful when running multiple instances of Handsontable on one page as it allows data separation per each instance.
+当在一页上运行 Handsontable 的多个实例时，持久状态存储特别有用，因为它允许每个实例的数据分离。
 
-When the [`persistentState`](@/api/options.md#persistentstate) option is enabled, the [`PersistentState`](@/api/persistentState.md) plugin exposes hooks listed below:
+当启用 [`persistentState`](@/api/options.md#persistentstate) 选项时，[`PersistentState`](@/api/persistentState.md) 插件会公开下面列出的钩子：
 
 - [`persistentStateSave`](@/api/hooks.md#persistentstatesave)
 - [`persistentStateLoad`](@/api/hooks.md#persistentstateload)
 - [`persistentStateReset`](@/api/hooks.md#persistentstatereset)
 
-## [`PersistentState`](@/api/persistentState.md) vs `localStorage`
+## [`PersistentState`](@/api/persistentState.md) 与 `localStorage`
 
-The main benefit of using the [`PersistentState`](@/api/persistentState.md) plugin hooks rather than the regular `localStorage` API is that it ensures separation of data stored by multiple Handsontable instances. For example, if you have two or more instances of Handsontable on one page, data saved by one instance will be inaccessible to the second instance. Those two instances can store data under the same key, and no data would be overwritten.
+使用 [`PersistentState`](@/api/persistentState.md) 插件挂钩而不是常规的 `localStorage` API 的主要好处是，它可以确保多个 Handsontable 实例存储的数据分离。例如，如果一页上有两个或多个 Handsontable 实例，则第二个实例将无法访问一个实例保存的数据。这两个实例可以在同一密钥下存储数据，并且不会覆盖任何数据。
 
-For the data separation to work properly, make sure that each instance of Handsontable has a unique `id`.
+为了使数据分离正常工作，请确保 Handsontable 的每个实例都有一个唯一的`id`。
 
 ## 相关API参考
 

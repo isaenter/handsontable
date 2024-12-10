@@ -31,7 +31,7 @@ const ExampleComponent = () => {
       rowHeaders={true}
       hiddenRows={{
         rows: [3, 5, 9],
-        // show UI indicators to mark hidden rows
+        // 显示 UI 指示器来标记隐藏行
         indicators: true,
       }}
     />

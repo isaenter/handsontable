@@ -7,7 +7,7 @@ import 'handsontable/styles/ht-theme-main.css';
 registerAllModules();
 
 const ExampleComponent = () => {
-  //  Generate an array of arrays with a dummy data
+  //  使用虚拟数据生成多维数组
   const generateData = (rows = 3, columns = 7, additionalRows = true) => {
     let counter = 0;
     const array2d = [...new Array(rows)].map((_) =>

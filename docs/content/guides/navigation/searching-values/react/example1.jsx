@@ -19,9 +19,9 @@ const ExampleComponent = () => {
   const searchFieldKeyupCallback = useCallback(
     (event) => {
       const hot = hotRef.current?.hotInstance;
-      // get the `Search` plugin's instance
+      // 获取`Search`插件的实例
       const search = hot?.getPlugin('search');
-      // use the `Search` plugin's `query()` method
+      // 使用`Search`插件的`query()`方法
       const queryResult = search?.query(event.currentTarget.value);
 
       console.log(queryResult);

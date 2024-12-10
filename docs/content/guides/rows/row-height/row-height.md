@@ -1,6 +1,6 @@
 ---
 id: fehmrn1j
-title: Row heights
+title: 行高
 metaTitle: Row heights - JavaScript Data Grid | Handsontable
 description: Configure row heights, using a number, an array or a function. Let your users manually change row heights using Handsontable's interface.
 permalink: /row-height
@@ -23,24 +23,24 @@ searchCategory: Guides
 category: Rows
 ---
 
-# Row heights
+# 行高
 
-Configure row heights, using a number, an array or a function. Let your users manually change row heights using Handsontable's interface.
+使用数字、数组或函数配置行高。让您的用户使用 Handsontable 的界面手动更改行高。
 
 [[toc]]
 
 ## 概述
 
-The default (and minimum) row height is calculated based on the used theme's padding and border values (in the classic theme it's 23 px - 22 px + 1 px of the row's bottom border). Unless configured otherwise, Handsontable assumes that your cell contents fit in this default row height.
+默认（和最小）行高是根据使用的主题的填充和边框值计算的（在经典主题中，它是行底部边框的 23 px -22 px + 1 px）。除非另有配置，Handsontable 假定您的单元格内容适合此默认行高。
 
-If your cell contents require heights greater than default (because you use multiline text, or [custom renderers](@/guides/cell-functions/cell-renderer/cell-renderer.md), or custom styles), use one of the following configurations to avoid potential layout problems:
-  - Configure your row heights in advance: set the [`rowHeights`](@/api/options.md#rowheights) option to a [number](#set-row-heights-to-a-number), or an [array](#set-row-heights-with-an-array), or a [function](#set-row-heights-with-a-function). This requires you to know the heights beforehand, but results in the best runtime performance.
-  - Set the [`manualRowResize`](@/api/options.md#manualrowresize) option to an array, to configure initial row heights and let your users [adjust the row heights manually](#adjust-row-heights-manually).
-  - Enable the [`AutoRowSize`](@/api/autoRowSize.md) plugin, by setting `autoRowSize: true`. This tells Handsontable to measure the actual row heights in the DOM. It impacts runtime performance but is accurate.
+如果您的单元格内容需要大于默认高度（因为您使用多行文本或[自定义渲染器](@/guides/cell-functions/cell-renderer/cell-renderer.md) 或自定义样式），请使用其中一种以下配置以避免潜在的布局问题：
+  - 提前配置行高：将 [`rowHeights`](@/api/options.md#rowheights) 选项设置为 [number](#set-row-heights-to-a-number) 或 [array](#set-row-heights-with-an-array)，或一个[function](#set-row-heights-with-a-function)。这要求您事先知道高度，但会带来最佳的运行时性能。
+  - 将 [`manualRowResize`](@/api/options.md#manualrowresize) 选项设置为数组，以配置初始行高并让您的用户[手动调整行高](#adjust-row-heights-manually)。
+  - 通过设置 `autoRowSize: true` 启用 [`AutoRowSize`](@/api/autoRowSize.md) 插件。这告诉 Handsontable 测量 DOM 中的实际行高。它会影响运行时性能，但很准确。
 
-## Set row heights to a number
+## 将行高设置为数字
 
-We set the same height of `40px` for all rows across the entire grid in this example.
+在此示例中，我们为整个网格中的所有行设置相同的高度`40px`。
 
 ::: only-for javascript
 
@@ -64,9 +64,9 @@ We set the same height of `40px` for all rows across the entire grid in this exa
 
 :::
 
-## Set row heights with an array
+## 使用数组设置行高
 
-In this example, the height is only set for the first rows. Each additional row would be automatically adjusted to the content.
+在此示例中，仅为第一行设置高度。每增加一行都会根据内容自动调整。
 
 ::: only-for javascript
 
@@ -90,9 +90,9 @@ In this example, the height is only set for the first rows. Each additional row 
 
 :::
 
-## Set row heights with a function
+## 使用函数设置行高
 
-The row height can be set using a function. In this example, the size of all rows is set using a function that takes a row `index` (1, 2 ...) and multiplies it by `20px` for each consecutive row.
+可以使用函数设置行高。在此示例中，所有行的大小是使用一个函数设置的，该函数采用行`索引`(1, 2 ...) 并将其乘以每个连续行的`20px`。
 
 ::: only-for javascript
 
@@ -116,11 +116,11 @@ The row height can be set using a function. In this example, the size of all row
 
 :::
 
-## Adjust row heights manually
+## 手动调整行高
 
-Set the option [`manualRowResize`](@/api/options.md#manualrowresize) to `true` to allow users to manually resize the row height by dragging the handle between the adjacent row headers. Don't forget to enable row headers by setting [`rowHeaders`](@/api/options.md#rowheaders) to `true`.
+将选项 [`manualRowResize`](@/api/options.md#manualrowresize) 设置为 `true`，以允许用户通过拖动相邻行标题之间的手柄来手动调整行高大小。不要忘记通过将 [`rowHeaders`](@/api/options.md#rowheaders) 设置为 `true` 来启用行标题。
 
-You can adjust the size of one or multiple rows simultaneously, even if the selected rows are not placed next to each other.
+即使所选行没有彼此相邻放置，您也可以同时调整一行或多行的大小。
 
 ::: only-for javascript
 
