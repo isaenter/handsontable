@@ -14,22 +14,22 @@ category: Cell features
 
 # 合并单元格
 
-使用 <kbd>**Ctrl**</kbd>+<kbd>**M**</kbd> 快捷方式或上下文菜单合并相邻单元格。使用 Handsontable 的 API 控制合并的单元格。
+使用 <kbd>**Ctrl**</kbd>+<kbd>**M**</kbd> 快捷方式或上下文菜单合并相邻单元格.使用 Handsontable 的 API 控制合并的单元格.
 
 [[toc]]
 
 ## 概述
 
-通过合并，您可以将两个或多个相邻单元格合并为跨多行或多列的单个单元格。
+通过合并，您可以将两个或多个相邻单元格合并为跨多行或多列的单个单元格.
 
-Handsontable 合并单元格的方式与 Microsoft Excel 相同：仅保留所选范围的左上角值并清除其他值。
+Handsontable 合并单元格的方式与 Microsoft Excel 相同:仅保留所选范围的左上角值并清除其他值.
 
-单元格合并发生在 Handsontable 的可视层上，不会影响您的源数据结构。
+单元格合并发生在 Handsontable 的可视层上，不会影响您的源数据结构.
 
 ## 如何合并单元格
 
-要启用合并单元格功能，请将 [`mergeCells`](@/api/options.md#mergecells) 选项设置为 `true` 或数组。
-要使用预定义的合并单元格初始化 Handsontable，请以数组的形式提供合并单元格的详细信息：
+要启用合并单元格功能，请将 [`mergeCells`](@/api/options.md#mergecells) 选项设置为 `true` 或数组.
+要使用预定义的合并单元格初始化 Handsontable，请以数组的形式提供合并单元格的详细信息:
 
 ::: only-for javascript
 
@@ -67,9 +67,9 @@ Handsontable 合并单元格的方式与 Microsoft Excel 相同：仅保留所�
 
 ## 优化宽/高合并单元格的渲染
 
-当单元格跨越数千行或数千列时，与未合并的单元格相比，滚动可能会感觉更慢。为了提高性能，请考虑启用合并单元的专用虚拟化功能，该功能默认情况下处于禁用状态。
+当单元格跨越数千行或数千列时，与未合并的单元格相比，滚动可能会感觉更慢.为了提高性能，请考虑启用合并单元的专用虚拟化功能，该功能默认情况下处于禁用状态.
 
-要启用合并单元虚拟化模式，请启用`virtualized`选项：
+要启用合并单元虚拟化模式，请启用`virtualized`选项:
 
 ::: only-for javascript
 
@@ -93,7 +93,7 @@ mergeCells={{
 
 :::
 
-下面的示例使用虚拟化合并单元。还建议增加渲染行/列的缓冲区以最大程度地减少闪烁效果。
+下面的示例使用虚拟化合并单元.还建议增加渲染行/列的缓冲区以最大程度地减少闪烁效果.
 
 ::: only-for javascript
 

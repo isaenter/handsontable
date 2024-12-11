@@ -21,7 +21,7 @@ category: Tools and building
 
 # 文件夹结构
 
-Handsontable 的源文件存储在 GitHub 上的 monorepo 中。
+Handsontable 的源文件存储在 GitHub 上的 monorepo 中.
 
 [[toc]]
 
@@ -31,7 +31,7 @@ Handsontable 的源文件存储在 GitHub 上的 monorepo 中。
 ├── examples                                # 代码示例
 └── handsontable                            # Handsontable项目目录
     ├── dist                                # 编译文件
-    ├── languages                           # 翻译（国际化）
+    ├── languages                           # 翻译(国际化)
     ├── scripts                             # 可手动脚本
     ├── src                                 # 源文件
     ├── test                                # 自动化测试
@@ -42,7 +42,7 @@ Handsontable 的源文件存储在 GitHub 上的 monorepo 中。
 └── wrappers                                # 包装文件
     ├── angular                             # Angular 的包装器
     ├── react                               # React 的包装器
-    ├── react-wrapper                       # React 的包装器（功能组件）
+    ├── react-wrapper                       # React 的包装器(功能组件)
     └── vue                                 # Vue 2 的包装
     └── vue3                                # Vue 3 的包装
 ```

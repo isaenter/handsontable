@@ -14,18 +14,18 @@ category: Columns
 
 # 列标题
 
-使用默认列标题(A、B、C`)，或将它们设置为数组或函数提供的自定义值。
+使用默认列标题(A、B、C`),或将它们设置为数组或函数提供的自定义值.
 
 [[toc]]
 
 ## 概述
 
-列标题是灰色行，用于标记每一列或一组列。默认情况下，这些标头按字母顺序填充字母。
+列标题是灰色行,用于标记每一列或一组列.默认情况下,这些标头按字母顺序填充字母.
 
-要反映特定列中数据的类型或类别，请为其指定自定义名称，然后将其显示在列标题中。例如，不要将字母作为标签，如`A、B、C、...`，而是将它们命名为`ID、全名、国家/地区...`。
+要反映特定列中数据的类型或类别,请为其指定自定义名称,然后将其显示在列标题中.例如,不要将字母作为标签,如`A、B、C、...`,而是将它们命名为`ID、全名、国家/地区...`.
 
 ## 默认标头
-将 [`colHeaders`](@/api/options.md#colheaders) 选项设置为 `true` 会启用默认列标题，如下例所示：
+将 [`colHeaders`](@/api/options.md#colheaders) 选项设置为 `true` 会启用默认列标题,如下例所示:
 
 ::: only-for javascript
 
@@ -50,7 +50,7 @@ category: Columns
 :::
 
 ## 标头标签作为数组
-标签数组可用于设置 [`colHeaders`](@/api/options.md#colheaders)，如下例所示：
+标签数组可用于设置 [`colHeaders`](@/api/options.md#colheaders),如下例所示:
 
 ::: only-for javascript
 
@@ -75,7 +75,7 @@ category: Columns
 :::
 
 ## 标头标签作为函数
-[`colHeaders`](@/api/options.md#colheaders) 也可以使用函数填充，如下例所示：
+[`colHeaders`](@/api/options.md#colheaders) 也可以使用函数填充,如下例所示:
 
 ::: only-for javascript
 
@@ -101,9 +101,9 @@ category: Columns
 
 ## 自定义列标题
 
-您可以将标题标签中的文本与 [`headerClassName`](@/api/options.md#headerclassname) 选项对齐。将其设置为`htLeft`、`htCenter`或`htRight`将分别将标题标签向左、居中或向右对齐。
+您可以将标题标签中的文本与 [`headerClassName`](@/api/options.md#headerclassname) 选项对齐.将其设置为`htLeft`、`htCenter`或`htRight`将分别将标题标签向左、居中或向右对齐.
 
-您还可以使用 [`columns`](@/api/options.md#columns) 选项设置特定列的对齐方式。
+您还可以使用 [`columns`](@/api/options.md#columns) 选项设置特定列的对齐方式.
 
 ::: only-for javascript
 
@@ -127,7 +127,7 @@ category: Columns
 
 :::
 
-如果要设置标题标签的样式，可以将任意数量的类名(以空格分隔`)传递给 [`header ClassName`](@/api/options.md#headerclassname) 选项。
+如果要设置标题标签的样式,可以将任意数量的类名(以空格分隔`)传递给 [`header ClassName`](@/api/options.md#headerclassname) 选项.
 
 ::: only-for javascript
 
@@ -155,7 +155,7 @@ category: Columns
 
 ## 嵌套标头
 
-更复杂的数据结构可以用多个标题来显示，每个标题代表不同的数据类别。要了解有关嵌套标题的更多信息，请参阅[列组](@/guides/columns/column-groups/column-groups.md)页面。
+更复杂的数据结构可以用多个标题来显示,每个标题代表不同的数据类别.要了解有关嵌套标题的更多信息,请参阅[列组](@/guides/columns/column-groups/column-groups.md)页面.
 
 ## 相关文章
 

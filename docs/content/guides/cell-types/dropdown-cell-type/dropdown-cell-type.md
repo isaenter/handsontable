@@ -14,27 +14,27 @@ category: Cell types
 
 # 下拉单元格类型
 
-通过使用下拉单元格类型，通过可搜索的选项列表收集用户输入。
+通过使用下拉单元格类型，通过可搜索的选项列表收集用户输入.
 
 [[toc]]
 
 ## 概述
 
-下拉单元格类型基于自动完成单元格类型，并且也可以搜索。
+下拉单元格类型基于自动完成单元格类型，并且也可以搜索.
 
 ## 用法
 
-此示例显示了下拉功能的用法。下拉菜单基于[自动完成](@/guides/cell-types/autocomplete-cell-type/autocomplete-cell-type.md) 单元格类型。 `自动完成`单元格类型使用的所有选项也适用于`下拉菜单`。
+此示例显示了下拉功能的用法.下拉菜单基于[自动完成](@/guides/cell-types/autocomplete-cell-type/autocomplete-cell-type.md) 单元格类型. `自动完成`单元格类型使用的所有选项也适用于`下拉菜单`.
 
 ::: only-for javascript
 
-在内部，单元格`{type: 'dropdown'}`相当于单元格`{type: 'autocomplete', strict: true, filter: false}`。因此，您可以将`dropdown`视为可搜索的`<select>`。
+在内部，单元格`{type: 'dropdown'}`相当于单元格`{type: 'autocomplete', strict: true, filter: false}`.因此，您可以将`dropdown`视为可搜索的`<select>`.
 
 :::
 
 ::: only-for react
 
-在内部，单元格 `type="dropdown"` 相当于单元格 `type="autocomplete" strict={true} filter={false}`。因此，您可以将`dropdown`视为可搜索的`<select>`。
+在内部，单元格 `type="dropdown"` 相当于单元格 `type="autocomplete" strict={true} filter={false}`.因此，您可以将`dropdown`视为可搜索的`<select>`.
 
 :::
 

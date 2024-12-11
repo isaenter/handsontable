@@ -14,23 +14,23 @@ category: Cell types
 
 # 复选框单元格类型
 
-使用复选框单元格类型创建可以选中或取消选中的交互式元素。
+使用复选框单元格类型创建可以选中或取消选中的交互式元素.
 
 [[toc]]
 
 ## 概述
 
-这些单元格中的数据将呈现为复选框，您可以通过选中/取消选中该复选框轻松更改它。
+这些单元格中的数据将呈现为复选框，您可以通过选中/取消选中该复选框轻松更改它.
 
-要选中该框，请使用鼠标或按 <kbd>**空格**</kbd> 或 <kbd>**Enter**</kbd>。
+要选中该框，请使用鼠标或按 <kbd>**空格**</kbd> 或 <kbd>**Enter**</kbd>.
 
-要取消选中该框，请使用鼠标或按 <kbd>**空格**</kbd>、<kbd>**Enter**</kbd>、<kbd>**Delete**</kbd> 或 < kbd>**退格键**</kbd>。
+要取消选中该框，请使用鼠标或按 <kbd>**空格**</kbd>、<kbd>**Enter**</kbd>、<kbd>**Delete**</kbd> 或 < kbd>**退格键**</kbd>.
 
-您可以通过选择要更改的单元格并按 <kbd>**空格**</kbd> 来一次更改多个单元格的状态。
+您可以通过选择要更改的单元格并按 <kbd>**空格**</kbd> 来一次更改多个单元格的状态.
 
 ## 复选框真/假值
 
-这是默认的使用场景，其中列数据具有`true`或`false`值，并且我们只想显示复选框。
+这是默认的使用场景，其中列数据具有`true`或`false`值，并且我们只想显示复选框.
 
 ::: only-for javascript
 
@@ -56,7 +56,7 @@ category: Cell types
 
 ## 复选框模板
 
-如果您想使用`true`和`false`以外的值，则必须使用 [`checkedTemplate`](@/api/options.md#checkedtemplate) 和 [`uncheckedTemplate`](@/api/options.md#uncheckedtemplate)。然后，Handsontable 将使用适当的模板更新您的数据。
+如果您想使用`true`和`false`以外的值，则必须使用 [`checkedTemplate`](@/api/options.md#checkedtemplate) 和 [`uncheckedTemplate`](@/api/options.md#uncheckedtemplate).然后，Handsontable 将使用适当的模板更新您的数据.
 
 ::: only-for javascript
 
@@ -82,7 +82,7 @@ category: Cell types
 
 ## 复选框标签
 
-要向复选框添加标签，请使用 [`label`](@/api/options.md#label) 选项。您可以声明使用此选项注入标签的位置 -在复选框元素之前或之后。您还可以声明将从哪个数据源更新标签文本。
+要向复选框添加标签，请使用 [`label`](@/api/options.md#label) 选项.您可以声明使用此选项注入标签的位置 -在复选框元素之前或之后.您还可以声明将从哪个数据源更新标签文本.
 
 ::: only-for javascript
 

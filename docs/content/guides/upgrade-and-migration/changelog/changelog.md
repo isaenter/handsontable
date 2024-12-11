@@ -21,7 +21,7 @@ category: Upgrade and migration
 
 # 变更日志
 
-查看每个主要版本、次要版本和补丁版本中对 Handsontable 所做更改的完整历史记录。
+查看每个主要版本、次要版本和补丁版本中对 Handsontable 所做更改的完整历史记录.
 
 [[toc]]
 
@@ -29,45 +29,45 @@ category: Upgrade and migration
 
 发布于 2024 年 10 月 17 日
 
-有关此版本的更多信息，请参阅：
+有关此版本的更多信息,请参阅:
 - [文档 (14.6)](https://handsontable.com/docs/14.6)
 
 #### 已删除
-- 从文本编辑器和密码编辑器的`TEXTAREA`元素中删除了`aria-hidden`。  [#11218](https://github.com/handsontable/handsontable/pull/11218)
+- 从文本编辑器和密码编辑器的`TEXTAREA`元素中删除了`aria-hidden`.  [#11218](https://github.com/handsontable/handsontable/pull/11218)
 
 ## 14.6.0
 
 发布于 2024 年 10 月 1 日
 
-有关此版本的更多信息，请参阅：
+有关此版本的更多信息,请参阅:
 - [博客文章(14.6.0)](https://handsontable.com/blog/handsontable-14-6-0-easier-styling-and-enhanced-undo-redo)
 - [文档(14.6)](https://handsontable.com/docs/14.6)
 
 #### 添加
 - 修复只读和对齐上下文菜单项的 aria-label、aria-checked 和 menuitemcheckbox 角色 [#11091](https://github.com/handsontable/handsontable/pull/11091)
-- 使用第二个参数扩展了`beforeFilter`挂钩，以允许正确的撤消/重做功能。 [#11170](https://github.com/handsontable/handsontable/pull/11170)
-- 向 TR​​ 元素添加偶数和奇数类名称。 [#11183](https://github.com/handsontable/handsontable/pull/11183)
-- 添加了新的 API 来检索可见、部分可见和渲染的行和列索引。 [#11189](https://github.com/handsontable/handsontable/pull/11189)
+- 使用第二个参数扩展了`beforeFilter`挂钩,以允许正确的撤消/重做功能. [#11170](https://github.com/handsontable/handsontable/pull/11170)
+- 向 TR​​ 元素添加偶数和奇数类名称. [#11183](https://github.com/handsontable/handsontable/pull/11183)
+- 添加了新的 API 来检索可见、部分可见和渲染的行和列索引. [#11189](https://github.com/handsontable/handsontable/pull/11189)
 
 #### 改变了
-- 使焦点对`选择`单元格类型单元格可见。 [#11160](https://github.com/handsontable/handsontable/pull/11160)
+- 使焦点对`选择`单元格类型单元格可见. [#11160](https://github.com/handsontable/handsontable/pull/11160)
 
 #### 已删除
 - 从 css 中删除 -ms 修复 [#11055](https://github.com/handsontable/handsontable/issues/11055)
 
 #### 固定的
-- 修复了阻止单元格注释复制值的错误。 [#11103](https://github.com/handsontable/handsontable/pull/11103)
-- 修复了水平滚动后子菜单未对齐的问题。 [#11106](https://github.com/handsontable/handsontable/pull/11106)
-- 修复了内容产生带有分数的高度的单元格的行未对齐问题。 [#11110](https://github.com/handsontable/handsontable/pull/11110)
-- 修复了使用键盘快捷键打开后下拉菜单未对齐的问题。 [#11115](https://github.com/handsontable/handsontable/pull/11115)
-- 修复了使用打开的编辑器对列进行排序时数据保存在错误单元格中的错误。 [#11129](https://github.com/handsontable/handsontable/pull/11129)
+- 修复了阻止单元格注释复制值的错误. [#11103](https://github.com/handsontable/handsontable/pull/11103)
+- 修复了水平滚动后子菜单未对齐的问题. [#11106](https://github.com/handsontable/handsontable/pull/11106)
+- 修复了内容产生带有分数的高度的单元格的行未对齐问题. [#11110](https://github.com/handsontable/handsontable/pull/11110)
+- 修复了使用键盘快捷键打开后下拉菜单未对齐的问题. [#11115](https://github.com/handsontable/handsontable/pull/11115)
+- 修复了使用打开的编辑器对列进行排序时数据保存在错误单元格中的错误. [#11129](https://github.com/handsontable/handsontable/pull/11129)
 - 修复了禁用 `outsideClickDeselects` 时的复制/粘贴/剪切问题 [#11139](https://github.com/handsontable/handsontable/pull/11139)
-- 修复了添加新行后合并单元格损坏的问题。 [#11145](https://github.com/handsontable/handsontable/pull/11145)
-- 修复了 F2 键盘快捷键（进入编辑模式）。 [#11151](https://github.com/handsontable/handsontable/pull/11151)
-- 根据内容修复了上下文/下拉菜单列宽度计算。 [#11156](https://github.com/handsontable/handsontable/pull/11156)
-- 更新了`selectCell`方法的 TS 类型。 [#11161](https://github.com/handsontable/handsontable/pull/11161)
-- 修复了当选择内容同时包含`复选框`和非`复选框`类型的单元格时从选择中删除内容的问题。 [#11182](https://github.com/handsontable/handsontable/pull/11182)
-- 修复了上下文菜单容器未反映其内容大小的问题。 [#11190](https://github.com/handsontable/handsontable/pull/11190)
+- 修复了添加新行后合并单元格损坏的问题. [#11145](https://github.com/handsontable/handsontable/pull/11145)
+- 修复了 F2 键盘快捷键(进入编辑模式). [#11151](https://github.com/handsontable/handsontable/pull/11151)
+- 根据内容修复了上下文/下拉菜单列宽度计算. [#11156](https://github.com/handsontable/handsontable/pull/11156)
+- 更新了`selectCell`方法的 TS 类型. [#11161](https://github.com/handsontable/handsontable/pull/11161)
+- 修复了当选择内容同时包含`复选框`和非`复选框`类型的单元格时从选择中删除内容的问题. [#11182](https://github.com/handsontable/handsontable/pull/11182)
+- 修复了上下文菜单容器未反映其内容大小的问题. [#11190](https://github.com/handsontable/handsontable/pull/11190)
 - 修复了在没有选择时某些键盘快捷键触发的错误的问题 [#11195](https://github.com/handsontable/handsontable/pull/11195)
 
 
@@ -75,7 +75,7 @@ category: Upgrade and migration
 
 发布于 2024 年 7 月 30 日
 
-有关此版本的更多信息，请参阅：
+有关此版本的更多信息,请参阅:
 - [Blog post (14.5.0)](https://handsontable.com/blog/handsontable-14.5.0-improved-performance-and-flexible-column-header-class)
 - [Documentation (14.5)](https://handsontable.com/docs/14.5)
 

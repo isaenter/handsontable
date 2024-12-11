@@ -14,24 +14,24 @@ category: Cell types
 
 # 时间单元类型
 
-使用时间单元格类型将值显示为时间、设置格式并验证值。时间单元格类型使用 Moment.js 作为时间格式化程序。
+使用时间单元格类型将值显示为时间、设置格式并验证值.时间单元格类型使用 Moment.js 作为时间格式化程序.
 
 [[toc]]
 
 ## 用法
-要使用时间单元格类型，请在 [`columns`](@/api/options.md#columns) 数组或 [`cells`](@/api/options.md#columns) 数组中设置 `type: 'time'` 选项。 md#cells) 函数。
-时间单元使用 [Moment.js](https://github.com/moment/moment) 作为时间格式化程序，因此您必须添加以下必需的依赖项：
+要使用时间单元格类型，请在 [`columns`](@/api/options.md#columns) 数组或 [`cells`](@/api/options.md#columns) 数组中设置 `type: 'time'` 选项. md#cells) 函数.
+时间单元使用 [Moment.js](https://github.com/moment/moment) 作为时间格式化程序，因此您必须添加以下必需的依赖项:
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/moment@2.29.4/moment.min.js"></script>
 ```
 
 输入到时间类型单元格中的所有数据最终都会根据默认时间格式`h:mm:ss a`进行验证，该格式会转换为`9:30:00 am`，除非提供了另一种格式作为“时间格式`.
-如果启用 [` CorrectFormat`](@/api/options.md# Correctformat) 配置选项，这些值将自动格式化以匹配所需的时间格式。
+如果启用 [` CorrectFormat`](@/api/options.md# Correctformat) 配置选项，这些值将自动格式化以匹配所需的时间格式.
 
 ::: tip
 
-默认情况下，输入到时间类型列中的值不会被验证，因此如果您希望它们以正确的格式显示，请记住调用 [`hot.validateCells()`](@/api/core.md#validatecells )在表初始化之后。
+默认情况下，输入到时间类型列中的值不会被验证，因此如果您希望它们以正确的格式显示，请记住调用 [`hot.validateCells()`](@/api/core.md#validatecells )在表初始化之后.
 
 :::
 

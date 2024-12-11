@@ -14,13 +14,13 @@ category: Integrate with Vue 3
 
 # Vue 3 中的自定义上下文菜单示例
 
-通过为每个菜单项创建自定义函数来自定义 Vue 3 数据网格的上下文菜单。
+通过为每个菜单项创建自定义函数来自定义 Vue 3 数据网格的上下文菜单.
 
 [[toc]]
 
 ## 例子
 
-以下示例实现了`@handsontable/vue3`组件，添加了自定义上下文菜单。
+以下示例实现了`@handsontable/vue3`组件，添加了自定义上下文菜单.
 
 [了解支持哪些 Vue 3 版本](@/guides/integrate-with-vue 3/vue 3-installation/vue3-installation.md#vue-3-version-support)
 

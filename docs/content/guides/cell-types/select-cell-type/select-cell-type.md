@@ -14,17 +14,17 @@ category: Cell types
 
 # 选择单元格类型
 
-使用选择单元格类型通过 HTML `<select>` 元素收集用户输入，该元素创建多项目下拉列表。
+使用选择单元格类型通过 HTML `<select>` 元素收集用户输入，该元素创建多项目下拉列表.
 
 [[toc]]
 
 ## 概述
 
-选择单元格类型是 [dropdown](@/guides/cell-types/dropdown-cell-type/dropdown-cell-type.md) 单元格类型的更简单形式。
+选择单元格类型是 [dropdown](@/guides/cell-types/dropdown-cell-type/dropdown-cell-type.md) 单元格类型的更简单形式.
 
 ## 用法
 
-选择编辑器应被视为如何编写编辑器的示例，而不是用作功能齐全的编辑器。它是[下拉编辑器](@/guides/cell-types/dropdown-cell-type/dropdown-cell-type.md) 的更简单的形式。我们建议您在项目中使用后者。
+选择编辑器应被视为如何编写编辑器的示例，而不是用作功能齐全的编辑器.它是[下拉编辑器](@/guides/cell-types/dropdown-cell-type/dropdown-cell-type.md) 的更简单的形式.我们建议您在项目中使用后者.
 
 ::: only-for javascript
 

@@ -18,7 +18,7 @@ category: Getting started
 
 # 演示
 
-在您最喜欢的框架中尝试一下 Handsontable 的演示。
+在您最喜欢的框架中尝试一下 Handsontable 的演示.
 
 [[toc]]
 
@@ -52,7 +52,7 @@ category: Getting started
 
 ## 尝试演示的功能
 
-探索演示并发现 Handsontable 最受欢迎的功能：
+探索演示并发现 Handsontable 最受欢迎的功能:
 
 - [上下文菜单](@/guides/accessories-and-menus/context-menu/context-menu.md)
 - [下拉单元格类型](@/guides/cell-types/dropdown-cell-type/dropdown-cell-type.md)
@@ -65,9 +65,9 @@ category: Getting started
 
 ## 编辑演示的源代码
 
-你可以：
+你可以:
 - 查看框架演示背后的完整源代码
 - 在本地计算机上运行框架的演示
-- 使用框架的演示分叉目录，并添加您自己的更改
+- 使用框架的演示分叉目录,并添加您自己的更改
 
-只需从上面的演示中选择您的框架即可。
+只需从上面的演示中选择您的框架即可.

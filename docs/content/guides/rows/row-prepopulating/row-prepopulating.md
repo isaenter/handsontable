@@ -19,13 +19,13 @@ category: Rows
 
 # 行预填充
 
-使用单元格渲染器用预定义的模板值填充新添加的行。
+使用单元格渲染器用预定义的模板值填充新添加的行.
 
 [[toc]]
 
 ## 例子
 
-下面的示例显示了如何使用单元格渲染器来填充空行中的模板值。当编辑空行中的单元格时，[`beforeChange`](@/api/hooks.md#beforechange) 回调会使用模板值填充该行。
+下面的示例显示了如何使用单元格渲染器来填充空行中的模板值.当编辑空行中的单元格时，[`beforeChange`](@/api/hooks.md#beforechange) 回调会使用模板值填充该行.
 
 ::: only-for javascript
 

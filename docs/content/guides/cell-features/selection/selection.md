@@ -17,28 +17,28 @@ category: Cell features
 
 # 选择
 
-选择单个单元格、一系列相邻单元格或多个不相邻单元格范围。
+选择单个单元格、一系列相邻单元格或多个不相邻单元格范围.
 
 [[toc]]
 
 ## 概述
 
-选择使您能够在 Handsontable 中选择单个单元格或单元格区域。选择后，您可以从单元格中检索数据、编辑单元格的内容或更改单元格的样式。
+选择使您能够在 Handsontable 中选择单个单元格或单元格区域.选择后，您可以从单元格中检索数据、编辑单元格的内容或更改单元格的样式.
 
 ## 基本配置
 
-使用此功能，您可以选择网格中的单个单元格或单元格范围。轻松检索所选单元格的坐标以清除或更改单元格的内容。
+使用此功能，您可以选择网格中的单个单元格或单元格范围.轻松检索所选单元格的坐标以清除或更改单元格的内容.
 
-在 Mac 上使用 <kbd>**Cmd**</kbd> 或在 Windows 上使用 <kbd>**Ctrl**</kbd> 选择不相邻的单元格区域。
+在 Mac 上使用 <kbd>**Cmd**</kbd> 或在 Windows 上使用 <kbd>**Ctrl**</kbd> 选择不相邻的单元格区域.
 ## 选择范围
 
-您可以在不同的模式下使用此插件。在选择单个单元格、一系列相邻单元格和多个不相邻单元格范围之间进行选择。
+您可以在不同的模式下使用此插件.在选择单个单元格、一系列相邻单元格和多个不相邻单元格范围之间进行选择.
 
-[`selectionMode`](@/api/options.md#selectionmode) 的可能值：
+[`selectionMode`](@/api/options.md#selectionmode) 的可能值:
 
-- [`single`](@/api/options.md#selectionmode) -您可以选择单个单元格。
-- [`range`](@/api/options.md#selectionmode) -您可以在选定的单个范围内选择多个单元格。
-- [`multiple`](@/api/options.md#selectionmode) -您可以选择多个不相邻的单元格范围。
+- [`single`](@/api/options.md#selectionmode) -您可以选择单个单元格.
+- [`range`](@/api/options.md#selectionmode) -您可以在选定的单个范围内选择多个单元格.
+- [`multiple`](@/api/options.md#selectionmode) -您可以选择多个不相邻的单元格范围.
 
 ::: only-for javascript
 
@@ -65,7 +65,7 @@ category: Cell features
 
 ## 获取选定范围内的数据
 
-要将选定的单元格作为数组的数组检索，请使用 [`getSelected()`](@/api/core.md#getselected) 或 [`getSelectedRange()`](@/api/core.md#getselectedrange) ) 方法。
+要将选定的单元格作为数组的数组检索，请使用 [`getSelected()`](@/api/core.md#getselected) 或 [`getSelectedRange()`](@/api/core.md#getselectedrange) ) 方法.
 
 ::: only-for javascript
 
@@ -92,7 +92,7 @@ category: Cell features
 
 ## 修改选中的单元格
 
-您可能想要删除、格式化或以其他方式更改选定的单元格。例如，您可以使用下面的演示更改值或将 CSS 类添加到选定的单元格。
+您可能想要删除、格式化或以其他方式更改选定的单元格.例如，您可以使用下面的演示更改值或将 CSS 类添加到选定的单元格.
 
 ::: only-for javascript
 
@@ -121,33 +121,33 @@ category: Cell features
 
 ## 设置选择区域的样式
 
-您可以使用 CSS 样式轻松更改背景颜色。主要的浅蓝色背景颜色在`.area`类中定义。
+您可以使用 CSS 样式轻松更改背景颜色.主要的浅蓝色背景颜色在`.area`类中定义.
 
-对于非相邻选择，多个类别会使每个级别变得更暗。这些类称为`area-1`、`area-2`等。
+对于非相邻选择，多个类别会使每个级别变得更暗.这些类称为`area-1`、`area-2`等.
 
-不幸的是，没有简单的方法来更改选区的边框颜色。
+不幸的是，没有简单的方法来更改选区的边框颜色.
 
 ## 跳过网格的边缘
 
-当您使用键盘导航跨越网格边缘时，您可以将单元格选择设置为跳转到相反的边缘。
+当您使用键盘导航跨越网格边缘时，您可以将单元格选择设置为跳转到相反的边缘.
 
 #### 跳过垂直边缘
 
-要启用跨越左右边缘的跳跃：
--将 [`autoWrapRow`](@/api/options.md#autowraprow) 配置选项设置为 `true`。
+要启用跨越左右边缘的跳跃:
+-将 [`autoWrapRow`](@/api/options.md#autowraprow) 配置选项设置为 `true`.
 
-要跳过垂直边缘：
--当单元格选择位于行的第一个单元格时，按向左箭头键。
--当单元格选择位于行的最后一个单元格时，按向右箭头键，或按 <kbd>**Tab**</kbd>。
+要跳过垂直边缘:
+-当单元格选择位于行的第一个单元格时，按向左箭头键.
+-当单元格选择位于行的最后一个单元格时，按向右箭头键，或按 <kbd>**Tab**</kbd>.
 
 #### 跳过水平边缘
 
-要启用跨越顶部和底部边缘的跳跃：
--将 [`autoWrapCol`](@/api/options.md#autowrapcol) 配置选项设置为 `true`。
+要启用跨越顶部和底部边缘的跳跃:
+-将 [`autoWrapCol`](@/api/options.md#autowrapcol) 配置选项设置为 `true`.
 
-要跳过水平边缘：
--当单元格选择位于列的第一个单元格时，按向上箭头键。
--当单元格选择位于列的最后一个单元格时，按向下箭头键，或按 <kbd>**Enter**</kbd>。
+要跳过水平边缘:
+-当单元格选择位于列的第一个单元格时，按向上箭头键.
+-当单元格选择位于列的最后一个单元格时，按向下箭头键，或按 <kbd>**Enter**</kbd>.
 
 ## 相关键盘快捷键
 
@@ -170,8 +170,8 @@ category: Cell features
 | <kbd>**Delete**</kbd>                                         | <kbd>**Delete**</kbd>                                        | 清除所选单元格的内容                                     | &check; | &check; |
 | <kbd>**Backspace**</kbd>                                      | <kbd>**Backspace**</kbd>                                     | 清除所选单元格的内容                                     | &check; | &check; |
 
-<sup>*</sup> 此操作取决于您的[布局方向](@/guides/internationalization/layout-direction/layout-direction.md)。<br>
-<sup>**</sup> 如果有多个选择层，则仅扩展最后一个选择层。
+<sup>*</sup> 此操作取决于您的[布局方向](@/guides/internationalization/layout-direction/layout-direction.md).<br>
+<sup>**</sup> 如果有多个选择层，则仅扩展最后一个选择层.
 
 ## 相关API参考
 

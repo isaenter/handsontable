@@ -14,15 +14,15 @@ category: Cell types
 
 # 日期单元格类型
 
-使用日期单元格类型来显示、格式化和验证日期值。使用交互式弹出编辑器选择日期。
+使用日期单元格类型来显示、格式化和验证日期值.使用交互式弹出编辑器选择日期.
 
 [[toc]]
 
 ## 用法
 
-要设置日期单元格类型，请在 [`columns`](@/api/options.md#columns) 数组或 [`cells`](@/api/options.md) 中使用选项 `type: 'date'` #cells)功能。日期单元格使用 [Pikaday datepicker](https://github.com/dbushell/Pikaday) 作为 UI 控件。 Pikaday 使用 [Moment.js](https://github.com/moment/moment) 作为日期格式化程序。
+要设置日期单元格类型，请在 [`columns`](@/api/options.md#columns) 数组或 [`cells`](@/api/options.md) 中使用选项 `type: 'date'` #cells)功能.日期单元格使用 [Pikaday datepicker](https://github.com/dbushell/Pikaday) 作为 UI 控件. Pikaday 使用 [Moment.js](https://github.com/moment/moment) 作为日期格式化程序.
 
-请注意，日期单元格需要额外的模块：
+请注意，日期单元格需要额外的模块:
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/moment@2.29.4/moment.min.js"></script>
@@ -32,15 +32,15 @@ category: Cell types
 
 ## 日期格式
 
-`date`单元格接受格式符合 [`dateFormat`](@/api/options.md#dateformat) 设置的字符串。
+`date`单元格接受格式符合 [`dateFormat`](@/api/options.md#dateformat) 设置的字符串.
 
-默认日期格式为`DD/MM/YYYY`。
+默认日期格式为`DD/MM/YYYY`.
 
-Handsontable 不支持 JavaScript 的`Date`对象。
+Handsontable 不支持 JavaScript 的`Date`对象.
 
 ### 更改日期格式
 
-要更改`date`单元格接受的日期格式，请将 [`dateFormat`](@/api/options.md#dateformat) 配置选项设置为具有您首选格式的字符串。例如：
+要更改`date`单元格接受的日期格式，请将 [`dateFormat`](@/api/options.md#dateformat) 配置选项设置为具有您首选格式的字符串.例如:
 
 ::: only-for javascript
 
@@ -60,10 +60,10 @@ dateFormat={'YYYY-MM-DD'}
 
 ### 自动更正无效日期
 
-默认情况下，当用户输入的日期格式与 [`dateFormat`](@/api/options.md#dateformat) 设置不匹配时，该日期将被视为无效。
+默认情况下，当用户输入的日期格式与 [`dateFormat`](@/api/options.md#dateformat) 设置不匹配时，该日期将被视为无效.
 
-您可以让 Handsontable 自动更正此类日期，使它们符合所需的格式。为此，请将 [` CorrectFormat`](@/api/options.md# Correctformat) 选项设置为 `true`。
-例如：
+您可以让 Handsontable 自动更正此类日期，使它们符合所需的格式.为此，请将 [` CorrectFormat`](@/api/options.md# Correctformat) 选项设置为 `true`.
+例如:
 
 ::: only-for javascript
 
@@ -97,7 +97,7 @@ correctFormat={true}
 
 ## 基本示例
 
-单击 ▼ 图标之一打开交互式日期编辑器。
+单击 ▼ 图标之一打开交互式日期编辑器.
 
 ::: only-for javascript
 

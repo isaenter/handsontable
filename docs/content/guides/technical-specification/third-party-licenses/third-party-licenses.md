@@ -14,7 +14,7 @@ category: Technical specification
 
 # 第三方许可
 
-了解 Handsontable 的软件依赖项的许可条款。
+了解 Handsontable 的软件依赖项的许可条款.
 
 [[toc]]
 
@@ -56,7 +56,7 @@ category: Technical specification
 
 ### [`Formulas`](@/api/formulas.md) 插件的依赖项
 
-仅当您使用 [`Formulas`](@/api/formulas.md) [计算插件](@/guides/formulas/formula-calculation/formula-calculation.md) 时，以下依赖项才适用：
+仅当您使用 [`Formulas`](@/api/formulas.md) [计算插件](@/guides/formulas/formula-calculation/formula-calculation.md) 时,以下依赖项才适用:
 
 <div class="boxes-list gray">
 

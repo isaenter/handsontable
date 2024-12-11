@@ -33,28 +33,28 @@ category: Rows
 
 # 行排序
 
-按字母或数字、升序、降序或自定义顺序、一列或多列对数据进行排序。
+按字母或数字、升序、降序或自定义顺序、一列或多列对数据进行排序.
 
 [[toc]]
 
 ## 概述
 
-通过排序，您可以根据特定列中的值轻松重新排列数据行。这对于分析和组织大型
-数据集，可帮助您识别模式和趋势。
+通过排序,您可以根据特定列中的值轻松重新排列数据行.这对于分析和组织大型
+数据集,可帮助您识别模式和趋势.
 
-您可以通过不同的方式对数据进行排序：
+您可以通过不同的方式对数据进行排序:
 
 - 按字母顺序、数字或基于自定义排序逻辑
 - 按升序、降序或自定义顺序
 - 按单列或多列
 - 使用 Handsontable 的 UI 或 API
 
-Handsontable 仅以视觉方式对数据进行排序，因此源数据仍保持原始顺序。要在数据源中保存排序更改，请参阅本指南：
-[保存数据](@/guides/getting-started/saving-data/saving-data.md)。
+Handsontable 仅以视觉方式对数据进行排序,因此源数据仍保持原始顺序.要在数据源中保存排序更改,请参阅本指南:
+[保存数据](@/guides/getting-started/saving-data/saving-data.md).
 
 ## 排序演示
 
-单击某一列名称可按升序 (↑) 或降序 (↓) 对值进行排序，或返回到原始顺序。
+单击某一列名称可按升序 (↑) 或降序 (↓) 对值进行排序,或返回到原始顺序.
 
 ::: only-for javascript
 
@@ -81,7 +81,7 @@ Handsontable 仅以视觉方式对数据进行排序，因此源数据仍保持�
 
 ## 启用排序
 
-要对所有列启用排序，请将 [`columnSorting`](@/api/options.md#columnsorting) 设置为 `true`。
+要对所有列启用排序,请将 [`columnSorting`](@/api/options.md#columnsorting) 设置为 `true`.
 
 ::: only-for javascript
 
@@ -105,8 +105,8 @@ const configurationOptions = {
 
 :::
 
-要仅对特定列启用排序，请将您不想排序的列的 [`headerAction`](@/api/options.md#columnsorting) 设置为 `false`。在
-在以下示例中，只有 **型号**、**日期**和 **库存**列可排序。
+要仅对特定列启用排序,请将您不想排序的列的 [`headerAction`](@/api/options.md#columnsorting) 设置为 `false`.在
+在以下示例中,只有 **型号**、**日期**和 **库存**列可排序.
 
 ::: only-for javascript
 
@@ -133,30 +133,30 @@ const configurationOptions = {
 
 ## 配置排序
 
-您可以配置排序 UI，设置[初始排序顺序](#set-an-initial-sort-order)，并实现您自己的[比较器](#add-a-custom-comparator)。
+您可以配置排序 UI,设置[初始排序顺序](#set-an-initial-sort-order),并实现您自己的[比较器](#add-a-custom-comparator).
 
-默认情况下：
+默认情况下:
 
-- 对所有列启用排序。
+- 对所有列启用排序.
 - 最终用户可以通过单击列对数据进行排序name.
-- 排序顺序指示器可见。
-- 在 Handsontable 初始化时，没有对任何行进行排序。
+- 排序顺序指示器可见.
+- 在 Handsontable 初始化时,没有对任何行进行排序.
 
-您可以配置以下选项：
+您可以配置以下选项:
 
 ::: only-for javascript
 
 ```js
 const configurationOptions = {
   columnSorting: {
-    // 让最终用户通过单击列名称（默认设置）对数据进行排序
+    // 让最终用户通过单击列名称(默认设置)对数据进行排序
     headerAction: true,
-    // 不对空单元格进行排序 -将包含空单元格的行移动到底部（默认设置）
+    // 不对空单元格进行排序 -将包含空单元格的行移动到底部(默认设置)
     sortEmptyCells: false,
-    // 启用列名称旁边显示的排序顺序图标（默认设置）
+    // 启用列名称旁边显示的排序顺序图标(默认设置)
     indicator: true,
 
-    // 初始化时，按第一列对数据进行降序排序
+    // 初始化时,按第一列对数据进行降序排序
     initialConfig: {
       column: 1,
       sortOrder: 'desc',
@@ -165,7 +165,7 @@ const configurationOptions = {
     // 实现你自己的比较器
     compareFunctionFactory(sortOrder, columnMeta) {
       return function (value, nextValue) {
-        // 在这里，添加一个比较函数
+        // 在这里,添加一个比较函数
         // 返回`-1`、`0`或`1`
       };
     },

@@ -23,14 +23,14 @@ category: Rows
 
 # 嵌套行
 
-使用 [`NestedRows`](@/api/nestedRows.md) 插件的交互式 UI 元素（例如展开和折叠）反映数据的父子关系
-按钮或扩展上下文菜单。
+使用 [`NestedRows`](@/api/nestedRows.md) 插件的交互式 UI 元素(例如展开和折叠)反映数据的父子关系
+按钮或扩展上下文菜单.
 
 [[toc]]
 
 ## 快速设置
 
-要启用 [`NestedRows`](@/api/nestedRows.md) 插件，请将 [`nestedRows`](@/api/options.md#nestedrows) 选项设置为 `true`。
+要启用 [`NestedRows`](@/api/nestedRows.md) 插件,请将 [`nestedRows`](@/api/options.md#nestedrows) 选项设置为 `true`.
 
 ::: only-for javascript
 
@@ -50,19 +50,19 @@ const hot = new Handsontable(container, {
 
 :::
 
-请注意，使用插件提供的所有功能需要启用行标题和 Handsontable 上下文菜单。要做这组
-[`rowHeaders`](@/api/options.md#rowheaders) 和 [`contextMenu`](@/api/options.md#contextmenu) 为 `true`。 _collapse_ /_expand_ 按钮位于
-行标题和行修改选项_添加行_、_插入子项_等位于上下文菜单中。
+请注意,使用插件提供的所有功能需要启用行标题和 Handsontable 上下文菜单.要做这组
+[`rowHeaders`](@/api/options.md#rowheaders) 和 [`contextMenu`](@/api/options.md#contextmenu) 为 `true`. _collapse_ /_expand_ 按钮位于
+行标题和行修改选项_添加行_、_插入子项_等位于上下文菜单中.
 
 ## 准备数据源
 
-数据源必须具有与 _Nested Rows_ 插件一起使用的特定结构。
+数据源必须具有与 _Nested Rows_ 插件一起使用的特定结构.
 
-该插件要求数据源是对象数组。数组中的每个对象代表一个 _0-level_ 条目。 _0-level_ 指的是一个条目，其中
-不是任何其他条目的子项。如果一个条目有任何子条目，则需要将它们再次声明为_对象数组_。要将它们分配到一行，请创建一个
-父元素中的`__children`属性。
+该插件要求数据源是对象数组.数组中的每个对象代表一个 _0-level_ 条目. _0-level_ 指的是一个条目,其中
+不是任何其他条目的子项.如果一个条目有任何子条目,则需要将它们再次声明为_对象数组_.要将它们分配到一行,请创建一个
+父元素中的`__children`属性.
 
-这是一个例子：
+这是一个例子:
 
 ::: only-for javascript
 
@@ -86,34 +86,34 @@ const hot = new Handsontable(container, {
 
 :::
 
-在上面的示例中，我们创建了一个由 2016 年`摇滚`类型格莱美提名者组成的数据对象。每个_0-level_条目声明一个类别，而
-他们的孩子声明被提名者 -在`__children`属性下分配。
+在上面的示例中,我们创建了一个由 2016 年`摇滚`类型格莱美提名者组成的数据对象.每个_0-level_条目声明一个类别,而
+他们的孩子声明被提名者 -在`__children`属性下分配.
 
-请注意，数组中的第一个 0 级对象需要定义所有列才能正确显示表格。它们可以声明为`null`或空的
-字符串`''`，但需要定义它们。对于其他对象来说，这是可选的。
+请注意,数组中的第一个 0 级对象需要定义所有列才能正确显示表格.它们可以声明为`null`或空的
+字符串`''`,但需要定义它们.对于其他对象来说,这是可选的.
 
 ## 用户界面
 
-_Nested Rows_ 插件的用户界面位于行标题和 Handsontable 的上下文菜单中。
+_Nested Rows_ 插件的用户界面位于行标题和 Handsontable 的上下文菜单中.
 
 ### 行标题
 
-每个 _parent_ 行标题都包含一个`+`/`-`按钮。它用于折叠或展开其子行。
+每个 _parent_ 行标题都包含一个`+`/`-`按钮.它用于折叠或展开其子行.
 
-子行标题有更大的缩进，使用户能够清楚地识别子元素和父元素。
+子行标题有更大的缩进,使用户能够清楚地识别子元素和父元素.
 
 ### 上下文菜单
 
-上下文菜单已扩展为一些与嵌套行相关的选项，例如：
+上下文菜单已扩展为一些与嵌套行相关的选项,例如:
 
 - 插入子行
 - 与父母分离
 
-修改了`在上方插入行`和`在下方插入行`选项，以便与嵌套数据结构正常工作。
+修改了`在上方插入行`和`在下方插入行`选项,以便与嵌套数据结构正常工作.
 
 ## 已知限制
 
-当您使用父子行结构时，不支持以下 Handsontable 功能：
+当您使用父子行结构时,不支持以下 Handsontable 功能:
 
 - [数据源作为数组的数组](@/guides/getting-started/binding-to-data/binding-to-data.md#array-of-arrays)
 - [列过滤器](@/guides/columns/column-filter/column-filter.md)

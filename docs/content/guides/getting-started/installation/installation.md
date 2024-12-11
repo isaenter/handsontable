@@ -18,13 +18,13 @@ category: Getting started
 
 ::: only-for javascript
 
-通过您首选的包管理器安装 Handsontable，或直接从 CDN 导入 Handsontable 的资产。
+通过您首选的包管理器安装 Handsontable,或直接从 CDN 导入 Handsontable 的资产.
 
 :::
 
 ::: only-for react
 
-通过您首选的包管理器安装 Handsontable，并通过`HotTable`组件的属性控制您的网格。
+通过您首选的包管理器安装 Handsontable,并通过`HotTable`组件的属性控制您的网格.
 
 :::
 
@@ -36,15 +36,15 @@ category: Getting started
 
 ## 概述
 
-要开始使用 Handsontable，请按照下列步骤操作：
+要开始使用 Handsontable,请按照下列步骤操作:
 
 ## 安装Handsontable
 
-以您喜欢的方式获取 Handsontable 的文件。
+以您喜欢的方式获取 Handsontable 的文件.
 
 ### 使用包管理器
 
-要使用包管理器在本地安装 Handsontable，请运行以下命令之一：
+要使用包管理器在本地安装 Handsontable,请运行以下命令之一:
 
 <code-group>
   <code-block title="npm">
@@ -72,24 +72,24 @@ category: Getting started
 
 ### 使用 CDN
 
-要从 CDN 获取 Handsontable 的文件，请使用以下位置：
+要从 CDN 获取 Handsontable 的文件,请使用以下位置:
 
 - [https://cdn.jsdelivr.net/npm/handsontable/dist/handsontable.full.min.js](https://cdn.jsdelivr.net/npm/handsontable/dist/handsontable.full.min.js)
 - [https://cdn.jsdelivr.net/npm/handsontable/dist/handsontable.full.min.css](https://cdn.jsdelivr.net/npm/handsontable/dist/handsontable.full.min.css)
 
 ## 导入 Handsontable 的 JavaScript
 
-将 Handsontable 的 JavaScript 导入到您的应用程序中。
+将 Handsontable 的 JavaScript 导入到您的应用程序中.
 
 ::: tip
-为了获得更优化的构建，请使用 [modules](@/guides/tools-and-building/modules/modules.md) 导入 Handsontable JavaScript 的各个部分。
+为了获得更优化的构建,请使用 [modules](@/guides/tools-and-building/modules/modules.md) 导入 Handsontable JavaScript 的各个部分.
 :::
 
 ### 使用 CommonJS 或包管理器
 
-如果您将 Handsontable 用作 CommonJS 包或 ECMAScript 模块（使用包管理器），请将 Handsontable 的完整发行版导入为 JavaScript 文件。
+如果您将 Handsontable 用作 CommonJS 包或 ECMAScript 模块(使用包管理器),请将 Handsontable 的完整发行版导入为 JavaScript 文件.
 
-使用捆绑程序首选的文件导入方法。例如：
+使用捆绑程序首选的文件导入方法.例如:
 
 ```js
 import Handsontable from 'handsontable';
@@ -97,9 +97,9 @@ import Handsontable from 'handsontable';
 
 ### 使用 `script` 标签
 
-如果您将 Handsontable 用作传统的 UMD 包，请将 Handsontable 的完整发行版导入为缩小的 JavaScript 文件。
+如果您将 Handsontable 用作传统的 UMD 包,请将 Handsontable 的完整发行版导入为缩小的 JavaScript 文件.
 
-使用`script`标签。例如，如果您从 CDN 加载 Handsontable 的 JavaScript：
+使用`script`标签.例如,如果您从 CDN 加载 Handsontable 的 JavaScript:
 
 ```html
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/handsontable/dist/handsontable.full.min.js"></script>
@@ -107,11 +107,11 @@ import Handsontable from 'handsontable';
 
 ## 导入 Handsontable 的 CSS
 
-将 Handsontable 的 CSS 导入到您的应用程序中。
+将 Handsontable 的 CSS 导入到您的应用程序中.
 
 ### 使用`import`
 
-如果您的捆绑程序允许，您可以使用`import`语句导入 Handsontable 的完整分发 CSS 文件。
+如果您的捆绑程序允许,您可以使用`import`语句导入 Handsontable 的完整分发 CSS 文件.
 
 ```js
 import 'handsontable/styles/handsontable.css';
@@ -120,7 +120,7 @@ import 'handsontable/styles/ht-theme-main.css';
 
 ### 使用 `link` 标签
 
-您还可以使用链接标签导入 Handsontable 的 CSS：
+您还可以使用链接标签导入 Handsontable 的 CSS:
 
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/handsontable/dist/handsontable.full.min.css" />
@@ -128,7 +128,7 @@ import 'handsontable/styles/ht-theme-main.css';
 
 ## 创建一个容器
 
-在 HTML 中，添加一个空的`div`，它用作 Handsontable 实例的容器。
+在 HTML 中,添加一个空的`div`,它用作 Handsontable 实例的容器.
 
 ```html
 <div id="example"></div>
@@ -136,7 +136,7 @@ import 'handsontable/styles/ht-theme-main.css';
 
 ## 初始化你的网格
 
-现在将您的容器变成包含示例数据的数据网格。
+现在将您的容器变成包含示例数据的数据网格.
 
 ```js
 const container = document.querySelector('#example');
@@ -172,7 +172,7 @@ const hot = new Handsontable(container, {
 
 ## 安装 Handsontable
 
-要使用包管理器在本地安装 Handsontable，请运行以下命令之一：
+要使用包管理器在本地安装 Handsontable,请运行以下命令之一:
 
 <code-group>
   <code-block title="npm">
@@ -200,7 +200,7 @@ const hot = new Handsontable(container, {
 
 ## 导入 Handsontable 的 CSS
 
-将 Handsontable 的 CSS 导入到您的应用程序中。
+将 Handsontable 的 CSS 导入到您的应用程序中.
 
 ```jsx
 import 'handsontable/styles/handsontable.css';
@@ -209,7 +209,7 @@ import 'handsontable/styles/ht-theme-main.css';
 
 ## 注册Handsontable的模块
 
-通过单个函数调用导入并注册所有 Handsontable 模块：
+通过单个函数调用导入并注册所有 Handsontable 模块:
 
 ```jsx
 import Handsontable from 'handsontable/base';
@@ -218,17 +218,17 @@ import { registerAllModules } from 'handsontable/registry';
 registerAllModules();
 ```
 
-或者，要减少 JavaScript 包的大小，[仅导入您需要的模块](@/guides/tools-and-building/modules/modules.md)。
+或者,要减少 JavaScript 包的大小,[仅导入您需要的模块](@/guides/tools-and-building/modules/modules.md).
 
 ## 使用 `HotTable` 组件
 
-主要的 Handsontable 组件称为`HotTable`。
+主要的 Handsontable 组件称为`HotTable`.
 
 ```jsx
 import { HotTable } from '@handsontable/react-wrapper';
 ```
 
-要设置 Handsontable 的[配置选项](@/guides/getting-started/configuration-options/configuration-options.md)，请使用 `HotTable` 的 props。例如：
+要设置 Handsontable 的[配置选项](@/guides/getting-started/configuration-options/configuration-options.md),请使用 `HotTable` 的 props.例如:
 
 ```jsx
 <HotTable
@@ -249,9 +249,9 @@ import { HotTable } from '@handsontable/react-wrapper';
 
 ::: tip
 
-`@handsontable/react-wrapper` 至少需要 React@18，并且是在构建时考虑到功能编辑器和渲染器组件。如果您使用较低版本的 React 或者更喜欢使用基于类的组件，则可以使用`@handsontable/react` 包。
+`@handsontable/react-wrapper` 至少需要 React@18,并且是在构建时考虑到功能编辑器和渲染器组件.如果您使用较低版本的 React 或者更喜欢使用基于类的组件,则可以使用`@handsontable/react` 包.
 
-有关`@handsontable/react`的更多信息，请参阅 [14.6 文档](https://handsontable.com/docs/14.6/react-data-grid/installation/)。
+有关`@handsontable/react`的更多信息,请参阅 [14.6 文档](https://handsontable.com/docs/14.6/react-data-grid/installation/).
 
 :::
 

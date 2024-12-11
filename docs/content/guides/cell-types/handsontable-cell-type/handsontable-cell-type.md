@@ -14,7 +14,7 @@ category: Cell types
 
 # Handsontable单元格类型
 
-使用 Handsontable 单元格类型在弹出窗口中添加电子表格编辑器。
+使用 Handsontable 单元格类型在弹出窗口中添加电子表格编辑器.
 
 [[toc]]
 
@@ -26,17 +26,17 @@ category: Cell types
 - 单击三角形图标
 - 双击单元格内容
 
-当表中表打开时，表中表上方的文本字段始终保持焦点状态。
+当表中表打开时，表中表上方的文本字段始终保持焦点状态.
 
-**打开 表中表 时的键盘绑定：**
+**打开 表中表 时的键盘绑定:**
 
-- <kbd>**Escape**</kbd> -关闭编辑器并取消更改。
-- <kbd>**Enter**</kbd> -关闭编辑器并应用更改\*，向下移动主 HOT 中的选择或根据 [`enterMoves`](@/api/options.md#enterMoves)环境。
-- <kbd>**Tab**</kbd> -行为与 <kbd>**Enter**</kbd> 键相同，但将主 HOT 中的选择移动到右侧或左侧(取决于您的[`layoutDirection`](@/api/options.md#layoutdirection) 设置`)或根据 [`tabMoves`](@/api/options.md#tabmoves) 设置。
-- <kbd>**向下箭头**</kbd> -向下移动 HOT-in-HOT 中的选择。如果选择了最后一行，则此操作无效。
-- <kbd>**向上箭头**</kbd> -向上移动 HOT-in-HOT 中的选择。如果选择了第一行，则取消选择。如果取消选择 HOT-in-HOT，则其行为与 <kbd>**Enter**</kbd> 键相同，但向上移动主 HOT 中的选择。
-- <kbd>**向右箭头**</kbd> -将文本字段中的文本光标向左移动。如果文本光标位于开始位置，则其行为与 <kbd>**Enter**</kbd> 键相同，但将主 HOT 中的选择移动到左侧。
-- <kbd>**向左箭头**</kbd> -将文本字段中的文本光标向右移动。如果文本光标位于结束位置，则充当 <kbd>**Tab**</kbd> 键。
+- <kbd>**Escape**</kbd> -关闭编辑器并取消更改.
+- <kbd>**Enter**</kbd> -关闭编辑器并应用更改\*，向下移动主 HOT 中的选择或根据 [`enterMoves`](@/api/options.md#enterMoves)环境.
+- <kbd>**Tab**</kbd> -行为与 <kbd>**Enter**</kbd> 键相同，但将主 HOT 中的选择移动到右侧或左侧(取决于您的[`layoutDirection`](@/api/options.md#layoutdirection) 设置`)或根据 [`tabMoves`](@/api/options.md#tabmoves) 设置.
+- <kbd>**向下箭头**</kbd> -向下移动 HOT-in-HOT 中的选择.如果选择了最后一行，则此操作无效.
+- <kbd>**向上箭头**</kbd> -向上移动 HOT-in-HOT 中的选择.如果选择了第一行，则取消选择.如果取消选择 HOT-in-HOT，则其行为与 <kbd>**Enter**</kbd> 键相同，但向上移动主 HOT 中的选择.
+- <kbd>**向右箭头**</kbd> -将文本字段中的文本光标向左移动.如果文本光标位于开始位置，则其行为与 <kbd>**Enter**</kbd> 键相同，但将主 HOT 中的选择移动到左侧.
+- <kbd>**向左箭头**</kbd> -将文本字段中的文本光标向右移动.如果文本光标位于结束位置，则充当 <kbd>**Tab**</kbd> 键.
 
 ## 基本示例
 

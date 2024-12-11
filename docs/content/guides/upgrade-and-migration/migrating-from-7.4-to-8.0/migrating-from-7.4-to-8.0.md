@@ -15,13 +15,13 @@ category: Upgrade and migration
 
 # 从 7.4 迁移到 8.0
 
-从 Handsontable 7.4 迁移到 2020 年 8 月 5 日发布的 Handsontable 8.0。
+从 Handsontable 7.4 迁移到 2020 年 8 月 5 日发布的 Handsontable 8.0.
 
 [[toc]]
 
 ## 概述
 
-本指南帮助您将 Handsontable 版本升级到 8.0.0。我们强烈建议升级，因为它可以让您受益于全新的行和列管理架构。
+本指南帮助您将 Handsontable 版本升级到 8.0.0.我们强烈建议升级，因为它可以让您受益于全新的行和列管理架构.
 
 ## Context
 
